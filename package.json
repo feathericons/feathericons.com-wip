@@ -11,7 +11,7 @@
 		"next": "latest",
 		"react": "latest",
 		"react-dom": "latest",
-		"use-immer": "latest1"
+		"use-immer": "latest"
 	},
 	"devDependencies": {
 		"@tailwindcss/ui": "latest",
