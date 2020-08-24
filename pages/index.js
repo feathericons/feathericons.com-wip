@@ -12,8 +12,7 @@ import {
 	Info as InfoSVG,
 } from "react-feather"
 
-// // ??
-// const tw = tw => `${tw * 4}rem`
+const tw = tw => `${tw * 4}rem`
 
 // background-color: #21D4FD;
 // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
@@ -36,8 +35,8 @@ const Home = () => (
 		</div>
 
 		{/* App */}
-		<div className="px-4 py-16 flex flex-row justify-center bg-no-repeat">
-			<header className="flex flex-row justify-between w-full max-w-screen-xl">
+		<div className="px-4 py-16 flex flex-row justify-center">
+			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
 				{/* LHS */}
 				<div>
@@ -285,52 +284,49 @@ const Home = () => (
 
 				</div>
 
-			</header>
+			</div>
+		</div>
 
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
+		<div className="-mt-16 px-4 py-16 flex flex-row justify-center">
+			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
-			{/* <img src="/light-mode-gradient.png" /> */}
+				<main className="flex flex-row w-full">
+
+					{/* LHS */}
+					{/* */}
+					{/* NOTE: w-full is needed. */}
+					<div className="w-full">
+						<div className="w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+							hello
+						</div>
+						<div className="h-8" />
+						<div className="w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+							hello
+						</div>
+					</div>
+
+					{/* RHS */}
+					<div className="w-8" />
+					<div className="bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+						Hello<br />
+					</div>
+
+				</main>
+
+			</div>
 		</div>
 
 	</>
 )
-
-// <h6 className="text-center font-bold text-xs tracking-wider leading-normal text-theme">
-// 	<span className="inline-flex flex-row items-center">
-// 		OPEN IN GITHUB
-// 		<Apply className="ml-1 -mt-px w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
-// 			<ExternalLinkSVG className="inline-block" />
-// 		</Apply>
-// 	</span>
-// </h6>
 
 export default Home
