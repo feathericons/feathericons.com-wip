@@ -290,35 +290,77 @@ const Home = () => (
 		<div className="-mt-16 px-4 py-16 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
-				<main className="flex flex-row w-full">
+				<main className="flex flex-row items-start w-full">
 
 					{/* LHS */}
 					{/* */}
 					{/* NOTE: w-full is needed. */}
 					<div className="w-full">
-						<div className="w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-							hello
+						<div className="px-6 py-4 w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+							Search 282 icons
 						</div>
 						<div className="h-8" />
-						<div className="w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-							hello
+						<div className="px-6 py-4 w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
+							icon<br />
 						</div>
 					</div>
 
 					{/* RHS */}
 					<div className="w-8" />
-					<div className="bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
-						Hello<br />
+					<div className="-mt-4 pt-4 sticky top-0 right-0">
+						<div className="px-6 py-4 bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+							Hello<br />
+						</div>
 					</div>
 
 				</main>
