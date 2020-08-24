@@ -141,9 +141,9 @@ const Home = () => (
 				{/* NOTE: Uses -mx-2 to offset sponsors mx-2 */}
 				<div className="-mx-2 w-full max-w-lg">
 
-					{/* <h6 className="text-center font-bold text-xs tracking-wider text-theme"> */}
-					{/* 	SPONSORED BY */}
-					{/* </h6> */}
+					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
+						SPONSORED BY
+					</h6>
 
 					{/* Sponsors */}
 					{/* <div className="h-4" /> */}
@@ -296,8 +296,10 @@ const Home = () => (
 					{/* */}
 					{/* NOTE: w-full is needed. */}
 					<div className="w-full">
-						<div className="px-6 py-4 w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-							Search 282 icons
+						<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+							<div className="px-6 py-4 w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+								Search 282 icons
+							</div>
 						</div>
 						<div className="h-8" />
 						<div className="px-6 py-4 w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
@@ -347,21 +349,21 @@ const Home = () => (
 
 					{/* RHS */}
 					<div className="w-8" />
-					<div className="-mt-4 pt-4 sticky top-0 right-0">
-						<div className="px-6 py-4 bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
-							Hello<br />
+						<div className="-mt-4 pt-4 sticky top-0 right-0">
+							<div className="px-6 py-4 bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+							</div>
 						</div>
-					</div>
 
 				</main>
 

@@ -4,3 +4,10 @@
 .bg-theme {
 	background-color: #0066ff;
 }
+
+.text-alt-theme {
+	color: #00a3ff;
+}
+.bg-alt-theme {
+	background-color: #00a3ff;
+}
