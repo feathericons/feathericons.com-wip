@@ -1,6 +1,7 @@
 import Head from "next/head"
 
 import "stylesheets/tailwind-css/tailwind.generated.css"
+import "stylesheets/tailwind-css/experimental-color-vars.css"
 
 // TODO: Add <link rel="icon" href="/favicon.ico" />.
 const App = ({ Component, pageProps }) => (
