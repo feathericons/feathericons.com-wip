@@ -90,7 +90,7 @@ const Home = () => (
 					{/* */}
 					{/* NOTE: Uses -mx-4 to offset borderRadius: 1rem. */}
 					<div className="h-8" />
-					<div className="-mx-8">
+					<div className="-mx-4">
 						<div className="space-x-3 flex flex-row">
 
 							{/* Figma */}
@@ -141,12 +141,12 @@ const Home = () => (
 				{/* NOTE: Uses -mx-2 to offset sponsors mx-2 */}
 				<div className="-mx-2 w-full max-w-lg">
 
-					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
-						SPONSORED BY
-					</h6>
+					{/* <h6 className="text-center font-bold text-xs tracking-wider text-theme"> */}
+					{/* 	SPONSORED BY */}
+					{/* </h6> */}
 
 					{/* Sponsors */}
-					<div className="h-4" />
+					{/* <div className="h-4" /> */}
 					<div className="flex flex-row justify-center flex-wrap">
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-44 h-16 rounded-full">
