@@ -1,15 +1,22 @@
 {
-  "name": "feathericons.dev",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.5.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+	"name": "feathericons.dev",
+	"scripts": {
+		"tailwind-build": "tailwind build -o src/stylesheets/tailwind/tailwind.generated.css",
+		"dev": "next dev",
+		"tailwind-dev": "NODE_ENV=production yarn tailwind-build",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"next": "latest",
+		"react": "latest",
+		"react-dom": "latest",
+		"use-immer": "latest1"
+	},
+	"devDependencies": {
+		"@tailwindcss/ui": "latest",
+		"babel-eslint": "latest",
+		"eslint": "latest",
+		"tailwindcss": "latest"
+	}
 }
