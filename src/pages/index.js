@@ -14,8 +14,8 @@ import {
 
 const APP_WIDE_MAX_WIDTH = 1280 + 64
 
-const HeaderFragment = () => (
-	<>
+const Header = () => (
+	<header className="flex flex-row justify-between">
 
 		{/* LHS */}
 		<div className="px-6 flex flex-row justify-center items-center w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH - 400 - 16 /* TODO */ }}>
@@ -300,11 +300,12 @@ const HeaderFragment = () => (
 			</div>
 		</div>
 
-	</>
+	</header>
 )
 
-const MainFragment = () => (
-	<>
+const Main = () => (
+	// NOTE: Uses items-start because of sticky top-0.
+	<main className="mt-24 flex flex-row items-start">
 
 		{/* LHS */}
 		{/* */}
@@ -396,31 +397,23 @@ const MainFragment = () => (
 			</div>
 		</div>
 
-	</>
+	</main>
 )
 
-const FooterFragment = () => (
-	"TODO"
+const Footer = () => (
+	<footer className="mt-8">
+		TODO
+	</footer>
 )
 
 const Home = () => (
-	<>
-		<header className="px-4 py-24 flex flex-row justify-center">
-			<div className="flex flex-row justify-between w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH }}>
-				<HeaderFragment />
-			</div>
-		</header>
-		<main className="px-4 py-24 flex flex-row justify-center">
-			<div className="flex flex-row justify-between w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH }}>
-				<MainFragment />
-			</div>
-		</main>
-		<footer className="px-4 py-24 flex flex-row justify-center">
-			<div className="flex flex-row justify-between w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH }}>
-				<FooterFragment />
-			</div>
-		</footer>
-	</>
+	<div className="px-4 pt-24 pb-8 flex flex-row justify-center">
+		<div className="w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH }}>
+			<Header />
+			<Main />
+			<Footer />
+		</div>
+	</div>
 )
 
 export default Home
