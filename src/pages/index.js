@@ -20,14 +20,14 @@ const Header = () => (
 	<header className="flex flex-row justify-between">
 
 		{/* LHS */}
-		<div className="px-6 flex flex-row !justify-center items-center w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
+		<div className="px-6 flex flex-row w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
 			<div>
 
 				{/* H1 */}
-				<h1 className="!text-center font-semibold text-5xl tracking-tight">
+				<h1 className="font-semibold text-5xl" style={{ letterSpacing: "-0.0125em" }}>
 					<span className="inline-flex flex-row items-baseline">
 						Feathericons{" "}
-						<Apply className="ml-2 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
+						<Apply className="ml-1 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
 							<FeatherSVG />
 						</Apply>
 					</span>
@@ -35,15 +35,8 @@ const Header = () => (
 
 				{/* H2 */}
 				<div className="h-2" />
-				<h2 className="!text-center text-xl text-blue-200">
-					{/* Free, MIT Open Source Icons By Cole Bemis */}
-					{/* <span className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
-					{/* 	<Apply className="mr-2 w-4 h-4 fill-current text-alt-theme !transform !scale-110 !origin-bottom-right"> */}
-					{/* 		<HeartSVG /> */}
-					{/* 	</Apply> */}
-					{/* 	Free, MIT Open Source Icons By Cole Bemis */}
-					{/* </span> */}
-					Free, MIT Open Source Icons By Cole Bemis
+				<h2 className="font-medium text-2xl text-theme">
+					Free, MIT open source icons by Cole Bemis
 				</h2>
 
 				{/* <a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
