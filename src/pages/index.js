@@ -21,7 +21,16 @@ const Header = () => (
 	<header className="flex flex-row justify-between">
 
 		<div className="p-4 absolute top-0 left-0">
-			hello
+			<p>
+				<span className="inline-flex flex-row items-center">
+					<Apply className="mr-2 w-5 h-5" style={{ color: "rgb(29, 161, 242)" }}>
+						<svg viewBox="0 0 24 24" fill="currentColor">
+							<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+						</svg>
+					</Apply>
+					Share on Twitter!
+				</span>
+			</p>
 		</div>
 
 		{/* LHS */}
@@ -266,63 +275,79 @@ const Header = () => (
 
 const Main = () => (
 	// NOTE: Uses items-start because of sticky top-0.
-	<main className="pt-16 flex flex-row items-start">
+	<main className="pt-24 flex flex-row items-start">
 
 		{/* LHS */}
-		{/* */}
-		{/* NOTE: w-full is needed. */}
-		<div className="w-full">
-			<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
-				<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
-					<div className="px-6 py-4 w-full bg-white shadow-hero-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
-							Search 282 icons
+		<div className="flex-1">
+			{false && (
+				<>
+					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+						<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
+							<div className="px-6 py-4 w-full bg-white shadow-hero-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
+								Search 282 icons
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div className="h-4" />
+					<div className="h-4" />
+				</>
+			)}
 			<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
-				<div className="px-6 py-4 w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
-					icon<br />
+				<div className="bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
+
+					{/* Search */}
+					<div className="sticky top-0 inset-x-0" style={{ top: "1rem" }}>
+						<div className="px-10 py-8 h-20 bg-white border-b border-gray-100" style={{ boxShadow: "0 0 0 1px var(--blue-300), 0 0 0 4px var(--blue-200)", borderRadius: "1rem" }}>
+							<div className="flex flex-row items-center h-full">
+								Search 282 icons
+							</div>
+						</div>
+					</div>
+
+					{/* Icons */}
+					<div className="px-6 py-4">
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+						icon<br />
+					</div>
+
 				</div>
 			</div>
 		</div>
