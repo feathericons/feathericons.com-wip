@@ -13,21 +13,21 @@ import {
 } from "react-feather"
 
 const APP_WIDE = 1280 + 64
-const SIDE_PANEL_WIDTH = 400
+const SIDE_PANEL_WIDTH = 384
 const MAIN_PANEL_WIDTH = APP_WIDE - SIDE_PANEL_WIDTH
 
 const Header = () => (
 	<header className="flex flex-row justify-between">
 
 		{/* LHS */}
-		<div className="px-6 flex flex-row justify-center items-center w-full" style={{ maxWidth: APP_WIDE - 400 - 16 /* TODO */ }}>
+		<div className="px-6 flex flex-row !justify-center items-center w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
 			<div>
 
 				{/* H1 */}
-				<h1 className="text-center font-medium text-4xl text-theme" /* style={{ fontFamily: "Poppins", letterSpacing: "-0.0125em" }} */>
-					<span className="inline-flex flex-row items-center">
+				<h1 className="!text-center font-semibold text-5xl tracking-tight">
+					<span className="inline-flex flex-row items-baseline">
 						Feathericons{" "}
-						<Apply className="ml-2 w-6 h-6 text-alt-theme !transform !scale-110 !origin-bottom-left" style={{ strokeWidth: 2.25 }}>
+						<Apply className="ml-2 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
 							<FeatherSVG />
 						</Apply>
 					</span>
@@ -35,7 +35,7 @@ const Header = () => (
 
 				{/* H2 */}
 				<div className="h-2" />
-				<h2 className="text-center text-xl text-blue-200">
+				<h2 className="!text-center text-xl text-blue-200">
 					{/* Free, MIT Open Source Icons By Cole Bemis */}
 					{/* <span className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
 					{/* 	<Apply className="mr-2 w-4 h-4 fill-current text-alt-theme !transform !scale-110 !origin-bottom-right"> */}
