@@ -8,7 +8,7 @@ class Document extends NextDocument {
 
 	render() {
 		return (
-			<Html className="bg-gray-50">
+			<Html className="bg-gray-100">
 				<Head />
 					<title>
 						Feathericons 2.0
