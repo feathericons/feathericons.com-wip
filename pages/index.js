@@ -12,7 +12,8 @@ import {
 	Info as InfoSVG,
 } from "react-feather"
 
-const tw = tw => `${tw * 4}rem`
+// // ??
+// const tw = tw => `${tw * 4}rem`
 
 // background-color: #21D4FD;
 // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
@@ -35,33 +36,30 @@ const Home = () => (
 		</div>
 
 		{/* App */}
-		<div className="px-4 py-16 flex flex-row justify-center">
+		<div className="px-4 py-20 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
 				{/* LHS */}
 				<div>
 
 					{/* H1 */}
-					{/* */}
-					{/* TODO: Propagate app stroke-width here. */}
-					<h1 className="font-semibold text-5xl tracking-tight text-theme" style={{ fontFamily: "Poppins" }}>
+					<h1 className="font-semibold text-5xl tracking-tight leading-none" style={{ fontSize: "!3.5rem", fontFamily: "Poppins" }}>
 						<span className="inline-flex flex-row items-center">
-							Feathericons
-							{/* {" "} */}
-							{/* <Apply className="ml-2 w-10 h-10" style={{ color: "#00a3ff" }}> */}
-							{/* 	<FeatherSVG /> */}
-							{/* </Apply> */}
+							Feathericons{" "}
+							<Apply className="ml-2 w-10 h-10 text-alt-theme">
+								<FeatherSVG />
+							</Apply>
 						</span>
 					</h1>
 
 					{/* H2 */}
 					<div className="h-2" />
-					<h2 className="font-medium text-xl text-theme">
+					<h2 className="font-medium text-2xl">
 						<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK">
-							<Apply className="mr-2 w-5 h-5 fill-current" style={{ strokeWidth: 2 }}>
+							<Apply className="mr-2 w-5 h-5 fill-current text-red-600">
 								<HeartSVG />
 							</Apply>
-							Simply beautiful MIT open source icons
+							MIT-Licensed UI Icons
 						</a>
 					</h2>
 
@@ -142,7 +140,7 @@ const Home = () => (
 				<div className="-mx-2 w-full max-w-lg">
 
 					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
-						SPONSORED BY
+						OUR SPONSORS
 					</h6>
 
 					{/* Sponsors */}
@@ -271,7 +269,7 @@ const Home = () => (
 
 					<div className="h-4" />
 					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
-						BECOME A SPONSOR{" "}
+						SPONSOR US{" "}
 						<span className="ml-1 relative">
 							<span className="mt-px absolute left-full inset-y-0 inline-flex flex-row items-baseline">
 								<Apply className="w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
@@ -287,7 +285,7 @@ const Home = () => (
 			</div>
 		</div>
 
-		<div className="-mt-16 px-4 py-16 flex flex-row justify-center">
+		<div className="px-4 pb-16 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
 				<main className="flex flex-row items-start w-full">
@@ -297,71 +295,77 @@ const Home = () => (
 					{/* NOTE: w-full is needed. */}
 					<div className="w-full">
 						<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
-							<div className="px-6 py-4 w-full h-20 bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-								Search 282 icons
+							<div className="shadow" style={{ borderRadius: "1rem" }}>
+								<div className="px-6 py-4 w-full h-20 bg-white shadow-lg" style={{ borderRadius: "1rem" }}>
+									Search 282 icons
+								</div>
 							</div>
 						</div>
 						<div className="h-8" />
-						<div className="px-6 py-4 w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
-							icon<br />
+						<div className="shadow" style={{ borderRadius: "1rem" }}>
+							<div className="px-6 py-4 w-full h-full bg-white shadow-lg" style={{ borderRadius: "1rem" }}>
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+							</div>
 						</div>
 					</div>
 
 					{/* RHS */}
 					<div className="w-8" />
 						<div className="-mt-4 pt-4 sticky top-0 right-0">
-							<div className="px-6 py-4 bg-white shadow-hero-lg" style={{ width: 560, borderRadius: "1rem" }}>
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
-								Hello<br />
+							<div className="shadow" style={{ borderRadius: "1rem" }}>
+								<div className="px-6 py-4 bg-white shadow-lg" style={{ width: 560, borderRadius: "1rem" }}>
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+									Hello<br />
+								</div>
 							</div>
 						</div>
 
