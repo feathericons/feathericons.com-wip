@@ -20,11 +20,11 @@ const Header = () => (
 	<header className="flex flex-row justify-between">
 
 		{/* LHS */}
-		<div className="px-6 flex flex-row w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
+		<div className="px-6 flex flex-row justify-center w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
 			<div>
 
 				{/* H1 */}
-				<h1 className="font-semibold text-5xl" style={{ letterSpacing: "-0.0125em" }}>
+				<h1 className="text-center font-semibold text-5xl" style={{ letterSpacing: "-0.0125em" }}>
 					<span className="inline-flex flex-row items-baseline">
 						Feathericons{" "}
 						<Apply className="ml-1 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
@@ -34,36 +34,15 @@ const Header = () => (
 				</h1>
 
 				{/* H2 */}
-				<div className="h-2" />
-				<h2 className="font-medium text-2xl text-theme">
-					Free, MIT open source icons by Cole Bemis
+				<div className="h-3" />
+				<h2 className="text-center text-2xl text-gray-800">
+					<span className="inline-flex flex-row items-baseline">
+						<Apply className="mr-2 w-5 h-5 text-red-500 fill-current" style={{ strokeWidth: 2.25 }}>
+							<HeartSVG />
+						</Apply>
+						MIT open source icons by Cole Bemis
+					</span>
 				</h2>
-
-				{/* <a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
-				{/* 	<Apply className="mr-2 w-4 h-4 fill-current text-alt-theme !transform !scale-110 !origin-bottom-right"> */}
-				{/* 		<HeartSVG /> */}
-				{/* 	</Apply> */}
-				{/* 	Free */}
-				{/* </a>,{" "} */}
-
-				{/* H3 */}
-				{/* <div className="h-2" /> */}
-				{/* <h3 className="font-medium text-blue-600"> */}
-				{/* 	Icons by{" "} */}
-				{/* 	<a className="inline-flex flex-row items-center" href="https://twitter.com/colebemis"> */}
-				{/* 		@colebemis.{" "} */}
-				{/* 		<Apply className="ml-1 w-4 h-4 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}> */}
-				{/* 			<ExternalLinkSVG /> */}
-				{/* 		</Apply> */}
-				{/* 	</a>{" "}&nbsp; */}
-				{/* 	Website by{" "} */}
-				{/* 	<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
-				{/* 		@username_ZAYDEK{" "} */}
-				{/* 		<Apply className="ml-1 w-4 h-4 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}> */}
-				{/* 			<ExternalLinkSVG /> */}
-				{/* 		</Apply> */}
-				{/* 	</a> */}
-				{/* </h3> */}
 
 				{/* H3 */}
 				{/* <div className="h-8" /> */}
