@@ -27,7 +27,7 @@ const Header = () => (
 				<h1 className="text-center font-semibold text-5xl" style={{ letterSpacing: "-0.0125em" }}>
 					<span className="inline-flex flex-row items-baseline">
 						Feathericons{" "}
-						<Apply className="ml-1 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
+						<Apply className="ml-2 w-10 h-10 text-theme" style={{ strokeWidth: 2.25 }}>
 							<FeatherSVG />
 						</Apply>
 					</span>
@@ -35,7 +35,7 @@ const Header = () => (
 
 				{/* H2 */}
 				<div className="h-3" />
-				<h2 className="text-center text-2xl text-gray-800">
+				<h2 className="text-center text-2xl">
 					<span className="inline-flex flex-row items-baseline">
 						<Apply className="mr-2 w-5 h-5 text-red-500 fill-current" style={{ strokeWidth: 2.25 }}>
 							<HeartSVG />
@@ -43,27 +43,6 @@ const Header = () => (
 						MIT open source icons by Cole Bemis
 					</span>
 				</h2>
-
-				{/* H3 */}
-				{/* <div className="h-8" /> */}
-				{/* <h3 className="text-xl gray-800"> */}
-				{/* 	Icons by{" "} */}
-				{/* 	<a className="inline-flex flex-row items-center texttext-theme600" href="https://twitter.com/colebemis"> */}
-				{/* 		@colebemis{" "} */}
-				{/* 		<Apply className="ml-1 w-4 h-4" style={{ strokeWidth: 3 }}> */}
-				{/* 			<ExternalLinkSVG /> */}
-				{/* 		</Apply> */}
-				{/* 	</a> */}
-				{/* </h3> */}
-				{/* <h3 className="text-xl gray-800"> */}
-				{/* 	Website by{" "} */}
-				{/* 	<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
-				{/* 		@username_ZAYDEK{" "} */}
-				{/* 		<Apply className="ml-1 w-4 h-4" style={{ strokeWidth: 3 }}> */}
-				{/* 			<ExternalLinkSVG /> */}
-				{/* 		</Apply> */}
-				{/* 	</a> */}
-				{/* </h3> */}
 
 				{/* CTA */}
 				<div className="h-8" />
@@ -123,27 +102,26 @@ const Header = () => (
 		</div>
 
 		{/* RHS */}
-		{/* */}
-		{/* NOTE: Uses -mx-2 to offset sponsors mx-2 */}
-		<div className="relative" style={{ width: 400 }}>
-			<div className="absolute inset-y-0 right-0 flex flex-row items-center" style={{ marginLeft: -128 /* TODO */ }}>
-				<div className="-mx-2 w-full max-w-lg">
+		<div className="relative" style={{ width: SIDE_PANEL_WIDTH }}>
+			{/* NOTE: Uses -mx-2 to offset mx-2. */}
+			<div className="-mx-2 absolute inset-y-0 right-0 flex flex-row items-center" style={{ marginLeft: -128 }}>
+				<div className="w-full max-w-lg">
 
-					<h6 className="text-center font-bold !text-xs tracking-wider text-gray-800" style={{ fontSize: "0.6875rem" }}>
+					{/* NOTE: Uses -mb-1 to offset mb-1. */}
+					<h6 className="text-center font-bold tracking-wider text-blue-600" style={{ fontSize: "0.6875rem" }}>
 						SPONSORED BY
 					</h6>
 
 					{/* Sponsors */}
-					{/* <div className="h-4" /> */}
 					<div className="flex flex-row justify-center flex-wrap">
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									QA Wolf
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										browser testing
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										open source browser driver
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -155,11 +133,11 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									Hot Tips Ebook
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
 										designer ebook
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
@@ -172,12 +150,12 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									SkillSyncer
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										resume optimizer
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										resumé software
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -189,12 +167,12 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									codetisans_
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										development agency
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										developer studio
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -206,12 +184,12 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									Streamline
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										graphics and icons
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										icons and graphics
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -223,12 +201,12 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									SPELLL
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										figma plugin
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										Figma spellchecker plugin
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -240,12 +218,12 @@ const Header = () => (
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
 							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-600">
+								<p className="font-bold text-2xl text-gray-800">
 									codex
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="!text-xs text-gray-600" style={{ fontSize: "0.6875rem" }}>
-										markdown editor
+									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
+										open source markdown editor
 										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
 											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
@@ -258,7 +236,7 @@ const Header = () => (
 					</div>
 
 					<div className="h-4" />
-					<h6 className="text-center font-bold !text-xs tracking-wider text-gray-800" style={{ fontSize: "0.6875rem" }}>
+					<h6 className="text-center font-bold tracking-wider text-blue-600" style={{ fontSize: "0.6875rem" }}>
 						SPONSOR US{" "}
 						<span className="ml-1 relative">
 							<span className="absolute left-full inset-y-0 inline-flex flex-row items-baseline">
