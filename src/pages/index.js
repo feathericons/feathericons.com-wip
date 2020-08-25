@@ -12,33 +12,22 @@ import {
 	Info as InfoSVG,
 } from "react-feather"
 
-// // ??
-// const tw = tw => `${tw * 4}rem`
-
-// ;(() => {
-// 	setTimeout(() => {
-// 		document.body.classList.add("bg-gray-900")
-// 	}, 1e3)
-// })()
-
 // background-color: #21D4FD;
 // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 const Home = () => (
-	// <div className="bg-gray-900" style={{ backgroundColor: "!#f6f8fa" }}>
+	// {/* Background */}
+	// <div className="absolute inset-0" style={{ zIndex: -1 }}>
+	// 	<div className="relative" style={{ width: 1440, height: 675 }}>
+	// 		<img className="opacity-50" src="dark-mode-gradient.png" />
+	// 		<div className="absolute bottom-0 inset-x-0">
+	// 			<div className="h-96 bg-gradient-to-b from-transparent to-gray-900" />
+	// 		</div>
+	// 	</div>
+	// </div>
+
 	<>
 
-		{/* Background */}
-		<div className="absolute inset-0" style={{ zIndex: -1 }}>
-			<div className="relative" style={{ width: 1440, height: 675 }}>
-				<img className="opacity-50" src="dark-mode-gradient.png" />
-				<div className="absolute bottom-0 inset-x-0">
-					<div className="h-96 bg-gradient-to-b from-transparent to-gray-900" />
-				</div>
-			</div>
-		</div>
-
-		{/* App */}
-		<div className="px-4 py-24 flex flex-row justify-center">
+		<header className="px-4 py-24 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full !max-w-screen-xl" style={{ maxWidth: 1344 /* TODO */ }}>
 
 				{/* LHS */}
@@ -318,9 +307,9 @@ const Home = () => (
 				</div>
 
 			</div>
-		</div>
+		</header>
 
-		<div className="px-4 pb-16 flex flex-row justify-center">
+		<main className="px-4 pb-16 flex flex-row justify-center">
 			<div className="flex flex-row justify-between items-start w-full !max-w-screen-xl" style={{ maxWidth: 1344 /* TODO */ }}>
 
 				{/* <main className="flex flex-row items-start w-full"> */}
@@ -330,15 +319,15 @@ const Home = () => (
 				{/* NOTE: w-full is needed. */}
 				<div className="w-full">
 					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
-						<div className="shadow" style={{ borderRadius: "1rem" }}>
-							<div className="px-6 py-4 w-full !h-20 bg-gray-800 border border-gray-700 shadow-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
+						<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
+							<div className="px-6 py-4 w-full !h-20 bg-white shadow-hero-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
 									Search 282 icons
 							</div>
 						</div>
 					</div>
 					<div className="h-4" />
-					<div className="shadow" style={{ borderRadius: "1rem" }}>
-						<div className="px-6 py-4 w-full h-full bg-gray-800 border border-gray-700 shadow-lg" style={{ borderRadius: "1rem" }}>
+					<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
+						<div className="px-6 py-4 w-full h-full bg-white shadow-hero-lg" style={{ borderRadius: "1rem" }}>
 							icon<br />
 							icon<br />
 							icon<br />
@@ -389,8 +378,8 @@ const Home = () => (
 					<div className="w-4" />
 				</Apply>
 				<div className="-mt-4 pt-4 sticky top-0 right-0">
-					<div className="shadow" style={{ borderRadius: "1rem" }}>
-						<div className="px-6 py-4 bg-gray-800 border border-gray-700 shadow-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
+					<div className="shadow-sm" style={{ borderRadius: "1rem" }}>
+						<div className="px-6 py-4 bg-white shadow-hero-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
 							Hello<br />
 							Hello<br />
 							Hello<br />
@@ -418,10 +407,13 @@ const Home = () => (
 				{/* </main> */}
 
 			</div>
-		</div>
+		</main>
+
+		<footer>
+			{/* TODO */}
+		</footer>
 
 	</>
-	// </div>
 )
 
 export default Home
