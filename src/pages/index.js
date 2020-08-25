@@ -12,13 +12,15 @@ import {
 	Info as InfoSVG,
 } from "react-feather"
 
-const APP_WIDE_MAX_WIDTH = 1280 + 64
+const APP_WIDE = 1280 + 64
+const SIDE_PANEL_WIDTH = 400
+const MAIN_PANEL_WIDTH = APP_WIDE - SIDE_PANEL_WIDTH
 
 const Header = () => (
 	<header className="flex flex-row justify-between">
 
 		{/* LHS */}
-		<div className="px-6 flex flex-row justify-center items-center w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH - 400 - 16 /* TODO */ }}>
+		<div className="px-6 flex flex-row justify-center items-center w-full" style={{ maxWidth: APP_WIDE - 400 - 16 /* TODO */ }}>
 			<div>
 
 				{/* H1 */}
@@ -401,29 +403,33 @@ const Main = () => (
 )
 
 const Footer = () => (
-	<footer className="mt-8">
+	<footer className="mt-8 flex flex-row justify-center" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
 
-		<Apply className="text-center">
-			<p>
-				<span className="inline-flex flex-row items-center h-full">
-					Feathericons created by{" "}
-					<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
-					@colebemis.
-				</span>{" "}
-				<span className="inline-flex flex-row items-center h-full">
-					feathericons.com created by{" "}
-					<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
-					@username_ZAYDEK.
+		<p className="text-center">
+			<span className="inline-flex flex-row items-center h-full">
+				Feathericons created by{" "}
+				<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
+				<span className="text-blue-600">
+					@colebemis
 				</span>
-			</p>
-		</Apply>
+				.
+			</span>{" "}
+			<span className="inline-flex flex-row items-center h-full">
+				feathericons.com created by{" "}
+				<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
+				<span className="text-blue-600">
+					@username_ZAYDEK
+				</span>
+				.
+			</span>
+		</p>
 
 	</footer>
 )
 
-const Home = () => (
-	<div className="px-4 pt-24 pb-8 flex flex-row justify-center">
-		<div className="w-full" style={{ maxWidth: APP_WIDE_MAX_WIDTH }}>
+const Page = () => (
+	<div className="mx-4 mt-24 mb-8 flex flex-row justify-center">
+		<div className="w-full" style={{ maxWidth: APP_WIDE }}>
 			<Header />
 			<Main />
 			<Footer />
@@ -431,4 +437,4 @@ const Home = () => (
 	</div>
 )
 
-export default Home
+export default Page
