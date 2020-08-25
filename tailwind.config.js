@@ -13,6 +13,7 @@ module.exports = {
 		removeDeprecatedGapUtilities: true,
 	},
 	purge: [
+		"./pages/**/*.js",
 		"./src/**/*.js",
 	],
 	theme: {

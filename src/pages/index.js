@@ -15,25 +15,27 @@ import {
 // // ??
 // const tw = tw => `${tw * 4}rem`
 
-;(() => {
-	document.body.classList.add("bg-gray-900")
-})()
+// ;(() => {
+// 	setTimeout(() => {
+// 		document.body.classList.add("bg-gray-900")
+// 	}, 1e3)
+// })()
 
 // background-color: #21D4FD;
 // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 const Home = () => (
-	// <div className="bg-black" style={{ backgroundColor: "!#f6f8fa" }}>
+	// <div className="bg-gray-900" style={{ backgroundColor: "!#f6f8fa" }}>
 	<>
 
 		{/* Background */}
-		{/* <div className="absolute inset-0" style={{ zIndex: -1 }}> */}
-		{/* 	<div className="relative" style={{ width: 1440, height: 675 }}> */}
-		{/* 		<img className="opacity-75" src="dark-mode-gradient.png" /> */}
-		{/* 		<div className="absolute bottom-0 inset-x-0"> */}
-		{/* 			<div class="h-96 bg-gradient-to-b from-transparent to-gray-900" /> */}
-		{/* 		</div> */}
-		{/* 	</div> */}
-		{/* </div> */}
+		<div className="absolute inset-0" style={{ zIndex: -1 }}>
+			<div className="relative" style={{ width: 1440, height: 675 }}>
+				<img className="opacity-50" src="dark-mode-gradient.png" />
+				<div className="absolute bottom-0 inset-x-0">
+					<div className="h-96 bg-gradient-to-b from-transparent to-gray-900" />
+				</div>
+			</div>
+		</div>
 
 		{/* App */}
 		<div className="px-4 py-24 flex flex-row justify-center">
@@ -44,10 +46,10 @@ const Home = () => (
 					<div>
 
 						{/* H1 */}
-						<h1 className="text-center font-medium text-5xl text-theme" style={{ fontFamily: "Poppins", letterSpacing: "-0.0125em" }}>
+						<h1 className="text-center font-medium text-4xl text-theme" /* style={{ fontFamily: "Poppins", letterSpacing: "-0.0125em" }} */>
 							<span className="inline-flex flex-row items-center">
 								Feathericons{" "}
-								<Apply className="ml-2 w-8 h-8 text-alt-theme transform scale-110 origin-bottom-left">
+								<Apply className="ml-2 w-6 h-6 text-alt-theme !transform !scale-110 !origin-bottom-left" style={{ strokeWidth: 2.25 }}>
 									<FeatherSVG />
 								</Apply>
 							</span>
@@ -55,7 +57,7 @@ const Home = () => (
 
 						{/* H2 */}
 						<div className="h-2" />
-						<h2 className="text-center text-xl text-theme">
+						<h2 className="text-center text-xl text-blue-200">
 							Free, MIT Open Source Icons By Cole Bemis
 						</h2>
 
@@ -329,14 +331,14 @@ const Home = () => (
 				<div className="w-full">
 					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
 						<div className="shadow" style={{ borderRadius: "1rem" }}>
-							<div className="px-6 py-4 w-full !h-20 bg-gray-800 shadow-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
+							<div className="px-6 py-4 w-full !h-20 bg-gray-800 border border-gray-700 shadow-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
 									Search 282 icons
 							</div>
 						</div>
 					</div>
 					<div className="h-4" />
 					<div className="shadow" style={{ borderRadius: "1rem" }}>
-						<div className="px-6 py-4 w-full h-full bg-gray-800 shadow-lg" style={{ borderRadius: "1rem" }}>
+						<div className="px-6 py-4 w-full h-full bg-gray-800 border border-gray-700 shadow-lg" style={{ borderRadius: "1rem" }}>
 							icon<br />
 							icon<br />
 							icon<br />
@@ -388,7 +390,7 @@ const Home = () => (
 				</Apply>
 				<div className="-mt-4 pt-4 sticky top-0 right-0">
 					<div className="shadow" style={{ borderRadius: "1rem" }}>
-						<div className="px-6 py-4 bg-gray-800 shadow-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
+						<div className="px-6 py-4 bg-gray-800 border border-gray-700 shadow-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
 							Hello<br />
 							Hello<br />
 							Hello<br />

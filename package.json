@@ -2,8 +2,8 @@
 	"name": "feathericons.dev",
 	"scripts": {
 		"tailwind-dev": "tailwind build -o src/stylesheets/tailwind-css/tailwind.generated.css",
+		"tailwind-build": "NODE_ENV=production yarn tailwind-dev",
 		"dev": "next dev",
-		"tailwind-build": "NODE_ENV=production yarn tailwind-build",
 		"build": "next build",
 		"start": "next start"
 	},
