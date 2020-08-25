@@ -31,15 +31,15 @@ const Home = () => (
 		</div>
 
 		{/* App */}
-		<div className="px-4 pt-24 pb-16 flex flex-row justify-center">
+		<div className="px-4 py-24 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full !max-w-screen-xl" style={{ maxWidth: 1344 /* TODO */ }}>
 
 				{/* LHS */}
-				<div className="px-3 flex flex-row justify-center items-center w-full" style={{ minWidth: 944 /* TODO */ }}>
+				<div className="px-6 flex flex-row !justify-center items-center w-full" style={{ maxWidth: 1344 - 400 - 16 /* TODO */ }}>
 					<div>
 
 						{/* H1 */}
-						<h1 className="text-center font-medium text-5xl leading-none text-theme" style={{ fontFamily: "Poppins", letterSpacing: "-0.0125em" }}>
+						<h1 className="font-medium text-5xl leading-none text-blue-700" style={{ fontFamily: "Poppins", letterSpacing: "-0.0125em" }}>
 							<span className="inline-flex flex-row items-center">
 								Feathericons{" "}
 								{/* <Apply className="ml-2 w-10 h-10 text-alt-theme"> */}
@@ -50,7 +50,7 @@ const Home = () => (
 
 						{/* H2 */}
 						<div className="h-2" />
-						<h2 className="text-center font-medium text-xl text-theme">
+						<h2 className="!font-medium text-xl text-blue-700">
 							<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK">
 								{/* <Apply className="mr-2 w-5 h-5 fill-current text-red-600"> */}
 								{/* 	<HeartSVG /> */}
@@ -81,51 +81,47 @@ const Home = () => (
 						{/* </h3> */}
 
 						{/* CTA */}
-						{/* */}
-						{/* NOTE: Uses -mx-4 to offset borderRadius: 1rem. */}
 						<div className="h-8" />
-						<div className="-mx-4">
-							<div className="space-x-3 flex flex-row">
+						<div className="-mx-6 space-x-3 flex flex-row">
 
-								{/* Figma */}
-								<Reset className="block">
-									<a className="h-14 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
-										<div className="px-4 flex flex-row justify-center items-center h-full">
-											<Apply className="mr-2 w-4 h-4 text-gray-800" style={{ strokeWidth: 2.25 }}>
-												<FigmaSVG />
-											</Apply>
-											<p className="text-lg text-gray-800">
-												<span className="inline-flex flex-row items-center">
-													Open in Figma
-													<Apply className="ml-1.5 w-4 h-4 text-blue-500" style={{ strokeWidth: 2.25 }}>
-														<ExternalLinkSVG />
-													</Apply>
-												</span>
-											</p>
-										</div>
-									</a>
-								</Reset>
+							{/* Figma */}
+							<Reset className="block">
+								<a className="h-14 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
+									<div className="px-4 flex flex-row justify-center items-center h-full">
+										<Apply className="mr-2 w-4 h-4 text-blue-700" style={{ strokeWidth: 2.25 }}>
+											<FigmaSVG />
+										</Apply>
+										<p className="text-lg text-blue-700">
+											<span className="inline-flex flex-row items-center">
+												Open in Figma
+												<Apply className="ml-1.5 w-4 h-4 text-blue-700 opacity-75" style={{ strokeWidth: 2.25 }}>
+													<ExternalLinkSVG />
+												</Apply>
+											</span>
+										</p>
+									</div>
+								</a>
+							</Reset>
 
-								{/* GitHub */}
-								<Reset className="block">
-									<a className="h-14 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
-										<div className="px-4 flex flex-row justify-center items-center h-full">
-											<Apply className="mr-2 w-4 h-4 text-gray-800" style={{ strokeWidth: 2.25 }}>
-												<GitHubSVG />
-											</Apply>
-											<p className="text-lg text-gray-800">
-												<span className="inline-flex flex-row items-center">
-													Open in GitHub
-													<Apply className="ml-1.5 w-4 h-4 text-blue-500" style={{ strokeWidth: 2.25 }}>
-														<ExternalLinkSVG />
-													</Apply>
-												</span>
-											</p>
-										</div>
-									</a>
-								</Reset>
+							{/* GitHub */}
+							<Reset className="block">
+								<a className="h-14 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
+									<div className="px-4 flex flex-row justify-center items-center h-full">
+										<Apply className="mr-2 w-4 h-4 text-blue-700" style={{ strokeWidth: 2.25 }}>
+											<GitHubSVG />
+										</Apply>
+										<p className="text-lg text-blue-700">
+											<span className="inline-flex flex-row items-center">
+												Open in GitHub
+												<Apply className="ml-1.5 w-4 h-4 text-blue-700 opacity-75" style={{ strokeWidth: 2.25 }}>
+													<ExternalLinkSVG />
+												</Apply>
+											</span>
+										</p>
+									</div>
+								</a>
+							</Reset>
 
-							</div>
 						</div>
 
 					</div>
@@ -134,149 +130,153 @@ const Home = () => (
 				{/* RHS */}
 				{/* */}
 				{/* NOTE: Uses -mx-2 to offset sponsors mx-2 */}
-				<div className="-mx-2 w-full max-w-lg">
+				<div className="relative" style={{ width: 400 }}>
+					<div className="absolute inset-y-0 right-0 flex flex-row items-center" style={{ marginLeft: -128 /* TODO */ }}>
+						<div className="-mx-2 w-full max-w-lg">
 
-					<h6 className="text-center font-bold text-xs tracking-wider">
-						OUR SPONSORS
-					</h6>
+							<h6 className="text-center font-bold text-xs tracking-wider">
+								OUR SPONSORS
+							</h6>
 
-					{/* Sponsors */}
-					{/* <div className="h-4" /> */}
-					<div className="flex flex-row justify-center flex-wrap">
-						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-100">
-									QA Wolf
-								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs">
-										browser testing
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
-							</div>
-						</Apply>
-						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-100">
-									Hot Tips Ebook
-								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs">
-										designer ebook
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
-							</div>
-						</Apply>
-						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-100">
-									SkillSyncer
-								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs">
-										resume optimizer
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
-							</div>
-						</Apply>
-						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-100">
-									codetisans_
-								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs">
-										development agency
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
-							</div>
-						</Apply>
-						{/* <Apply className="relative flex flex-row justify-center items-center"> */}
-						{/* 	<div className="mx-2 my-1 w-36 h-16 rounded-full"> */}
-						{/* 		<p className="font-bold text-2xl text-gray-100"> */}
-						{/* 			Streamline */}
-						{/* 		</p> */}
-						{/* 		<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
-						{/* 			<p className="font-medium text-xs"> */}
-						{/* 				graphics and icons */}
-						{/* 				<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
-						{/* 					<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}> */}
-						{/* 						<ExternalLinkSVG /> */}
-						{/* 					</Apply> */}
-						{/* 				</span> */}
-						{/* 			</p> */}
-						{/* 		</div> */}
-						{/* 	</div> */}
-						{/* </Apply> */}
-						{/* <Apply className="relative flex flex-row justify-center items-center"> */}
-						{/* 	<div className="mx-2 my-1 w-44 h-16 rounded-full"> */}
-						{/* 		<p className="font-bold text-2xl text-gray-100"> */}
-						{/* 			SPELLL */}
-						{/* 		</p> */}
-						{/* 		<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
-						{/* 			<p className="font-medium text-xs"> */}
-						{/* 				figma plugin */}
-						{/* 				<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
-						{/* 					<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}> */}
-						{/* 						<ExternalLinkSVG /> */}
-						{/* 					</Apply> */}
-						{/* 				</span> */}
-						{/* 			</p> */}
-						{/* 		</div> */}
-						{/* 	</div> */}
-						{/* </Apply> */}
-						{/* <Apply className="relative flex flex-row justify-center items-center"> */}
-						{/* 	<div className="mx-2 my-1 w-44 h-16 rounded-full"> */}
-						{/* 		<p className="font-bold text-2xl text-gray-100"> */}
-						{/* 			codex */}
-						{/* 		</p> */}
-						{/* 		<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
-						{/* 			<p className="font-medium text-xs"> */}
-						{/* 				markdown editor */}
-						{/* 				<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
-						{/* 					<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}> */}
-						{/* 						<ExternalLinkSVG /> */}
-						{/* 					</Apply> */}
-						{/* 				</span> */}
-						{/* 			</p> */}
-						{/* 		</div> */}
-						{/* 	</div> */}
-						{/* </Apply> */}
-					</div>
-
-					<div className="h-4" />
-					<h6 className="text-center font-bold text-xs tracking-wider">
-						SPONSOR US{" "}
-						<span className="ml-1 relative">
-							<span className="mt-px absolute left-full inset-y-0 inline-flex flex-row items-baseline">
-								<Apply className="w-3 h-3" style={{ strokeWidth: 3 }}>
-									<ExternalLinkSVG />
+							{/* Sponsors */}
+							{/* <div className="h-4" /> */}
+							<div className="flex flex-row justify-center flex-wrap">
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-44 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											QA Wolf
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												browser testing
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
 								</Apply>
-							</span>
-						</span>
-					</h6>
-					{/* </Apply> */}
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-44 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											Hot Tips Ebook
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												designer ebook
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-36 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											SkillSyncer
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												resume optimizer
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-36 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											codetisans_
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												development agency
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-36 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											Streamline
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												graphics and icons
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-44 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											SPELLL
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												figma plugin
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+								<Apply className="relative flex flex-row justify-center items-center">
+									<div className="mx-2 my-1 w-44 h-16 rounded-full">
+										<p className="font-bold text-2xl text-gray-100">
+											codex
+										</p>
+										<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
+											<p className="font-medium text-xs">
+												markdown editor
+												<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+													<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
+														<ExternalLinkSVG />
+													</Apply>
+												</span>
+											</p>
+										</div>
+									</div>
+								</Apply>
+							</div>
 
+							<div className="h-4" />
+							<h6 className="text-center font-bold text-xs tracking-wider">
+								SPONSOR US{" "}
+								<span className="ml-1 relative">
+									<span className="mt-px absolute left-full inset-y-0 inline-flex flex-row items-baseline">
+										<Apply className="w-3 h-3" style={{ strokeWidth: 3 }}>
+											<ExternalLinkSVG />
+										</Apply>
+									</span>
+								</span>
+							</h6>
+							{/* </Apply> */}
+
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -287,72 +287,72 @@ const Home = () => (
 
 				{/* <main className="flex flex-row items-start w-full"> */}
 
-					{/* LHS */}
-					{/* */}
-					{/* NOTE: w-full is needed. */}
-					<div className="w-full">
-						<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
-							<div className="shadow" style={{ borderRadius: "1rem" }}>
-								<div className="px-6 py-4 w-full !h-20 bg-white shadow-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
+				{/* LHS */}
+				{/* */}
+				{/* NOTE: w-full is needed. */}
+				<div className="w-full">
+					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+						<div className="shadow" style={{ borderRadius: "1rem" }}>
+							<div className="px-6 py-4 w-full !h-20 bg-white shadow-lg" style={{ height: "4.5rem" /* TODO */, borderRadius: "1rem" }}>
 									Search 282 icons
-								</div>
-							</div>
-						</div>
-						<div className="h-4" />
-						<div className="shadow" style={{ borderRadius: "1rem" }}>
-							<div className="px-6 py-4 w-full h-full bg-white shadow-lg" style={{ borderRadius: "1rem" }}>
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
-								icon<br />
 							</div>
 						</div>
 					</div>
+					<div className="h-4" />
+					<div className="shadow" style={{ borderRadius: "1rem" }}>
+						<div className="px-6 py-4 w-full h-full bg-white shadow-lg" style={{ borderRadius: "1rem" }}>
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+								icon<br />
+						</div>
+					</div>
+				</div>
 
-					{/* RHS */}
-					<Apply className="flex-shrink-0">
-						<div className="w-4" />
-					</Apply>
-					<div className="-mt-4 pt-4 sticky top-0 right-0">
-						<div className="shadow" style={{ borderRadius: "1rem" }}>
-							<div className="px-6 py-4 bg-white shadow-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
+				{/* RHS */}
+				<Apply className="flex-shrink-0">
+					<div className="w-4" />
+				</Apply>
+				<div className="-mt-4 pt-4 sticky top-0 right-0">
+					<div className="shadow" style={{ borderRadius: "1rem" }}>
+						<div className="px-6 py-4 bg-white shadow-lg" style={{ width: 400 /* TODO */, borderRadius: "1rem" }}>
 								Hello<br />
 								Hello<br />
 								Hello<br />
@@ -373,9 +373,9 @@ const Home = () => (
 								Hello<br />
 								Hello<br />
 								Hello<br />
-							</div>
 						</div>
 					</div>
+				</div>
 
 				{/* </main> */}
 
