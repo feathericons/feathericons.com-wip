@@ -18,117 +18,115 @@ import {
 // background-color: #21D4FD;
 // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 const Home = () => (
-	<>
+	<div className="bg-gray-50">
 
 		{/* Background */}
-		<div className="absolute inset-0" style={{ zIndex: -1 }}>
-			<div className="relative" style={{ width: 1440, height: 675 }}>
-
-				{/* Background */}
-				<img src="light-mode-gradient.png" />
-
-				{/* Background fade-out */}
-				<div className="absolute bottom-0 inset-x-0">
-					<div class="h-64 bg-gradient-to-b from-transparent to-white" />
-				</div>
-
-			</div>
-		</div>
+		{/* <div className="absolute inset-0" style={{ zIndex: -1 }}> */}
+		{/* 	<div className="relative" style={{ width: 1440, height: 675 }}> */}
+		{/* 		<img src="light-mode-gradient-blue.png" /> */}
+		{/* 		<div className="absolute bottom-0 inset-x-0"> */}
+		{/* 			<div class="h-64 bg-gradient-to-b from-transparent to-gray-100" /> */}
+		{/* 		</div> */}
+		{/* 	</div> */}
+		{/* </div> */}
 
 		{/* App */}
-		<div className="px-4 py-20 flex flex-row justify-center">
+		<div className="px-4 py-16 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
 				{/* LHS */}
-				<div>
+				<div className="flex flex-row items-center w-full" style={{ maxWidth: 698 /* TODO */ }}>
+					<div>
 
-					{/* H1 */}
-					<h1 className="font-semibold text-5xl tracking-tight leading-none" style={{ fontSize: "!3.5rem", fontFamily: "Poppins" }}>
-						<span className="inline-flex flex-row items-center">
-							Feathericons{" "}
-							<Apply className="ml-2 w-10 h-10 text-alt-theme">
-								<FeatherSVG />
-							</Apply>
-						</span>
-					</h1>
+						{/* H1 */}
+						<h1 className="font-semibold text-4xl tracking-tight leading-none !text-white" style={{ fontSize: "3.25rem", fontFamily: "Poppins" }}>
+							<span className="inline-flex flex-row items-center">
+								Feathericons{" "}
+								{/* TODO: Add absolute here */}
+								<Apply className="ml-2 w-10 h-10 text-alt-theme">
+									<FeatherSVG />
+								</Apply>
+							</span>
+						</h1>
 
-					{/* H2 */}
-					<div className="h-2" />
-					<h2 className="font-medium text-2xl">
-						<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK">
-							<Apply className="mr-2 w-5 h-5 fill-current text-red-600">
-								<HeartSVG />
-							</Apply>
-							MIT-Licensed UI Icons
-						</a>
-					</h2>
+						{/* H2 */}
+						{/* <div className="h-2" /> */}
+						{/* <h2 className="font-medium text-2xl !text-white"> */}
+						{/* 	<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
+						{/* 		<Apply className="mr-2 w-5 h-5 fill-current text-red-600"> */}
+						{/* 			<HeartSVG /> */}
+						{/* 		</Apply> */}
+						{/* 		MIT Open Source Icons */}
+						{/* 	</a> */}
+						{/* </h2> */}
 
-					{/* H3 */}
-					{/* <div className="h-8" /> */}
-					{/* <h3 className="text-xl gray-800"> */}
-					{/* 	Icons by{" "} */}
-					{/* 	<a className="inline-flex flex-row items-center texttext-theme600" href="https://twitter.com/colebemis"> */}
-					{/* 		@colebemis{" "} */}
-					{/* 		<Apply className="ml-1 w-4 h-4 text-theme" style={{ strokeWidth: 3 }}> */}
-					{/* 			<ExternalLinkSVG /> */}
-					{/* 		</Apply> */}
-					{/* 	</a> */}
-					{/* </h3> */}
-					{/* <h3 className="text-xl gray-800"> */}
-					{/* 	Website by{" "} */}
-					{/* 	<a className="inline-flex flex-row items-center text-theme" href="https://twitter.com/username_ZAYDEK"> */}
-					{/* 		@username_ZAYDEK{" "} */}
-					{/* 		<Apply className="ml-1 w-4 h-4 text-theme" style={{ strokeWidth: 3 }}> */}
-					{/* 			<ExternalLinkSVG /> */}
-					{/* 		</Apply> */}
-					{/* 	</a> */}
-					{/* </h3> */}
+						{/* H3 */}
+						{/* <div className="h-8" /> */}
+						{/* <h3 className="text-xl gray-800"> */}
+						{/* 	Icons by{" "} */}
+						{/* 	<a className="inline-flex flex-row items-center texttext-theme600" href="https://twitter.com/colebemis"> */}
+						{/* 		@colebemis{" "} */}
+						{/* 		<Apply className="ml-1 w-4 h-4" style={{ strokeWidth: 3 }}> */}
+						{/* 			<ExternalLinkSVG /> */}
+						{/* 		</Apply> */}
+						{/* 	</a> */}
+						{/* </h3> */}
+						{/* <h3 className="text-xl gray-800"> */}
+						{/* 	Website by{" "} */}
+						{/* 	<a className="inline-flex flex-row items-center" href="https://twitter.com/username_ZAYDEK"> */}
+						{/* 		@username_ZAYDEK{" "} */}
+						{/* 		<Apply className="ml-1 w-4 h-4" style={{ strokeWidth: 3 }}> */}
+						{/* 			<ExternalLinkSVG /> */}
+						{/* 		</Apply> */}
+						{/* 	</a> */}
+						{/* </h3> */}
 
-					{/* CTA */}
-					{/* */}
-					{/* NOTE: Uses -mx-4 to offset borderRadius: 1rem. */}
-					<div className="h-8" />
-					<div className="-mx-4">
-						<div className="space-x-3 flex flex-row">
+						{/* CTA */}
+						{/* */}
+						{/* NOTE: Uses -mx-4 to offset borderRadius: 1rem. */}
+						<div className="h-8" />
+						<div className="-mx-4">
+							<div className="space-x-3 flex flex-row">
 
-							{/* Figma */}
-							<Reset className="block">
-								<a className="h-16 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(200%)", borderRadius: "1rem" }} href="TODO">
-									<div className="px-6 flex flex-row justify-center items-center h-full">
-										<Apply className="mr-3 w-6 h-6 text-white">
-											<FigmaSVG />
-										</Apply>
-										<p className="text-lg text-white">
-											<span className="inline-flex flex-row items-center">
-												Open in Figma
-												{/* <Apply className="ml-1.5 w-4 h-4 text-theme" style={{ strokeWidth: 3 }}> */}
-												{/* 	<ExternalLinkSVG /> */}
-												{/* </Apply> */}
-											</span>
-										</p>
-									</div>
-								</a>
-							</Reset>
+								{/* Figma */}
+								<Reset className="block">
+									<a className="h-16 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
+										<div className="px-6 flex flex-row justify-center items-center h-full">
+											<Apply className="mr-3 w-6 h-6 text-gray-800">
+												<FigmaSVG />
+											</Apply>
+											<p className="text-lg text-gray-800">
+												<span className="inline-flex flex-row items-center">
+													Open in Figma
+													{/* <Apply className="ml-1.5 w-4 h-4" style={{ strokeWidth: 3 }}> */}
+													{/* 	<ExternalLinkSVG /> */}
+													{/* </Apply> */}
+												</span>
+											</p>
+										</div>
+									</a>
+								</Reset>
 
-							{/* GitHub */}
-							<Reset className="block">
-								<a className="h-16 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(200%)", borderRadius: "1rem" }} href="TODO">
-									<div className="px-6 flex flex-row justify-center items-center h-full">
-										<Apply className="mr-3 w-6 h-6 text-white">
-											<GitHubSVG />
-										</Apply>
-										<p className="text-lg text-white">
-											<span className="inline-flex flex-row items-center">
-												Open in GitHub
-												{/* <Apply className="ml-1.5 w-4 h-4 text-theme" style={{ strokeWidth: 3 }}> */}
-												{/* 	<ExternalLinkSVG /> */}
-												{/* </Apply> */}
-											</span>
-										</p>
-									</div>
-								</a>
-							</Reset>
+								{/* GitHub */}
+								<Reset className="block">
+									<a className="h-16 bg-white bg-opacity-25" style={{ backdropFilter: "saturate(150%)", borderRadius: "1rem" }} href="TODO">
+										<div className="px-6 flex flex-row justify-center items-center h-full">
+											<Apply className="mr-3 w-6 h-6 text-gray-800">
+												<GitHubSVG />
+											</Apply>
+											<p className="text-lg text-gray-800">
+												<span className="inline-flex flex-row items-center">
+													Open in GitHub
+													{/* <Apply className="ml-1.5 w-4 h-4" style={{ strokeWidth: 3 }}> */}
+													{/* 	<ExternalLinkSVG /> */}
+													{/* </Apply> */}
+												</span>
+											</p>
+										</div>
+									</a>
+								</Reset>
 
+							</div>
 						</div>
 					</div>
 
@@ -139,7 +137,7 @@ const Home = () => (
 				{/* NOTE: Uses -mx-2 to offset sponsors mx-2 */}
 				<div className="-mx-2 w-full max-w-lg">
 
-					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
+					<h6 className="text-center font-bold text-xs tracking-wider">
 						OUR SPONSORS
 					</h6>
 
@@ -152,10 +150,10 @@ const Home = () => (
 									QA Wolf
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										browser testing
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -169,10 +167,10 @@ const Home = () => (
 									Hot Tips Ebook
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										designer ebook
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -186,10 +184,10 @@ const Home = () => (
 									SkillSyncer
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										resume optimizer
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -203,10 +201,10 @@ const Home = () => (
 									codetisans_
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										development agency
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -220,10 +218,10 @@ const Home = () => (
 									Streamline
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										graphics and icons
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -237,10 +235,10 @@ const Home = () => (
 									SPELLL
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										figma plugin
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -254,10 +252,10 @@ const Home = () => (
 									codex
 								</p>
 								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="font-medium text-xs text-theme">
+									<p className="font-medium text-xs">
 										markdown editor
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.125rem" }}>
-											<Apply className="ml-1 w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
+											<Apply className="ml-1 w-2.5 h-2.5" style={{ strokeWidth: 3 }}>
 												<ExternalLinkSVG />
 											</Apply>
 										</span>
@@ -268,11 +266,11 @@ const Home = () => (
 					</div>
 
 					<div className="h-4" />
-					<h6 className="text-center font-bold text-xs tracking-wider text-theme">
+					<h6 className="text-center font-bold text-xs tracking-wider">
 						SPONSOR US{" "}
 						<span className="ml-1 relative">
 							<span className="mt-px absolute left-full inset-y-0 inline-flex flex-row items-baseline">
-								<Apply className="w-3 h-3 text-theme" style={{ strokeWidth: 3 }}>
+								<Apply className="w-3 h-3" style={{ strokeWidth: 3 }}>
 									<ExternalLinkSVG />
 								</Apply>
 							</span>
@@ -288,7 +286,7 @@ const Home = () => (
 		<div className="px-4 pb-16 flex flex-row justify-center">
 			<div className="flex flex-row justify-between w-full max-w-screen-xl">
 
-				<main className="flex flex-row items-start w-full">
+				{/* <main className="flex flex-row items-start w-full"> */}
 
 					{/* LHS */}
 					{/* */}
@@ -301,7 +299,7 @@ const Home = () => (
 								</div>
 							</div>
 						</div>
-						<div className="h-8" />
+						<div className="h-6" />
 						<div className="shadow" style={{ borderRadius: "1rem" }}>
 							<div className="px-6 py-4 w-full h-full bg-white shadow-lg" style={{ borderRadius: "1rem" }}>
 								icon<br />
@@ -350,31 +348,33 @@ const Home = () => (
 					</div>
 
 					{/* RHS */}
-					<div className="w-8" />
-						<div className="-mt-4 pt-4 sticky top-0 right-0">
-							<div className="shadow" style={{ borderRadius: "1rem" }}>
-								<div className="px-6 py-4 bg-white shadow-lg" style={{ width: 560, borderRadius: "1rem" }}>
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-									Hello<br />
-								</div>
+					<Reset className="flex-shrink-0">
+						<div className="w-4" />
+					</Reset>
+					<div className="-mt-4 pt-4 sticky top-0 right-0">
+						<div className="shadow" style={{ borderRadius: "1rem" }}>
+							<div className="px-6 py-4 bg-white shadow-lg" style={{ width: 560 /* TODO */, borderRadius: "1rem" }}>
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
+								Hello<br />
 							</div>
 						</div>
+					</div>
 
-				</main>
+				{/* </main> */}
 
 			</div>
 		</div>
 
-	</>
+	</div>
 )
 
 export default Home
