@@ -402,7 +402,22 @@ const Main = () => (
 
 const Footer = () => (
 	<footer className="mt-8">
-		TODO
+
+		<Apply className="text-center">
+			<p>
+				<span className="inline-flex flex-row items-center h-full">
+					Feathericons created by{" "}
+					<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
+					@colebemis.
+				</span>{" "}
+				<span className="inline-flex flex-row items-center h-full">
+					feathericons.com created by{" "}
+					<span className="mx-1 w-5 h-5 bg-gray-300 rounded-full" />{" "}
+					@username_ZAYDEK.
+				</span>
+			</p>
+		</Apply>
+
 	</footer>
 )
 
