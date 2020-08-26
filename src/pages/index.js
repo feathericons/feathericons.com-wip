@@ -20,249 +20,187 @@ const MAIN_PANEL_WIDTH = APP_WIDE - SIDE_PANEL_WIDTH
 const Header = () => (
 	<header className="flex flex-row justify-between">
 
-		<div className="p-4 absolute top-0 left-0">
-			<p>
-				<span className="inline-flex flex-row items-center">
-					<Apply className="mr-2 w-5 h-5" style={{ color: "rgb(29, 161, 242)" }}>
-						<svg viewBox="0 0 24 24" fill="currentColor">
-							<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
-						</svg>
-					</Apply>
-					Share on Twitter!
-				</span>
-			</p>
+		<div className="p-6 absolute top-0 left-0">
+			<Apply className="w-6 h-6 text-gray-100">
+				<svg viewBox="0 0 24 24" fill="currentColor">
+					<path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z" />
+				</svg>
+			</Apply>
 		</div>
 
 		{/* LHS */}
 		<div className="px-6 flex flex-col items-center w-full" style={{ maxWidth: MAIN_PANEL_WIDTH }}>
 
 			{/* H1 */}
-			<h1 className="text-center font-semibold text-4xl" style={{ letterSpacing: "-0.0125em" }}>
+			<h1 className="text-center font-semibold text-5xl text-gray-100" style={{ fontSize: 40 }}>
 				<span className="inline-flex flex-row items-baseline">
-					Feathericons{" "}
-					<Apply className="ml-2 w-8 h-8 text-theme" style={{ strokeWidth: 2.125 }}>
+					{/* Feathericons{" "} */}
+						<Apply className="ml-2 w-10 h-10 text-red-500 fill-current" style={{ strokeWidth: 2.125 }}>
+							<HeartSVG />
+						</Apply>
+					<Apply className="ml-2 w-10 h-10" style={{ strokeWidth: 2.125 }}>
 						<FeatherSVG />
 					</Apply>
 				</span>
 			</h1>
 
 			{/* H2 */}
-			<div className="h-2" />
-			<h2 className="text-center text-2xl">
+			<div className="h-4" />
+			<h2 className="text-center text-3xl text-gray-100">
 				<span className="inline-flex flex-row items-baseline">
-					<Apply className="mr-2 w-5 h-5 text-red-500 fill-current" style={{ strokeWidth: 2.25 }}>
-						<HeartSVG />
-					</Apply>
+					{/* <Apply className="mr-2 w-5 h-5 text-red-500 fill-current" style={{ strokeWidth: 2.25 }}> */}
+					{/* 	<HeartSVG /> */}
+					{/* </Apply> */}
 					{/* MIT open source icons by Cole Bemis */}
 					Simply beautiful open source icons
 				</span>
 			</h2>
 
-			{/* CTA */}
-			<div className="h-8" />
-			<div className="!-mx-6 space-x-3 flex flex-row justify-center">
-
-				{/* Figma */}
-				{/* */}
-				{/* style={{ backdropFilter: "brightness(110%) saturate(110%)" }} */}
-				<ApplyTransition>
-					<Reset className="block">
-						<a className="h-16 bg-white hover:bg-blue-50" style={{ borderRadius: "1rem" }} href="TODO">
-							<div className="px-4 flex flex-row justify-center items-center h-full">
-								<Apply className="mr-3 w-5 h-5 text-blue-600" style={{ strokeWidth: 2.25 }}>
-									<svg viewBox="0 0 38 57">
-										<path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z" />
-										<path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z" />
-										<path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z" />
-										<path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z" />
-										<path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z" />
-									</svg>
-								</Apply>
-								<p className="text-lg text-blue-600">
-									<span className="inline-flex flex-row items-center">
-										Open in Figma{" "}
-										<Apply className="ml-1.5 w-4 h-4 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}>
-											<ExternalLinkSVG />
-										</Apply>
-									</span>
-								</p>
-							</div>
-						</a>
-					</Reset>
-				</ApplyTransition>
-
-				{/* GitHub */}
-				{/* */}
-				{/* style={{ backdropFilter: "brightness(110%) saturate(110%)" }} */}
-				<ApplyTransition>
-					<Reset className="block">
-						<a className="h-16 bg-white hover:bg-blue-50" style={{ borderRadius: "1rem" }} href="TODO">
-							<div className="px-4 flex flex-row justify-center items-center h-full">
-								<Apply className="mr-3 w-5 h-5 text-blue-600" style={{ strokeWidth: 2.25 }}>
-									<svg viewBox="0 0 16 16" fill="currentColor">
-										<path fillRule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-									</svg>
-								</Apply>
-								<p className="text-lg text-blue-600">
-									<span className="inline-flex flex-row items-center">
-										Open in GitHub{" "}
-										<Apply className="ml-1.5 w-4 h-4 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}>
-											<ExternalLinkSVG />
-										</Apply>
-									</span>
-								</p>
-							</div>
-						</a>
-					</Reset>
-				</ApplyTransition>
-
-			</div>
-
 		</div>
 
 		{/* RHS */}
 		<div className="relative" style={{ width: SIDE_PANEL_WIDTH }}>
-			<div className="absolute inset-y-0 right-0 flex flex-row items-center" style={{ marginLeft: -112, marginRight: -16 }}>
+			<div className="absolute right-0 flex flex-row items-center" style={{ marginLeft: -112, marginRight: -16, marginTop: -48 }}>
 				<div className="w-full max-w-lg">
 
-					{/* NOTE: Uses -mb-1 to offset mb-1. */}
-					<h6 className="text-center font-bold tracking-wider text-blue-600" style={{ fontSize: "0.6875rem" }}>
+					<h6 className="text-center font-bold tracking-wider text-gray-100" style={{ fontSize: "0.6875rem" }}>
 						SPONSORED BY
 					</h6>
 
 					{/* Sponsors */}
+					<div className="h-2" />
 					<div className="flex flex-row justify-center flex-wrap">
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-44 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									QA Wolf
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										open source browser driver
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		open source browser driver */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-44 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									Hot Tips Ebook
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										designer ebook
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		designer ebook */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-36 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									SkillSyncer
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										resumé software
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		resumé software */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-36 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									codetisans_
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										developer studio
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		developer studio */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-36 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-36 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									Streamline
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										icons and graphics
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		icons and graphics */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-44 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									SPELLL
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										Figma spellchecker plugin
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		Figma spellchecker plugin */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 						<Apply className="relative flex flex-row justify-center items-center">
-							<div className="mx-2 my-1 w-44 h-16 rounded-full">
-								<p className="font-bold text-2xl text-gray-800">
+							<div className="mx-2 w-44 h-14 rounded-full">
+								<p className="font-bold text-2xl text-gray-100">
 									codex
 								</p>
-								<div className="absolute bottom-0 inset-x-0 flex flex-row justify-center">
-									<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}>
-										open source markdown editor
-										<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}>
-											<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}>
-												<ExternalLinkSVG />
-											</Apply>
-										</span>
-									</p>
-								</div>
+								{/* <div className="absolute bottom-0 inset-x-0 flex flex-row justify-center"> */}
+								{/* 	<p className="text-gray-800" style={{ fontSize: "0.6875rem" }}> */}
+								{/* 		open source markdown editor */}
+								{/* 		<span className="inline-flex flex-row items-center" style={{ verticalAlign: "-0.0625rem" }}> */}
+								{/* 			<Apply className="ml-1 w-2.5 h-2.5 text-blue-600 opacity-75" style={{ strokeWidth: 3 }}> */}
+								{/* 				<ExternalLinkSVG /> */}
+								{/* 			</Apply> */}
+								{/* 		</span> */}
+								{/* 	</p> */}
+								{/* </div> */}
 							</div>
 						</Apply>
 					</div>
 
-					<div className="h-4" />
-					<h6 className="text-center font-bold tracking-wider text-blue-600" style={{ fontSize: "0.6875rem" }}>
+					<div className="h-2" />
+					<h6 className="text-center font-bold tracking-wider text-gray-100" style={{ fontSize: "0.6875rem" }}>
 						SPONSOR US{" "}
-						<span className="ml-1 relative">
-							<span className="absolute left-full inset-y-0 inline-flex flex-row items-baseline">
-								<Apply className="w-3 h-3 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}>
-									<ExternalLinkSVG />
-								</Apply>
-							</span>
-						</span>
+						{/* <span className="ml-1 relative"> */}
+						{/* 	<span className="absolute left-full inset-y-0 inline-flex flex-row items-baseline"> */}
+						{/* 		<Apply className="w-3 h-3 text-blue-600 opacity-75" style={{ strokeWidth: 2.25 }}> */}
+						{/* 			<ExternalLinkSVG /> */}
+						{/* 		</Apply> */}
+						{/* 	</span> */}
+						{/* </span> */}
 					</h6>
 					{/* </Apply> */}
 
@@ -275,7 +213,7 @@ const Header = () => (
 
 const Main = () => (
 	// NOTE: Uses items-start because of sticky top-0.
-	<main className="pt-24 flex flex-row items-start">
+	<main className="pt-40 flex flex-row items-start">
 
 		{/* LHS */}
 		<div className="flex-1">
@@ -411,14 +349,59 @@ const Footer = () => (
 	</footer>
 )
 
-const Page = () => (
-	<div className="px-4 pt-24 pb-8 flex flex-row justify-center">
-		<div className="w-full" style={{ maxWidth: APP_WIDE }}>
-			<Header />
-			<Main />
-			<Footer />
+const Page = () => {
+
+	// Canvas Gradient Animation by Luis Jose Rivera
+	//
+	// https://codepen.io/luisjoserivera/pen/oePeNy
+	React.useLayoutEffect(() => {
+		const c = document.getElementById("canv")
+		const $ = c.getContext("2d")
+		const col = function(x, y, r, g, b) {
+			$.fillStyle = "rgb(" + r + "," + g + "," + b + ")"
+			$.fillRect(x, y, 1, 1)
+		}
+		const R = function(x, y, t) {
+			return 0 // (Math.floor(100 + 64 * Math.cos((x * x - y * y) / 300 + t)))
+		}
+		// 72
+		const G = function(x, y, t) {
+			return (Math.floor(96 + 64 * Math.sin((x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3)) / 300)))
+		}
+		// 320
+		const B = function(x, y, t) {
+			return (Math.floor(320 + 64 * Math.sin(5 * Math.sin(t / 9) + ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100)))
+		}
+		let t = 0
+		var run = function() {
+			for (let x = 0; x <= 32; x++) {
+				for (let y = 0; y <= 32; y++) {
+					col(x, y, R(x, y, t), G(x, y, t), B(x, y, t))
+				}
+			}
+			t += 0.12 / 2
+			window.requestAnimationFrame(run)
+		}
+		run()
+	}, [])
+
+	return (
+		<div className="px-4 pt-40 pb-8 flex flex-row justify-center">
+
+			<div className="absolute inset-0" style={{ zIndex: -1, height: 560 }}>
+				<canvas id="canv" className="w-full h-full" width={32} height={32} />
+				{/* <div className="absolute bottom-0 inset-x-0"> */}
+				{/* 	<div className="h-64 bg-gradient-to-b from-transparent to-white" /> */}
+				{/* </div> */}
+			</div>
+
+			<div className="w-full" style={{ maxWidth: APP_WIDE }}>
+				<Header />
+				<Main />
+				<Footer />
+			</div>
 		</div>
-	</div>
-)
+	)
+}
 
 export default Page
