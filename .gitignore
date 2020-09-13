@@ -12,4 +12,4 @@
 
 # Production
 /build
-tailwind.generated.css
+out.css
