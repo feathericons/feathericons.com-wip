@@ -174,6 +174,7 @@ export default function Home() {
 
 			<Header />
 
+			{/* Rounded SVG */}
 			<div className="hidden xl:block">
 				<Style className="w-screen h-auto">
 					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
@@ -187,6 +188,48 @@ export default function Home() {
 					</svg>
 				</Style>
 			</div>
+
+			{/* App */}
+			<div className="-mt-32 px-6 sm:px-4 flex flex-row justify-center">
+				<main
+					className="bg-gray-100"
+					style={{
+						width: "100%",
+						maxWidth: px(1280 + 64),
+						borderRadius: px(24),
+					}}
+				>
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+				</main>
+			</div>
+
+			<br />
+			<br />
+			<br />
+			<br />
 
 		</>
 	)
