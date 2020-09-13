@@ -233,54 +233,31 @@ function IconApp() {
 								}}
 							>
 
-								<section className="py-12">
-
-									<div className="flex flex-row">
-										<div className="w-5 h-5 bg-gray-100 rounded-full" />
-										<div className="w-3" />
-										<div className="w-32 h-5 bg-gray-100 rounded-full" />
-									</div>
-
-									<div className="grid grid-cols-6 !bg-red-100">
-
-										{Array(12).fill(0).map((_, x) => (
-											<article key={x} className="pb-full relative">
-												<div className="absolute inset-0">
-													<div className="flex flex-row justify-center items-center h-full">
-														<div className="w-10 h-10 bg-gray-200 rounded-full" />
+								{Array(6).fill(0).map((_, x) => (
+									<section key={x} className="py-12">
+										<div className="px-6 flex flex-row">
+											<div className="w-5 h-5 bg-gray-100 rounded-full" />
+											<div className="w-3" />
+											<div className="w-32 h-5 bg-gray-100 rounded-full" />
+										</div>
+										<div className="grid grid-cols-6">
+											{Array(12).fill(0).map((_, x) => (
+												<article key={x} className="pb-full relative">
+													<div className="absolute inset-0">
+														<div className="flex flex-row justify-center items-center h-full">
+															<div className="w-10 h-10 bg-gray-200 rounded-full" />
+														</div>
+														<div className="p-2 absolute inset-x-0 bottom-0">
+															<div className="flex flex-row justify-center">
+																<div className="w-20 h-4 bg-gray-100 rounded-full" />
+															</div>
+														</div>
 													</div>
-												</div>
-											</article>
-										))}
-
-									</div>
-
-								</section>
-
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
-								<br />
+												</article>
+											))}
+										</div>
+									</section>
+								))}
 
 							</div>
 						</div>
