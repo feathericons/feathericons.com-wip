@@ -197,8 +197,8 @@ export default function Home() {
 						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 						<defs>
 							<linearGradient id="bg-grad">
-								<stop offset="0%" stop-color="hsl(215, 100%, 50%)" />
-								<stop offset="100%" stop-color="hsl(255, 100%, 65%)" />
+								<stop offset="0%" stopColor="hsl(215, 100%, 50%)" />
+								<stop offset="100%" stopColor="hsl(255, 100%, 65%)" />
 							</linearGradient>
 						</defs>
 					</svg>
