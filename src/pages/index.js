@@ -99,7 +99,7 @@ function SponsorHoneycomb() {
 	)
 }
 
-function Header() {
+function Hero() {
 	return (
 		<header
 			className="px-6 sm:px-4 py-24 xl:pb-48 flex flex-row justify-center"
@@ -142,37 +142,53 @@ function Header() {
 	)
 }
 
+function IconApp() {
+	return (
+		<div className="-mt-32 px-6 sm:px-4 flex flex-row justify-center">
+			<main
+				className="bg-white border border-gray-300 shadow-lg"
+				style={{
+					width: "100%",
+					maxWidth: px(1280 + 64),
+					borderRadius: px(24),
+				}}
+			>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+			</main>
+		</div>
+	)
+}
+
 export default function Home() {
 	return (
 		<>
 			<SEO />
 
-			{/* https://yoksel.github.io/url-encoder */}
-			{/* <style> */}
-			{/* 	{css` */}
-			{/* 		@media (min-width: 1152px) { */}
-			{/* 			html { */}
-			{/* 				background-attachment: */}
-			{/* 					fixed, */}
-			{/* 					fixed; */}
-			{/* 				background-image: */}
-			{/* 					url("data:image/svg+xml,%3Csvg fill='url(%23bg-grad)' viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' /%3E%3Cdefs%3E%3ClinearGradient id='bg-grad'%3E%3Cstop offset='0%25' stop-color='hsl(215, 100%25, 50%25)' /%3E%3Cstop offset='100%25' stop-color='hsl(255, 100%25, 65%25)' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"), */}
-			{/* 					url("data:image/svg+xml,%3Csvg fill='url(%23bg-grad)' viewBox='0 0 32 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z' /%3E%3Cdefs%3E%3ClinearGradient id='bg-grad'%3E%3Cstop offset='0%25' stop-color='hsl(215, 100%25, 50%25)' /%3E%3Cstop offset='100%25' stop-color='hsl(255, 100%25, 65%25)' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"); */}
-			{/* 				background-repeat: */}
-			{/* 					repeat-x, */}
-			{/* 					no-repeat; */}
-			{/* 				background-size: */}
-			{/* 					544px, */}
-			{/* 					100%; */}
-			{/* 				background-position: */}
-			{/* 					0 0, */}
-			{/* 					0 544px; */}
-			{/* 			} */}
-			{/* 		} */}
-			{/* 	`} */}
-			{/* </style> */}
-
-			<Header />
+			{/* Hero */}
+			<Hero />
 
 			{/* Rounded SVG */}
 			<div className="hidden xl:block">
@@ -190,41 +206,7 @@ export default function Home() {
 			</div>
 
 			{/* App */}
-			<div className="-mt-32 px-6 sm:px-4 flex flex-row justify-center">
-				<main
-					className="bg-gray-100"
-					style={{
-						width: "100%",
-						maxWidth: px(1280 + 64),
-						borderRadius: px(24),
-					}}
-				>
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-				</main>
-			</div>
+			<IconApp />
 
 			<br />
 			<br />
