@@ -4,8 +4,9 @@ const meta = {
 	title: "Feather – Simply beautiful open source icons",
 	description: "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.",
 
-	// TODO: Change to "https://feathericons.com".
-	url: "https://feathericons.dev",
+	// TODO: Change to "https://feathericons.com" for
+	// production.
+	url: process.env.NODE_ENV !== "production" ? "http://localhost:3000" : "https://feathericons.dev",
 }
 
 export default function SEO() {
@@ -20,8 +21,9 @@ export default function SEO() {
 				content="width=device-width, initial-scale=1"
 			/>
 			<link
+				// TODO: See favicon-16x16.png and favicon-32x32.png.
 				rel="icon"
-				href={`${meta.url}/static/favicon.ico`}
+				href={`${meta.url}/images/favicon.ico`}
 			/>
 
 			{/* Core */}
@@ -56,7 +58,7 @@ export default function SEO() {
 			/>
 			<meta
 				property="og:image"
-				content={`https://${meta.url}/static/social.png`}
+				content={`https://${meta.url}/images/share.png`}
 			/>
 
 			{/* Twitter */}
@@ -78,7 +80,7 @@ export default function SEO() {
 			/>
 			<meta
 				property="twitter:image"
-				content={`https://${meta.url}/static/social.png`}
+				content={`https://${meta.url}/images/share.png`}
 			/>
 
 			{/* NOTE: <meta name="twitter:creator" ...> is not
