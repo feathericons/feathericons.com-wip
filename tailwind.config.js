@@ -13,7 +13,7 @@ module.exports = {
 		backgroundClip: false,
 		backgroundColor: true,
 		backgroundImage: false,
-		backgroundOpacity: false,
+		backgroundOpacity: true,
 		backgroundPosition: false,
 		backgroundRepeat: false,
 		backgroundSize: false,
