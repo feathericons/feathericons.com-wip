@@ -1,7 +1,7 @@
 import SEO from "./_SEO"
 import Style from "lib/x/Style"
 
-// Converts px to rem units.
+// Converts px units to rem units.
 function px(n) {
 	n /= 16
 	return n + "rem"
@@ -13,6 +13,11 @@ function tw(n) {
 	n /= 16
 	return n + "rem"
 }
+
+// // Converts rem units to rem units (stringified).
+// function rem(n) {
+// 	return n + "rem"
+// }
 
 // https://dev.to/patarapolw/fake-tagged-template-string-literal-to-enable-syntax-highlighting-in-vscode-34g1
 function css/* tpl */(arr, ...args) {
@@ -216,26 +221,69 @@ function IconApp() {
 						<SearchBar />
 						<div className="w-full h-px bg-gray-300" />
 
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
-						<br />
+						{/* Icons */}
+						{/* */}
+						{/* TODO: Add min-height constraint. */}
+						<div className="flex flex-row justify-center">
+							<div
+								// className="!py-12"
+								style={{
+									width: "100%",
+									maxWidth: px(52 * 16),
+								}}
+							>
+
+								<section className="py-12">
+
+									<div className="flex flex-row">
+										<div className="w-5 h-5 bg-gray-100 rounded-full" />
+										<div className="w-3" />
+										<div className="w-32 h-5 bg-gray-100 rounded-full" />
+									</div>
+
+									<div className="grid grid-cols-6 !bg-red-100">
+
+										{Array(12).fill(0).map((_, x) => (
+											<article key={x} className="pb-full relative">
+												<div className="absolute inset-0">
+													<div className="flex flex-row justify-center items-center h-full">
+														<div className="w-10 h-10 bg-gray-200 rounded-full" />
+													</div>
+												</div>
+											</article>
+										))}
+
+									</div>
+
+								</section>
+
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+								<br />
+
+							</div>
+						</div>
 
 					</div>
 				</Style>
