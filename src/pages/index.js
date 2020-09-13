@@ -48,14 +48,18 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 			</div>
 
@@ -63,20 +67,26 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 			</div>
 
@@ -84,14 +94,18 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					{/* </div> */}
 				</div>
 			</div>
 
@@ -144,7 +158,7 @@ function Hero() {
 
 function IconApp() {
 	return (
-		<div className="-mt-32 px-6 sm:px-4 flex flex-row justify-center">
+		<div className="mt-0 xl:-mt-32 px-0 xl:px-6 flex flex-row justify-center">
 			<main
 				className="bg-white border border-gray-300 shadow-lg"
 				style={{
@@ -208,10 +222,12 @@ export default function Home() {
 			{/* App */}
 			<IconApp />
 
-			<br />
-			<br />
-			<br />
-			<br />
+			<div className="hidden xl:block">
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
 
 		</>
 	)
