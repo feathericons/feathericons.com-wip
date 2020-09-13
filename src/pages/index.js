@@ -245,9 +245,9 @@ function IconApp() {
 					<div className="w-px h-full bg-gray-300" />
 				</Style>
 				<Style className="hidden md:block">
-					<div className="w-80">
+					<div className="w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
 
-						<div className="w-80 h-64">
+						<div className="w-80 h-64 bg-white rounded-tr-none xl:rounded-tr-6">
 							{/* ... */}
 						</div>
 
