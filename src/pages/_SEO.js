@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 const meta = {
 	title: "Feather – Simply beautiful open source icons",
 	description: "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.",
@@ -19,16 +21,16 @@ export default function SEO() {
 			/>
 			<link
 				rel="icon"
-				href={`${consts.url}/static/favicon.ico`}
+				href={`${meta.url}/static/favicon.ico`}
 			/>
 
 			{/* Core */}
 			<title>
-				{consts.title}
+				{meta.title}
 			</title>
 			<meta
 				name="title"
-				content={consts.title}
+				content={meta.title}
 			/>
 			<meta
 				name="description"
@@ -42,11 +44,11 @@ export default function SEO() {
 			/>
 			<meta
 				property="og:url"
-				content={consts.url}
+				content={meta.url}
 			/>
 			<meta
 				property="og:title"
-				content={consts.title}
+				content={meta.title}
 			/>
 			<meta
 				property="og:description"
@@ -54,7 +56,7 @@ export default function SEO() {
 			/>
 			<meta
 				property="og:image"
-				content={`https://${consts.url}/static/social.png`}
+				content={`https://${meta.url}/static/social.png`}
 			/>
 
 			{/* Twitter */}
@@ -64,11 +66,11 @@ export default function SEO() {
 			/>
 			<meta
 				property="twitter:url"
-				content={consts.url}
+				content={meta.url}
 			/>
 			<meta
 				property="twitter:title"
-				content={consts.title}
+				content={meta.title}
 			/>
 			<meta
 				property="twitter:description"
@@ -76,7 +78,7 @@ export default function SEO() {
 			/>
 			<meta
 				property="twitter:image"
-				content={`https://${consts.url}/static/social.png`}
+				content={`https://${meta.url}/static/social.png`}
 			/>
 
 			{/* NOTE: <meta name="twitter:creator" ...> is not

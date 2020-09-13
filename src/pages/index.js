@@ -1,5 +1,12 @@
+import SEO from "./_SEO"
+
 export default function Home() {
 	return (
-		"Hello, world!"
+		<>
+			<SEO />
+
+			Hello, world!
+
+		</>
 	)
 }
