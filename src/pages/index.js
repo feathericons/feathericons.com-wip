@@ -22,17 +22,21 @@ function css/* tpl */(arr, ...args) {
 function LogoAndCTA() {
 	return (
 		<div className="flex flex-col items-center">
+
 			<div className="w-20 h-20 bg-gray-200 rounded-full" />
 
 			<div className="h-6" />
 			<div className="h-6 bg-gray-200 rounded-full" style={{ width: tw(112) }} />
 
+			{/* <div className="hidden xl:block"> */}
 			<div className="h-6" />
 			<div className="flex flex-row">
 				<div className="w-48 h-16 bg-gray-200 rounded-full" />
-				<div className="w-3 h-3" />
+				<div className="w-4 h-4" />
 				<div className="w-48 h-16 bg-gray-200 bg-opacity-50 rounded-full" />
 			</div>
+			{/* </div> */}
+
 		</div>
 	)
 }
@@ -98,7 +102,7 @@ function SponsorHoneycomb() {
 function Header() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-24 flex flex-row justify-center"
+			className="px-6 sm:px-4 py-24 xl:pb-48 flex flex-row justify-center"
 			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
 		>
 
@@ -127,7 +131,8 @@ function Header() {
 				<LogoAndCTA />
 
 				{/* Sponsors */}
-				<div className="pt-16 xl:pt-0 hidden sm:block">
+				<div className="hidden sm:block">
+					<div className="h-16 xl:h-0" />
 					<SponsorHoneycomb />
 				</div>
 
