@@ -152,6 +152,52 @@ function Hero() {
 	)
 }
 
+function SearchBar() {
+	return (
+		<div className="relative h-20">
+
+			{/* LHS */}
+			<div className="absolute left-0 inset-y-0">
+				<div className="px-6 flex flex-row h-full">
+					<div className="px-2 flex flex-row items-center">
+						<div className="w-8 h-8 rounded-full bg-gray-100" />
+					</div>
+				</div>
+			</div>
+
+			{/* Search */}
+			<div className="px-16">
+				{/* ... */}
+			</div>
+
+			{/* RHS */}
+			<div className="absolute right-0 inset-y-0">
+				<div className="px-6 flex flex-row h-full">
+
+					{/* Button */}
+					<div className="px-2 flex flex-row items-center">
+						<div className="px-2 flex flex-row items-center w-48 h-12 rounded-full bg-gray-100">
+							<div className="w-8 h-8 rounded-full bg-gray-200" />
+						</div>
+					</div>
+
+					{/* Button */}
+					<div className="px-2 flex flex-row items-center">
+						<div className="w-8 h-8 rounded-full bg-gray-100" />
+					</div>
+
+					{/* Button */}
+					<div className="px-2 flex flex-row items-center">
+						<div className="w-8 h-8 rounded-full bg-gray-100" />
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	)
+}
+
 function IconApp() {
 	return (
 		<div className="mt-0 xl:-mt-32 px-0 xl:px-6 flex flex-row justify-center">
@@ -167,7 +213,7 @@ function IconApp() {
 				<Style className="flex-1">
 					<div className="">
 
-						<div className="h-20" />
+						<SearchBar />
 						<div className="w-full h-px bg-gray-300" />
 
 						<br />
