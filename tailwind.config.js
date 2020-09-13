@@ -125,7 +125,11 @@ module.exports = {
 	// },
 	purge: [],
 	theme: {
-		extend: {},
+		extend: {
+			borderRadius: {
+				6: "1.5rem",
+			},
+		},
 	},
 	variants: {
 		typography: {},

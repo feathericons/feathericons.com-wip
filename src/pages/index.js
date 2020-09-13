@@ -21,6 +21,7 @@ function css/* tpl */(arr, ...args) {
 
 function LogoAndCTA() {
 	return (
+		// TODO: Add w-full max-w-* here.
 		<div className="flex flex-col items-center">
 
 			<div className="w-20 h-20 bg-gray-200 rounded-full" />
@@ -29,11 +30,11 @@ function LogoAndCTA() {
 			<div className="h-6 bg-gray-200 rounded-full" style={{ width: tw(112) }} />
 
 			{/* <div className="hidden xl:block"> */}
-			<div className="h-6" />
+			<div className="h-8" />
 			<div className="flex flex-row">
-				<div className="w-48 h-16 bg-gray-200 rounded-full" />
+				<div className="w-44 h-14 bg-gray-200 rounded-full" />
 				<div className="w-4 h-4" />
-				<div className="w-48 h-16 bg-gray-200 bg-opacity-50 rounded-full" />
+				<div className="w-44 h-14 bg-gray-200 bg-opacity-50 rounded-full" />
 			</div>
 			{/* </div> */}
 
@@ -41,6 +42,7 @@ function LogoAndCTA() {
 	)
 }
 
+// TODO: Honeycomb UI breaks down for sm-lg breakpoints.
 function SponsorHoneycomb() {
 	return (
 		<div className="flex flex-col items-center">
@@ -48,18 +50,14 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 			</div>
 
@@ -67,26 +65,20 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 			</div>
 
@@ -94,18 +86,14 @@ function SponsorHoneycomb() {
 			<div className="flex flex-row">
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					{/* <div className="hidden xl:block"> */}
 					<div className="h-3" />
 					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-					{/* </div> */}
 				</div>
 			</div>
 
@@ -122,12 +110,20 @@ function Hero() {
 
 			{/* TL */}
 			<div className="px-8 py-6 absolute top-0 left-0">
-				<div className="w-24 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+				<div className="flex flex-row">
+					<div className="w-5 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-3" />
+					<div className="w-24 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+				</div>
 			</div>
 
 			{/* TR */}
 			<div className="px-8 py-6 absolute top-0 right-0">
-				<div className="w-24 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+				<div className="flex flex-row">
+					<div className="w-24 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-3" />
+					<div className="w-5 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
+				</div>
 			</div>
 
 			{/* Logo and Sponsors */}
@@ -160,37 +156,48 @@ function IconApp() {
 	return (
 		<div className="mt-0 xl:-mt-32 px-0 xl:px-6 flex flex-row justify-center">
 			<main
-				className="bg-white border border-gray-300 shadow-lg"
+				className="flex flex-row bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-lg"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
-					borderRadius: px(24),
 				}}
 			>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+
+				{/* LHS */}
+				<Style className="flex-1">
+					<div className="">
+
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+
+					</div>
+				</Style>
+
+				{/* RHS */}
+				<Style className="hidden lg:block">
+					<div className="w-80">
+
+					</div>
+				</Style>
+
 			</main>
 		</div>
 	)
