@@ -198,7 +198,8 @@ function IconApp() {
 	return (
 		<div className="mt-0 xl:-mt-36 px-0 xl:px-6 flex flex-row justify-center">
 			<main
-				className="flex flex-row bg-white border border-gray-200 rounded-none xl:rounded-6 shadow"
+				// NOTE: Must use items-start because of sticky top-0.
+				className="flex flex-row items-start bg-white border border-gray-200 rounded-none xl:rounded-6 shadow"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
@@ -210,12 +211,12 @@ function IconApp() {
 					<div>
 
 						<aside className="sticky top-0 z-10">
-							<div className="bg-white border-b border-gray-200 rounded-tl-none xl:rounded-tl-6">
+							{/* TODO */}
+							<div className="bg-white !border-b !border-gray-200 rounded-tl-none xl:rounded-tl-6">
 								<SearchBar />
 							</div>
+							<div className="w-full h-px bg-gray-200" />
 						</aside>
-
-						{/* <div className="w-full h-px bg-gray-200" /> */}
 
 						{/* Icons */}
 						{/* */}
@@ -276,10 +277,24 @@ function IconApp() {
 					<div className="w-px h-full bg-gray-200" />
 				</Style>
 				<Style className="hidden xl:block">
-					<div className="w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
-						<div className="w-80 h-80 bg-white rounded-tr-none xl:rounded-tr-6" />
-						<div className="w-full h-px bg-gray-200" />
-					</div>
+				<div className="sticky top-0 w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
+					<div className="w-80 h-80 bg-white rounded-tr-none xl:rounded-tr-6" />
+					<div className="w-full h-px bg-gray-200" />
+
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+					<br />
+
+				</div>
 				</Style>
 
 			</main>
