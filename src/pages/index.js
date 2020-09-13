@@ -124,8 +124,9 @@ function Header() {
 				<LogoAndCTA />
 
 				{/* Sponsors */}
-				<div className="h-16 xl:h-0" />
-				<SponsorHoneycomb />
+				<div className="pt-16 xl:pt-0 hidden sm:block">
+					<SponsorHoneycomb />
+				</div>
 
 			</div>
 
