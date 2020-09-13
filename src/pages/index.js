@@ -1,4 +1,5 @@
 import SEO from "./_SEO"
+import Style from "lib/x/Style"
 
 // Converts px to rem units.
 function px(n) {
@@ -11,6 +12,11 @@ function tw(n) {
 	n *= 4
 	n /= 16
 	return n + "rem"
+}
+
+// https://dev.to/patarapolw/fake-tagged-template-string-literal-to-enable-syntax-highlighting-in-vscode-34g1
+function css/* tpl */(arr, ...args) {
+	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
 }
 
 function LogoAndCTA() {
@@ -92,11 +98,8 @@ function SponsorHoneycomb() {
 function Header() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-24 flex flex-row justify-center items-center bg-gray-100"
-			style={{
-				// minHeight: px(480),
-				backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)",
-			}}
+			className="px-6 sm:px-4 py-24 flex flex-row justify-center"
+			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
 		>
 
 			{/* TL */}
@@ -138,7 +141,48 @@ export default function Home() {
 	return (
 		<>
 			<SEO />
+
+			{/* https://yoksel.github.io/url-encoder */}
+			{/* <style> */}
+			{/* 	{css` */}
+			{/* 		@media (min-width: 1152px) { */}
+			{/* 			html { */}
+			{/* 				background-attachment: */}
+			{/* 					fixed, */}
+			{/* 					fixed; */}
+			{/* 				background-image: */}
+			{/* 					url("data:image/svg+xml,%3Csvg fill='url(%23bg-grad)' viewBox='0 0 1 1' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' /%3E%3Cdefs%3E%3ClinearGradient id='bg-grad'%3E%3Cstop offset='0%25' stop-color='hsl(215, 100%25, 50%25)' /%3E%3Cstop offset='100%25' stop-color='hsl(255, 100%25, 65%25)' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"), */}
+			{/* 					url("data:image/svg+xml,%3Csvg fill='url(%23bg-grad)' viewBox='0 0 32 1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z' /%3E%3Cdefs%3E%3ClinearGradient id='bg-grad'%3E%3Cstop offset='0%25' stop-color='hsl(215, 100%25, 50%25)' /%3E%3Cstop offset='100%25' stop-color='hsl(255, 100%25, 65%25)' /%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E"); */}
+			{/* 				background-repeat: */}
+			{/* 					repeat-x, */}
+			{/* 					no-repeat; */}
+			{/* 				background-size: */}
+			{/* 					544px, */}
+			{/* 					100%; */}
+			{/* 				background-position: */}
+			{/* 					0 0, */}
+			{/* 					0 544px; */}
+			{/* 			} */}
+			{/* 		} */}
+			{/* 	`} */}
+			{/* </style> */}
+
 			<Header />
+
+			<div className="hidden xl:block">
+				<Style className="w-screen h-auto">
+					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+						<defs>
+							<linearGradient id="bg-grad">
+								<stop offset="0%" stop-color="hsl(215, 100%, 50%)" />
+								<stop offset="100%" stop-color="hsl(255, 100%, 65%)" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</Style>
+			</div>
+
 		</>
 	)
 }
