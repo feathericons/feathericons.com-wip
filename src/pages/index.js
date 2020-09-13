@@ -31,6 +31,64 @@ function LogoArea() {
 	)
 }
 
+function SponsorArea() {
+	return (
+		<div className="flex flex-col items-center">
+
+			<div className="flex flex-row">
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+				<div className="w-6" />
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+			</div>
+
+			<div className="h-4" />
+			<div className="flex flex-row">
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+				<div className="w-6" />
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+				<div className="w-6" />
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+			</div>
+
+			<div className="h-4" />
+			<div className="flex flex-row">
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+				<div className="w-6" />
+				<div className="flex flex-col items-center">
+					<div className="w-44 h-12 bg-gray-200 rounded-full" />
+					<div className="h-3" />
+					<div className="w-32 h-3 bg-gray-200 bg-opacity-50 rounded-full" />
+				</div>
+			</div>
+
+		</div>
+	)
+}
+
 function Header() {
 	return (
 		<header
@@ -58,7 +116,7 @@ function Header() {
 				<LogoArea />
 
 				{/* Sponsors */}
-				<div className="w-20 h-20 bg-gray-200 rounded-full" />
+				<SponsorArea />
 
 			</div>
 
