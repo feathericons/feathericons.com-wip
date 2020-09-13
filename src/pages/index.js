@@ -198,7 +198,7 @@ function IconApp() {
 	return (
 		<div className="mt-0 xl:-mt-36 px-0 xl:px-6 flex flex-row justify-center">
 			<main
-				className="flex flex-row bg-white border border-gray-200 rounded-none xl:rounded-6 shadow-lg"
+				className="flex flex-row bg-white border border-gray-200 rounded-none xl:rounded-6 shadow"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
@@ -209,8 +209,13 @@ function IconApp() {
 				<Style className="flex-1">
 					<div>
 
-						<SearchBar />
-						<div className="w-full h-px bg-gray-200" />
+						<aside className="sticky top-0 z-10">
+							<div className="bg-white border-b border-gray-200 rounded-tl-none xl:rounded-tl-6">
+								<SearchBar />
+							</div>
+						</aside>
+
+						{/* <div className="w-full h-px bg-gray-200" /> */}
 
 						{/* Icons */}
 						{/* */}
