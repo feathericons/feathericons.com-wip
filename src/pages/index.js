@@ -167,6 +167,9 @@ function IconApp() {
 				<Style className="flex-1">
 					<div className="">
 
+						<div className="h-20" />
+						<div className="w-full h-px bg-gray-300" />
+
 						<br />
 						<br />
 						<br />
@@ -192,8 +195,10 @@ function IconApp() {
 				</Style>
 
 				{/* RHS */}
-				<Style className="hidden lg:block">
+				<Style className="hidden md:block">
 					<div className="w-80">
+						<div className="w-px h-full bg-gray-300" />
+
 
 					</div>
 				</Style>
