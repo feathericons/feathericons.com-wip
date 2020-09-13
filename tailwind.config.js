@@ -114,14 +114,23 @@ module.exports = {
 		zIndex: true,
 	},
 
-	future: {
-		// removeDeprecatedGapUtilities: true,
-		// purgeLayersByDefault: true,
+	// dark: "class",
+	experimental: {
+		// darkModeVariant: true,
+		uniformColorPalette: true,
 	},
+	// future: {
+	// 	removeDeprecatedGapUtilities: true,
+	// 	purgeLayersByDefault: true,
+	// },
 	purge: [],
 	theme: {
 		extend: {},
 	},
-	variants: {},
-	plugins: [],
+	variants: {
+		typography: {},
+	},
+	plugins: [
+		require("@tailwindcss/ui"),
+	],
 }
