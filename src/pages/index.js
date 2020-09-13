@@ -242,9 +242,16 @@ function IconApp() {
 
 				{/* RHS */}
 				<Style className="hidden md:block">
+					<div className="w-px h-full bg-gray-300" />
+				</Style>
+				<Style className="hidden md:block">
 					<div className="w-80">
-						<div className="w-px h-full bg-gray-300" />
 
+						<div className="w-80 h-64">
+							{/* ... */}
+						</div>
+
+						<div className="w-full h-px bg-gray-300" />
 
 					</div>
 				</Style>
