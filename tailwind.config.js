@@ -20,7 +20,7 @@ module.exports = {
 		borderCollapse: false,
 		borderColor: false,
 		borderOpacity: false,
-		borderRadius: false,
+		borderRadius: true,
 		borderStyle: false,
 		borderWidth: false,
 		boxShadow: true,
