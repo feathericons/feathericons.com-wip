@@ -199,7 +199,7 @@ function IconApp() {
 		<div className="mt-0 xl:-mt-36 px-0 xl:px-6 flex flex-row justify-center">
 			<main
 				// NOTE: Must use items-start because of sticky top-0.
-				className="flex flex-row items-start bg-white border border-gray-200 rounded-none xl:rounded-6 shadow"
+				className="flex flex-row items-start bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-xl"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
@@ -212,10 +212,10 @@ function IconApp() {
 
 						<aside className="sticky top-0 z-10">
 							{/* TODO */}
-							<div className="bg-white !border-b !border-gray-200 rounded-tl-none xl:rounded-tl-6">
+							<div className="bg-white !border-b !border-gray-300 rounded-tl-none xl:rounded-tl-6">
 								<SearchBar />
 							</div>
-							<div className="w-full h-px bg-gray-200" />
+							<div className="w-full h-px bg-gray-300" />
 						</aside>
 
 						{/* Icons */}
@@ -223,9 +223,11 @@ function IconApp() {
 						{/* TODO: Add min-height constraint. */}
 						<div className="px-4 sm:px-6 flex flex-row justify-center">
 							<div
-								className="pb-8"
+								className="pb-24"
 								style={{
 									width: "100%",
+
+									// TODO: Disable max-width for < xl breakpoints.
 									maxWidth: px(56 * 16),
 								}}
 							>
@@ -240,29 +242,32 @@ function IconApp() {
 								</style>
 
 								{Array(6).fill(0).map((_, x) => (
-									<section key={x} className="my-16">
+									<section key={x} className="pt-16">
+
 										<div className="px-6 flex flex-row">
-											<div className="w-5 h-5 bg-gray-100 rounded-full" />
+											<div className="w-4 h-4 bg-gray-200 rounded-full" />
 											<div className="w-3" />
-											<div className="w-32 h-5 bg-gray-100 rounded-full" />
+											<div className="w-24 h-4 bg-gray-200 rounded-full" />
 										</div>
+
 										<div className="h-4" />
 										<div id="grid">
 											{Array(12).fill(0).map((_, x) => (
 												<article key={x} className="pb-full relative">
 													<div className="absolute inset-0">
 														<div className="flex flex-row justify-center items-center h-full">
-															<div className="w-10 h-10 bg-gray-200 rounded-full" />
+															<div className="w-8 h-8 bg-gray-400 rounded-full" />
 														</div>
 														<div className="p-2 absolute inset-x-0 bottom-0">
 															<div className="flex flex-row justify-center">
-																<div className="w-20 h-4 bg-gray-100 rounded-full" />
+																<div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
 															</div>
 														</div>
 													</div>
 												</article>
 											))}
 										</div>
+
 									</section>
 								))}
 
@@ -273,28 +278,36 @@ function IconApp() {
 				</Style>
 
 				{/* RHS */}
-				<Style className="hidden xl:block">
-					<div className="w-px h-full bg-gray-200" />
+				<Style className="hidden lg:block">
+					<div className="w-px h-full bg-gray-300" />
 				</Style>
-				<Style className="hidden xl:block">
-				<div className="sticky top-0 w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
-					<div className="w-80 h-80 bg-white rounded-tr-none xl:rounded-tr-6" />
-					<div className="w-full h-px bg-gray-200" />
+				<Style className="hidden lg:block">
+					<div className="sticky top-0 w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
+						<div className="w-80 h-80 bg-white rounded-tr-none xl:rounded-tr-6" />
+						<div className="w-full h-px bg-gray-300" />
 
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
+						<br />
 
-				</div>
+					</div>
 				</Style>
 
 			</main>
