@@ -14,16 +14,12 @@ function tw(n) {
 	return n + "rem"
 }
 
-// // Converts rem units to rem units (stringified).
-// function rem(n) {
-// 	return n + "rem"
-// }
-
 // https://dev.to/patarapolw/fake-tagged-template-string-literal-to-enable-syntax-highlighting-in-vscode-34g1
 function css/* tpl */(arr, ...args) {
 	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
 }
 
+// TODO: Responsive CTA should use flex flex-row.
 function LogoAndCTA() {
 	return (
 		// TODO: Add w-full max-w-* here.
@@ -109,7 +105,7 @@ function SponsorHoneycomb() {
 function Hero() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-24 xl:pb-48 flex flex-row justify-center"
+			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-52 flex flex-row justify-center"
 			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
 		>
 
@@ -180,15 +176,10 @@ function SearchBar() {
 				<div className="px-6 flex flex-row h-full">
 
 					{/* Button */}
-					<div className="px-2 flex flex-row items-center">
+					<div className="px-2 hidden sm:flex sm:flex-row sm:items-center">
 						<div className="px-2 flex flex-row items-center w-48 h-12 rounded-full bg-gray-100">
 							<div className="w-8 h-8 rounded-full bg-gray-200" />
 						</div>
-					</div>
-
-					{/* Button */}
-					<div className="px-2 flex flex-row items-center">
-						<div className="w-8 h-8 rounded-full bg-gray-100" />
 					</div>
 
 					{/* Button */}
@@ -205,9 +196,9 @@ function SearchBar() {
 
 function IconApp() {
 	return (
-		<div className="mt-0 xl:-mt-32 px-0 xl:px-6 flex flex-row justify-center">
+		<div className="mt-0 xl:-mt-36 px-0 xl:px-6 flex flex-row justify-center">
 			<main
-				className="flex flex-row bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-lg"
+				className="flex flex-row bg-white border border-gray-200 rounded-none xl:rounded-6 shadow-lg"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
@@ -216,31 +207,41 @@ function IconApp() {
 
 				{/* LHS */}
 				<Style className="flex-1">
-					<div className="">
+					<div>
 
 						<SearchBar />
-						<div className="w-full h-px bg-gray-300" />
+						<div className="w-full h-px bg-gray-200" />
 
 						{/* Icons */}
 						{/* */}
 						{/* TODO: Add min-height constraint. */}
-						<div className="flex flex-row justify-center">
+						<div className="px-4 sm:px-6 flex flex-row justify-center">
 							<div
-								// className="!py-12"
+								className="pb-8"
 								style={{
 									width: "100%",
-									maxWidth: px(52 * 16),
+									maxWidth: px(56 * 16),
 								}}
 							>
 
+								<style>
+									{css`
+										#grid {
+											display: grid;
+											grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+										}
+									`}
+								</style>
+
 								{Array(6).fill(0).map((_, x) => (
-									<section key={x} className="py-12">
+									<section key={x} className="my-16">
 										<div className="px-6 flex flex-row">
 											<div className="w-5 h-5 bg-gray-100 rounded-full" />
 											<div className="w-3" />
 											<div className="w-32 h-5 bg-gray-100 rounded-full" />
 										</div>
-										<div className="grid grid-cols-6">
+										<div className="h-4" />
+										<div id="grid">
 											{Array(12).fill(0).map((_, x) => (
 												<article key={x} className="pb-full relative">
 													<div className="absolute inset-0">
@@ -266,18 +267,13 @@ function IconApp() {
 				</Style>
 
 				{/* RHS */}
-				<Style className="hidden md:block">
-					<div className="w-px h-full bg-gray-300" />
+				<Style className="hidden xl:block">
+					<div className="w-px h-full bg-gray-200" />
 				</Style>
-				<Style className="hidden md:block">
+				<Style className="hidden xl:block">
 					<div className="w-80 bg-gray-50 rounded-r-none xl:rounded-r-6">
-
-						<div className="w-80 h-64 bg-white rounded-tr-none xl:rounded-tr-6">
-							{/* ... */}
-						</div>
-
-						<div className="w-full h-px bg-gray-300" />
-
+						<div className="w-80 h-80 bg-white rounded-tr-none xl:rounded-tr-6" />
+						<div className="w-full h-px bg-gray-200" />
 					</div>
 				</Style>
 
