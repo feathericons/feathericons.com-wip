@@ -19,6 +19,32 @@ function css/* tpl */(arr, ...args) {
 	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
 }
 
+function AbsoluteAndFixedBackground() {
+	return (
+		<div className="hidden xl:block">
+			<div className="absolute top-full inset-x-0">
+				<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+					<defs>
+						<linearGradient id="bg-grad">
+							<stop offset="0%" stopColor="hsl(215, 100%, 50%)" />
+							<stop offset="100%" stopColor="hsl(255, 100%, 65%)" />
+						</linearGradient>
+					</defs>
+				</svg>
+			</div>
+			<div className="fixed top-0 inset-x-0" style={{ zIndex: -1 }}>
+				<svg className="w-full h-24" preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+					<rect width="1" height="1" />
+				</svg>
+				<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+				</svg>
+			</div>
+		</div>
+	)
+}
+
 // TODO: Responsive CTA should use flex flex-row.
 function LogoAndCTA() {
 	return (
@@ -27,11 +53,11 @@ function LogoAndCTA() {
 
 			<div className="w-20 h-20 bg-gray-200 rounded-full" />
 
-			<div className="h-6" />
+			<div className="h-8" />
 			<div className="h-6 bg-gray-200 rounded-full" style={{ width: tw(112) }} />
 
 			{/* <div className="hidden xl:block"> */}
-			<div className="h-8" />
+			<div className="h-6" />
 			<div className="flex flex-row">
 				<div className="w-44 h-14 bg-gray-200 rounded-full" />
 				<div className="w-4 h-4" />
@@ -52,13 +78,13 @@ function SponsorHoneycomb() {
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 			</div>
 
@@ -67,19 +93,19 @@ function SponsorHoneycomb() {
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 			</div>
 
@@ -88,13 +114,13 @@ function SponsorHoneycomb() {
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 				<div className="w-6" />
 				<div className="flex flex-col items-center">
 					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
 					<div className="h-3" />
-					<div className="w-32 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
 				</div>
 			</div>
 
@@ -105,9 +131,13 @@ function SponsorHoneycomb() {
 function Hero() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-52 flex flex-row justify-center"
+			// TODO: Restore !xl:pb-56.
+			className="px-6 sm:px-4 py-16 xl:py-24 !xl:pb-56 relative flex flex-row justify-center"
 			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
 		>
+
+			{/* #bg-grad */}
+			<AbsoluteAndFixedBackground />
 
 			{/* TL */}
 			<div className="px-8 py-6 absolute top-0 left-0">
@@ -196,10 +226,10 @@ function SearchBar() {
 
 function IconApp() {
 	return (
-		<div className="mt-0 xl:-mt-36 px-0 xl:px-6 flex flex-row justify-center">
+		<div className="mt-0 xl:-mt-24 px-0 xl:px-6 flex flex-row justify-center">
 			<main
-				// NOTE: Must use items-start because of sticky top-0.
-				className="flex flex-row items-start bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-xl"
+				// NOTE: Use items-start because of sticky top-0.
+				className="flex flex-row items-start bg-white border border-gray-300 rounded-none xl:rounded-6"
 				style={{
 					width: "100%",
 					maxWidth: px(1280 + 64),
@@ -210,6 +240,7 @@ function IconApp() {
 				<Style className="flex-1">
 					<div>
 
+						{/* TODO: Use the -mt-4 pt-4 pattern? */}
 						<aside className="sticky top-0 z-10">
 							{/* TODO */}
 							<div className="bg-white !border-b !border-gray-300 rounded-tl-none xl:rounded-tl-6">
@@ -241,35 +272,32 @@ function IconApp() {
 									`}
 								</style>
 
-								{Array(6).fill(0).map((_, x) => (
-									<section key={x} className="pt-16">
-
-										<div className="px-6 flex flex-row">
-											<div className="w-4 h-4 bg-gray-200 rounded-full" />
-											<div className="w-3" />
-											<div className="w-24 h-4 bg-gray-200 rounded-full" />
-										</div>
-
-										<div className="h-4" />
-										<div id="grid">
-											{Array(12).fill(0).map((_, x) => (
-												<article key={x} className="pb-full relative">
-													<div className="absolute inset-0">
-														<div className="flex flex-row justify-center items-center h-full">
-															<div className="w-8 h-8 bg-gray-400 rounded-full" />
-														</div>
-														<div className="p-2 absolute inset-x-0 bottom-0">
-															<div className="flex flex-row justify-center">
-																<div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
-															</div>
-														</div>
-													</div>
-												</article>
-											))}
-										</div>
-
-									</section>
-								))}
+								{/* {Array(6).fill(0).map((_, x) => ( */}
+								{/* 	<section key={x} className="pt-16"> */}
+								{/* 		<div className="px-6 flex flex-row"> */}
+								{/* 			<div className="w-4 h-4 bg-gray-200 rounded-full" /> */}
+								{/* 			<div className="w-3" /> */}
+								{/* 			<div className="w-24 h-4 bg-gray-200 rounded-full" /> */}
+								{/* 		</div> */}
+								{/* 		<div className="h-4" /> */}
+								{/* 		<div id="grid"> */}
+								{/* 			{Array(12).fill(0).map((_, x) => ( */}
+								{/* 				<article key={x} className="pb-full relative"> */}
+								{/* 					<div className="absolute inset-0"> */}
+								{/* 						<div className="flex flex-row justify-center items-center h-full"> */}
+								{/* 							<div className="w-8 h-8 bg-gray-400 rounded-full" /> */}
+								{/* 						</div> */}
+								{/* 						<div className="p-2 absolute inset-x-0 bottom-0"> */}
+								{/* 							<div className="flex flex-row justify-center"> */}
+								{/* 								<div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" /> */}
+								{/* 							</div> */}
+								{/* 						</div> */}
+								{/* 					</div> */}
+								{/* 				</article> */}
+								{/* 			))} */}
+								{/* 		</div> */}
+								{/* 	</section> */}
+								{/* ))} */}
 
 							</div>
 						</div>
@@ -323,30 +351,19 @@ export default function Home() {
 			{/* Hero */}
 			<Hero />
 
-			{/* Rounded SVG */}
-			<div className="hidden xl:block">
-				<Style className="w-screen h-auto">
-					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
-						<defs>
-							<linearGradient id="bg-grad">
-								<stop offset="0%" stopColor="hsl(215, 100%, 50%)" />
-								<stop offset="100%" stopColor="hsl(255, 100%, 65%)" />
-							</linearGradient>
-						</defs>
-					</svg>
-				</Style>
-			</div>
-
 			{/* App */}
-			<IconApp />
+			{/* <IconApp /> */}
 
-			<div className="hidden xl:block">
-				<br />
-				<br />
-				<br />
-				<br />
-			</div>
+			{/* <div className="hidden xl:block"> */}
+			{/* 	<br /> */}
+			{/* 	<br /> */}
+			{/* 	<br /> */}
+			{/* 	<br /> */}
+			{/* </div> */}
+
+			{Array(80).fill(0).map((_, x) => (
+				<br key={x} />
+			))}
 
 		</>
 	)
