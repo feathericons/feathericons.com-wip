@@ -19,25 +19,25 @@ function css/* tpl */(arr, ...args) {
 	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
 }
 
-// TODO: Responsive CTA should use flex flex-row.
 function LogoAndCTA() {
 	return (
-		// TODO: Add w-full max-w-* here.
-		<div className="flex flex-col items-center">
+		// NOTE: Use w-full sm:w-auto because of CTA buttons.
+		<div className="flex flex-col items-center w-full sm:w-auto">
 
+			{/* Logo mark */}
 			<div className="w-20 h-20 bg-gray-200 rounded-full" />
 
-			<div className="h-8" />
-			<div className="h-6 bg-gray-200 rounded-full" style={{ width: tw(112) }} />
+			{/* <h1> */}
+			<div className="h-10" />
+			<div className="h-6 bg-gray-200 rounded-full" style={{ width: tw(104) }} />
 
-			{/* <div className="hidden xl:block"> */}
+			{/* CTA buttons */}
 			<div className="h-6" />
-			<div className="flex flex-row">
-				<div className="w-44 h-14 bg-gray-200 rounded-full" />
+			<div className="flex flex-col sm:flex-row w-full sm:w-auto">
+				<div className="w-auto sm:w-44 h-14 bg-gray-200 rounded-full" />
 				<div className="w-4 h-4" />
-				<div className="w-44 h-14 bg-gray-200 bg-opacity-50 rounded-full" />
+				<div className="w-auto sm:w-44 w-44 h-14 bg-gray-200 bg-opacity-50 rounded-full" />
 			</div>
-			{/* </div> */}
 
 		</div>
 	)
@@ -167,7 +167,9 @@ function Hero() {
 				>
 
 					{/* Logo */}
-					<LogoAndCTA />
+					<Style className="flex-1">
+						<LogoAndCTA />
+					</Style>
 
 					{/* Sponsors */}
 					<div className="hidden sm:block">
