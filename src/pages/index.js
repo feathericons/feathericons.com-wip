@@ -238,91 +238,54 @@ function IconApp() {
 	return (
 		// NOTE: Use relative because of #bg-grad.
 		<div className="mt-0 xl:-mt-40 relative flex flex-row justify-center">
-			<main className="flex flex-row items-start w-full max-w-screen-xl">
-
-				{/* NOTE: Use items-start because of sticky top-0. */}
-				{/* <div className=""> */}
+			<main className="flex flex-row w-full max-w-screen-xl bg-white rounded-6">
 
 				{/* LHS */}
-				<div className="-mt-4 pt-4 sticky top-0 left-0 w-full">
-					{/* #bg-grad */}
-					<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
-						<Style className="w-full h-10">
-							<svg preserveAspectRatio="none" fill="red" /* fill="url(#bg-grad)" */ viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-								<rect width={1} height={1} />
-							</svg>
-						</Style>
+				<div className="w-full">
+					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+
+						{/* #bg-grad */}
+						<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
+							<Style className="w-full h-10">
+								<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+									<rect width={1} height={1} />
+								</svg>
+							</Style>
+						</div>
+
+						<div className="h-6 bg-red-100 rounded-tl-6">
+							a
+						</div>
 					</div>
-					<div className="h-20 bg-white rounded-tl-6">
-						SEARCH
+					<div className="bg-white">
+						b
+						{Array(60).fill(0).map((_, x) => (
+							<br key={x} />
+						))}
 					</div>
 				</div>
 
 				{/* RHS */}
-				<div className="-mt-4 pt-4 sticky top-0 right-0 w-80">
-					{/* #bg-grad */}
-					<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
-						<Style className="w-full h-10">
-							<svg preserveAspectRatio="none" fill="red" /* fill="url(#bg-grad)" */ viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-								<rect width={1} height={1} />
-							</svg>
-						</Style>
+				<div className="w-80">
+					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+
+						{/* #bg-grad */}
+						<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
+							<Style className="w-full h-10">
+								<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+									<rect width={1} height={1} />
+								</svg>
+							</Style>
+						</div>
+
+						<div className="bg-red-200 rounded-tr-6">
+							{Array(10).fill(0).map((_, x) => (
+								<br key={x} />
+							))}
+						</div>
+
 					</div>
-
-					{/* <aside> */}
-					<aside className="bg-white rounded-tr-6">
-						<div>
-							ICON
-						</div>
-						<div>
-							ICON
-						</div>
-						<div>
-							ICON
-						</div>
-					</aside>
-
 				</div>
-
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
 
 			</main>
 		</div>
