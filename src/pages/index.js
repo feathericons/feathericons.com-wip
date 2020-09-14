@@ -239,14 +239,14 @@ function IconApp() {
 		// NOTE: Use relative because of #bg-grad.
 		<div className="mt-0 xl:-mt-40 relative flex flex-row justify-center">
 			{/* NOTE: Use items-start because of sticky top-0. */}
-			<main className="w-full max-w-screen-xl bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-sm">
+			<main className="w-full max-w-screen-xl">
 
-				<div className="!-mt-4 !pt-4 sticky top-0 inset-x-0 w-full">
-					{/* <div className="-mx-6 absolute top-0 inset-x-0 pointer-events-none"> */}
-					{/* 	<div className="h-4 bg-blue-500" /> */}
-					{/* 	<div className="h-4 bg-blue-500" /> */}
-					{/* </div> */}
-					<div className="w-full h-20 xl:h-24 bg-red-100">
+				<div className="-mt-4 pt-4 sticky top-0 inset-x-0 w-full">
+					<div className="-mx-6 absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
+						<div className="h-4" style={{ fill: "url(#bg-grad)" }} />
+						<div className="h-6" style={{ fill: "url(#bg-grad)" }} />
+					</div>
+					<div className="w-full h-20 xl:h-24 bg-white border border-b-0 border-gray-300 rounded-t-0 xl:rounded-t-6 shadow">
 						{/* ... */}
 					</div>
 				</div>
