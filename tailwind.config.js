@@ -132,6 +132,14 @@ module.exports = {
 				6: "1.5rem",
 			},
 		},
+		screens: {
+			/* eslint-disable no-multi-spaces */
+			sm: `${16 +  640 + 16}px`,
+			md: `${24 +  768 + 24}px`,
+			lg: `${24 + 1024 + 24}px`,
+			xl: `${24 + 1280 + 24}px`,
+			/* eslint-enable no-multi-spaces */
+		},
 	},
 	variants: {
 		typography: {},
