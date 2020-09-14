@@ -198,7 +198,7 @@ function SearchBar() {
 		<div className="relative h-20">
 
 			{/* LHS */}
-			<div className="absolute left-0 inset-y-0">
+			<div className="absolute inset-y-0 left-0">
 				<div className="px-6 flex flex-row h-full">
 					<div className="px-2 flex flex-row items-center">
 						<div className="w-8 h-8 rounded-full bg-gray-100" />
@@ -212,7 +212,7 @@ function SearchBar() {
 			</div>
 
 			{/* RHS */}
-			<div className="absolute right-0 inset-y-0">
+			<div className="absolute inset-y-0 right-0">
 				<div className="px-6 flex flex-row h-full">
 
 					{/* Button */}
