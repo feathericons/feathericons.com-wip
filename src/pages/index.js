@@ -1,6 +1,8 @@
 import SEO from "./_SEO"
 import Style from "lib/x/Style"
 
+/**********/
+
 // Converts px units to rem units.
 function px(n) {
 	n /= 16
@@ -15,9 +17,13 @@ function tw(n) {
 }
 
 // https://dev.to/patarapolw/fake-tagged-template-string-literal-to-enable-syntax-highlighting-in-vscode-34g1
-function css/* tpl */(arr, ...args) {
+function css(arr, ...args) {
 	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
 }
+
+/**********/
+
+/* </Hero> */
 
 function LogoAndCTA() {
 	return (
@@ -43,19 +49,20 @@ function LogoAndCTA() {
 	)
 }
 
-function MockSponsor() {
-	return (
-		<div className="flex flex-col items-center">
-			<div className="w-40 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-			<div className="h-3" />
-			<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-		</div>
-	)
-}
-
 function Sponsors() {
+
+	function MockSponsor() {
+		return (
+			<div className="flex flex-col items-center">
+				<div className="w-40 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+				<div className="h-3" />
+				<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+			</div>
+		)
+	}
+
 	return (
-		<div>
+		<>
 
 			{/* Row (sm-xl) */}
 			<div className="-m-3 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
@@ -102,7 +109,7 @@ function Sponsors() {
 				</div>
 			</div>
 
-		</div>
+		</>
 	)
 }
 
@@ -184,6 +191,10 @@ function Hero() {
 	)
 }
 
+/* </Hero> */
+
+/* <IconApp> */
+
 function SearchBar() {
 	return (
 		<div className="relative h-20">
@@ -238,6 +249,8 @@ function IconApp() {
 		</div>
 	)
 }
+
+/* </IconApp> */
 
 export default function Home() {
 	return (
