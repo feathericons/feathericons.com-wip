@@ -136,7 +136,7 @@ function Hero() {
 				<div className="fixed top-0 inset-x-0" style={{ zIndex: -1 }}>
 					<Style className="w-full h-40">
 						<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-							<rect width="1" height="1" />
+							<rect width={1} height={1} />
 						</svg>
 					</Style>
 					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
@@ -241,15 +241,33 @@ function IconApp() {
 			{/* NOTE: Use items-start because of sticky top-0. */}
 			<main className="w-full max-w-screen-xl">
 
-				<div className="-mt-4 pt-4 sticky top-0 inset-x-0 w-full">
-					<div className="-mx-6 absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
-						<div className="h-4" style={{ fill: "url(#bg-grad)" }} />
-						<div className="h-6" style={{ fill: "url(#bg-grad)" }} />
+				<div className="mt-0 xl:-mt-4 pt-0 xl:pt-4 sticky top-0 inset-x-0 w-full">
+
+					{/* #bg-grad */}
+					<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
+						<Style className="w-full h-10">
+							<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+								<rect width={1} height={1} />
+							</svg>
+						</Style>
 					</div>
-					<div className="w-full h-20 xl:h-24 bg-white border border-b-0 border-gray-300 rounded-t-0 xl:rounded-t-6 shadow">
+					<div className="h-6 bg-white rounded-t-0 xl:rounded-t-6">
 						{/* ... */}
 					</div>
 				</div>
+
+				<div className="w-full h-20 bg-red-100">
+					hello
+				</div>
+
+
+				{/* NOTE: Use items-start because of sticky top-0. */}
+				{/* <div className="flex flex-row items-start"> */}
+				{/* 	<div className="w-full h-20 bg-red-100" /> */}
+				{/* 	<div className="w-80 h-80 bg-red-100" /> */}
+				{/* </div> */}
+
+
 
 				<br />
 				<br />
