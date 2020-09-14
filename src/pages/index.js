@@ -43,58 +43,62 @@ function LogoAndCTA() {
 	)
 }
 
-// TODO: Honeycomb UI breaks down for sm-lg breakpoints.
-function SponsorHoneycomb() {
+function MockSponsor() {
 	return (
 		<div className="flex flex-col items-center">
+			<div className="w-40 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
+			<div className="h-3" />
+			<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+		</div>
+	)
+}
 
-			<div className="flex flex-row">
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+function Sponsors() {
+	return (
+		<div>
+
+			{/* Row (sm-xl) */}
+			<div className="-m-3 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
+				<div className="m-3">
+					<MockSponsor />
 				</div>
-				<div className="w-6" />
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+				<div className="m-3">
+					<MockSponsor />
+				</div>
+				<div className="m-3">
+					<MockSponsor />
+				</div>
+				<div className="m-3">
+					<MockSponsor />
+				</div>
+				<div className="m-3">
+					<MockSponsor />
+				</div>
+				<div className="m-3">
+					<MockSponsor />
 				</div>
 			</div>
 
-			<div className="h-4" />
-			<div className="flex flex-row">
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+			{/* Honeycomb (xl-only) */}
+			<div className="hidden xl:flex xl:flex-col xl:items-center">
+				<div className="flex flex-row">
+					<MockSponsor />
+					<div className="w-6" />
+					<MockSponsor />
 				</div>
-				<div className="w-6" />
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+				<div className="h-4" />
+				<div className="flex flex-row">
+					<MockSponsor />
+					<div className="w-6" />
+					<MockSponsor />
+					<div className="w-6" />
+					<MockSponsor />
 				</div>
-				<div className="w-6" />
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-				</div>
-			</div>
-
-			<div className="h-4" />
-			<div className="flex flex-row">
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-				</div>
-				<div className="w-6" />
-				<div className="flex flex-col items-center">
-					<div className="w-44 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-					<div className="h-3" />
-					<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
+				<div className="h-4" />
+				<div className="flex flex-row">
+					<MockSponsor />
+					<div className="w-6" />
+					<MockSponsor />
 				</div>
 			</div>
 
@@ -168,7 +172,7 @@ function Hero() {
 					{/* Sponsors */}
 					<div className="hidden sm:block">
 						<div className="h-16 xl:h-0" />
-						<SponsorHoneycomb />
+						<Sponsors />
 					</div>
 
 				</div>
