@@ -116,7 +116,7 @@ function Sponsors() {
 function Hero() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-48 relative"
+			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-56 relative"
 			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
 		>
 
@@ -134,9 +134,11 @@ function Hero() {
 					</svg>
 				</div>
 				<div className="fixed top-0 inset-x-0" style={{ zIndex: -1 }}>
-					<svg className="w-full h-24" preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-						<rect width="1" height="1" />
-					</svg>
+					<Style className="w-full h-40">
+						<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+							<rect width="1" height="1" />
+						</svg>
+					</Style>
 					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 					</svg>
@@ -174,9 +176,7 @@ function Hero() {
 				>
 
 					{/* Logo */}
-					<Style className="flex-1">
-						<LogoAndCTA />
-					</Style>
+					<LogoAndCTA />
 
 					{/* Sponsors */}
 					<div className="h-0 sm:h-16 xl:h-0" />
@@ -237,12 +237,60 @@ function SearchBar() {
 function IconApp() {
 	return (
 		// NOTE: Use relative because of #bg-grad.
-		<div className="mt-0 xl:-mt-24 relative flex flex-row justify-center">
+		<div className="mt-0 xl:-mt-40 relative flex flex-row justify-center">
 			{/* NOTE: Use items-start because of sticky top-0. */}
-			<main className="flex flex-row items-start w-full max-w-screen-xl bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-sm">
-				{Array(20).fill(0).map((_, x) => (
-					<br key={x} />
-				))}
+			<main className="w-full max-w-screen-xl bg-white border border-gray-300 rounded-none xl:rounded-6 shadow-sm">
+
+				<div className="!-mt-4 !pt-4 sticky top-0 inset-x-0 w-full">
+					{/* <div className="-mx-6 absolute top-0 inset-x-0 pointer-events-none"> */}
+					{/* 	<div className="h-4 bg-blue-500" /> */}
+					{/* 	<div className="h-4 bg-blue-500" /> */}
+					{/* </div> */}
+					<div className="w-full h-20 xl:h-24 bg-red-100">
+						{/* ... */}
+					</div>
+				</div>
+
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+
 			</main>
 		</div>
 	)
@@ -268,7 +316,7 @@ export default function Home() {
 			{/* 	<br /> */}
 			{/* </div> */}
 
-			{Array(40).fill(0).map((_, x) => (
+			{Array(4).fill(0).map((_, x) => (
 				<br key={x} />
 			))}
 
