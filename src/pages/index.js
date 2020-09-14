@@ -144,7 +144,7 @@ function Hero() {
 			</div>
 
 			{/* TL */}
-			<div className="px-8 py-6 absolute top-0 left-0">
+			<div className="p-4 absolute top-0 left-0">
 				<div className="flex flex-row">
 					<div className="w-5 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
 					<div className="w-3" />
@@ -153,7 +153,7 @@ function Hero() {
 			</div>
 
 			{/* TR */}
-			<div className="px-8 py-6 absolute top-0 right-0">
+			<div className="p-4 absolute top-0 right-0">
 				<div className="flex flex-row">
 					<div className="w-24 h-5 bg-gray-200 bg-opacity-25 rounded-full" />
 					<div className="w-3" />
@@ -179,10 +179,8 @@ function Hero() {
 					</Style>
 
 					{/* Sponsors */}
-					<div className="hidden sm:block">
-						<div className="h-16 xl:h-0" />
-						<Sponsors />
-					</div>
+					<div className="h-0 sm:h-16 xl:h-0" />
+					<Sponsors />
 
 				</div>
 			</div>
