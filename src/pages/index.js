@@ -241,47 +241,60 @@ function SearchBar() {
 
 function IconApp() {
 	return (
-		// NOTE: Use z-10 because of #bg-grad.
+		// NOTE (1): Use z-10 because of <Hero>.
+		// NOTE (2): Use bg-gray-300 because of border-l border-gray-300.
 		<div className="mt-0 xl:-mt-32 flex flex-row justify-center">
-			<main className="bg-white w-full max-w-screen-xl rounded-6 z-10">
+			<main className="bg-gray-300 w-full max-w-screen-xl rounded-6 z-10 shadow">
 
 				{/* (top) */}
 				<Style className="hidden xl:block">
-					<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none z-10">
+					{/* NOTE: Use z-20 or more. */}
+					<div className="-mx-1 -mt-4 sticky top-0 inset-x-0 pointer-events-none z-20">
 						<div className="flex flex-row items-start">
+
+							{/* LHS edge (because of -mx-1) */}
+							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
+								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+									<rect width={1} height={1} />
+								</svg>
+							</Style>
+
+							{/* LHS */}
 							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 								</svg>
 							</Style>
+
+							{/* Center */}
 							<Style className="w-full h-4" style={{ fill: "url(#bg-grad)" }}>
-								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-									<rect width={16} height={16} />
+								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+									<rect width={1} height={1} />
 								</svg>
 							</Style>
+
+							{/* RHS */}
 							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 								</svg>
 							</Style>
+
+							{/* RHS edge (because of -mx-1) */}
+							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
+								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
+									<rect width={1} height={1} />
+								</svg>
+							</Style>
+
 						</div>
 					</div>
 				</Style>
 
-				{/* <Style className="hidden xl:block"> */}
-				{/* 	<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none z-10"> */}
-				{/* 		<Style className="w-full h-10" style={{ fill: "url(#bg-grad)" }}> */}
-				{/* 			<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"> */}
-				{/* 				<rect width={1} height={1} /> */}
-				{/* 			</svg> */}
-				{/* 		</Style> */}
-				{/* 	</div> */}
-				{/* </Style> */}
-
 				<div className="flex flex-row">
 
 					{/* LHS */}
-					<div className="w-full">
+					<div className="w-full bg-white rounded-0 xl:rounded-l-6">
 						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
 							<div className="bg-white border-b border-gray-300 rounded-tl-0 xl:rounded-tl-6">
 								<SearchBar />
@@ -331,19 +344,22 @@ function IconApp() {
 					</div>
 
 					{/* RHS */}
-					<Style className="hidden md:block">
-						<div className="flex-shrink-0 w-80 border-l border-gray-300">
+					<Style className="hidden lg:block">
+						<div className="flex-shrink-0 w-80 bg-gray-50 border-l border-gray-300 rounded-r-0 xl:rounded-r-6">
+
 							<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
-								<div className="bg-red-200 rounded-tr-0 xl:rounded-tr-6">
+								<div className="bg-white rounded-tr-0 xl:rounded-tr-6">
 									RHS
 									{Array(10).fill(0).map((_, x) => (
 										<br key={x} />
 									))}
 								</div>
+								<hr className="border-t border-gray-300" />
+								{Array(10).fill(0).map((_, x) => (
+									<br key={x} />
+								))}
 							</div>
-							{Array(50).fill(0).map((_, x) => (
-								<br key={x} />
-							))}
+
 						</div>
 					</Style>
 
@@ -389,12 +405,7 @@ export default function Home() {
 
 			{/* App */}
 			<IconApp />
-
-			<div className="hidden xl:block">
-				{Array(4).fill(0).map((_, x) => (
-					<br key={x} />
-				))}
-			</div>
+			<div className="h-0 xl:h-16" />
 
 		</>
 	)
