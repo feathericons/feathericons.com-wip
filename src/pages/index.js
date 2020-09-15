@@ -215,11 +215,16 @@ function SearchBar() {
 			<div className="absolute inset-y-0 right-0">
 				<div className="px-6 flex flex-row h-full">
 
-					{/* Button */}
+					{/* Select */}
 					<div className="px-2 hidden sm:flex sm:flex-row sm:items-center">
-						<div className="px-2 flex flex-row items-center w-48 h-12 rounded-full bg-gray-100">
-							<div className="w-8 h-8 rounded-full bg-gray-200" />
+						<div className="px-2 flex flex-row items-center w-40 h-10 rounded-full bg-gray-100">
+							<div className="w-6 h-6 rounded-full bg-gray-200" />
 						</div>
+					</div>
+
+					{/* Button */}
+					<div className="px-2 flex flex-row items-center">
+						<div className="w-8 h-8 rounded-full bg-gray-100" />
 					</div>
 
 					{/* Button */}
@@ -238,7 +243,7 @@ function IconApp() {
 	return (
 		// NOTE: Use z-10 because of #bg-grad.
 		<div className="mt-0 xl:-mt-40 flex flex-row justify-center">
-			<main className="bg-white w-full max-w-screen-xl z-10">
+			<main className="bg-white w-full max-w-screen-xl rounded-6 z-10">
 
 				{/* (top) */}
 				<Style className="hidden xl:block">
@@ -268,12 +273,12 @@ function IconApp() {
 					{/* LHS */}
 					<div className="w-full">
 						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
-							<div className="bg-gray-50 rounded-tl-0 xl:rounded-tl-6">
+							<div className="bg-white border-b border-gray-300 rounded-tl-0 xl:rounded-tl-6">
 								<SearchBar />
 							</div>
 						</div>
 
-						<div className="px-4 xl:px-20">
+						<div className="px-4 xl:px-16">
 							<style>
 								{css`
 									#grid {
@@ -316,7 +321,7 @@ function IconApp() {
 					</div>
 
 					{/* RHS */}
-					<div className="flex-shrink-0 w-80">
+					<div className="flex-shrink-0 w-80 border-l border-gray-300">
 						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
 							<div className="bg-red-200 rounded-tr-0 xl:rounded-tr-6">
 								RHS
@@ -333,27 +338,27 @@ function IconApp() {
 				</div>
 
 				{/* (bottom) */}
-				<Style className="hidden xl:block">
-					<div className="-mt-6 -mb-4 sticky bottom-0 inset-x-0 pointer-events-none">
-						<div className="flex flex-row items-end">
-							<Style className="flex-shrink-0 h-10 text-cool-gray-200">
-								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M24 40H0L0 0C0 13.2549 10.7451 24 24 24L24 40Z" />
-								</svg>
-							</Style>
-							<Style className="w-full h-4 text-cool-gray-200">
-								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-									<rect width={16} height={16} />
-								</svg>
-							</Style>
-							<Style className="flex-shrink-0 h-10 text-cool-gray-200">
-								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
-									<path fillRule="evenodd" clipRule="evenodd" d="M0 40H24V0C24 13.2549 13.2549 24 0 24V40Z" />
-								</svg>
-							</Style>
-						</div>
-					</div>
-				</Style>
+				{/* <Style className="hidden xl:block"> */}
+				{/* 	<div className="-mt-6 -mb-4 sticky bottom-0 inset-x-0 pointer-events-none"> */}
+				{/* 		<div className="flex flex-row items-end"> */}
+				{/* 			<Style className="flex-shrink-0 h-10 text-cool-gray-200"> */}
+				{/* 				<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg"> */}
+				{/* 					<path fillRule="evenodd" clipRule="evenodd" d="M24 40H0L0 0C0 13.2549 10.7451 24 24 24L24 40Z" /> */}
+				{/* 				</svg> */}
+				{/* 			</Style> */}
+				{/* 			<Style className="w-full h-4 text-cool-gray-200"> */}
+				{/* 				<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> */}
+				{/* 					<rect width={16} height={16} /> */}
+				{/* 				</svg> */}
+				{/* 			</Style> */}
+				{/* 			<Style className="flex-shrink-0 h-10 text-cool-gray-200"> */}
+				{/* 				<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg"> */}
+				{/* 					<path fillRule="evenodd" clipRule="evenodd" d="M0 40H24V0C24 13.2549 13.2549 24 0 24V40Z" /> */}
+				{/* 				</svg> */}
+				{/* 			</Style> */}
+				{/* 		</div> */}
+				{/* 	</div> */}
+				{/* </Style> */}
 
 			</main>
 		</div>
