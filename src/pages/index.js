@@ -242,17 +242,17 @@ function IconApp() {
 
 				<div className="sticky top-0">
 					<div className="flex flex-row">
-						<Style className="flex-shrink-0 h-10 text-blue-500">
+						<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
 							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 							</svg>
 						</Style>
-						<Style className="w-full h-4 text-blue-500">
+						<Style className="w-full h-4 text-blue-600" style={{ fill: "url(#bg-grad)" }}>
 							<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
 								<rect width={16} height={16} />
 							</svg>
 						</Style>
-						<Style className="flex-shrink-0 h-10 text-blue-500">
+						<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
 							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 							</svg>
