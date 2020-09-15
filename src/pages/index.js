@@ -4,6 +4,10 @@ import Style from "lib/x/Style"
 
 /**********/
 
+const SVG = ({ svg: Component, ...props }) => (
+	<Component {...props} />
+)
+
 // Converts px units to rem units.
 function px(n) {
 	n /= 16
@@ -317,18 +321,19 @@ function IconApp() {
 								`}
 							</style>
 							<div id="grid">
-								{Array(200).fill(0).map((_, x) => (
-									<article key={x} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
+								{dataset.map(each => (
+									<article key={each.name} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
 										<div className="absolute inset-0">
 											<div className="flex flex-row justify-center items-center h-full">
-												<div className="w-8 h-8 bg-gray-400 rounded-full" />
-												{/* <Style className="w-8 h-8 text-gray-800"> */}
-												{/* 	<svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> */}
-												{/* 		<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /> */}
-												{/* 		<line x1={16} y1={8} x2={2} y2={22} /> */}
-												{/* 		<line x1={17.5} y1={15} x2={9} y2={15} /> */}
-												{/* 	</svg> */}
-												{/* </Style> */}
+												{/* <div className="w-8 h-8 bg-gray-400 rounded-full" /> */}
+												<Style className="w-8 h-8 text-gray-800">
+													<SVG svg={each.svgs.stroke} />
+													{/* <svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> */}
+													{/* 	<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /> */}
+													{/* 	<line x1={16} y1={8} x2={2} y2={22} /> */}
+													{/* 	<line x1={17.5} y1={15} x2={9} y2={15} /> */}
+													{/* </svg> */}
+												</Style>
 											</div>
 										</div>
 										<div className="p-2 absolute inset-x-0 bottom-0">
