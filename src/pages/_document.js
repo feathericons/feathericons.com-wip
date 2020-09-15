@@ -8,7 +8,7 @@ class Document extends NextDocument {
 
 	render() {
 		return (
-			<Html className="bg-cool-gray-100" lang="en">
+			<Html className="bg-cool-gray-50" lang="en">
 				<Head>
 					<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 					{process.env.NODE_ENV === "production" && (

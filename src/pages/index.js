@@ -1,3 +1,4 @@
+import dataset from "data/dataset"
 import SEO from "./_SEO"
 import Style from "lib/x/Style"
 
@@ -295,52 +296,51 @@ function IconApp() {
 
 					{/* LHS */}
 					<div className="w-full bg-white rounded-0 xl:rounded-l-6">
+
+						{/* Search */}
 						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
 							<div className="bg-white border-b border-gray-300 rounded-tl-0 xl:rounded-tl-6">
 								<SearchBar />
 							</div>
 						</div>
 
-						<div className="px-4 xl:px-16">
+						{/* Icons */}
+						{/* */}
+						{/* px-6 sm:px-4 */}
+						<div className="px-4 sm:px-16 py-16 pb-24">
 							<style>
 								{css`
 									#grid {
 										display: grid;
-										grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+										grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
 									}
 								`}
 							</style>
-							{Array(6).fill(0).map((_, x) => (
-								<>
-									<div className="h-16" />
-									<section>
-										<div className="px-8 flex flex-row">
-											<div className="w-4 h-4 bg-gray-200 rounded-full" />
-											<div className="w-3" />
-											<div className="w-24 h-4 bg-gray-200 rounded-full" />
+							<div id="grid">
+								{Array(200).fill(0).map((_, x) => (
+									<article key={x} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
+										<div className="absolute inset-0">
+											<div className="flex flex-row justify-center items-center h-full">
+												<div className="w-8 h-8 bg-gray-400 rounded-full" />
+												{/* <Style className="w-8 h-8 text-gray-800"> */}
+												{/* 	<svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> */}
+												{/* 		<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /> */}
+												{/* 		<line x1={16} y1={8} x2={2} y2={22} /> */}
+												{/* 		<line x1={17.5} y1={15} x2={9} y2={15} /> */}
+												{/* 	</svg> */}
+												{/* </Style> */}
+											</div>
 										</div>
-										<div className="h-4" />
-										<div id="grid" className="!-m-px">
-											{Array(12).fill(0).map((_, x) => (
-												<article key={x} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
-													<div className="absolute inset-0">
-														<div className="flex flex-row justify-center items-center h-full">
-															<div className="w-8 h-8 bg-gray-400 rounded-full" />
-														</div>
-													</div>
-													<div className="p-4 absolute inset-x-0 bottom-0">
-														<div className="flex flex-row justify-center">
-															<div className="w-20 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
-														</div>
-													</div>
-												</article>
-											))}
+										<div className="p-2 absolute inset-x-0 bottom-0">
+											<div className="flex flex-row justify-center">
+												<div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
+											</div>
 										</div>
-									</section>
-								</>
-							))}
-							<div className="h-4 xl:h-24" />
+									</article>
+								))}
+							</div>
 						</div>
+
 					</div>
 
 					{/* RHS */}
@@ -348,7 +348,7 @@ function IconApp() {
 						<div className="flex-shrink-0 w-80 bg-gray-50 border-l border-gray-300 rounded-r-0 xl:rounded-r-6">
 
 							<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
-								<div className="bg-white rounded-tr-0 xl:rounded-tr-6">
+								<div className="h-80 bg-white rounded-tr-0 xl:rounded-tr-6">
 									RHS
 									{Array(10).fill(0).map((_, x) => (
 										<br key={x} />
@@ -405,7 +405,7 @@ export default function Home() {
 
 			{/* App */}
 			<IconApp />
-			<div className="h-0 xl:h-16" />
+			<div className="h-0 xl:h-24" />
 
 		</>
 	)
