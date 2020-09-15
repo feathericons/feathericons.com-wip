@@ -237,13 +237,13 @@ function SearchBar() {
 function IconApp() {
 	return (
 		// NOTE: Use z-10 because of #bg-grad.
-		<div className="mt-0 xl:-mt-40 !relative flex flex-row justify-center">
-			<main className="w-full max-w-screen-xl bg-white rounded-6 z-10">
+		<div className="mt-0 xl:-mt-40 flex flex-row justify-center">
+			<main className="w-full max-w-screen-xl bg-white rounded-0 xl:rounded-6 z-10">
 
-				{/* #bg-grad */}
+				{/* (top) */}
 				<Style className="hidden xl:block">
-					<div className="-mt-4 sticky top-0 pointer-events-none">
-						<div className="flex flex-row">
+					<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none">
+						<div className="flex flex-row items-start">
 							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
@@ -292,6 +292,29 @@ function IconApp() {
 					</div>
 				</div>
 
+				{/* (bottom) */}
+				<Style className="hidden xl:block">
+					<div className="-mb-4 sticky bottom-0 inset-x-0 pointer-events-none">
+						<div className="flex flex-row items-end">
+							<Style className="flex-shrink-0 h-10 text-cool-gray-200">
+								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M24 40H0L0 0C0 13.2549 10.7451 24 24 24L24 40Z" />
+								</svg>
+							</Style>
+							<Style className="w-full h-4 text-cool-gray-200">
+								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect width={16} height={16} />
+								</svg>
+							</Style>
+							<Style className="flex-shrink-0 h-10 text-cool-gray-200">
+								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M0 40H24V0C24 13.2549 13.2549 24 0 24V40Z" />
+								</svg>
+							</Style>
+						</div>
+					</div>
+				</Style>
+
 			</main>
 		</div>
 	)
@@ -310,16 +333,11 @@ export default function Home() {
 			{/* App */}
 			<IconApp />
 
-			{/* <div className="hidden xl:block"> */}
-			{/* 	<br /> */}
-			{/* 	<br /> */}
-			{/* 	<br /> */}
-			{/* 	<br /> */}
-			{/* </div> */}
-
-			{Array(4).fill(0).map((_, x) => (
-				<br key={x} />
-			))}
+			<div className="hidden xl:block">
+				{Array(4).fill(0).map((_, x) => (
+					<br key={x} />
+				))}
+			</div>
 
 		</>
 	)
