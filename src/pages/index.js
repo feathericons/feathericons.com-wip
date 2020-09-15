@@ -237,55 +237,40 @@ function SearchBar() {
 function IconApp() {
 	return (
 		// NOTE: Use relative because of #bg-grad.
-		<div className="mt-0 xl:-mt-40 relative flex flex-row justify-center">
-			<main className="flex flex-row w-full max-w-screen-xl bg-white rounded-6">
+		<div className="mt-0 xl:-mt-40 relative flex flex-row items-star justify-center">
+			<main className="w-full max-w-screen-xl bg-white rounded-6">
 
-				{/* LHS */}
-				<div className="w-full">
-					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
-
-						{/* #bg-grad */}
-						<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
-							<Style className="w-full h-10">
-								<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-									<rect width={1} height={1} />
-								</svg>
-							</Style>
-						</div>
-
-						<div className="h-6 bg-red-100 rounded-tl-6">
-							a
-						</div>
-					</div>
-					<div className="bg-white">
-						b
-						{Array(60).fill(0).map((_, x) => (
-							<br key={x} />
-						))}
+				<div className="sticky top-0">
+					<div className="flex flex-row">
+						<Style className="flex-shrink-0 h-10 text-blue-500">
+							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+								<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
+							</svg>
+						</Style>
+						<Style className="w-full h-4 text-blue-500">
+							<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+								<rect width={16} height={16} />
+							</svg>
+						</Style>
+						<Style className="flex-shrink-0 h-10 text-blue-500">
+							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+								<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
+							</svg>
+						</Style>
 					</div>
 				</div>
 
-				{/* RHS */}
-				<div className="w-80">
-					<div className="-mt-4 pt-4 sticky top-0 inset-x-0">
+				{/* <div className="-mt-4 pt-4 sticky top-0"> */}
+				{/* 	<div className="absolute top-0 inset-x-0"> */}
+				{/* 	</div> */}
+				{/* 	<div className="h-24 bg-red-100"> */}
+				{/* 		SEARCH */}
+				{/* 	</div> */}
+				{/* </div> */}
 
-						{/* #bg-grad */}
-						<div className="absolute top-0 inset-x-0 pointer-events-none" style={{ zIndex: -1 }}>
-							<Style className="w-full h-10">
-								<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
-									<rect width={1} height={1} />
-								</svg>
-							</Style>
-						</div>
-
-						<div className="bg-red-200 rounded-tr-6">
-							{Array(10).fill(0).map((_, x) => (
-								<br key={x} />
-							))}
-						</div>
-
-					</div>
-				</div>
+				{Array(80).fill(0).map((_, x) => (
+					<br key={x} />
+				))}
 
 			</main>
 		</div>
