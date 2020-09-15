@@ -236,9 +236,9 @@ function SearchBar() {
 
 function IconApp() {
 	return (
-		// NOTE: Use relative because of #bg-grad.
-		<div className="mt-0 xl:-mt-40 relative flex flex-row items-star justify-center">
-			<main className="w-full max-w-screen-xl bg-white rounded-6">
+		// NOTE: Use z-10 because of #bg-grad.
+		<div className="mt-0 xl:-mt-40 !relative flex flex-row justify-center">
+			<main className="w-full max-w-screen-xl bg-white rounded-6 z-10">
 
 				{/* #bg-grad */}
 				<Style className="hidden xl:block">
