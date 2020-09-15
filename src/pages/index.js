@@ -240,37 +240,57 @@ function IconApp() {
 		<div className="mt-0 xl:-mt-40 relative flex flex-row items-star justify-center">
 			<main className="w-full max-w-screen-xl bg-white rounded-6">
 
-				<div className="sticky top-0">
-					<div className="flex flex-row">
-						<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
-							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
-								<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
-							</svg>
-						</Style>
-						<Style className="w-full h-4 text-blue-600" style={{ fill: "url(#bg-grad)" }}>
-							<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-								<rect width={16} height={16} />
-							</svg>
-						</Style>
-						<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
-							<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
-								<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
-							</svg>
-						</Style>
+				{/* #bg-grad */}
+				<Style className="hidden xl:block">
+					<div className="-mt-4 sticky top-0 pointer-events-none">
+						<div className="flex flex-row">
+							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
+								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
+								</svg>
+							</Style>
+							<Style className="w-full h-4" style={{ fill: "url(#bg-grad)" }}>
+								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+									<rect width={16} height={16} />
+								</svg>
+							</Style>
+							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
+								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
+									<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
+								</svg>
+							</Style>
+						</div>
+					</div>
+				</Style>
+
+				<div className="flex flex-row">
+
+					{/* LHS */}
+					<div className="w-full">
+
+						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 z-10">
+							HELLO
+						</div>
+
+						{Array(60).fill(0).map((_, x) => (
+							<br key={x} />
+						))}
+
+					</div>
+
+					{/* RHS */}
+					<div className="flex-shrink-0 w-80">
+
+						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 z-10">
+							HELLO
+						</div>
+
+						{Array(40).fill(0).map((_, x) => (
+							<br key={x} />
+						))}
+
 					</div>
 				</div>
-
-				{/* <div className="-mt-4 pt-4 sticky top-0"> */}
-				{/* 	<div className="absolute top-0 inset-x-0"> */}
-				{/* 	</div> */}
-				{/* 	<div className="h-24 bg-red-100"> */}
-				{/* 		SEARCH */}
-				{/* 	</div> */}
-				{/* </div> */}
-
-				{Array(80).fill(0).map((_, x) => (
-					<br key={x} />
-				))}
 
 			</main>
 		</div>
