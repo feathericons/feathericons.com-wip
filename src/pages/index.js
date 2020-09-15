@@ -242,7 +242,7 @@ function SearchBar() {
 function IconApp() {
 	return (
 		// NOTE: Use z-10 because of #bg-grad.
-		<div className="mt-0 xl:-mt-40 flex flex-row justify-center">
+		<div className="mt-0 xl:-mt-32 flex flex-row justify-center">
 			<main className="bg-white w-full max-w-screen-xl rounded-6 z-10">
 
 				{/* (top) */}
@@ -267,6 +267,16 @@ function IconApp() {
 						</div>
 					</div>
 				</Style>
+
+				{/* <Style className="hidden xl:block"> */}
+				{/* 	<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none z-10"> */}
+				{/* 		<Style className="w-full h-10" style={{ fill: "url(#bg-grad)" }}> */}
+				{/* 			<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"> */}
+				{/* 				<rect width={1} height={1} /> */}
+				{/* 			</svg> */}
+				{/* 		</Style> */}
+				{/* 	</div> */}
+				{/* </Style> */}
 
 				<div className="flex flex-row">
 
@@ -321,19 +331,21 @@ function IconApp() {
 					</div>
 
 					{/* RHS */}
-					<div className="flex-shrink-0 w-80 border-l border-gray-300">
-						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
-							<div className="bg-red-200 rounded-tr-0 xl:rounded-tr-6">
-								RHS
-								{Array(10).fill(0).map((_, x) => (
-									<br key={x} />
-								))}
+					<Style className="hidden md:block">
+						<div className="flex-shrink-0 w-80 border-l border-gray-300">
+							<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
+								<div className="bg-red-200 rounded-tr-0 xl:rounded-tr-6">
+									RHS
+									{Array(10).fill(0).map((_, x) => (
+										<br key={x} />
+									))}
+								</div>
 							</div>
+							{Array(50).fill(0).map((_, x) => (
+								<br key={x} />
+							))}
 						</div>
-						{Array(50).fill(0).map((_, x) => (
-							<br key={x} />
-						))}
-					</div>
+					</Style>
 
 				</div>
 
