@@ -238,11 +238,11 @@ function IconApp() {
 	return (
 		// NOTE: Use z-10 because of #bg-grad.
 		<div className="mt-0 xl:-mt-40 flex flex-row justify-center">
-			<main className="w-full max-w-screen-xl bg-white rounded-0 xl:rounded-6 z-10">
+			<main className="bg-white w-full max-w-screen-xl z-10">
 
 				{/* (top) */}
 				<Style className="hidden xl:block">
-					<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none">
+					<div className="-mt-4 sticky top-0 inset-x-0 pointer-events-none z-10">
 						<div className="flex flex-row items-start">
 							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
@@ -267,34 +267,74 @@ function IconApp() {
 
 					{/* LHS */}
 					<div className="w-full">
-
-						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 z-10">
-							HELLO
+						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
+							<div className="bg-gray-50 rounded-tl-0 xl:rounded-tl-6">
+								<SearchBar />
+							</div>
 						</div>
 
-						{Array(60).fill(0).map((_, x) => (
-							<br key={x} />
-						))}
-
+						<div className="px-4 xl:px-20">
+							<style>
+								{css`
+									#grid {
+										display: grid;
+										grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+									}
+								`}
+							</style>
+							{Array(6).fill(0).map((_, x) => (
+								<>
+									<div className="h-16" />
+									<section>
+										<div className="px-8 flex flex-row">
+											<div className="w-4 h-4 bg-gray-200 rounded-full" />
+											<div className="w-3" />
+											<div className="w-24 h-4 bg-gray-200 rounded-full" />
+										</div>
+										<div className="h-4" />
+										<div id="grid" className="!-m-px">
+											{Array(12).fill(0).map((_, x) => (
+												<article key={x} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
+													<div className="absolute inset-0">
+														<div className="flex flex-row justify-center items-center h-full">
+															<div className="w-8 h-8 bg-gray-400 rounded-full" />
+														</div>
+													</div>
+													<div className="p-4 absolute inset-x-0 bottom-0">
+														<div className="flex flex-row justify-center">
+															<div className="w-20 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
+														</div>
+													</div>
+												</article>
+											))}
+										</div>
+									</section>
+								</>
+							))}
+							<div className="h-4 xl:h-24" />
+						</div>
 					</div>
 
 					{/* RHS */}
 					<div className="flex-shrink-0 w-80">
-
-						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 z-10">
-							HELLO
+						<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
+							<div className="bg-red-200 rounded-tr-0 xl:rounded-tr-6">
+								RHS
+								{Array(10).fill(0).map((_, x) => (
+									<br key={x} />
+								))}
+							</div>
 						</div>
-
-						{Array(40).fill(0).map((_, x) => (
+						{Array(50).fill(0).map((_, x) => (
 							<br key={x} />
 						))}
-
 					</div>
+
 				</div>
 
 				{/* (bottom) */}
 				<Style className="hidden xl:block">
-					<div className="-mb-4 sticky bottom-0 inset-x-0 pointer-events-none">
+					<div className="-mt-6 -mb-4 sticky bottom-0 inset-x-0 pointer-events-none">
 						<div className="flex flex-row items-end">
 							<Style className="flex-shrink-0 h-10 text-cool-gray-200">
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
