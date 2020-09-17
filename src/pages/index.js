@@ -95,30 +95,32 @@ function Sponsors() {
 	}
 
 	return (
-		<>
+		<Style className="hidden sm:block">
+			<div className="relative">
 
-			{/* Row (sm-xl) */}
-			<div className="-mx-4 -my-3 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
-				<div className="mx-4 my-3">
-					<Sponsor sponsor={sponsors[0]} />
+				<div className="flex flex-row justify-center">
+					{/* <p className="font-bold text-xs leading-none text-purple-50"> */}
+					<p className="font-bold tracking-wide leading-none text-purple-50 opacity-87.5" style={{ fontSize: `${11 / 16}rem` }}>
+						SPONSORED BY &nbsp;
+						&middot; &nbsp;
+						<span className="inline-flex flex-row items-center align-top">
+							BECOME A SPONSOR
+							<EnSpace />
+							<Style
+								className="opacity-75"
+								style={{
+									width: "1em",
+									height: "1em",
+								}}
+							>
+								<SVGExternalLink />
+							</Style>
+						</span>
+					</p>
 				</div>
-				<div className="mx-4 my-3">
-					<Sponsor sponsor={sponsors[1]} />
-				</div>
-				<div className="mx-4 my-3">
-					<Sponsor sponsor={sponsors[2]} />
-				</div>
-				<div className="mx-4 my-3">
-					<Sponsor sponsor={sponsors[3]} />
-				</div>
-				<div className="mx-4 my-3">
-					<Sponsor sponsor={sponsors[4]} />
-				</div>
-			</div>
 
-			{/* Honeycomb (xl-only) */}
-			<div className="-mx-4 -my-3 hidden xl:flex xl:flex-col xl:items-center">
-				<div className="flex flex-row">
+				{/* Row (sm-xl) */}
+				<div className="-mx-4 -my-3 pt-8 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
 					<div className="mx-4 my-3">
 						<Sponsor sponsor={sponsors[0]} />
 					</div>
@@ -128,8 +130,6 @@ function Sponsors() {
 					<div className="mx-4 my-3">
 						<Sponsor sponsor={sponsors[2]} />
 					</div>
-				</div>
-				<div className="flex flex-row">
 					<div className="mx-4 my-3">
 						<Sponsor sponsor={sponsors[3]} />
 					</div>
@@ -137,9 +137,32 @@ function Sponsors() {
 						<Sponsor sponsor={sponsors[4]} />
 					</div>
 				</div>
-			</div>
 
-		</>
+				{/* Honeycomb (xl-only) */}
+				<div className="-mx-4 -my-3 pt-8 hidden xl:flex xl:flex-col xl:items-center">
+					<div className="flex flex-row">
+						<div className="mx-4 my-3">
+							<Sponsor sponsor={sponsors[0]} />
+						</div>
+						<div className="mx-4 my-3">
+							<Sponsor sponsor={sponsors[1]} />
+						</div>
+						<div className="mx-4 my-3">
+							<Sponsor sponsor={sponsors[2]} />
+						</div>
+					</div>
+					<div className="flex flex-row">
+						<div className="mx-4 my-3">
+							<Sponsor sponsor={sponsors[3]} />
+						</div>
+						<div className="mx-4 my-3">
+							<Sponsor sponsor={sponsors[4]} />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</Style>
 	)
 }
 
