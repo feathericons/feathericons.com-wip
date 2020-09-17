@@ -1,6 +1,11 @@
 import dataset from "data/dataset"
 import SEO from "./_SEO"
+import sponsors from "data/sponsors"
 import Style from "lib/x/Style"
+import target_blank from "lib/x/target_blank"
+import { Space, EnSpace, EmSpace } from "lib/x/Spaces"
+
+import { ExternalLink as SVGExternalLink } from "react-feather"
 
 /**********/
 
@@ -56,13 +61,36 @@ function LogoAndCTA() {
 
 function Sponsors() {
 
-	function MockSponsor() {
+	function Sponsor({ sponsor }) {
 		return (
-			<div className="flex flex-col items-center">
-				<div className="w-40 h-12 bg-gray-200 bg-opacity-50 rounded-full" />
-				<div className="h-3" />
-				<div className="w-24 h-3 bg-gray-200 bg-opacity-25 rounded-full" />
-			</div>
+			<a
+				key={sponsor.href}
+				className="!opacity-93.75 !dark:opacity-87.5 !hover:opacity-100"
+				href={sponsor.href + "?ref=feathericons.com"}
+				// data-splitbee-event="Click Sponsor Link"
+				// data-splitbee-event-type={sponsor.name}
+				{...target_blank}
+			>
+				<div className="flex flex-col items-center">
+					<img className="h-12" src={sponsor.src} alt={sponsor.name} />
+					<div className="h-2" />
+					<p className="font-medium text-xs leading-none text-purple-50">
+						<span className="inline flex flex-row items-center align-top">
+							{sponsor.tagline}
+							<EnSpace />
+							<Style
+								className="opacity-75"
+								style={{
+									width: "0.875em",
+									height: "0.875em",
+								}}
+							>
+								<SVGExternalLink />
+							</Style>
+						</span>
+					</p>
+				</div>
+			</a>
 		)
 	}
 
@@ -70,47 +98,44 @@ function Sponsors() {
 		<>
 
 			{/* Row (sm-xl) */}
-			<div className="-m-3 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
-				<div className="m-3">
-					<MockSponsor />
+			<div className="-mx-4 -my-3 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
+				<div className="mx-4 my-3">
+					<Sponsor sponsor={sponsors[0]} />
 				</div>
-				<div className="m-3">
-					<MockSponsor />
+				<div className="mx-4 my-3">
+					<Sponsor sponsor={sponsors[1]} />
 				</div>
-				<div className="m-3">
-					<MockSponsor />
+				<div className="mx-4 my-3">
+					<Sponsor sponsor={sponsors[2]} />
 				</div>
-				<div className="m-3">
-					<MockSponsor />
+				<div className="mx-4 my-3">
+					<Sponsor sponsor={sponsors[3]} />
 				</div>
-				<div className="m-3">
-					<MockSponsor />
-				</div>
-				<div className="m-3">
-					<MockSponsor />
+				<div className="mx-4 my-3">
+					<Sponsor sponsor={sponsors[4]} />
 				</div>
 			</div>
 
 			{/* Honeycomb (xl-only) */}
-			<div className="hidden xl:flex xl:flex-col xl:items-center">
+			<div className="-mx-4 -my-3 hidden xl:flex xl:flex-col xl:items-center">
 				<div className="flex flex-row">
-					<MockSponsor />
-					<div className="w-6" />
-					<MockSponsor />
+					<div className="mx-4 my-3">
+						<Sponsor sponsor={sponsors[0]} />
+					</div>
+					<div className="mx-4 my-3">
+						<Sponsor sponsor={sponsors[1]} />
+					</div>
+					<div className="mx-4 my-3">
+						<Sponsor sponsor={sponsors[2]} />
+					</div>
 				</div>
-				<div className="h-4" />
 				<div className="flex flex-row">
-					<MockSponsor />
-					<div className="w-6" />
-					<MockSponsor />
-					<div className="w-6" />
-					<MockSponsor />
-				</div>
-				<div className="h-4" />
-				<div className="flex flex-row">
-					<MockSponsor />
-					<div className="w-6" />
-					<MockSponsor />
+					<div className="mx-4 my-3">
+						<Sponsor sponsor={sponsors[3]} />
+					</div>
+					<div className="mx-4 my-3">
+						<Sponsor sponsor={sponsors[4]} />
+					</div>
 				</div>
 			</div>
 
@@ -311,12 +336,13 @@ function IconApp() {
 						{/* Icons */}
 						{/* */}
 						{/* px-6 sm:px-4 */}
-						<div className="px-4 sm:px-16 py-16 pb-24">
+						<div className="px-4 xl:px-16 py-8 pb-24">
 							<style>
 								{css`
 									#grid {
 										display: grid;
-										grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+										grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+										gap: 1rem;
 									}
 								`}
 							</style>
@@ -336,9 +362,21 @@ function IconApp() {
 												</Style>
 											</div>
 										</div>
-										<div className="p-2 absolute inset-x-0 bottom-0">
+										<div className="py-2 absolute inset-x-0 bottom-0">
 											<div className="flex flex-row justify-center">
-												<div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" />
+												{/* <div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" /> */}
+												<Style className="subpixel-antialiased">
+													<p
+														className="text-center tracking-wide leading-tight text-gray-500"
+														style={{
+															fontSize: px(13),
+															overflowX: "hidden",
+															textOverflow: "ellipsis",
+															whiteSpace: "nowrap",
+														}}>
+														{each.name}
+													</p>
+												</Style>
 											</div>
 										</div>
 									</article>
@@ -410,7 +448,7 @@ export default function Home() {
 
 			{/* App */}
 			<IconApp />
-			<div className="h-0 xl:h-24" />
+			<div className="h-0 xl:h-8" />
 
 		</>
 	)

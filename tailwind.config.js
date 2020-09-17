@@ -143,7 +143,7 @@ module.exports = {
 			sm: `${16 +  640 + 16}px`,
 			md: `${24 +  768 + 24}px`,
 			lg: `${24 + 1024 + 24}px`,
-			xl: `${24 + 1280 + 24}px`,
+			xl: `${24 + (1280 + 64) + 24}px`,
 			/* eslint-enable no-multi-spaces */
 		},
 	},
