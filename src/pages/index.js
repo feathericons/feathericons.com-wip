@@ -223,7 +223,7 @@ function Hero() {
 			{/* (top-right) */}
 			<div className="p-4 absolute top-0 right-0">
 				<a className="group" {...target_blank}>
-					<p className="font-medium text-gray-50">
+					<p className="font-medium text-gray-50" style={{ fontSize: `${17 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<span>
 								<span className="group-hover:underline">
@@ -237,7 +237,7 @@ function Hero() {
 							{/* 	</svg> */}
 							{/* </Style> */}
 							{/* <span className="w-1" /> */}
-							<Style className="w-5 h-5">
+							<Style className="-mt-1 w-5 h-5">
 								<svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 									<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
 								</svg>
