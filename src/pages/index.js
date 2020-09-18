@@ -65,7 +65,8 @@ function Sponsors() {
 		return (
 			<a
 				key={sponsor.href}
-				className="!opacity-93.75 !dark:opacity-87.5 !hover:opacity-100"
+				className="no-underline hover:underline !opacity-93.75 !dark:opacity-87.5 !hover:opacity-100"
+				style={{ textDecorationColor: "var(--white)" }}
 				href={sponsor.href + "?ref=feathericons.com"}
 				// data-splitbee-event="Click Sponsor Link"
 				// data-splitbee-event-type={sponsor.name}
@@ -74,7 +75,7 @@ function Sponsors() {
 				<div className="flex flex-col items-center">
 					<img className="h-12" src={sponsor.src} alt={sponsor.name} />
 					<div className="h-2" />
-					<p className="font-medium text-xs leading-none text-purple-50">
+					<p className="font-medium text-xs leading-none text-white">
 						<span className="inline flex flex-row items-center align-top">
 							{sponsor.tagline}
 							<EnSpace />
@@ -99,23 +100,24 @@ function Sponsors() {
 			<div className="relative">
 
 				<div className="flex flex-row justify-center">
-					{/* <p className="font-bold text-xs leading-none text-purple-50"> */}
-					<p className="font-bold tracking-wide leading-none text-purple-50 opacity-87.5" style={{ fontSize: `${11 / 16}rem` }}>
+					<p className="font-bold tracking-wide leading-none text-white opacity-87.5" style={{ fontSize: `${11 / 16}rem` }}>
 						SPONSORED BY &nbsp;
 						&middot; &nbsp;
-						<span className="inline-flex flex-row items-center align-top">
-							BECOME A SPONSOR
-							<EnSpace />
-							<Style
-								className="opacity-75"
-								style={{
-									width: "1em",
-									height: "1em",
-								}}
-							>
-								<SVGExternalLink />
-							</Style>
-						</span>
+						<a className="no-underline hover:underline" href="TODO" {...target_blank}>
+							<span className="inline-flex flex-row items-center align-top">
+								BECOME A SPONSOR
+								<EnSpace />
+								<Style
+									className="opacity-75"
+									style={{
+										width: "1em",
+										height: "1em",
+									}}
+								>
+									<SVGExternalLink />
+								</Style>
+							</span>
+						</a>
 					</p>
 				</div>
 
@@ -170,20 +172,20 @@ function Hero() {
 	return (
 		<header
 			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-56 relative"
-			style={{ backgroundImage: "linear-gradient(to right, hsl(215, 100%, 50%), hsl(255, 100%, 65%)" }}
+			style={{ backgroundImage: "linear-gradient(to right, var(--grad-start), var(--grad-end)" }}
 		>
 
 			{/* #bg-grad */}
 			<div className="hidden xl:block">
 				<div className="absolute top-full inset-x-0">
 					<svg fill="url(#bg-grad)" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
-						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 						<defs>
 							<linearGradient id="bg-grad">
-								<stop offset="0%" stopColor="hsl(215, 100%, 50%)" />
-								<stop offset="100%" stopColor="hsl(255, 100%, 65%)" />
+								<stop offset="0%" stopColor="var(--grad-start)" />
+								<stop offset="100%" stopColor="var(--grad-end)" />
 							</linearGradient>
 						</defs>
+						<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 					</svg>
 				</div>
 				<div className="fixed top-0 inset-x-0" style={{ zIndex: -1 }}>
@@ -217,8 +219,6 @@ function Hero() {
 			</div>
 
 			{/* Logo and Sponsors */}
-			{/* */}
-			{/* NOTE: justify-normal is not a real class. */}
 			<div className="flex flex-row justify-center">
 				<div
 					className="flex flex-col xl:flex-row items-center justify-normal xl:justify-between"
@@ -306,14 +306,14 @@ function IconApp() {
 						<div className="flex flex-row items-start">
 
 							{/* LHS edge (because of -mx-1) */}
-							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
+							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "var(--grad-start)" }}>
 								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
 									<rect width={1} height={1} />
 								</svg>
 							</Style>
 
 							{/* LHS */}
-							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(215, 100%, 50%)" }}>
+							<Style className="flex-shrink-0 h-10" style={{ fill: "var(--grad-start)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 								</svg>
@@ -327,14 +327,14 @@ function IconApp() {
 							</Style>
 
 							{/* RHS */}
-							<Style className="flex-shrink-0 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
+							<Style className="flex-shrink-0 h-10" style={{ fill: "var(--grad-end)" }}>
 								<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg">
 									<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 								</svg>
 							</Style>
 
 							{/* RHS edge (because of -mx-1) */}
-							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "hsl(255, 100%, 65%)" }}>
+							<Style className="flex-shrink-0 w-1 h-10" style={{ fill: "var(--grad-end)" }}>
 								<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
 									<rect width={1} height={1} />
 								</svg>
@@ -465,6 +465,15 @@ export default function Home() {
 	return (
 		<>
 			<SEO />
+
+			<style>
+				{css`
+					html {
+						--grad-start: hsl(215, 100%, 50%);
+						--grad-end: hsl(255, 100%, 65%);
+					}
+				`}
+			</style>
 
 			{/* Hero */}
 			<Hero />
