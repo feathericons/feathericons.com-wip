@@ -26,7 +26,7 @@ export default [
 	{
 		name: "CodeTisans",
 		href: "https://codetisans.com",
-		src: "/images/sponsors/codetisans.png",
+		src: "/images/sponsors/codetisans2.png",
 		tagline: "Laravel Softwarehouse",
 	},
 ]

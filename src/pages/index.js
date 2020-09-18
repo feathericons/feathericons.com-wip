@@ -76,27 +76,23 @@ function Sponsors() {
 		return (
 			<a
 				key={sponsor.href}
-				className="no-underline hover:underline !opacity-93.75 !dark:opacity-87.5 !hover:opacity-100"
-				style={{ textDecorationColor: "var(--white)" }}
 				href={sponsor.href + "?ref=feathericons.com"}
-				// data-splitbee-event="Click Sponsor Link"
-				// data-splitbee-event-type={sponsor.name}
+				data-splitbee-event="Click Sponsor Link"
+				data-splitbee-event-type={sponsor.name}
 				{...target_blank}
 			>
-				<div className="flex flex-col items-center">
+				<div className="group flex flex-col items-center">
 					<img className="h-12" src={sponsor.src} alt={sponsor.name} />
 					<div className="h-2" />
 					<p className="font-medium text-xs leading-none text-white">
 						<span className="inline flex flex-row items-center align-top">
-							{sponsor.tagline}
-							<EnSpace />
-							<Style
-								className="opacity-75"
-								style={{
-									width: "0.875em",
-									height: "0.875em",
-								}}
-							>
+							<span>
+								<span className="no-underline group-hover:underline">
+									{sponsor.tagline}
+								</span>
+								&nbsp;&nbsp;
+							</span>
+							<Style style={{ width: "0.875em", height: "0.875em" }}>
 								<SVGExternalLink />
 							</Style>
 						</span>
@@ -111,24 +107,25 @@ function Sponsors() {
 			<div className="relative">
 
 				<div className="flex flex-row justify-center">
-					<p className="font-bold tracking-wide leading-none text-white opacity-87.5" style={{ fontSize: `${11 / 16}rem` }}>
-						SPONSORED BY &nbsp;
-						&middot; &nbsp;
-						<a className="no-underline hover:underline" href="TODO" {...target_blank}>
-							<span className="inline-flex flex-row items-center align-top">
-								BECOME A SPONSOR
-								<EnSpace />
-								<Style
-									className="opacity-75"
-									style={{
-										width: "1em",
-										height: "1em",
-									}}
-								>
-									<SVGExternalLink />
-								</Style>
+					<p className="font-bold tracking-wide leading-none text-white" style={{ fontSize: `${11 / 16}rem` }}>
+						<span className="inline-flex flex-row items-center align-top">
+							<span>
+								OUR SPONSORS &nbsp;&middot; &nbsp;
 							</span>
-						</a>
+							<a href="TODO" {...target_blank}>
+								<span className="group inline-flex flex-row items-center align-top">
+									<span>
+										<span className="no-underline group-hover:underline">
+											BECOME A SPONSOR
+										</span>
+										&nbsp;&nbsp;
+									</span>
+									<Style style={{ width: "1em", height: "1em" }}>
+										<SVGExternalLink />
+									</Style>
+								</span>
+							</a>
+						</span>
 					</p>
 				</div>
 
@@ -213,7 +210,12 @@ function Hero() {
 
 			{/* (top-left) */}
 			<div className="px-4 py-3 absolute top-0 left-0">
-				<a href="TODO" {...target_blank}>
+				<a
+					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					data-splitbee-event="Click Share Link"
+					data-splitbee-event-type="Twitter"
+					{...target_blank}
+				>
 					<p className="group font-medium text-gray-50" style={{ fontSize: `${17 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<Style className="-mt-px w-5 h-5">
@@ -223,7 +225,7 @@ function Hero() {
 							</Style>
 							<span>
 								&nbsp;&nbsp;
-								<span className="group-hover:underline">
+								<span className="no-underline group-hover:underline">
 									Tweet thank you!
 								</span>
 							</span>
@@ -234,11 +236,17 @@ function Hero() {
 
 			{/* (top-right) */}
 			<div className="px-4 py-3 absolute top-0 right-0">
-				<a href="TODO" {...target_blank}>
+				<a
+					href="TODO"
+					href="https://github.com/feathericons/feathericons.com"
+					data-splitbee-event="Click Share Link"
+					data-splitbee-event-type="GitHub"
+					{...target_blank}
+				>
 					<p className="group font-medium text-gray-50" style={{ fontSize: `${17 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<span>
-								<span className="group-hover:underline">
+								<span className="no-underline group-hover:underline">
 									Star on GitHub
 								</span>
 								&nbsp;&nbsp;
@@ -504,7 +512,7 @@ export default function Home() {
 			<style>
 				{css`
 					html {
-						--theme: hsl(215, 100%, 50%);
+						--theme: hsl(215, 100%, 56.25%);
 						--grad-start: var(--theme);
 						--grad-end: hsl(215, 100%, 62.5%);
 					}
