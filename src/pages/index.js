@@ -469,8 +469,9 @@ export default function Home() {
 			<style>
 				{css`
 					html {
+						/* #0066ff */
 						--grad-start: hsl(215, 100%, 50%);
-						--grad-end: hsl(255, 100%, 65%);
+						--grad-end: hsl(215, 100%, 62.5%);
 					}
 				`}
 			</style>
