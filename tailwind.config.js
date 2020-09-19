@@ -140,6 +140,21 @@ module.exports = {
 				5: `${5 * 0.25}rem`,
 				6: `${6 * 0.25}rem`,
 			},
+			boxShadow: {
+				"px": defaultTheme.boxShadow.xs,
+				"1": defaultTheme.boxShadow.sm,
+				"2": defaultTheme.boxShadow.default,
+				"3": defaultTheme.boxShadow.md,
+				"4": defaultTheme.boxShadow.lg,
+				"5": defaultTheme.boxShadow.xl,
+				"6": defaultTheme.boxShadow["2xl"],
+				"px-1": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow.sm,
+				"px-2": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow.default,
+				"px-3": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow.md,
+				"px-4": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow.lg,
+				"px-5": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow.xl,
+				"px-6": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow["2xl"],
+			},
 			fontFamily: {
 				// mono: [
 				// 	"IBM Plex Mono",

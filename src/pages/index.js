@@ -11,6 +11,7 @@ import {
 	GitHub as SVGGitHub,
 	Heart as SVGHeart,
 	Star as SVGStar,
+	Tool as SVGTool,
 	Twitter as SVGTwitter,
 } from "react-feather"
 
@@ -58,7 +59,8 @@ function LogoAndCTA() {
 			{/* <h1> */}
 			<div className="h-8" />
 			<h1 className="font-medium leading-none text-white" style={{ fontSize: `${32 / 16}rem` }}>
-				Open source <span className="hidden sm:inline">SVG </span>icons
+				{/* Open source <span className="hidden sm:inline">SVG </span>icons */}
+				Open source icons
 			</h1>
 
 			<div className="h-2" />
@@ -93,7 +95,7 @@ function LogoAndCTA() {
 				<a
 					// TODO
 				>
-					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-95 rounded-3">
+					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-95 rounded-3 sm:rounded-full">
 						<p className="font-medium leading-none text-gray-800" style={{ fontSize: `${17 / 16}rem` }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<SVGGitHub style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }} />
@@ -109,7 +111,7 @@ function LogoAndCTA() {
 				<a
 					// TODO
 				>
-					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-20 rounded-3">
+					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-20 rounded-3 sm:rounded-full">
 						<p className="font-semibold leading-none text-white" style={{ fontSize: `${17 / 16}rem` }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<SVGDownload style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }} />
@@ -269,9 +271,8 @@ function Hero() {
 			</div>
 
 			{/* (top-left) */}
-			<div className="-my-1 p-4 absolute top-0 left-0">
+			<div className="px-4 py-3 absolute top-0 left-0">
 				<a
-					className="py-1 block"
 					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
 					data-splitbee-event="Click Share Link"
 					data-splitbee-event-type="Twitter"
@@ -293,57 +294,39 @@ function Hero() {
 						</span>
 					</p>
 				</a>
-				{/* <a */}
-				{/* 	className="py-1 block" */}
-				{/* 	href="https://github.com/feathericons/feathericons.com" */}
-				{/* 	data-splitbee-event="Click Share Link" */}
-				{/* 	data-splitbee-event-type="GitHub" */}
-				{/* 	{...target_blank} */}
-				{/* > */}
-				{/* 	<p className="group font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}> */}
-				{/* 		<span className="inline-flex flex-row items-center align-top"> */}
-				{/* 			<SVGGitHub */}
-				{/* 				style={{ width: "1.25em", height: "1.25em" }} */}
-				{/* 				fill="currentColor" */}
-				{/* 				strokeWidth={0} */}
-				{/* 			/> */}
-				{/* 			<span> */}
-				{/* 				&nbsp;&nbsp; */}
-				{/* 				<span className="no-underline group-hover:underline"> */}
-				{/* 					Star on GitHub */}
-				{/* 				</span> */}
-				{/* 			</span> */}
-				{/* 		</span> */}
-				{/* 	</p> */}
-				{/* </a> */}
 			</div>
 
 			{/* (top-right) */}
-			{/* <div className="px-4 py-3 absolute top-0 right-0"> */}
-			{/* 	<a */}
-			{/* 		href="TODO" */}
-			{/* 		href="https://github.com/feathericons/feathericons.com" */}
-			{/* 		data-splitbee-event="Click Share Link" */}
-			{/* 		data-splitbee-event-type="GitHub" */}
-			{/* 		{...target_blank} */}
-			{/* 	> */}
-			{/* 		<p className="group font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}> */}
-			{/* 			<span className="inline-flex flex-row items-center align-top"> */}
-			{/* 				<span> */}
-			{/* 					<span className="no-underline group-hover:underline"> */}
-			{/* 						Star on GitHub */}
-			{/* 					</span> */}
-			{/* 					&nbsp;&nbsp; */}
-			{/* 				</span> */}
-			{/* 				<SVGGitHub */}
-			{/* 					style={{ width: "1.25em", height: "1.25em" }} */}
-			{/* 					fill="currentColor" */}
-			{/* 					strokeWidth={0} */}
-			{/* 				/> */}
-			{/* 			</span> */}
-			{/* 		</p> */}
-			{/* 	</a> */}
-			{/* </div> */}
+			<div className="px-4 py-3 absolute top-0 right-0">
+				<a
+					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					data-splitbee-event="Click Share Link"
+					data-splitbee-event-type="Twitter"
+					{...target_blank}
+				>
+					<p className="font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}>
+						<a
+							href="https://github.com/feathericons/feather/blob/master/LICENSE"
+							// TODO
+							{...target_blank}
+						>
+							<span className="no-underline hover:underline">
+								MIT-license
+							</span>
+						</a>
+						&nbsp;&nbsp;&middot;&nbsp;&nbsp;
+						<a
+							href="https://github.com/feathericons/feather/releases"
+							// TODO
+							{...target_blank}
+						>
+							<span className="no-underline hover:underline">
+								v4.28
+							</span>
+						</a>
+					</p>
+				</a>
+			</div>
 
 			{/* Logo and Sponsors */}
 			<div className="flex flex-row justify-center">
@@ -424,7 +407,7 @@ function IconApp() {
 		// NOTE (1): Use z-10 because of <Hero>.
 		// NOTE (2): Use bg-gray-300 because of border-l border-gray-300.
 		<div className="mt-0 xl:-mt-32 flex flex-row justify-center">
-			<main className="bg-gray-300 w-full max-w-screen-xl rounded-6 z-10 shadow">
+			<main className="bg-gray-300 w-full max-w-screen-xl rounded-6 shadow z-10" /* style={{ boxShadow: "var(--shadow-xs), var(--shadow)" }} */>
 
 				{/* (top) */}
 				<Style className="hidden xl:block">
@@ -492,6 +475,8 @@ function IconApp() {
 									#grid {
 										display: grid;
 										grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+
+										/* TODO: Move gap to <article> as padding. */
 										gap: 1rem;
 									}
 								`}
