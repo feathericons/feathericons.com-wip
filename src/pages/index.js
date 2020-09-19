@@ -3,7 +3,6 @@ import SEO from "./_SEO"
 import sponsors from "data/sponsors"
 import Style from "lib/x/Style"
 import target_blank from "lib/x/target_blank"
-// import { Space, EnSpace, EmSpace } from "lib/x/Spaces"
 
 import {
 	Download as SVGDownload,
@@ -11,6 +10,7 @@ import {
 	Feather as SVGFeather,
 	GitHub as SVGGitHub,
 	Heart as SVGHeart,
+	Star as SVGStar,
 	Twitter as SVGTwitter,
 } from "react-feather"
 
@@ -45,97 +45,83 @@ function css(arr, ...args) {
 function LogoAndCTA() {
 	return (
 		// NOTE: Use w-full sm:w-auto because of CTA buttons.
-		<div className="flex flex-col items-center" style={{ width: "100%", maxWidth: "26rem" }}>
+		<div className="flex flex-col items-center" style={{ width: "100%", maxWidth: "28rem" }}>
 
 			{/* Logo */}
-			<SVGFeather className="w-14 h-14 text-white" />
-			{/* <Style className="w-14 h-14 text-white"> */}
-			{/* 	<svg fill="currentColor" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"> */}
-			{/* 		<path fillRule="evenodd" clipRule="evenodd" d="M21.5308 13.5393L21.5329 13.5372C22.4712 12.5992 22.9983 11.327 22.9983 10.0004C22.9983 8.67391 22.4712 7.4017 21.5329 6.46369C21.4156 6.34644 21.2931 6.23561 21.1659 6.13143C20.2756 5.40218 19.1561 4.99872 17.995 4.99872C16.668 4.99872 15.3954 5.52568 14.4571 6.46369L8 12.9187L8 18.5885L17.2921 9.2994L17.2929 9.29857C17.6834 8.90817 18.3166 8.90817 18.7071 9.29857C19.0976 9.68897 19.0976 10.3219 18.7071 10.7123M18.7071 10.7123L13.4142 16.0035H19.0731L21.5308 13.5393M11.4142 18.0029L9.41421 20.0022H15.0849L17.079 18.0029H11.4142ZM7.41421 22.0016L4.70776 24.7072C4.31724 25.0976 3.68342 25.0982 3.29289 24.7078C2.90237 24.3174 2.90237 23.6845 3.29289 23.2941L3.29382 23.2932L6 20.5878L6 12.5046C6 12.2395 6.10536 11.9852 6.29289 11.7978L6.58523 11.5055L13.0429 5.04993C14.3563 3.73697 16.1376 2.99936 17.995 2.99936C19.8524 2.99936 21.6337 3.73697 22.9471 5.04993C23.1113 5.21405 23.2665 5.38548 23.4123 5.56345C24.4334 6.80927 24.9983 8.37575 24.9983 10.0004C24.9983 11.8567 24.2609 13.6369 22.9483 14.9497L22.9471 14.951L20.2937 17.6114C20.2409 17.6802 20.1794 17.7419 20.1107 17.7949L18.4957 19.4141L16.2082 21.7078C16.0205 21.8959 15.7657 22.0016 15.5 22.0016H7.41421ZM21.4601 19.2736L17.6245 23.1194C17.0616 23.6838 16.2972 24.001 15.5 24.001H8.24264L6.12132 26.1216C4.94975 27.2928 3.05025 27.2928 1.87868 26.1216C0.707109 24.9504 0.707106 23.0515 1.87868 21.8803L4 19.7597V12.5046C4 11.7093 4.31607 10.9464 4.87868 10.384L11.6287 3.63617C13.3171 1.94826 15.6072 1 17.995 1C20.3828 1 22.6729 1.94826 24.3613 3.63617C26.0498 5.32408 26.9983 7.61338 26.9983 10.0004C26.9983 12.3869 26.0502 14.6757 24.3625 16.3635L24.3613 16.3647L21.7769 18.956C21.6794 19.0696 21.5735 19.1758 21.4601 19.2736Z" /> */}
-			{/* 	</svg> */}
-			{/* </Style> */}
+			{/* <SVGFeather className="w-14 h-14 text-white" /> */}
+			<Style className="w-14 h-14 text-white">
+				<svg fill="currentColor" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+					<path fillRule="evenodd" clipRule="evenodd" d="M21.5308 13.5393L21.5329 13.5372C22.4712 12.5992 22.9983 11.327 22.9983 10.0004C22.9983 8.67391 22.4712 7.4017 21.5329 6.46369C21.4156 6.34644 21.2931 6.23561 21.1659 6.13143C20.2756 5.40218 19.1561 4.99872 17.995 4.99872C16.668 4.99872 15.3954 5.52568 14.4571 6.46369L8 12.9187L8 18.5885L17.2921 9.2994L17.2929 9.29857C17.6834 8.90817 18.3166 8.90817 18.7071 9.29857C19.0976 9.68897 19.0976 10.3219 18.7071 10.7123M18.7071 10.7123L13.4142 16.0035H19.0731L21.5308 13.5393M11.4142 18.0029L9.41421 20.0022H15.0849L17.079 18.0029H11.4142ZM7.41421 22.0016L4.70776 24.7072C4.31724 25.0976 3.68342 25.0982 3.29289 24.7078C2.90237 24.3174 2.90237 23.6845 3.29289 23.2941L3.29382 23.2932L6 20.5878L6 12.5046C6 12.2395 6.10536 11.9852 6.29289 11.7978L6.58523 11.5055L13.0429 5.04993C14.3563 3.73697 16.1376 2.99936 17.995 2.99936C19.8524 2.99936 21.6337 3.73697 22.9471 5.04993C23.1113 5.21405 23.2665 5.38548 23.4123 5.56345C24.4334 6.80927 24.9983 8.37575 24.9983 10.0004C24.9983 11.8567 24.2609 13.6369 22.9483 14.9497L22.9471 14.951L20.2937 17.6114C20.2409 17.6802 20.1794 17.7419 20.1107 17.7949L18.4957 19.4141L16.2082 21.7078C16.0205 21.8959 15.7657 22.0016 15.5 22.0016H7.41421ZM21.4601 19.2736L17.6245 23.1194C17.0616 23.6838 16.2972 24.001 15.5 24.001H8.24264L6.12132 26.1216C4.94975 27.2928 3.05025 27.2928 1.87868 26.1216C0.707109 24.9504 0.707106 23.0515 1.87868 21.8803L4 19.7597V12.5046C4 11.7093 4.31607 10.9464 4.87868 10.384L11.6287 3.63617C13.3171 1.94826 15.6072 1 17.995 1C20.3828 1 22.6729 1.94826 24.3613 3.63617C26.0498 5.32408 26.9983 7.61338 26.9983 10.0004C26.9983 12.3869 26.0502 14.6757 24.3625 16.3635L24.3613 16.3647L21.7769 18.956C21.6794 19.0696 21.5735 19.1758 21.4601 19.2736Z" />
+				</svg>
+			</Style>
 
 			{/* <h1> */}
 			<div className="h-8" />
 			<h1 className="font-medium leading-none text-white" style={{ fontSize: `${32 / 16}rem` }}>
-				{/* Open source SVG icons */}
-				{/* Beautiful open source icons */}
-				Open source icons
+				Open source <span className="hidden sm:inline">SVG </span>icons
 			</h1>
 
 			<div className="h-2" />
-			<h2 className="font-medium text-white" style={{ fontSize: `${18 / 16}rem` }}>
-				<span className="inline-flex flex-row items-center align-top">
-					<span>
-						By{" "}
-						<a
-							href="https://twitter.com/colebemis"
-							data-splitbee-event="Click Author Link"
-							data-splitbee-event-type="Cole Bemis"
-							{...target_blank}
-						>
-							<span className="font-bold no-underline hover:underline">
-								@colebemis
-								{/* Cole Bemis */}
-							</span>
-						</a>
-						{" "}and{" "}
-						<a
-							href="https://twitter.com/username_ZAYDEK"
-							data-splitbee-event="Click Author Link"
-							data-splitbee-event-type="Zaydek Michels-Gualtieri"
-							{...target_blank}
-						>
-							<span className="font-bold no-underline hover:underline">
-								@username_ZAYDEK
-								{/* Zaydek */}
-							</span>
-						</a>
-						&nbsp;
+			<h2 className="text-center font-medium text-white" style={{ fontSize: `${18 / 16}rem` }}>
+				Created by{" "}
+				<a
+					href="https://twitter.com/colebemis"
+					data-splitbee-event="Click Author Link"
+					data-splitbee-event-type="Cole Bemis"
+					{...target_blank}
+				>
+					<span className="font-bold no-underline hover:underline">
+						@colebemis
 					</span>
-					<SVGHeart
-						className="text-teal-200"
-						style={{ width: "1em", height: "1em" }}
-						fill="currentColor"
-						strokeWidth={0}
-					/>
-				</span>
+				</a>
+				{" "}and{" "}
+				<a
+					href="https://twitter.com/username_ZAYDEK"
+					data-splitbee-event="Click Author Link"
+					data-splitbee-event-type="Zaydek Michels-Gualtieri"
+					{...target_blank}
+				>
+					<span className="font-bold no-underline hover:underline">
+						@username_ZAYDEK
+					</span>
+				</a>
 			</h2>
 
 			{/* CTA buttons */}
 			<div className="h-6" />
 			<div className="flex flex-col sm:flex-row w-full sm:w-auto">
-				<div className="flex flex-row justify-center items-center w-auto sm:w-52 h-14 bg-white bg-opacity-95 rounded-3 sm:rounded-full">
-					<p className="font-medium leading-none text-gray-800" style={{ fontSize: `${17 / 16}rem` }}>
-						<span className="inline-flex flex-row items-center align-top">
-							<SVGGitHub
-								style={{ width: `${19 / 16}rem`, height: `${19 / 16}rem` }}
-								strokeWidth={2.25}
-							/>
-							<span>
-								&nbsp;
-								Get Started
+				<a
+					// TODO
+				>
+					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-95 rounded-3">
+						<p className="font-medium leading-none text-gray-800" style={{ fontSize: `${17 / 16}rem` }}>
+							<span className="inline-flex flex-row items-center align-top">
+								<SVGGitHub style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }} />
+								<span>
+									&nbsp;
+									Get started
+								</span>
 							</span>
-						</span>
-					</p>
-				</div>
+						</p>
+					</div>
+				</a>
 				<div className="w-4 h-4" />
-				<div className="flex flex-row justify-center items-center w-auto sm:w-52 h-14 bg-white bg-opacity-20 rounded-3 sm:rounded-full">
-					<p className="font-semibold leading-none text-white" style={{ fontSize: `${17 / 16}rem` }}>
-						<span className="inline-flex flex-row items-center align-top">
-							<SVGDownload
-								style={{ width: `${19 / 16}rem`, height: `${19 / 16}rem` }}
-								strokeWidth={2.25}
-							/>
-							<span>
-								&nbsp;
-								Download All
+				<a
+					// TODO
+				>
+					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-20 rounded-3">
+						<p className="font-semibold leading-none text-white" style={{ fontSize: `${17 / 16}rem` }}>
+							<span className="inline-flex flex-row items-center align-top">
+								<SVGDownload style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }} />
+								<span>
+									&nbsp;
+									Download all
+								</span>
 							</span>
-						</span>
-					</p>
-				</div>
+						</p>
+					</div>
+				</a>
 			</div>
-
 		</div>
 	)
 }
@@ -162,14 +148,17 @@ function Sponsors() {
 								</span>
 								&nbsp;&nbsp;
 							</span>
-							<Style style={{ width: "0.875em", height: "0.875em" }}>
-								<SVGExternalLink />
-							</Style>
+							<SVGExternalLink style={{ width: "0.875em", height: "0.875em" }} />
 						</span>
 					</p>
 				</div>
 			</a>
 		)
+	}
+
+	const emojiStyles = {
+		fontSize: "1.25em",
+		lineHeight: 1,
 	}
 
 	return (
@@ -180,7 +169,9 @@ function Sponsors() {
 					<p className="font-bold tracking-wide leading-none text-white" style={{ fontSize: `${11 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<span>
-								OUR SPONSORS &nbsp;&middot; &nbsp;
+								CHECK OUT OUR SPONSORS{" "}
+								{/* <span style={emojiStyles}>🔥</span> */}
+								&nbsp;&middot; &nbsp;
 							</span>
 							<a href="TODO" {...target_blank}>
 								<span className="group inline-flex flex-row items-center align-top">
@@ -190,9 +181,7 @@ function Sponsors() {
 										</span>
 										&nbsp;&nbsp;
 									</span>
-									<Style style={{ width: "1em", height: "1em" }}>
-										<SVGExternalLink />
-									</Style>
+									<SVGExternalLink style={{ width: "1em", height: "1em" }} />
 								</span>
 							</a>
 						</span>
@@ -200,42 +189,42 @@ function Sponsors() {
 				</div>
 
 				{/* Row (sm-xl) */}
-				<div className="-mx-4 -my-3 pt-8 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
-					<div className="mx-4 my-3">
+				<div className="-m-3 pt-8 hidden sm:flex sm:flex-row sm:justify-center sm:flex-wrap xl:hidden">
+					<div className="m-3">
 						<Sponsor sponsor={sponsors[0]} />
 					</div>
-					<div className="mx-4 my-3">
+					<div className="m-3">
 						<Sponsor sponsor={sponsors[1]} />
 					</div>
-					<div className="mx-4 my-3">
+					<div className="m-3">
 						<Sponsor sponsor={sponsors[2]} />
 					</div>
-					<div className="mx-4 my-3">
+					<div className="m-3">
 						<Sponsor sponsor={sponsors[3]} />
 					</div>
-					<div className="mx-4 my-3">
+					<div className="m-3">
 						<Sponsor sponsor={sponsors[4]} />
 					</div>
 				</div>
 
 				{/* Honeycomb (xl-only) */}
-				<div className="-mx-4 -my-3 pt-8 hidden xl:flex xl:flex-col xl:items-center">
+				<div className="-m-3 pt-8 hidden xl:flex xl:flex-col xl:items-center">
 					<div className="flex flex-row">
-						<div className="mx-4 my-3">
+						<div className="m-3">
 							<Sponsor sponsor={sponsors[0]} />
 						</div>
-						<div className="mx-4 my-3">
+						<div className="m-3">
 							<Sponsor sponsor={sponsors[1]} />
 						</div>
-						<div className="mx-4 my-3">
+						<div className="m-3">
 							<Sponsor sponsor={sponsors[2]} />
 						</div>
 					</div>
 					<div className="flex flex-row">
-						<div className="mx-4 my-3">
+						<div className="m-3">
 							<Sponsor sponsor={sponsors[3]} />
 						</div>
-						<div className="mx-4 my-3">
+						<div className="m-3">
 							<Sponsor sponsor={sponsors[4]} />
 						</div>
 					</div>
@@ -249,7 +238,8 @@ function Sponsors() {
 function Hero() {
 	return (
 		<header
-			className="px-6 sm:px-4 py-16 xl:py-24 xl:pb-56 relative"
+			// TODO: Use xl:pb-52?
+			className="px-6 sm:px-4 py-20 xl:py-24 xl:pb-52 relative"
 			style={{ backgroundImage: "linear-gradient(to right, var(--grad-start), var(--grad-end)" }}
 		>
 
@@ -279,8 +269,9 @@ function Hero() {
 			</div>
 
 			{/* (top-left) */}
-			<div className="px-4 py-3 absolute top-0 left-0">
+			<div className="-my-1 p-4 absolute top-0 left-0">
 				<a
+					className="py-1 block"
 					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
 					data-splitbee-event="Click Share Link"
 					data-splitbee-event-type="Twitter"
@@ -302,34 +293,57 @@ function Hero() {
 						</span>
 					</p>
 				</a>
+				{/* <a */}
+				{/* 	className="py-1 block" */}
+				{/* 	href="https://github.com/feathericons/feathericons.com" */}
+				{/* 	data-splitbee-event="Click Share Link" */}
+				{/* 	data-splitbee-event-type="GitHub" */}
+				{/* 	{...target_blank} */}
+				{/* > */}
+				{/* 	<p className="group font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}> */}
+				{/* 		<span className="inline-flex flex-row items-center align-top"> */}
+				{/* 			<SVGGitHub */}
+				{/* 				style={{ width: "1.25em", height: "1.25em" }} */}
+				{/* 				fill="currentColor" */}
+				{/* 				strokeWidth={0} */}
+				{/* 			/> */}
+				{/* 			<span> */}
+				{/* 				&nbsp;&nbsp; */}
+				{/* 				<span className="no-underline group-hover:underline"> */}
+				{/* 					Star on GitHub */}
+				{/* 				</span> */}
+				{/* 			</span> */}
+				{/* 		</span> */}
+				{/* 	</p> */}
+				{/* </a> */}
 			</div>
 
 			{/* (top-right) */}
-			<div className="px-4 py-3 absolute top-0 right-0">
-				<a
-					href="TODO"
-					href="https://github.com/feathericons/feathericons.com"
-					data-splitbee-event="Click Share Link"
-					data-splitbee-event-type="GitHub"
-					{...target_blank}
-				>
-					<p className="group font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}>
-						<span className="inline-flex flex-row items-center align-top">
-							<span>
-								<span className="no-underline group-hover:underline">
-									Star on GitHub
-								</span>
-								&nbsp;&nbsp;
-							</span>
-							<SVGGitHub
-								style={{ width: "1.25em", height: "1.25em" }}
-								fill="currentColor"
-								strokeWidth={0}
-							/>
-						</span>
-					</p>
-				</a>
-			</div>
+			{/* <div className="px-4 py-3 absolute top-0 right-0"> */}
+			{/* 	<a */}
+			{/* 		href="TODO" */}
+			{/* 		href="https://github.com/feathericons/feathericons.com" */}
+			{/* 		data-splitbee-event="Click Share Link" */}
+			{/* 		data-splitbee-event-type="GitHub" */}
+			{/* 		{...target_blank} */}
+			{/* 	> */}
+			{/* 		<p className="group font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}> */}
+			{/* 			<span className="inline-flex flex-row items-center align-top"> */}
+			{/* 				<span> */}
+			{/* 					<span className="no-underline group-hover:underline"> */}
+			{/* 						Star on GitHub */}
+			{/* 					</span> */}
+			{/* 					&nbsp;&nbsp; */}
+			{/* 				</span> */}
+			{/* 				<SVGGitHub */}
+			{/* 					style={{ width: "1.25em", height: "1.25em" }} */}
+			{/* 					fill="currentColor" */}
+			{/* 					strokeWidth={0} */}
+			{/* 				/> */}
+			{/* 			</span> */}
+			{/* 		</p> */}
+			{/* 	</a> */}
+			{/* </div> */}
 
 			{/* Logo and Sponsors */}
 			<div className="flex flex-row justify-center">
@@ -584,7 +598,8 @@ export default function Home() {
 					html {
 						--theme: hsl(215, 100%, 50%);
 						--grad-start: var(--theme);
-						--grad-end: hsl(215, 100%, 62.5%);
+						/* --grad-end: hsl(216, 100%, 56.25%); */
+						--grad-end: var(--theme);
 					}
 
 					.text-theme {
