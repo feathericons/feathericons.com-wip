@@ -1,17 +1,30 @@
 import css from "lib/x/tpl"
+import dataset from "data/dataset"
+import IconsFragment from "./_IconsFragment"
 import px from "lib/x/px"
 
-import { Heart as SVGHeart } from "react-feather"
+import { Circle as SVGCircle } from "react-feather"
 
 export default function IconFragment() {
 	return (
 		<>
 
 			{/* Bento */}
-			<div className="flex flex-row items-center">
-				<div className="w-8 h-8 rounded-full bg-gray-100" />
-				<div className="w-4" />
-				<div className="w-40 h-6 bg-gray-100 rounded-full" />
+			<div className="flex flex-row justify-between">
+
+				{/* LHS */}
+				<div className="flex flex-row items-center">
+					<div className="w-8 h-8 rounded-full bg-gray-100" />
+					<div className="w-4" />
+					<div className="w-40 h-6 bg-gray-100 rounded-full" />
+				</div>
+
+				{/* RHS */}
+				<div className="flex flex-row items-center">
+					<div className="w-40 h-6 bg-gray-100 rounded-full" />
+					<div className="w-4" />
+					<div className="w-8 h-8 rounded-full bg-gray-100" />
+				</div>
 			</div>
 
 			<style>
@@ -89,16 +102,16 @@ export default function IconFragment() {
 			<div className="h-8" />
 			<div id="bento-grid">
 				<div className="bento-child">
-					<SVGHeart className="text-gray-800" />
+					<SVGCircle className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGHeart className="text-gray-800" />
+					<SVGCircle className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGHeart className="text-gray-800" />
+					<SVGCircle className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGHeart className="text-gray-800" />
+					<SVGCircle className="text-gray-800" />
 				</div>
 			</div>
 
@@ -115,7 +128,7 @@ export default function IconFragment() {
 					#demo-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-						gap: 1rem;
+						gap: 0.75rem;
 					}
 				`}
 			</style>
@@ -138,26 +151,8 @@ export default function IconFragment() {
 				<div className="w-40 h-6 bg-gray-100 rounded-full" />
 			</div>
 
-			<div className="flex flex-row">
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
-					<div className="w-8 h-8 bg-gray-300 rounded-full" />
-				</div>
-			</div>
+			<div className="h-8" />
+			<IconsFragment svgs={dataset.slice(0, 6)} />
 
 		</>
 	)
