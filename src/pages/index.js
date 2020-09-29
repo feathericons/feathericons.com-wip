@@ -84,8 +84,9 @@ function LogoAndCTA() {
 									style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }}
 									strokeWidth={2.25}
 								/>
+								&nbsp;&nbsp;
 								<span>
-									&nbsp;&nbsp;Read docs
+									Read docs
 								</span>
 							</span>
 						</p>
@@ -107,8 +108,9 @@ function LogoAndCTA() {
 									style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }}
 									strokeWidth={2.25}
 								/>
+								&nbsp;&nbsp;
 								<span>
-									&nbsp;&nbsp;Download
+									Download
 								</span>
 							</span>
 						</p>
@@ -136,12 +138,10 @@ function Sponsors() {
 					<div className="h-2" />
 					<p className="font-medium text-xs leading-none text-white">
 						<span className="inline flex flex-row items-center align-top">
-							<span>
-								<span className="no-underline group-hover:underline">
-									{sponsor.tagline}
-								</span>
-								&nbsp;&nbsp;
+							<span className="no-underline group-hover:underline">
+								{sponsor.tagline}
 							</span>
+							&nbsp;&nbsp;
 							<SVGExternalLink style={{ width: "0.875em", height: "0.875em" }} />
 						</span>
 					</p>
@@ -158,16 +158,15 @@ function Sponsors() {
 					<p className="font-bold tracking-wide leading-none text-white" style={{ fontSize: `${11 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<span>
-								CHECK OUT OUR SPONSORS! &nbsp;&middot; &nbsp;
+								CHECK OUT OUR SPONSORS!
 							</span>
+							&nbsp;&nbsp;&middot;&nbsp;&nbsp;
 							<a href="TODO" {...target_blank}>
 								<span className="group inline-flex flex-row items-center align-top">
-									<span>
-										<span className="no-underline group-hover:underline">
-											BECOME A SPONSOR
-										</span>
-										&nbsp;&nbsp;
+									<span className="no-underline group-hover:underline">
+										BECOME A SPONSOR
 									</span>
+									&nbsp;&nbsp;
 									<SVGExternalLink style={{ width: "1em", height: "1em" }} />
 								</span>
 							</a>
@@ -257,7 +256,7 @@ function Hero() {
 			{/* (top-left) */}
 			<div className="px-4 py-3 absolute top-0 left-0">
 				<a
-					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather IconsInfo and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
 					data-splitbee-event="Click Share Link"
 					data-splitbee-event-type="Twitter"
 					{...target_blank}
@@ -269,11 +268,9 @@ function Hero() {
 								fill="currentColor"
 								strokeWidth={0}
 							/>
-							<span>
-								&nbsp;&nbsp;
-								<span className="no-underline group-hover:underline">
-									Tweet thank you!
-								</span>
+							&nbsp;&nbsp;
+							<span className="no-underline group-hover:underline">
+								Tweet thank you!
 							</span>
 						</span>
 					</p>
@@ -283,10 +280,11 @@ function Hero() {
 			{/* (top-right) */}
 			<div className="px-4 py-3 absolute top-0 right-0">
 				<a
-					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather IconsInfo and @username_ZAYDEK for feathericons.com. ❤️")}`}
-					data-splitbee-event="Click Share Link"
-					data-splitbee-event-type="Twitter"
-					{...target_blank}
+					// FIXME
+					// href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					// data-splitbee-event="Click Share Link"
+					// data-splitbee-event-type="Twitter"
+					// {...target_blank}
 				>
 					<p className="font-medium text-white" style={{ fontSize: `${17 / 16}rem` }}>
 						<a
@@ -450,9 +448,8 @@ function IconApp() {
 							</div>
 						</div>
 
-						{/* IconsInfo */}
+						{/* Icons */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
-							{/* <IconsInfo /> */}
 							<IconInfo />
 						</div>
 

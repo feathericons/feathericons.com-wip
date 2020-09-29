@@ -223,7 +223,7 @@ export default function IconInfo() {
 				`}
 			</style>
 
-			<div className="h-8" />
+			<div className="h-4" />
 			<div id="bento-grid">
 				<div className="bento-child">
 					<SVGGitHub className="text-gray-800" />
@@ -257,7 +257,7 @@ export default function IconInfo() {
 				`}
 			</style>
 
-			<div className="h-8" />
+			<div className="h-4" />
 			<div id="demo-grid">
 				<div className="h-40 bg-gray-100">
 					<Demo1 />
@@ -287,8 +287,8 @@ export default function IconInfo() {
 				<div className="w-40 h-6 bg-gray-100 rounded-full" />
 			</div>
 
-			<div className="h-8" />
-			<IconsInfo svgs={dataset.slice(0, 6)} />
+			{/* <div className="h-4" /> */}
+			{/* <IconsInfo svgs={dataset.slice(0, 6)} /> */}
 
 		</>
 	)

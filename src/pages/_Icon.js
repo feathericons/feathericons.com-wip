@@ -4,7 +4,7 @@ import SVG from "lib/x/SVG"
 
 export default function Icon({ svg }) {
 	return (
-		<article className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
+		<div className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
 			<div className="absolute inset-0">
 				<div className="flex flex-row justify-center items-center h-full">
 					<Style className="w-8 h-8 text-gray-800">
@@ -29,6 +29,6 @@ export default function Icon({ svg }) {
 					</Style>
 				</div>
 			</div>
-		</article>
+		</div>
 	)
 }
