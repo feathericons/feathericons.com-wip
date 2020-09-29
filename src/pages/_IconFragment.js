@@ -7,6 +7,7 @@ export default function IconFragment() {
 	return (
 		<>
 
+			{/* Bento */}
 			<div className="flex flex-row items-center">
 				<div className="w-8 h-8 rounded-full bg-gray-100" />
 				<div className="w-4" />
@@ -101,6 +102,7 @@ export default function IconFragment() {
 				</div>
 			</div>
 
+			{/* Demo */}
 			<div className="h-16" />
 			<div className="flex flex-row items-center">
 				<div className="w-8 h-8 rounded-full bg-gray-100" />
@@ -110,7 +112,7 @@ export default function IconFragment() {
 
 			<style>
 				{css`
-					#examples-grid {
+					#demo-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 						gap: 1rem;
@@ -119,13 +121,42 @@ export default function IconFragment() {
 			</style>
 
 			<div className="h-8" />
-			<div id="examples-grid">
+			<div id="demo-grid">
 				<div className="h-40 bg-gray-100" />
 				<div className="h-40 bg-gray-100" />
 				<div className="h-40 bg-gray-100" />
 				<div className="h-40 bg-gray-100" />
 				<div className="h-40 bg-gray-100" />
 				<div className="h-40 bg-gray-100" />
+			</div>
+
+			{/* More */}
+			<div className="h-16" />
+			<div className="flex flex-row items-center">
+				<div className="w-8 h-8 rounded-full bg-gray-100" />
+				<div className="w-4" />
+				<div className="w-40 h-6 bg-gray-100 rounded-full" />
+			</div>
+
+			<div className="flex flex-row">
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
+				<div className="flex flex-row justify-center items-center" style={{ width: "7rem", height: "7rem" }}>
+					<div className="w-8 h-8 bg-gray-300 rounded-full" />
+				</div>
 			</div>
 
 		</>

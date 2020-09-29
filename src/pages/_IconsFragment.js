@@ -10,17 +10,15 @@ export default function IconsFragment() {
 
 			<style>
 				{css`
-					#grid {
+					#feather-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-
-						/* TODO: Move gap to <article> as padding. */
 						gap: 1rem;
 					}
 				`}
 			</style>
 
-			<div id="grid">
+			<div id="feather-grid">
 				{dataset.map(each => (
 					<article key={each.name} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
 						<div className="absolute inset-0">
