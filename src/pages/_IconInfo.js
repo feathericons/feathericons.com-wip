@@ -52,25 +52,46 @@ function Demo2() {
 			<div>
 
 				<div className="relative">
-					<div className="px-4 py-2 absolute bottom-full inset-x-0">
-						<p className="font-medium text-sm text-gray-600">
-							Username or email:
+					<div className="px-3 py-2 absolute bottom-full inset-x-0">
+						<p className="font-medium text-sm leading-none text-gray-800">
+							Username:
 						</p>
 					</div>
 				</div>
 
 				{/* TODO: <input> */}
 				<div className="relative">
-					<div className="px-4 absolute inset-y-0 left-0">
+					<div className="px-3 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
 							<SVGAtSign className="text-blue-600" style={{ width: "1em", height: "1em" }} /* strokeWidth={2.25} */ />
 						</div>
 					</div>
 					<input
-						className="px-10 w-64 h-12 bg-white font-medium leading-none text-gray-800 rounded-2 shadow-px-2"
+						// NOTE: Use text-black not text-gray-*.
+						className="px-9 w-64 h-11 bg-white text-black rounded-1 shadow-px-2"
 						placeholder="username"
 						value="username_ZAYDEK"
 					/>
+				</div>
+
+				<div className="relative">
+					<div className="mt-1 px-3 py-2 absolute top-full inset-x-0">
+						<div className="flex flex-row justify-end">
+							<p className="font-medium text-sm leading-none text-gray-800">
+								<span className="inline-flex flex-row items-center align-top">
+									<span>
+										Available
+									</span>
+									&nbsp;
+									<SVGCheck
+										className="text-green-400"
+										style={{ width: "1em", height: "1em" }}
+										strokeWidth={3}
+									/>
+								</span>
+							</p>
+						</div>
+					</div>
 				</div>
 
 			</div>
