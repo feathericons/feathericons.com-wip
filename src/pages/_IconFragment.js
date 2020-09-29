@@ -14,7 +14,7 @@ export default function IconFragment() {
 						grid-template-areas:
 							"a b b"
 							"a d c";
-						grid-gap: 0.75rem;
+						gap: 0.75rem;
 
 						/* width: 60rem; */
 						height: 20rem;
@@ -65,6 +65,23 @@ export default function IconFragment() {
 						height: ${px(24)};
 						background-color: gray;
 						border-radius: 50%;
+					}
+
+					@media (max-width: 639px) {
+						.bento {
+							grid-template-rows: 1fr;
+							grid-template-columns: 1fr;
+							gap: 0;
+						}
+						.bento-item:nth-child(2) {
+							display: none;
+						}
+						.bento-item:nth-child(3) {
+							display: none;
+						}
+						.bento-item:nth-child(4) {
+							display: none;
+						}
 					}
 				`}
 			</style>

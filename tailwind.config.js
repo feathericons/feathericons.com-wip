@@ -161,7 +161,7 @@ module.exports = {
 				sans: [
 					...defaultTheme.fontFamily.sans.slice(1, 3),
 					"Inter",
-					...defaultTheme.fontFamily.sans[0], // system-ui
+					defaultTheme.fontFamily.sans[0],
 					...defaultTheme.fontFamily.sans.slice(3),
 				],
 			},
