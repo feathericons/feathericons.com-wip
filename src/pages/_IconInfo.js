@@ -5,8 +5,8 @@ import px from "lib/x/px"
 import SVG from "lib/x/SVG"
 
 import {
-	AlertCircle as SVGAlertCircle,
 	AtSign as SVGAtSign,
+	Check as SVGCheck,
 	GitHub as SVGGitHub,
 	Instagram as SVGInstagram,
 	Mail as SVGMail,
@@ -51,52 +51,27 @@ function Demo2() {
 		<div className="flex flex-row justify-center items-center h-full">
 			<div>
 
-				{/* <div className="relative"> */}
-				{/* 	<div className="p-2 absolute bottom-full inset-x-0"> */}
-				{/* 		<p className="font-bold tracking-wide leading-none text-gray-600" style={{ fontSize: px(11) }}> */}
-				{/* 			USERNAME */}
-				{/* 		</p> */}
-				{/* 	</div> */}
-				{/* </div> */}
-
 				<div className="relative">
-					<div className="p-2 absolute bottom-full inset-x-0">
-						<div className="flex flex-row justify-start">
-							<p className="font-medium text-sm text-gray-800">
-								Username:
-							</p>
-						</div>
+					<div className="px-4 py-2 absolute bottom-full inset-x-0">
+						<p className="font-medium text-sm text-gray-600">
+							Username or email:
+						</p>
 					</div>
 				</div>
 
-				{/* Input */}
-				<div className="p-4 w-64 bg-white rounded-2 shadow-px-2">
-					<p className="font-medium leading-none text-gray-800">
-						<span className="inline-flex flex-row items-center align-top">
-							<SVGAtSign className="text-gray-400" style={{ width: "1em", height: "1em" }} /* strokeWidth={2.25} */ />
-							<span className="w-2" />
-							<span>
-								username_ZAYDEK
-							</span>
-						</span>
-					</p>
+				{/* TODO: <input> */}
+				<div className="relative">
+					<div className="px-4 absolute inset-y-0 left-0">
+						<div className="flex flex-row items-center h-full">
+							<SVGAtSign className="text-blue-600" style={{ width: "1em", height: "1em" }} /* strokeWidth={2.25} */ />
+						</div>
+					</div>
+					<input
+						className="px-10 w-64 h-12 bg-white font-medium leading-none text-gray-800 rounded-2 shadow-px-2"
+						placeholder="username"
+						value="username_ZAYDEK"
+					/>
 				</div>
-
-				{/* Text */}
-				{/* <div className="relative"> */}
-				{/* 	<div className="p-2 absolute top-full inset-x-0"> */}
-				{/* 		<div className="flex flex-row justify-end"> */}
-				{/* 			<p className="font-medium text-xs text-gray-800"> */}
-				{/* 				<span className="inline-flex flex-row items-center align-top" style={{ fontSize: px(17) }}> */}
-				{/* 					<SVGAlertCircle className="text-red-500" style={{ width: "1em", height: "1em" }} /> */}
-				{/* 					<span> */}
-				{/* 						We couldn’t find that username! */}
-				{/* 					</span> */}
-				{/* 				</span> */}
-				{/* 			</p> */}
-				{/* 		</div> */}
-				{/* 	</div> */}
-				{/* </div> */}
 
 			</div>
 		</div>
@@ -106,33 +81,17 @@ function Demo2() {
 function Demo3() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<div>
-
-				{/* Button */}
-				<button className="px-8 py-4 bg-blue-500 rounded-full">
-					<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
-						<span className="inline-flex flex-row items-center align-top">
-							<SVGTwitter style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
-							<span className="w-3" />
-							<span>
-								Follow on Twitter?
-							</span>
+			<button className="px-8 py-4 bg-blue-500 rounded-full">
+				<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
+					<span className="inline-flex flex-row items-center align-top">
+						<SVGTwitter style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
+						<span className="w-3" />
+						<span>
+							Follow on Twitter?
 						</span>
-					</p>
-				</button>
-
-				{/* Text */}
-				{/* <div className="relative"> */}
-				{/* 	<div className="p-2 absolute top-full inset-x-0"> */}
-				{/* 		<div className="flex flex-row justify-center"> */}
-				{/* 			<p className="font-medium text-sm text-gray-800"> */}
-				{/* 				Follow @username_ZAYDEK */}
-				{/* 			</p> */}
-				{/* 		</div> */}
-				{/* 	</div> */}
-				{/* </div> */}
-
-			</div>
+					</span>
+				</p>
+			</button>
 		</div>
 	)
 }
