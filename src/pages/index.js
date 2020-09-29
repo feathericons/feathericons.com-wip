@@ -1,7 +1,11 @@
+import asyncDownlodAll from "utils/asyncDownloadAll"
+import css from "lib/x/tpl"
 import dataset from "data/dataset"
+import px from "lib/x/px"
 import SEO from "./_SEO"
 import sponsors from "data/sponsors"
 import Style from "lib/x/Style"
+import SVG from "lib/x/SVG"
 import target_blank from "lib/x/target_blank"
 
 import {
@@ -14,32 +18,6 @@ import {
 	Tool as SVGTool,
 	Twitter as SVGTwitter,
 } from "react-feather"
-
-/**********/
-
-const SVG = ({ svg: Component, ...props }) => (
-	<Component {...props} />
-)
-
-// Converts px units to rem units.
-function px(n) {
-	n /= 16
-	return n + "rem"
-}
-
-// Converts Tailwind units to rem units.
-function tw(n) {
-	n *= 4
-	n /= 16
-	return n + "rem"
-}
-
-// https://dev.to/patarapolw/fake-tagged-template-string-literal-to-enable-syntax-highlighting-in-vscode-34g1
-function css(arr, ...args) {
-	return arr.map((each, x) => `${each}${args[x] || ""}`).join("")
-}
-
-/**********/
 
 /* </Hero> */
 
@@ -91,29 +69,36 @@ function LogoAndCTA() {
 			{/* CTA buttons */}
 			<div className="h-6" />
 			<div className="flex flex-col sm:flex-row w-full sm:w-auto">
+
+				{/* Button */}
 				<a
 					// TODO
 				>
 					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-95 rounded-3 sm:rounded-full">
-						<p className="font-medium leading-none text-gray-800" style={{ fontSize: `${17 / 16}rem` }}>
+						<p className="font-medium leading-none text-gray-800" style={{ fontSize: `${18 / 16}rem` }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<SVGGitHub
 									style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }}
 									strokeWidth={2.25}
 								/>
 								<span>
-									&nbsp;&nbsp;Get started
+									&nbsp;&nbsp;Read docs
 								</span>
 							</span>
 						</p>
 					</div>
 				</a>
+
+				{/* Button */}
 				<div className="w-4 h-4" />
-				<a
-					// TODO
+				<button
+					onClick={async () => {
+						// TODO: Add events tracking.
+						await asyncDownlodAll()
+					}}
 				>
 					<div className="flex flex-row justify-center items-center w-auto sm:w-48 h-14 bg-white bg-opacity-20 rounded-3 sm:rounded-full">
-						<p className="font-medium leading-none text-white" style={{ fontSize: `${17 / 16}rem` }}>
+						<p className="font-medium leading-none text-white" style={{ fontSize: `${18 / 16}rem` }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<SVGDownload
 									style={{ width: `${20 / 16}rem`, height: `${20 / 16}rem` }}
@@ -125,7 +110,8 @@ function LogoAndCTA() {
 							</span>
 						</p>
 					</div>
-				</a>
+				</button>
+
 			</div>
 		</div>
 	)
