@@ -63,7 +63,7 @@ function Demo2() {
 				<div className="relative">
 					<div className="px-3 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
-							<SVGAtSign className="text-blue-600" style={{ width: "1em", height: "1em" }} /* strokeWidth={2.25} */ />
+							<SVGAtSign /* className="text-blue-600" */ style={{ width: "1em", height: "1em", color: "#1da1f2" }} /* strokeWidth={2.25} */ />
 						</div>
 					</div>
 					<input
@@ -80,7 +80,7 @@ function Demo2() {
 							<p className="font-medium text-sm leading-none text-gray-800">
 								<span className="inline-flex flex-row items-center align-top">
 									<span>
-										Available
+										Available!
 									</span>
 									&nbsp;
 									<SVGCheck
@@ -102,13 +102,13 @@ function Demo2() {
 function Demo3() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<button className="px-8 py-4 bg-blue-500 rounded-full">
+			<button className="px-8 py-4 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
 				<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
 					<span className="inline-flex flex-row items-center align-top">
 						<SVGTwitter style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
 						<span className="w-3" />
 						<span>
-							Follow on Twitter?
+							Follow on Twitter
 						</span>
 					</span>
 				</p>
@@ -287,8 +287,8 @@ export default function IconInfo() {
 				<div className="w-40 h-6 bg-gray-100 rounded-full" />
 			</div>
 
-			{/* <div className="h-4" /> */}
-			{/* <IconsInfo svgs={dataset.slice(0, 6)} /> */}
+			<div className="h-4" />
+			<IconsInfo svgs={dataset.slice(0, 6)} />
 
 		</>
 	)
