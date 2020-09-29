@@ -1,13 +1,21 @@
 import css from "lib/x/tpl"
 import px from "lib/x/px"
 
+import { Heart as SVGHeart } from "react-feather"
+
 export default function IconFragment() {
 	return (
 		<>
 
+			<div className="flex flex-row items-center">
+				<div className="w-8 h-8 rounded-full bg-gray-100" />
+				<div className="w-4" />
+				<div className="w-40 h-6 bg-gray-100 rounded-full" />
+			</div>
+
 			<style>
 				{css`
-					.bento {
+					#bento-grid {
 						display: grid;
 						grid-template-rows: 0.62fr 0.38fr;
 						grid-template-columns: 0.62fr 0.14fr 0.24fr;
@@ -16,99 +24,109 @@ export default function IconFragment() {
 							"a d c";
 						gap: 0.75rem;
 
-						/* width: 60rem; */
 						height: 20rem;
 					}
 
-					.bento-item {
+					.bento-child {
 						display: flex;
 						flex-direction: row;
 						justify-content: center;
 						align-items: center;
 
-						background-color: lightgray;
+						background-color: var(--gray-100);
 					}
 
-					.bento-item:nth-child(1) {
+					.bento-child:nth-child(1) {
 						grid-area: a;
 					}
-					.bento-item:nth-child(2) {
+					.bento-child:nth-child(2) {
 						grid-area: b;
 					}
-					.bento-item:nth-child(3) {
+					.bento-child:nth-child(3) {
 						grid-area: c;
 					}
-					.bento-item:nth-child(4) {
+					.bento-child:nth-child(4) {
 						grid-area: d;
 					}
 
-					.bento-item:nth-child(1) > .svg {
-						width: ${px(104)};
-						height: ${px(104)};
-						background-color: gray;
-						border-radius: 50%;
+					.bento-child:nth-child(1) > svg {
+						width: ${px(54)};
+						height: ${px(54)};
 					}
-					.bento-item:nth-child(2) > .svg {
-						width: ${px(64)};
-						height: ${px(64)};
-						background-color: gray;
-						border-radius: 50%;
+					.bento-child:nth-child(2) > svg {
+						width: ${px(36)};
+						height: ${px(36)};
 					}
-					.bento-item:nth-child(3) > .svg {
-						width: ${px(40)};
-						height: ${px(40)};
-						background-color: gray;
-						border-radius: 50%;
-					}
-					.bento-item:nth-child(4) > .svg {
+					.bento-child:nth-child(3) > svg {
 						width: ${px(24)};
 						height: ${px(24)};
-						background-color: gray;
-						border-radius: 50%;
+					}
+					.bento-child:nth-child(4) > svg {
+						width: ${px(16)};
+						height: ${px(16)};
 					}
 
 					@media (max-width: 639px) {
-						.bento {
+						#bento-grid {
 							grid-template-rows: 1fr;
 							grid-template-columns: 1fr;
 							gap: 0;
 						}
-						.bento-item:nth-child(2) {
+						.bento-child:nth-child(2) {
 							display: none;
 						}
-						.bento-item:nth-child(3) {
+						.bento-child:nth-child(3) {
 							display: none;
 						}
-						.bento-item:nth-child(4) {
+						.bento-child:nth-child(4) {
 							display: none;
 						}
 					}
 				`}
 			</style>
 
-			{/* Name */}
+			<div className="h-8" />
+			<div id="bento-grid">
+				<div className="bento-child">
+					<SVGHeart className="text-gray-800" />
+				</div>
+				<div className="bento-child">
+					<SVGHeart className="text-gray-800" />
+				</div>
+				<div className="bento-child">
+					<SVGHeart className="text-gray-800" />
+				</div>
+				<div className="bento-child">
+					<SVGHeart className="text-gray-800" />
+				</div>
+			</div>
+
+			<div className="h-16" />
 			<div className="flex flex-row items-center">
 				<div className="w-8 h-8 rounded-full bg-gray-100" />
 				<div className="w-4" />
 				<div className="w-40 h-6 bg-gray-100 rounded-full" />
 			</div>
 
-			<div className="h-8" />
-			<div className="bento">
-				<div className="bento-item">
-					<div className="svg"></div>
-				</div>
-				<div className="bento-item">
-					<div className="svg"></div>
-				</div>
-				<div className="bento-item">
-					<div className="svg"></div>
-				</div>
-				<div className="bento-item">
-					<div className="svg"></div>
-				</div>
-			</div>
+			<style>
+				{css`
+					#examples-grid {
+						display: grid;
+						grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+						gap: 1rem;
+					}
+				`}
+			</style>
 
+			<div className="h-8" />
+			<div id="examples-grid">
+				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100" />
+			</div>
 
 		</>
 	)
