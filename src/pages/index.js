@@ -58,7 +58,7 @@ function LogoAndCTA() {
 
 			{/* <h1> */}
 			<div className="h-8" />
-			<h1 className="font-medium leading-none text-white" style={{ fontSize: `${32 / 16}rem` }}>
+			<h1 className="font-medium leading-none font-display text-white" style={{ fontSize: `${36 / 16}rem` }}>
 				{/* Open source <span className="hidden sm:inline">SVG </span>icons */}
 				Open source icons
 			</h1>
@@ -140,7 +140,7 @@ function Sponsors() {
 				{...target_blank}
 			>
 				<div className="group flex flex-col items-center">
-					<img className="h-12 xl:h-11" src={sponsor.src} alt={sponsor.name} />
+					<img className="h-12" src={sponsor.src} alt={sponsor.name} />
 					<div className="h-2" />
 					<p className="font-medium text-xs leading-none text-white">
 						<span className="inline flex flex-row items-center align-top">
@@ -241,7 +241,7 @@ function Hero() {
 	return (
 		<header
 			// TODO: Use xl:pb-52?
-			className="px-6 sm:px-4 py-20 xl:py-24 xl:pb-52 relative"
+			className="px-6 sm:px-4 py-32 pb-64 relative"
 			style={{ backgroundImage: "linear-gradient(to right, var(--grad-start), var(--grad-end)" }}
 		>
 

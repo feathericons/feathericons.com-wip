@@ -154,6 +154,10 @@ module.exports = {
 				"px-6": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow["2xl"],
 			},
 			fontFamily: {
+				display: [
+					"Inter Display",
+					...defaultTheme.fontFamily.sans,
+				],
 				sans: [
 					...defaultTheme.fontFamily.sans.slice(0, 3),
 					"Inter",

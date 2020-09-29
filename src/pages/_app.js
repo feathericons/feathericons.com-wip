@@ -1,5 +1,4 @@
-import "stylesheets/tailwind/out.css"
-
+import "stylesheets/tailwind/out.css" // Takes precedence
 import "stylesheets/tailwind/color-vars.css"
 import "stylesheets/tailwind/shadow-vars.css"
 
