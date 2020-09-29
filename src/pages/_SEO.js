@@ -1,9 +1,9 @@
 import Head from "next/head"
 
-// TODO: Change to "https://feathericons.com" for production.
-const TITLE = "Feather – Simply beautiful open source icons"
-const DESCRIPTION = "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability."
-const URL = process.env.NODE_ENV !== "production" ? "http://localhost:3000" : "https://feathericons.dev"
+// TODO: Update <url>.dev to <url>.com.
+const title = "Feather – Simply beautiful open source icons"
+const description = "Feather is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability."
+const url = process.env.NODE_ENV !== "production" ? "http://localhost:3000" : "https://feathericons.dev"
 
 export default function SEO() {
 	return (
@@ -19,20 +19,20 @@ export default function SEO() {
 			<link
 				// TODO: See favicon-16x16.png and favicon-32x32.png.
 				rel="icon"
-				href={`${URL}/images/favicon.ico`}
+				href={`${url}/images/favicon.ico`}
 			/>
 
 			{/* Core */}
 			<title>
-				{TITLE}
+				{title}
 			</title>
 			<meta
 				name="title"
-				content={TITLE}
+				content={title}
 			/>
 			<meta
 				name="description"
-				content={DESCRIPTION}
+				content={description}
 			/>
 
 			{/* Facebook */}
@@ -42,19 +42,19 @@ export default function SEO() {
 			/>
 			<meta
 				property="og:url"
-				content={URL}
+				content={url}
 			/>
 			<meta
 				property="og:title"
-				content={TITLE}
+				content={title}
 			/>
 			<meta
 				property="og:description"
-				content={DESCRIPTION}
+				content={description}
 			/>
 			<meta
 				property="og:image"
-				content={`https://${URL}/images/share.png`}
+				content={`https://${url}/images/share.png`}
 			/>
 
 			{/* Twitter */}
@@ -64,19 +64,19 @@ export default function SEO() {
 			/>
 			<meta
 				property="twitter:url"
-				content={URL}
+				content={url}
 			/>
 			<meta
 				property="twitter:title"
-				content={TITLE}
+				content={title}
 			/>
 			<meta
 				property="twitter:description"
-				content={DESCRIPTION}
+				content={description}
 			/>
 			<meta
 				property="twitter:image"
-				content={`https://${URL}/images/share.png`}
+				content={`https://${url}/images/share.png`}
 			/>
 
 			{/* New */}
