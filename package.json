@@ -9,6 +9,8 @@
 		"out": "rm -rf .next && yarn tw-build && yarn build && yarn next export && osascript -e 'display notification \"Production build ready\" with title \"yarn compile\"' && yarn tw-dev && osascript -e 'display notification \"Development build ready\" with title \"yarn tw-dev\"'"
 	},
 	"dependencies": {
+		"downloadjs": "^1.4.7",
+		"jszip": "^3.5.0",
 		"next": "^9.5.3",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
