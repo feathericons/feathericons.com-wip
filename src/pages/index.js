@@ -1,8 +1,8 @@
 import asyncDownlodAll from "utils/asyncDownloadAll"
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
-import IconFragment from "./_IconFragment"
-import IconsFragment from "./_IconsFragment"
+import IconInfo from "./_IconInfo"
+import IconsInfo from "./_IconsInfo"
 import px from "lib/x/px"
 import SEO from "./_SEO"
 import sponsors from "data/sponsors"
@@ -257,7 +257,7 @@ function Hero() {
 			{/* (top-left) */}
 			<div className="px-4 py-3 absolute top-0 left-0">
 				<a
-					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather IconsInfo and @username_ZAYDEK for feathericons.com. ❤️")}`}
 					data-splitbee-event="Click Share Link"
 					data-splitbee-event-type="Twitter"
 					{...target_blank}
@@ -283,7 +283,7 @@ function Hero() {
 			{/* (top-right) */}
 			<div className="px-4 py-3 absolute top-0 right-0">
 				<a
-					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️")}`}
+					href={`https://twitter.com/intent/tweet?text=${encodeURI("Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather IconsInfo and @username_ZAYDEK for feathericons.com. ❤️")}`}
 					data-splitbee-event="Click Share Link"
 					data-splitbee-event-type="Twitter"
 					{...target_blank}
@@ -450,10 +450,10 @@ function IconApp() {
 							</div>
 						</div>
 
-						{/* Icons */}
+						{/* IconsInfo */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
-							{/* <IconsFragment /> */}
-							<IconFragment />
+							{/* <IconsInfo /> */}
+							<IconInfo />
 						</div>
 
 					</div>

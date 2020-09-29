@@ -1,9 +1,9 @@
 import css from "lib/x/tpl"
 import Icon from "./_Icon"
 
-export default function IconsFragment({ svgs }) {
+export default function IconsInfo({ svgs }) {
 	return (
-		<>
+		<div id="feather-grid">
 
 			<style>
 				{css`
@@ -15,12 +15,10 @@ export default function IconsFragment({ svgs }) {
 				`}
 			</style>
 
-			<div id="feather-grid">
-				{svgs.map(each => (
-					<Icon key={each.name} svg={each} />
-				))}
-			</div>
+			{svgs.map(each => (
+				<Icon key={each.name} svg={each} />
+			))}
 
-		</>
+		</div>
 	)
 }

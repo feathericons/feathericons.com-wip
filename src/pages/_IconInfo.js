@@ -1,6 +1,6 @@
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
-import IconsFragment from "./_IconsFragment"
+import IconsInfo from "./_IconsInfo"
 import px from "lib/x/px"
 
 import { Circle as SVGCircle } from "react-feather"
@@ -42,7 +42,13 @@ function Demo1() {
 	)
 }
 
-export default function IconFragment() {
+function Demo6() {
+	return (
+		"hello"
+	)
+}
+
+export default function IconInfo() {
 	return (
 		<>
 
@@ -176,19 +182,19 @@ export default function IconFragment() {
 					<Demo1 />
 				</div>
 				<div className="h-40 bg-gray-100">
-
+					{/* <Demo1 /> */}
 				</div>
 				<div className="h-40 bg-gray-100">
-
+					{/* <Demo1 /> */}
 				</div>
 				<div className="h-40 bg-gray-100">
-
+					{/* <Demo1 /> */}
 				</div>
 				<div className="h-40 bg-gray-100">
-
+					{/* <Demo1 /> */}
 				</div>
 				<div className="h-40 bg-gray-100">
-
+					<Demo6 />
 				</div>
 			</div>
 
@@ -201,7 +207,7 @@ export default function IconFragment() {
 			</div>
 
 			<div className="h-8" />
-			<IconsFragment svgs={dataset.slice(0, 6)} />
+			<IconsInfo svgs={dataset.slice(0, 6)} />
 
 		</>
 	)
