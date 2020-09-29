@@ -452,7 +452,7 @@ function IconApp() {
 
 						{/* Icons */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
-							<IconFragment />
+							<IconsFragment />
 							{/* <IconsFragment /> */}
 						</div>
 

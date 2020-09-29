@@ -30,18 +30,17 @@ export default function IconsFragment() {
 								</Style>
 							</div>
 						</div>
-						<div className="py-2 absolute inset-x-0 bottom-0">
+						<div className="py-2 absolute bottom-0 inset-x-0">
 							<div className="flex flex-row justify-center">
-								{/* <div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" /> */}
 								<Style className="subpixel-antialiased">
 									<p
 										className="text-center tracking-wide leading-tight text-gray-500"
 										style={{
 											fontSize: px(13),
 
-											overflowX: "hidden",
-											textOverflow: "ellipsis",
-											whiteSpace: "nowrap",
+											// overflowX: "hidden",
+											// textOverflow: "ellipsis",
+											// whiteSpace: "nowrap",
 										}}>
 										{each.name}
 									</p>
