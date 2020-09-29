@@ -1,7 +1,6 @@
 const defaultTheme = require("tailwindcss/defaultTheme")
 
-// TODO: Remove corePlugins for production.
-const corePlugins = {
+const limitedCorePlugins = {
 	preflight: true,
 	container: false,
 	accessibility: false,
@@ -90,7 +89,7 @@ const corePlugins = {
 	rotate: false,
 	scale: false,
 	skew: false,
-	space: true, // ??
+	space: true,
 	stroke: true,
 	strokeWidth: false,
 	tableLayout: false,
@@ -116,18 +115,17 @@ const corePlugins = {
 }
 
 module.exports = {
-	corePlugins,
+	corePlugins: limitedCorePlugins,
 
 	// dark: "class",
 	experimental: {
 		// darkModeVariant: true,
 		uniformColorPalette: true,
 	},
-
-	// future: {
-	// 	removeDeprecatedGapUtilities: true,
-	// 	purgeLayersByDefault: true,
-	// },
+	future: {
+		// removeDeprecatedGapUtilities: true,
+		// purgeLayersByDefault: true,
+	},
 	purge: ["./src/**/*.js"],
 	theme: {
 		extend: {
@@ -156,10 +154,6 @@ module.exports = {
 				"px-6": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow["2xl"],
 			},
 			fontFamily: {
-				// mono: [
-				// 	"IBM Plex Mono",
-				// 	...defaultTheme.fontFamily.mono,
-				// ],
 				sans: [
 					...defaultTheme.fontFamily.sans.slice(0, 3),
 					"Inter",
@@ -188,8 +182,6 @@ module.exports = {
 			xl: `${24 + (1280 + 64) + 24}px`,
 		},
 	},
-	variants: {
-		typography: {},
-	},
+	variants: {},
 	plugins: [require("@tailwindcss/ui")],
 }
