@@ -155,12 +155,13 @@ module.exports = {
 			},
 			fontFamily: {
 				display: [
-					"Inter Display",
+					"InterDisplay",
 					...defaultTheme.fontFamily.sans,
 				],
 				sans: [
 					...defaultTheme.fontFamily.sans.slice(1, 3),
 					"Inter",
+					...defaultTheme.fontFamily.sans[0], // system-ui
 					...defaultTheme.fontFamily.sans.slice(3),
 				],
 			},

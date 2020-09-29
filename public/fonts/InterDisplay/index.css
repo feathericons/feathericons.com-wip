@@ -1,7 +1,7 @@
 /* https://github.com/rsms/inter/releases/tag/display-beta-1 */
 
 @font-face {
-	font-family: "Inter Display";
+	font-family: "InterDisplay";
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-	font-family: "Inter Display";
+	font-family: "InterDisplay";
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-	font-family: "Inter Display";
+	font-family: "InterDisplay";
 	font-style: normal;
 	font-weight: 600;
 	font-display: swap;
@@ -28,7 +28,7 @@
 }
 
 @font-face {
-	font-family: "Inter Display";
+	font-family: "InterDisplay";
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;

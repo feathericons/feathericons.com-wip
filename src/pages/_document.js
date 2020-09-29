@@ -8,16 +8,16 @@ class Document extends NextDocument {
 
 	render() {
 		return (
-			<Html className="bg-cool-gray-50" lang="en">
+			<Html className="antialiased bg-cool-gray-50" lang="en">
 				<Head>
 					<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-					<link href="/fonts/inter/index.css" rel="stylesheet" />
+					<link href="/fonts/InterDisplay/index.css" rel="stylesheet" />
 					{process.env.NODE_ENV === "production" && (
 						<script async src="https://cdn.splitbee.io/sb.js" />
 					)}
 					<script src="/scripts/layoutDarkMode.js" />
 				</Head>
-				<body className="antialiased">
+				<body>
 					<Main />
 					<NextScript />
 				</body>
