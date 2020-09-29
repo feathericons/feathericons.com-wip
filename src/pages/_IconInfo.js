@@ -2,8 +2,16 @@ import css from "lib/x/tpl"
 import dataset from "data/dataset"
 import IconsInfo from "./_IconsInfo"
 import px from "lib/x/px"
+import SVG from "lib/x/SVG"
 
-import { Circle as SVGCircle } from "react-feather"
+import {
+	AlertCircle as SVGAlertCircle,
+	AtSign as SVGAtSign,
+	GitHub as SVGGitHub,
+	Instagram as SVGInstagram,
+	Mail as SVGMail,
+	Twitter as SVGTwitter,
+} from "react-feather"
 
 function Demo1() {
 	return (
@@ -30,10 +38,67 @@ function Demo1() {
 				`}
 			</style>
 
-			<SVGCircle className="m-3 text-gray-800" />
-			<SVGCircle className="m-3 text-gray-800" />
-			<SVGCircle className="m-3 text-gray-800" />
-			<SVGCircle className="m-3 text-gray-800" />
+			<SVGGitHub className="m-3 text-gray-800" />
+			<SVGGitHub className="m-3 text-gray-800" />
+			<SVGGitHub className="m-3 text-gray-800" />
+			<SVGGitHub className="m-3 text-gray-800" />
+		</div>
+	)
+}
+
+function Demo2() {
+	return (
+		<div className="flex flex-row justify-center items-center h-full">
+			<div>
+
+				{/* <div className="relative"> */}
+				{/* 	<div className="p-2 absolute bottom-full inset-x-0"> */}
+				{/* 		<p className="font-bold tracking-wide leading-none text-gray-600" style={{ fontSize: px(11) }}> */}
+				{/* 			USERNAME */}
+				{/* 		</p> */}
+				{/* 	</div> */}
+				{/* </div> */}
+
+				<div className="relative">
+					<div className="p-2 absolute bottom-full inset-x-0">
+						<div className="flex flex-row justify-start">
+							<p className="font-medium text-sm text-gray-800">
+								Username:
+							</p>
+						</div>
+					</div>
+				</div>
+
+				{/* Input */}
+				<div className="p-4 w-64 bg-white rounded-2 shadow-px-2">
+					<p className="font-medium leading-none text-gray-800">
+						<span className="inline-flex flex-row items-center align-top">
+							<SVGAtSign className="text-gray-400" style={{ width: "1em", height: "1em" }} /* strokeWidth={2.25} */ />
+							<span className="w-2" />
+							<span>
+								username_ZAYDEK
+							</span>
+						</span>
+					</p>
+				</div>
+
+				{/* Text */}
+				{/* <div className="relative"> */}
+				{/* 	<div className="p-2 absolute top-full inset-x-0"> */}
+				{/* 		<div className="flex flex-row justify-end"> */}
+				{/* 			<p className="font-medium text-xs text-gray-800"> */}
+				{/* 				<span className="inline-flex flex-row items-center align-top" style={{ fontSize: px(17) }}> */}
+				{/* 					<SVGAlertCircle className="text-red-500" style={{ width: "1em", height: "1em" }} /> */}
+				{/* 					<span> */}
+				{/* 						We couldn’t find that username! */}
+				{/* 					</span> */}
+				{/* 				</span> */}
+				{/* 			</p> */}
+				{/* 		</div> */}
+				{/* 	</div> */}
+				{/* </div> */}
+
+			</div>
 		</div>
 	)
 }
@@ -44,28 +109,28 @@ function Demo3() {
 			<div>
 
 				{/* Button */}
-				<button className="px-10 py-4 bg-gray-200 rounded-2 shadow-px-2">
-					<p className="font-medium">
+				<button className="px-8 py-4 bg-blue-500 rounded-full">
+					<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
 						<span className="inline-flex flex-row items-center align-top">
-							<SVGCircle className="text-gray-800" />
+							<SVGTwitter style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
 							<span className="w-3" />
 							<span>
-								Click to Subscribe
+								Follow on Twitter?
 							</span>
 						</span>
 					</p>
 				</button>
 
 				{/* Text */}
-				<div className="relative">
-					<div className="p-3 absolute top-full inset-x-0">
-						<div className="flex flex-row justify-center">
-							<p className="font-medium text-xs text-gray-800">
-								You can always unsubscribe later.
-							</p>
-						</div>
-					</div>
-				</div>
+				{/* <div className="relative"> */}
+				{/* 	<div className="p-2 absolute top-full inset-x-0"> */}
+				{/* 		<div className="flex flex-row justify-center"> */}
+				{/* 			<p className="font-medium text-sm text-gray-800"> */}
+				{/* 				Follow @username_ZAYDEK */}
+				{/* 			</p> */}
+				{/* 		</div> */}
+				{/* 	</div> */}
+				{/* </div> */}
 
 			</div>
 		</div>
@@ -73,12 +138,13 @@ function Demo3() {
 }
 
 function Demo6() {
+	const svgs = [SVGInstagram, SVGTwitter, SVGGitHub, SVGMail]
+
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
-			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
-			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
-			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
+			{svgs.map(each => (
+				<SVG key={each.name} className="m-3 w-5 h-5 text-gray-800" svg={each} />
+			))}
 		</div>
 	)
 }
@@ -180,16 +246,16 @@ export default function IconInfo() {
 			<div className="h-8" />
 			<div id="bento-grid">
 				<div className="bento-child">
-					<SVGCircle className="text-gray-800" />
+					<SVGGitHub className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGCircle className="text-gray-800" />
+					<SVGGitHub className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGCircle className="text-gray-800" />
+					<SVGGitHub className="text-gray-800" />
 				</div>
 				<div className="bento-child">
-					<SVGCircle className="text-gray-800" />
+					<SVGGitHub className="text-gray-800" />
 				</div>
 			</div>
 
@@ -205,7 +271,7 @@ export default function IconInfo() {
 				{css`
 					#demo-grid {
 						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+						grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
 						gap: 1rem;
 					}
 				`}
@@ -217,7 +283,7 @@ export default function IconInfo() {
 					<Demo1 />
 				</div>
 				<div className="h-40 bg-gray-100">
-					{/* <Demo1 /> */}
+					<Demo2 />
 				</div>
 				<div className="h-40 bg-gray-100">
 					<Demo3 />
