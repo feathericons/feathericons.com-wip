@@ -5,6 +5,43 @@ import px from "lib/x/px"
 
 import { Circle as SVGCircle } from "react-feather"
 
+function Demo1() {
+	return (
+		<div id="demo-1" className="flex flex-row justify-center items-center h-full">
+
+			<style>
+				{css`
+					#demo-1 > svg:nth-of-type(1) {
+						width: ${px(16)};
+						height: ${px(16)};
+						color: var(--gray-800);
+					}
+					#demo-1 > svg:nth-of-type(2) {
+						width: ${px(24)};
+						height: ${px(24)};
+						color: var(--gray-800);
+					}
+					#demo-1 > svg:nth-of-type(3) {
+						width: ${px(36)};
+						height: ${px(36)};
+						color: var(--gray-800);
+					}
+					#demo-1 > svg:nth-of-type(4) {
+						width: ${px(54)};
+						height: ${px(54)};
+						color: var(--gray-800);
+					}
+				`}
+			</style>
+
+			<SVGCircle className="m-3" />
+			<SVGCircle className="m-3" />
+			<SVGCircle className="m-3" />
+			<SVGCircle className="m-3" />
+		</div>
+	)
+}
+
 export default function IconFragment() {
 	return (
 		<>
@@ -36,7 +73,7 @@ export default function IconFragment() {
 						grid-template-areas:
 							"a b b"
 							"a d c";
-						gap: 0.75rem;
+						gap: 1rem;
 
 						height: 20rem;
 					}
@@ -50,32 +87,32 @@ export default function IconFragment() {
 						background-color: var(--gray-100);
 					}
 
-					.bento-child:nth-child(1) {
+					.bento-child:nth-of-type(1) {
 						grid-area: a;
 					}
-					.bento-child:nth-child(2) {
+					.bento-child:nth-of-type(2) {
 						grid-area: b;
 					}
-					.bento-child:nth-child(3) {
+					.bento-child:nth-of-type(3) {
 						grid-area: c;
 					}
-					.bento-child:nth-child(4) {
+					.bento-child:nth-of-type(4) {
 						grid-area: d;
 					}
 
-					.bento-child:nth-child(1) > svg {
+					.bento-child:nth-of-type(1) > svg {
 						width: ${px(54)};
 						height: ${px(54)};
 					}
-					.bento-child:nth-child(2) > svg {
+					.bento-child:nth-of-type(2) > svg {
 						width: ${px(36)};
 						height: ${px(36)};
 					}
-					.bento-child:nth-child(3) > svg {
+					.bento-child:nth-of-type(3) > svg {
 						width: ${px(24)};
 						height: ${px(24)};
 					}
-					.bento-child:nth-child(4) > svg {
+					.bento-child:nth-of-type(4) > svg {
 						width: ${px(16)};
 						height: ${px(16)};
 					}
@@ -86,13 +123,13 @@ export default function IconFragment() {
 							grid-template-columns: 1fr;
 							gap: 0;
 						}
-						.bento-child:nth-child(2) {
+						.bento-child:nth-of-type(2) {
 							display: none;
 						}
-						.bento-child:nth-child(3) {
+						.bento-child:nth-of-type(3) {
 							display: none;
 						}
-						.bento-child:nth-child(4) {
+						.bento-child:nth-of-type(4) {
 							display: none;
 						}
 					}
@@ -128,19 +165,31 @@ export default function IconFragment() {
 					#demo-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-						gap: 0.75rem;
+						gap: 1rem;
 					}
 				`}
 			</style>
 
 			<div className="h-8" />
 			<div id="demo-grid">
-				<div className="h-40 bg-gray-100" />
-				<div className="h-40 bg-gray-100" />
-				<div className="h-40 bg-gray-100" />
-				<div className="h-40 bg-gray-100" />
-				<div className="h-40 bg-gray-100" />
-				<div className="h-40 bg-gray-100" />
+				<div className="h-40 bg-gray-100">
+					<Demo1 />
+				</div>
+				<div className="h-40 bg-gray-100">
+
+				</div>
+				<div className="h-40 bg-gray-100">
+
+				</div>
+				<div className="h-40 bg-gray-100">
+
+				</div>
+				<div className="h-40 bg-gray-100">
+
+				</div>
+				<div className="h-40 bg-gray-100">
+
+				</div>
 			</div>
 
 			{/* More */}

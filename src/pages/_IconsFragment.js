@@ -10,7 +10,7 @@ export default function IconsFragment({ svgs }) {
 					#feather-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-						gap: 0.75rem;
+						gap: 1rem;
 					}
 				`}
 			</style>
