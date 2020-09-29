@@ -14,37 +14,38 @@ function Demo1() {
 					#demo-1 > svg:nth-of-type(1) {
 						width: ${px(16)};
 						height: ${px(16)};
-						color: var(--gray-800);
 					}
 					#demo-1 > svg:nth-of-type(2) {
 						width: ${px(24)};
 						height: ${px(24)};
-						color: var(--gray-800);
 					}
 					#demo-1 > svg:nth-of-type(3) {
 						width: ${px(36)};
 						height: ${px(36)};
-						color: var(--gray-800);
 					}
 					#demo-1 > svg:nth-of-type(4) {
 						width: ${px(54)};
 						height: ${px(54)};
-						color: var(--gray-800);
 					}
 				`}
 			</style>
 
-			<SVGCircle className="m-3" />
-			<SVGCircle className="m-3" />
-			<SVGCircle className="m-3" />
-			<SVGCircle className="m-3" />
+			<SVGCircle className="m-3 text-gray-800" />
+			<SVGCircle className="m-3 text-gray-800" />
+			<SVGCircle className="m-3 text-gray-800" />
+			<SVGCircle className="m-3 text-gray-800" />
 		</div>
 	)
 }
 
 function Demo6() {
 	return (
-		"hello"
+		<div className="flex flex-row justify-center items-center h-full">
+			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
+			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
+			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
+			<SVGCircle className="m-3 w-5 h-5 text-gray-800" />
+		</div>
 	)
 }
 
