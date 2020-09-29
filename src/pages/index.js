@@ -1,10 +1,9 @@
 import asyncDownlodAll from "utils/asyncDownloadAll"
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
-import IconInfo from "./_IconInfo"
-import IconsInfo from "./_IconsInfo"
+import IconInfo from "components/IconInfo"
 import px from "lib/x/px"
-import SEO from "./_SEO"
+import SEO from "components/SEO"
 import sponsors from "data/sponsors"
 import Style from "lib/x/Style"
 import SVG from "lib/x/SVG"
@@ -158,7 +157,7 @@ function Sponsors() {
 					<p className="font-bold tracking-wide leading-none text-white" style={{ fontSize: `${11 / 16}rem` }}>
 						<span className="inline-flex flex-row items-center align-top">
 							<span>
-								CHECK OUT OUR SPONSORS!
+								CHECK OUT OUR SPONSORS
 							</span>
 							&nbsp;&nbsp;&middot;&nbsp;&nbsp;
 							<a href="TODO" {...target_blank}>
@@ -450,6 +449,7 @@ function IconApp() {
 
 						{/* Icons */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
+							{/* TODO: Add svg={...}. */}
 							<IconInfo />
 						</div>
 

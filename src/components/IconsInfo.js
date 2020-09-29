@@ -1,5 +1,5 @@
 import css from "lib/x/tpl"
-import Icon from "./_Icon"
+import Icon from "components/Icon"
 
 export default function IconsInfo({ svgs }) {
 	return (
@@ -10,7 +10,7 @@ export default function IconsInfo({ svgs }) {
 					#feather-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-						gap: 1rem;
+						gap: 0.75rem;
 					}
 				`}
 			</style>

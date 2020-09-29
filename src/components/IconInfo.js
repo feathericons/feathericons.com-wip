@@ -1,6 +1,6 @@
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
-import IconsInfo from "./_IconsInfo"
+import IconsInfo from "components/IconsInfo"
 import px from "lib/x/px"
 import SVG from "lib/x/SVG"
 
@@ -68,7 +68,7 @@ function Demo2() {
 					</div>
 					<input
 						// NOTE: Use text-black not text-gray-*.
-						className="px-9 w-64 h-11 bg-white text-black rounded-1 shadow-px-2"
+						className="px-9 w-56 h-11 bg-white text-black rounded-1 shadow-px-2"
 						placeholder="username"
 						value="username_ZAYDEK"
 					/>
@@ -160,7 +160,7 @@ export default function IconInfo() {
 						grid-template-areas:
 							"a b b"
 							"a d c";
-						gap: 1rem;
+						gap: 0.75rem;
 
 						height: 20rem;
 					}
@@ -252,7 +252,7 @@ export default function IconInfo() {
 					#demo-grid {
 						display: grid;
 						grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-						gap: 1rem;
+						gap: 0.75rem;
 					}
 				`}
 			</style>
