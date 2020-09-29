@@ -1,6 +1,7 @@
 import asyncDownlodAll from "utils/asyncDownloadAll"
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
+import IconFragment from "./_IconFragment"
 import IconsFragment from "./_IconsFragment"
 import px from "lib/x/px"
 import SEO from "./_SEO"
@@ -451,7 +452,8 @@ function IconApp() {
 
 						{/* Icons */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
-							<IconsFragment />
+							<IconFragment />
+							{/* <IconsFragment /> */}
 						</div>
 
 					</div>

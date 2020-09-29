@@ -159,7 +159,7 @@ module.exports = {
 					...defaultTheme.fontFamily.sans,
 				],
 				sans: [
-					...defaultTheme.fontFamily.sans.slice(0, 3),
+					...defaultTheme.fontFamily.sans.slice(1, 3),
 					"Inter",
 					...defaultTheme.fontFamily.sans.slice(3),
 				],
