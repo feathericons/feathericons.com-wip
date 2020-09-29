@@ -38,6 +38,40 @@ function Demo1() {
 	)
 }
 
+function Demo3() {
+	return (
+		<div className="flex flex-row justify-center items-center h-full">
+			<div>
+
+				{/* Button */}
+				<button className="px-10 py-4 bg-gray-200 rounded-2 shadow-px-2">
+					<p className="font-medium">
+						<span className="inline-flex flex-row items-center align-top">
+							<SVGCircle className="text-gray-800" />
+							<span className="w-3" />
+							<span>
+								Click to Subscribe
+							</span>
+						</span>
+					</p>
+				</button>
+
+				{/* Text */}
+				<div className="relative">
+					<div className="p-3 absolute top-full inset-x-0">
+						<div className="flex flex-row justify-center">
+							<p className="font-medium text-xs text-gray-800">
+								You can always unsubscribe later.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	)
+}
+
 function Demo6() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
@@ -186,7 +220,7 @@ export default function IconInfo() {
 					{/* <Demo1 /> */}
 				</div>
 				<div className="h-40 bg-gray-100">
-					{/* <Demo1 /> */}
+					<Demo3 />
 				</div>
 				<div className="h-40 bg-gray-100">
 					{/* <Demo1 /> */}
