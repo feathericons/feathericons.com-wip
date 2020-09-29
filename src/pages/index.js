@@ -1,6 +1,7 @@
 import asyncDownlodAll from "utils/asyncDownloadAll"
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
+import IconsFragment from "./_IconsFragment"
 import px from "lib/x/px"
 import SEO from "./_SEO"
 import sponsors from "data/sponsors"
@@ -449,56 +450,8 @@ function IconApp() {
 						</div>
 
 						{/* Icons */}
-						{/* */}
-						{/* px-6 sm:px-4 */}
 						<div className="px-4 xl:px-16 py-8 pb-24">
-							<style>
-								{css`
-									#grid {
-										display: grid;
-										grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
-
-										/* TODO: Move gap to <article> as padding. */
-										gap: 1rem;
-									}
-								`}
-							</style>
-							<div id="grid">
-								{dataset.map(each => (
-									<article key={each.name} className="pb-full relative bg-transparent hover:bg-gray-100 rounded-full transition duration-300 ease-out">
-										<div className="absolute inset-0">
-											<div className="flex flex-row justify-center items-center h-full">
-												{/* <div className="w-8 h-8 bg-gray-400 rounded-full" /> */}
-												<Style className="w-8 h-8 text-gray-800">
-													<SVG svg={each.svgs.stroke} />
-													{/* <svg fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> */}
-													{/* 	<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" /> */}
-													{/* 	<line x1={16} y1={8} x2={2} y2={22} /> */}
-													{/* 	<line x1={17.5} y1={15} x2={9} y2={15} /> */}
-													{/* </svg> */}
-												</Style>
-											</div>
-										</div>
-										<div className="py-2 absolute inset-x-0 bottom-0">
-											<div className="flex flex-row justify-center">
-												{/* <div className="w-16 h-3 bg-gray-400 bg-opacity-25 rounded-full" /> */}
-												<Style className="subpixel-antialiased">
-													<p
-														className="text-center tracking-wide leading-tight text-gray-500"
-														style={{
-															fontSize: px(13),
-															overflowX: "hidden",
-															textOverflow: "ellipsis",
-															whiteSpace: "nowrap",
-														}}>
-														{each.name}
-													</p>
-												</Style>
-											</div>
-										</div>
-									</article>
-								))}
-							</div>
+							<IconsFragment />
 						</div>
 
 					</div>
@@ -509,7 +462,6 @@ function IconApp() {
 
 							<div className="mt-0 xl:-mt-10 pt-0 xl:pt-4 sticky top-0 inset-x-0 z-10">
 								<div className="h-80 bg-white rounded-tr-0 xl:rounded-tr-6">
-									RHS
 									{Array(10).fill(0).map((_, x) => (
 										<br key={x} />
 									))}
