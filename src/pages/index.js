@@ -316,7 +316,7 @@ function Hero() {
 					className="flex flex-col xl:flex-row justify-start xl:justify-between items-center xl:items-end"
 					style={{
 						width: "100%",
-						maxWidth: px(1152),
+						maxWidth: px(72 * 16),
 					}}
 				>
 
@@ -389,7 +389,7 @@ function IconApp() {
 		// NOTE (1): Use z-10 because of <Hero>.
 		// NOTE (2): Use bg-gray-300 because of border-l border-gray-300.
 		<div className="mt-0 xl:-mt-32 flex flex-row justify-center">
-			<main className="bg-gray-300 w-full max-w-screen-xl rounded-6 shadow z-10" /* style={{ boxShadow: "var(--shadow-xs), var(--shadow)" }} */>
+			<main className="bg-gray-300 w-full max-w-screen-xl rounded-6 shadow z-10">
 
 				{/* (top) */}
 				<Style className="hidden xl:block">
@@ -450,7 +450,7 @@ function IconApp() {
 
 						{/* Icons */}
 						<div className="px-4 sm:px-6 py-16 pb-24 flex flex-row justify-center">
- 							<div style={{ width: "100%", maxWidth: px(60 * 16) }}>
+ 							<div style={{ width: "100%", maxWidth: px(56 * 16) }}>
 								{/* <IconsInfo svgs={dataset} /> */}
 								{/* TODO: Add svg={...}. */}
 								<IconInfo /* svg={SVGGitHub} */ />
