@@ -313,7 +313,7 @@ function Hero() {
 			{/* Logo and Sponsors */}
 			<div className="flex flex-row justify-center">
 				<div
-					className="flex flex-col xl:flex-row items-center justify-normal xl:justify-between"
+					className="flex flex-col xl:flex-row justify-start xl:justify-between items-center xl:items-end"
 					style={{
 						width: "100%",
 						maxWidth: px(1152),
