@@ -2,6 +2,7 @@ import asyncDownlodAll from "utils/asyncDownloadAll"
 import css from "lib/x/tpl"
 import dataset from "data/dataset"
 import IconInfo from "components/IconInfo"
+// import IconsInfo from "components/IconsInfo"
 import px from "lib/x/px"
 import SEO from "components/SEO"
 import sponsors from "data/sponsors"
@@ -448,9 +449,12 @@ function IconApp() {
 						</div>
 
 						{/* Icons */}
-						<div className="px-4 sm:px-6 xl:px-16 py-8 pb-24">
-							{/* TODO: Add svg={...}. */}
-							<IconInfo />
+						<div className="px-4 sm:px-6 py-16 pb-24 flex flex-row justify-center">
+ 							<div style={{ width: "100%", maxWidth: px(60 * 16) }}>
+								{/* <IconsInfo svgs={dataset} /> */}
+								{/* TODO: Add svg={...}. */}
+								<IconInfo /* svg={SVGGitHub} */ />
+							</div>
 						</div>
 
 					</div>
@@ -475,29 +479,6 @@ function IconApp() {
 					</Style>
 
 				</div>
-
-				{/* (bottom) */}
-				{/* <Style className="hidden xl:block"> */}
-				{/* 	<div className="-mt-6 -mb-4 sticky bottom-0 inset-x-0 pointer-events-none"> */}
-				{/* 		<div className="flex flex-row items-end"> */}
-				{/* 			<Style className="flex-shrink-0 h-10 text-cool-gray-200"> */}
-				{/* 				<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg"> */}
-				{/* 					<path fillRule="evenodd" clipRule="evenodd" d="M24 40H0L0 0C0 13.2549 10.7451 24 24 24L24 40Z" /> */}
-				{/* 				</svg> */}
-				{/* 			</Style> */}
-				{/* 			<Style className="w-full h-4 text-cool-gray-200"> */}
-				{/* 				<svg fill="currentColor" preserveAspectRatio="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"> */}
-				{/* 					<rect width={16} height={16} /> */}
-				{/* 				</svg> */}
-				{/* 			</Style> */}
-				{/* 			<Style className="flex-shrink-0 h-10 text-cool-gray-200"> */}
-				{/* 				<svg fill="currentColor" viewBox="0 0 24 40" xmlns="http://www.w3.org/2000/svg"> */}
-				{/* 					<path fillRule="evenodd" clipRule="evenodd" d="M0 40H24V0C24 13.2549 13.2549 24 0 24V40Z" /> */}
-				{/* 				</svg> */}
-				{/* 			</Style> */}
-				{/* 		</div> */}
-				{/* 	</div> */}
-				{/* </Style> */}
 
 			</main>
 		</div>
