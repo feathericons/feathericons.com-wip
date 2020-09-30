@@ -4,9 +4,11 @@ import Style from "lib/x/Style"
 import SVG from "lib/x/SVG"
 
 import {
+	EyeOff as SVGEyeOff,
 	GitHub as SVGGitHub,
 	Heart as SVGHeart,
 	Instagram as SVGInstagram,
+	Lock as SVGLock,
 	Mail as SVGMail,
 	MessageCircle as SVGMessageCircle,
 	Send as SVGSend,
@@ -49,51 +51,73 @@ export function Demo1() {
 export function Demo2() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<div>
+			<div className="shadow-px-1">
 
 				<div className="relative">
-					<div className="px-5 py-2 absolute bottom-full inset-x-0">
-						<p className="font-medium text-xs leading-none text-gray-800">
-							<span className="inline-flex flex-row items-center align-top">
-								<SVGGitHub className="text-gray-600" style={{ width: "1em", height: "1em" /* , color: "#1da1f2" */ }} /* strokeWidth={2.25} */ />
-								&nbsp;&nbsp;
-								<span>
-									Username:
-								</span>
-							</span>
-						</p>
+					<div className="px-4 absolute inset-y-0 left-0">
+						<div className="flex flex-row items-center h-full">
+							<SVGGitHub
+								className="text-indigo-600"
+								// style={{
+								// 	width: px(17),
+								// 	height: px(17),
+								// }}
+								style={{
+									width: "1em",
+									height: "1em",
+								}}
+							/>
+						</div>
 					</div>
-				</div>
-
-				{/* TODO: <input> */}
-				<div className="relative">
 					<input
-						// NOTE: Use text-black not text-gray-*.
-						className="px-5 w-56 h-10 bg-gray-200 rounded-full"
-						placeholder="username"
+						className="px-4 pl-12 w-64 h-11 text-gray-800 bg-white"
+						// style={{ fontSize: px(15) }}
+						placeholder="Username"
 						value="username_ZAYDEK"
 					/>
 				</div>
 
-				{/* <div className="relative"> */}
-				{/* 	<div className="p-3 absolute top-full inset-x-0"> */}
-				{/* 		<div className="flex flex-row justify-end"> */}
-				{/* 			<p className="font-medium text-xs leading-none text-gray-800"> */}
-				{/* 				<span className="inline-flex flex-row items-center align-top"> */}
-				{/* 					<span> */}
-				{/* 						Available */}
-				{/* 					</span> */}
-				{/* 					&nbsp; */}
-				{/* 					<SVGCheck */}
-				{/* 						className="text-green-400" */}
-				{/* 						style={{ width: "1em", height: "1em" }} */}
-				{/* 						strokeWidth={3} */}
-				{/* 					/> */}
-				{/* 				</span> */}
-				{/* 			</p> */}
-				{/* 		</div> */}
-				{/* 	</div> */}
-				{/* </div> */}
+				<hr className="border-t border-gray-100" />
+				<div className="relative">
+					<div className="px-4 absolute inset-y-0 left-0">
+						<div className="flex flex-row items-center h-full">
+							<SVGLock
+								className="text-indigo-600"
+								// style={{
+								// 	width: px(17),
+								// 	height: px(17),
+								// }}
+								style={{
+									width: "1em",
+									height: "1em",
+								}}
+							/>
+						</div>
+					</div>
+					<div className="px-4 absolute inset-y-0 right-0">
+						<div className="flex flex-row items-center h-full">
+							<SVGEyeOff
+								className="text-gray-400"
+								// style={{
+								// 	width: px(17),
+								// 	height: px(17),
+								// }}
+								style={{
+									width: "1em",
+									height: "1em",
+								}}
+							/>
+						</div>
+					</div>
+					<Style className="tracking-widest">
+						<input
+							className="px-4 pl-12 w-64 h-11 text-gray-800 bg-white"
+							// style={{ fontSize: px(15) }}
+							placeholder="Password"
+							value="••••••••••"
+						/>
+					</Style>
+				</div>
 
 			</div>
 		</div>
@@ -123,16 +147,13 @@ export function Demo5() {
 		<div className="flex flex-row justify-center items-center h-full">
 			<div className="flex flex-row">
 
-				<button className="m-1.5 p-1 group">
-					<Style className="text-gray-600 group-hover:text-blue-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+				<button className="p-2 group">
+					<Style className="text-gray-800 group-hover:text-blue-600">
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-blue-100">
-									<div className="flex flex-row justify-center items-center w-7 h-7 rounded-full transition duration-300 ease-out">
-										<SVGMessageCircle
-											style={{ width: "1em", height: "1em" }}
-											// strokeWidth={2.25}
-										/>
+									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
+										<SVGMessageCircle style={{ width: "1em", height: "1em" }} />
 									</div>
 								</Style>
 								<span>
@@ -144,16 +165,13 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="m-1.5 p-1 group">
-					<Style className="text-gray-600 group-hover:text-green-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+				<button className="p-2 group">
+					<Style className="text-gray-800 group-hover:text-green-600">
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-green-100">
-									<div className="flex flex-row justify-center items-center w-7 h-7 rounded-full transition duration-300 ease-out">
-										<SVGSend
-											style={{ width: "1em", height: "1em" }}
-											// strokeWidth={2.25}
-										/>
+									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
+										<SVGSend style={{ width: "1em", height: "1em" }} />
 									</div>
 								</Style>
 								<span>
@@ -165,16 +183,13 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="m-1.5 p-1 group">
-					<Style className="text-gray-600 group-hover:text-red-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+				<button className="p-2 group">
+					<Style className="text-gray-800 group-hover:text-red-600">
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-red-100">
-									<div className="flex flex-row justify-center items-center w-7 h-7 rounded-full transition duration-300 ease-out">
-										<SVGHeart
-											style={{ width: "1em", height: "1em" }}
-											// strokeWidth={2.25}
-										/>
+									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
+										<SVGHeart style={{ width: "1em", height: "1em" }} />
 									</div>
 								</Style>
 								<span>
@@ -186,21 +201,15 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="m-1.5 p-1 group">
-					<Style className="text-gray-600 group-hover:text-purple-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+				<button className="p-2 group">
+					<Style className="text-gray-800 group-hover:text-purple-600">
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-purple-100">
-									<div className="flex flex-row justify-center items-center w-7 h-7 rounded-full transition duration-300 ease-out">
-										<SVGGitHub
-											style={{ width: "1em", height: "1em" }}
-											// strokeWidth={2.25}
-										/>
+									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
+										<SVGGitHub style={{ width: "1em", height: "1em" }} />
 									</div>
 								</Style>
-								{/* <span> */}
-								{/* 	41 */}
-								{/* </span> */}
 							</span>
 						</p>
 					</Style>
@@ -217,7 +226,7 @@ export function Demo6() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
 			{svgs.map(each => (
-				<SVG key={each.name} className="m-3 w-5 h-5 text-gray-800" svg={each} />
+				<SVG key={each.name} className="m-4 w-5 h-5 text-gray-800" svg={each} />
 			))}
 		</div>
 	)
