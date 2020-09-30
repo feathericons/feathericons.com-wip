@@ -159,10 +159,6 @@ module.exports = {
 					'"DM Sans"',
 					...defaultTheme.fontFamily.sans,
 				],
-				// "inter-display": [
-				// 	"InterDisplay",
-				// 	...defaultTheme.fontFamily.sans,
-				// ],
 				"sans": [
 					...defaultTheme.fontFamily.sans.slice(1, 3),
 					"Inter",
