@@ -48,75 +48,109 @@ export function Demo1() {
 	)
 }
 
+// https://stackoverflow.com/a/7228322
+function randomInt(min, max) {
+	return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+// https://github.com/alexdevero/leet-speak-converter/blob/master/src/leet-converter.js#L1
+const mungedVowels = {
+	a: "4",
+	e: "3",
+	i: "1",
+	o: "0",
+	u: "u",
+}
+
+function munge(src) {
+	let dst = ""
+	for (let x = 0; x < src.length; x++) {
+		const ch = mungedVowels[src[x].toLowerCase()]
+		if (ch !== undefined) {
+			dst += ch
+			continue
+		}
+		dst += src[x]
+	}
+	return dst
+}
+
+// const mungedPasswords = [
+// 	munge("MadeYouLook! 🤓"),
+// 	munge("NiceTry! 😂"),
+// 	munge("GuessAgain! 😎"),
+// 	munge("NewPhoneWhoDis? 💁‍♀️"),
+// 	munge("Bananas! 🍌"),
+// 	munge("AreYouSerious? 🤬"),
+// 	munge("LeetHax! 👊"),
+// ]
+
 export function Demo2() {
+	const [username, setUsername] = React.useState("username_ZAYDEK")
+	const [password, setPassword] = React.useState(() => munge("MadeYouLook! 🤓"))
+	const [showPassword, setShowPassword] = React.useState(false)
+
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<div className="!rounded-1 border border-gray-200">
+			<div className="rounded-2 shadow-px-2">
 
 				<div className="relative">
 					<div className="px-4 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
 							<SVGGitHub
 								className="text-gray-600"
-								// style={{
-								// 	width: px(17),
-								// 	height: px(17),
-								// }}
-								style={{
-									width: "1em",
-									height: "1em",
-								}}
+								style={{ width: px(15), height: px(15) }}
 							/>
 						</div>
 					</div>
 					<input
-						className="px-4 pl-11 w-64 h-10 text-gray-800 bg-white !rounded-t-1"
-						// style={{ fontSize: px(15) }}
+						className="px-4 pl-11 w-64 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-t-2"
+						style={{ fontSize: px(15) }}
+						type="text"
 						placeholder="Username"
-						value="username_ZAYDEK"
+						value={username}
+						onChange={e => setUsername(e.target.value)}
 					/>
 				</div>
 
 				<hr className="border-t border-gray-100" />
 				<div className="relative">
+
+					{/* LHS */}
 					<div className="px-4 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
 							<SVGLock
 								className="text-gray-600"
-								// style={{
-								// 	width: px(17),
-								// 	height: px(17),
-								// }}
-								style={{
-									width: "1em",
-									height: "1em",
-								}}
+								style={{ width: px(15), height: px(15) }}
 							/>
 						</div>
 					</div>
-					<div className="px-4 absolute inset-y-0 right-0">
+
+					{/* RHS */}
+					<div
+						className="group px-4 absolute inset-y-0 right-0"
+						onClick={e => setShowPassword(!showPassword)}
+					>
 						<div className="flex flex-row items-center h-full">
 							<SVGEyeOff
-								className="text-gray-400"
-								// style={{
-								// 	width: px(17),
-								// 	height: px(17),
-								// }}
-								style={{
-									width: "1em",
-									height: "1em",
-								}}
+								className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out"
+								style={{ width: px(15), height: px(15) }}
 							/>
 						</div>
 					</div>
-					<Style className="tracking-widest">
+
+					{/* <input> */}
+					<Style className={(password && !showPassword) && "tracking-widest"}>
 						<input
-							className="px-4 pl-11 w-64 h-10 text-gray-800 bg-white !rounded-b-1"
-							// style={{ fontSize: px(15) }}
+							className="px-4 px-11 w-64 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-b-2"
+							style={{ fontSize: px(15) }}
+							type={!showPassword ? "password" : "text"}
 							placeholder="Password"
-							value="••••••••••"
+							value={password}
+							onChange={e => setPassword(e.target.value)}
 						/>
 					</Style>
+
 				</div>
 
 			</div>
@@ -127,7 +161,7 @@ export function Demo2() {
 export function Demo3() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<button className="px-8 py-4 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
+			<button className="px-6 py-4 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
 				<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
 					<span className="inline-flex flex-row items-center align-top">
 						<SVGGitHub style={{ width: px(19), height: px(19) }} /* strokeWidth={2.25} */ />
@@ -149,7 +183,7 @@ export function Demo5() {
 
 				<button className="p-2 group">
 					<Style className="text-gray-800 group-hover:text-blue-600">
-						<p className="leading-none">
+						<p className="leading-none" style={{ fontSize: px(15) }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-blue-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -167,7 +201,7 @@ export function Demo5() {
 				{/* Button */}
 				<button className="p-2 group">
 					<Style className="text-gray-800 group-hover:text-green-600">
-						<p className="leading-none">
+						<p className="leading-none" style={{ fontSize: px(15) }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-green-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -185,7 +219,7 @@ export function Demo5() {
 				{/* Button */}
 				<button className="p-2 group">
 					<Style className="text-gray-800 group-hover:text-red-600">
-						<p className="leading-none">
+						<p className="leading-none" style={{ fontSize: px(15) }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-red-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -203,7 +237,7 @@ export function Demo5() {
 				{/* Button */}
 				<button className="p-2 group">
 					<Style className="text-gray-800 group-hover:text-purple-600">
-						<p className="leading-none">
+						<p className="leading-none" style={{ fontSize: px(15) }}>
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-purple-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -227,7 +261,7 @@ export function Demo6() {
 		<div className="flex flex-row justify-center items-center h-full">
 			{svgs.map(each => (
 				<button key={each.name} className="group p-3">
-					<SVG className="w-5 h-5 text-gray-800 group-hover:text-blue-600" svg={each} />
+					<SVG className="w-5 h-5 text-gray-800 group-hover:text-blue-600 transition duration-300 ease-out" svg={each} />
 				</button>
 			))}
 		</div>
