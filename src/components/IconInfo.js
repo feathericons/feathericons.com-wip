@@ -120,6 +120,9 @@ export default function IconInfo() {
 					article > *:first-child {
 						margin-top: 0;
 					}
+					article > *:last-child {
+						margin-bottom: 0;
+					}
 
 					article h1 {
 						margin-top: ${24 / 16}em;
@@ -212,13 +215,15 @@ export default function IconInfo() {
 					Contribute on GitHub
 				</h6>
 				<p>
-					You are welcome to submit a pull request to enhance the documentation, add translations, and or contribute icon usage examples.
+					You are welcome to submit a pull request to enhance the docs, add translations, and or contribute examples.
+				</p>
+				<p>
+					Follow <a href="TODO" {...target_blank}>@colebemis</a> and <a href="TODO" {...target_blank}>@username_ZAYDEK</a> on Twitter.
 				</p>
 				<p>
 					<small>
-						{/* Feather Icons are designed by Cole Bemis @colebemis and this site is maintained by Zaydek @username_ZAYDEK.<br /> */}
-						Feather Icons and this site are licensed as MIT open source software.<br />
-						You can use the icons and the code for this site personally or commerically and without attribution.
+						Feather Icons is licensed as MIT open source software.<br />
+						You can use the icons personally and commerically without attribution.
 					</small>
 				</p>
 			</article>
@@ -273,6 +278,25 @@ export default function IconInfo() {
 
 			<div className="h-4" />
 			<IconsInfo svgs={dataset.slice(0, 6)} />
+
+			{/* <div className="h-16" /> */}
+			{/* <article> */}
+			{/* 	<h6> */}
+			{/* 		Contribute on GitHub */}
+			{/* 	</h6> */}
+			{/* 	<p> */}
+			{/* 		You are welcome to submit a pull request to enhance the docs, add translations, and or contribute examples. */}
+			{/* 	</p> */}
+			{/* 	<p> */}
+			{/* 		Follow <a href="TODO" {...target_blank}>@colebemis</a> and <a href="TODO" {...target_blank}>@username_ZAYDEK</a> on Twitter. */}
+			{/* 	</p> */}
+			{/* 	<p> */}
+			{/* 		<small> */}
+			{/* 			Feather Icons is licensed as MIT open source software.<br /> */}
+			{/* 			You can use the icons personally and commerically without attribution. */}
+			{/* 		</small> */}
+			{/* 	</p> */}
+			{/* </article> */}
 
 		</>
 	)
