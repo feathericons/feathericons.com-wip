@@ -52,47 +52,48 @@ function Demo2() {
 			<div>
 
 				<div className="relative">
-					<div className="px-3 py-2 absolute bottom-full inset-x-0">
-						<p className="font-medium text-sm leading-none text-gray-800">
-							Username:
+					<div className="px-5 py-2 absolute bottom-full inset-x-0">
+						<p className="font-medium text-xs leading-none text-gray-800">
+							<span className="inline-flex flex-row items-center align-top">
+								<SVGGitHub className="text-gray-600" style={{ width: "1em", height: "1em" /* , color: "#1da1f2" */ }} /* strokeWidth={2.25} */ />
+								&nbsp;&nbsp;
+								<span>
+									Username:
+								</span>
+							</span>
 						</p>
 					</div>
 				</div>
 
 				{/* TODO: <input> */}
 				<div className="relative">
-					<div className="px-3 absolute inset-y-0 left-0">
-						<div className="flex flex-row items-center h-full">
-							<SVGAtSign /* className="text-blue-600" */ style={{ width: "1em", height: "1em", color: "#1da1f2" }} /* strokeWidth={2.25} */ />
-						</div>
-					</div>
 					<input
 						// NOTE: Use text-black not text-gray-*.
-						className="px-9 w-56 h-11 bg-white text-black rounded-1 shadow-px-2"
+						className="px-5 w-56 h-10 bg-gray-200 rounded-full"
 						placeholder="username"
 						value="username_ZAYDEK"
 					/>
 				</div>
 
-				<div className="relative">
-					<div className="mt-1 px-3 py-2 absolute top-full inset-x-0">
-						<div className="flex flex-row justify-end">
-							<p className="font-medium text-sm leading-none text-gray-800">
-								<span className="inline-flex flex-row items-center align-top">
-									<span>
-										Available!
-									</span>
-									&nbsp;
-									<SVGCheck
-										className="text-green-400"
-										style={{ width: "1em", height: "1em" }}
-										strokeWidth={3}
-									/>
-								</span>
-							</p>
-						</div>
-					</div>
-				</div>
+				{/* <div className="relative"> */}
+				{/* 	<div className="p-3 absolute top-full inset-x-0"> */}
+				{/* 		<div className="flex flex-row justify-end"> */}
+				{/* 			<p className="font-medium text-xs leading-none text-gray-800"> */}
+				{/* 				<span className="inline-flex flex-row items-center align-top"> */}
+				{/* 					<span> */}
+				{/* 						Available */}
+				{/* 					</span> */}
+				{/* 					&nbsp; */}
+				{/* 					<SVGCheck */}
+				{/* 						className="text-green-400" */}
+				{/* 						style={{ width: "1em", height: "1em" }} */}
+				{/* 						strokeWidth={3} */}
+				{/* 					/> */}
+				{/* 				</span> */}
+				{/* 			</p> */}
+				{/* 		</div> */}
+				{/* 	</div> */}
+				{/* </div> */}
 
 			</div>
 		</div>
@@ -105,7 +106,7 @@ function Demo3() {
 			<button className="px-8 py-4 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
 				<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
 					<span className="inline-flex flex-row items-center align-top">
-						<SVGTwitter style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
+						<SVGGitHub style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
 						<span className="w-3" />
 						<span>
 							Follow on Twitter
@@ -155,8 +156,8 @@ export default function IconInfo() {
 				{css`
 					#bento-grid {
 						display: grid;
-						grid-template-rows: 0.62fr 0.38fr;
-						grid-template-columns: 0.62fr 0.14fr 0.24fr;
+						grid-template-rows: 0.6fr 0.4fr;
+						grid-template-columns: 0.6fr 0.15fr 0.25fr;
 						grid-template-areas:
 							"a b b"
 							"a d c";
@@ -204,7 +205,7 @@ export default function IconInfo() {
 						height: ${px(16)};
 					}
 
-					@media (max-width: 639px) {
+					@media (max-width: ${816 - 1}px) {
 						#bento-grid {
 							grid-template-rows: 1fr;
 							grid-template-columns: 1fr;
