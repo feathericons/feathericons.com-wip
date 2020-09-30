@@ -125,29 +125,46 @@ export default function IconInfo() {
 						margin-top: ${24 / 16}em;
 						margin-bottom: ${8 / 16}rem;
 						font-weight: 600;
-						font-size: ${24 / 16}rem;
+						font-size: ${28 / 16}rem;
 						line-height: 1.4;
-						color: var(--black);
+						color: var(--text-gray-800);
 					}
 					article h2 {
 						margin-top: ${24 / 16}em;
 						margin-bottom: ${8 / 16}rem;
 						font-weight: 600;
-						font-size: ${20 / 16}rem;
+						font-size: ${24 / 16}rem;
 						line-height: 1.4;
-						color: var(--black);
+						color: var(--text-gray-800);
+					}
+					article h6 {
+						margin-top: ${24 / 16}em;
+						margin-bottom: ${8 / 16}rem;
+						font-weight: 600;
+						font-size: ${18 / 16}rem;
+						line-height: 1.4;
+						color: var(--text-gray-800);
 					}
 					article h1 code,
-					article h2 code {
+					article h2 code,
+					article h6 code {
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
 					}
 
 					article p {
-						margin-bottom: ${12 / 16}rem;
-						font-size: ${17 / 16}rem;
+						margin-bottom: 1em;
+						font-size: ${18 / 16}rem;
 						line-height: 1.6;
 						color: var(--gray-800);
+					}
+					/* article p small { */
+					/* 	font-size: ${13 / 16}em; */
+					/* } */
+
+					article a {
+						text-decoration: underline;
+						color: var(--gray-600);
 					}
 
 					article code {
@@ -158,7 +175,7 @@ export default function IconInfo() {
 						padding-right: ${4 / 16}em;
 						padding-bottom: ${2 / 16}em;
 						padding-left: ${4 / 16}em;
-						font-size: ${14 / 16}em;
+						font-size: ${13 / 16}em;
 						color: var(--blue-600);
 						background-color: var(--white);
 						border: 1px solid var(--gray-300);
@@ -170,14 +187,6 @@ export default function IconInfo() {
 
 			<div className="h-12" />
 			<article>
-				<h1>
-					Get Started With the <code>github</code> Icon
-				</h1>
-				<p>
-					By default, icons will appear as <code>24px</code>.{" "}
-					This is because of the <code>width="24" height="24"</code> attributes that come with every icon.{" "}
-					To resize an icon to your preferred size, you can use classes in CSS or inline styles in HTML.
-				</p>
 				<h2>
 					Classes in CSS
 				</h2>
@@ -186,8 +195,7 @@ export default function IconInfo() {
 					All icons have a 1:1 aspect ratio, so <code>width</code> and <code>height</code> should be the same.
 				</p>
 				<p>
-					If you use a utility-first library like <a href="TODO" {...target_blank}>Tailwind CSS</a>, you can add <code>class="w-6 h-6"</code> for <code>24px</code> or <code>class="w-8 h-8"</code> for <code>32px</code>.{" "}
-					<a href="https://tailwindcss.com/docs/width" {...target_blank}>Size classes are described here</a>.
+					If you use <a href="TODO" {...target_blank}>Tailwind CSS</a>, you can add <code>class="w-6 h-6"</code> for <code>24px</code> or <code>class="w-8 h-8"</code> for <code>32px</code>.
 				</p>
 				<h2>
 					Inline Styles in HTML
@@ -200,13 +208,18 @@ export default function IconInfo() {
 				<p>
 					You can always extact this rule as a CSS class so you don’t need to write inline styles everywhere.
 				</p>
-				<h2>
-					Styling in React
-				</h2>
+				<h6>
+					Contribute on GitHub
+				</h6>
 				<p>
-					React.js uses JSX instead of HTML which has some small differences.{" "}
-					Instead of <code>class="..."</code>, you need to use <code>className="..."</code>.{" "}
-					And for inline styles, use an object. For example: <code>{"style={{ width: \"1em\", height: \"1em\" }}" }</code>.
+					You are welcome to submit a pull request to enhance the documentation, add translations, and or contribute icon usage examples.
+				</p>
+				<p>
+					<small>
+						{/* Feather Icons are designed by Cole Bemis @colebemis and this site is maintained by Zaydek @username_ZAYDEK.<br /> */}
+						Feather Icons and this site are licensed as MIT open source software.<br />
+						You can use the icons and the code for this site personally or commerically and without attribution.
+					</small>
 				</p>
 			</article>
 

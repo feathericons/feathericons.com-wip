@@ -21,15 +21,6 @@
 @font-face {
 	font-family: "InterDisplay";
 	font-style: normal;
-	font-weight: 600;
-	font-display: swap;
-	src: url("InterDisplay-SemiBold.woff2?v=3.12") format("woff2"),
-			 url("InterDisplay-SemiBold.woff?v=3.12") format("woff");
-}
-
-@font-face {
-	font-family: "InterDisplay";
-	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
 	src: url("InterDisplay-Bold.woff2?v=3.12") format("woff2"),

@@ -99,13 +99,13 @@ export function Demo2() {
 						<div className="flex flex-row items-center h-full">
 							<SVGGitHub
 								className="text-gray-600"
-								style={{ width: px(15), height: px(15) }}
+								style={{ width: px(18), height: px(18) }}
 							/>
 						</div>
 					</div>
 					<input
-						className="px-4 pl-11 w-56 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-t-2"
-						style={{ fontSize: px(15) }}
+						className="px-4 pl-12 w-64 h-12 placeholder-gray-600 text-gray-800 bg-white rounded-t-2"
+						// style={{ fontSize: px(16) }}
 						type="text"
 						placeholder="Username"
 						value={username}
@@ -121,7 +121,7 @@ export function Demo2() {
 						<div className="flex flex-row items-center h-full">
 							<SVGLock
 								className="text-gray-600"
-								style={{ width: px(15), height: px(15) }}
+								style={{ width: px(18), height: px(18) }}
 							/>
 						</div>
 					</div>
@@ -134,7 +134,7 @@ export function Demo2() {
 						<div className="flex flex-row items-center h-full">
 							<SVGEyeOff
 								className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out"
-								style={{ width: px(15), height: px(15) }}
+								style={{ width: px(18), height: px(18) }}
 							/>
 						</div>
 					</div>
@@ -142,8 +142,8 @@ export function Demo2() {
 					{/* <input> */}
 					<Style className={(password && !showPassword) && "tracking-widest"}>
 						<input
-							className="px-4 px-11 w-56 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-b-2"
-							style={{ fontSize: px(15) }}
+							className="px-4 px-12 w-64 h-12 placeholder-gray-600 text-gray-800 bg-white rounded-b-2"
+							// style={{ fontSize: px(16) }}
 							type={!showPassword ? "password" : "text"}
 							placeholder="Password"
 							value={password}

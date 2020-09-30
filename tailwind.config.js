@@ -154,11 +154,16 @@ module.exports = {
 				"px-6": defaultTheme.boxShadow.xs + ", " + defaultTheme.boxShadow["2xl"],
 			},
 			fontFamily: {
-				display: [
-					"InterDisplay",
+				"dm-sans": [
+					// eslint-disable-next-line
+					'"DM Sans"',
 					...defaultTheme.fontFamily.sans,
 				],
-				sans: [
+				// "inter-display": [
+				// 	"InterDisplay",
+				// 	...defaultTheme.fontFamily.sans,
+				// ],
+				"sans": [
 					...defaultTheme.fontFamily.sans.slice(1, 3),
 					"Inter",
 					defaultTheme.fontFamily.sans[0],

@@ -36,7 +36,7 @@ function LogoAndCTA() {
 
 			{/* <h1> */}
 			<div className="h-8" />
-			<h1 className="font-medium leading-none font-display text-white" style={{ fontSize: `${36 / 16}rem` }}>
+			<h1 className="font-medium tracking-tight leading-none font-dm-sans text-white" style={{ fontSize: `${36 / 16}rem` }}>
 				Open source icons
 			</h1>
 
