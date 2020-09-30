@@ -242,7 +242,7 @@ function Hero() {
 					</svg>
 				</div>
 				<div className="fixed top-0 inset-x-0" style={{ zIndex: -1 }}>
-					<Style className="w-full h-40">
+					<Style className="w-full h-36">
 						<svg preserveAspectRatio="none" fill="url(#bg-grad)" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg">
 							<rect width={1} height={1} />
 						</svg>
@@ -515,7 +515,7 @@ export default function Home() {
 
 			{/* App */}
 			<IconApp />
-			<div className="h-0 xl:h-8" />
+			<div className="h-0 xl:h-12" />
 
 		</>
 	)
