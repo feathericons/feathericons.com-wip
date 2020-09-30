@@ -104,7 +104,7 @@ export function Demo2() {
 						</div>
 					</div>
 					<input
-						className="px-4 pl-11 w-64 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-t-2"
+						className="px-4 pl-11 w-56 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-t-2"
 						style={{ fontSize: px(15) }}
 						type="text"
 						placeholder="Username"
@@ -142,7 +142,7 @@ export function Demo2() {
 					{/* <input> */}
 					<Style className={(password && !showPassword) && "tracking-widest"}>
 						<input
-							className="px-4 px-11 w-64 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-b-2"
+							className="px-4 px-11 w-56 h-10 placeholder-gray-600 text-gray-800 bg-white rounded-b-2"
 							style={{ fontSize: px(15) }}
 							type={!showPassword ? "password" : "text"}
 							placeholder="Password"
