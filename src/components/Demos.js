@@ -181,9 +181,10 @@ export function Demo5() {
 		<div className="flex flex-row justify-center items-center h-full">
 			<div className="flex flex-row">
 
-				<button className="p-2 group">
+				{/* Button */}
+				<button className="p-1.5 group">
 					<Style className="text-gray-800 group-hover:text-blue-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-blue-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -199,9 +200,9 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="p-2 group">
+				<button className="p-1.5 group">
 					<Style className="text-gray-800 group-hover:text-green-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-green-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -217,9 +218,9 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="p-2 group">
+				<button className="p-1.5 group">
 					<Style className="text-gray-800 group-hover:text-red-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-red-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
@@ -235,9 +236,9 @@ export function Demo5() {
 				</button>
 
 				{/* Button */}
-				<button className="p-2 group">
+				<button className="p-1.5 group">
 					<Style className="text-gray-800 group-hover:text-purple-600">
-						<p className="leading-none" style={{ fontSize: px(15) }}>
+						<p className="leading-none">
 							<span className="inline-flex flex-row items-center align-top">
 								<Style className="bg-transparent group-hover:bg-purple-100">
 									<div className="flex flex-row justify-center items-center w-8 h-8 rounded-full transition duration-300 ease-out">
