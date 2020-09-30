@@ -51,13 +51,13 @@ export function Demo1() {
 export function Demo2() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
-			<div className="shadow-px-1">
+			<div className="!rounded-1 border border-gray-200">
 
 				<div className="relative">
 					<div className="px-4 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
 							<SVGGitHub
-								className="text-indigo-600"
+								className="text-gray-600"
 								// style={{
 								// 	width: px(17),
 								// 	height: px(17),
@@ -70,7 +70,7 @@ export function Demo2() {
 						</div>
 					</div>
 					<input
-						className="px-4 pl-12 w-64 h-11 text-gray-800 bg-white"
+						className="px-4 pl-11 w-64 h-10 text-gray-800 bg-white !rounded-t-1"
 						// style={{ fontSize: px(15) }}
 						placeholder="Username"
 						value="username_ZAYDEK"
@@ -82,7 +82,7 @@ export function Demo2() {
 					<div className="px-4 absolute inset-y-0 left-0">
 						<div className="flex flex-row items-center h-full">
 							<SVGLock
-								className="text-indigo-600"
+								className="text-gray-600"
 								// style={{
 								// 	width: px(17),
 								// 	height: px(17),
@@ -111,7 +111,7 @@ export function Demo2() {
 					</div>
 					<Style className="tracking-widest">
 						<input
-							className="px-4 pl-12 w-64 h-11 text-gray-800 bg-white"
+							className="px-4 pl-11 w-64 h-10 text-gray-800 bg-white !rounded-b-1"
 							// style={{ fontSize: px(15) }}
 							placeholder="Password"
 							value="••••••••••"
@@ -130,7 +130,7 @@ export function Demo3() {
 			<button className="px-8 py-4 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
 				<p className="font-medium leading-none text-white" style={{ fontSize: px(17) }}>
 					<span className="inline-flex flex-row items-center align-top">
-						<SVGGitHub style={{ width: px(20), height: px(20) }} /* strokeWidth={2.25} */ />
+						<SVGGitHub style={{ width: px(19), height: px(19) }} /* strokeWidth={2.25} */ />
 						&nbsp;&nbsp;
 						<span>
 							Follow on Twitter
@@ -226,7 +226,9 @@ export function Demo6() {
 	return (
 		<div className="flex flex-row justify-center items-center h-full">
 			{svgs.map(each => (
-				<SVG key={each.name} className="m-4 w-5 h-5 text-gray-800" svg={each} />
+				<button key={each.name} className="group p-3">
+					<SVG className="w-5 h-5 text-gray-800 group-hover:text-blue-600" svg={each} />
+				</button>
 			))}
 		</div>
 	)
