@@ -215,7 +215,7 @@ export default function IconInfo() {
 					Contribute on GitHub
 				</h6>
 				<p>
-					You are welcome to submit a pull request to enhance the docs, add translations, and or contribute examples.
+					You are welcome to submit a pull request to enhance the docs, add translations, and contribute examples.
 				</p>
 				<p>
 					Follow <a href="TODO" {...target_blank}>@colebemis</a> and <a href="TODO" {...target_blank}>@username_ZAYDEK</a> on Twitter.

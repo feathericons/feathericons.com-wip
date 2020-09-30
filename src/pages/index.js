@@ -223,7 +223,7 @@ function Sponsors() {
 function Hero() {
 	return (
 		<header
-			className="px-6 sm:px-4 pt-32 pb-16 xl:pb-56 relative"
+			className="px-4 sm:px-6 pt-32 pb-16 xl:pb-56 relative"
 			style={{ backgroundImage: "linear-gradient(to right, var(--grad-start), var(--grad-end)" }}
 		>
 
@@ -448,7 +448,7 @@ function IconApp() {
 						</div>
 
 						{/* Icons */}
-						<div className="px-4 xl:px-16 py-8 pb-24">
+						<div className="px-4 sm:px-6 xl:px-16 py-8 pb-24">
 							{/* TODO: Add svg={...}. */}
 							<IconInfo />
 						</div>
