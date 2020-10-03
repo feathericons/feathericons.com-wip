@@ -167,7 +167,7 @@ export function Demo3() {
 						<SVGGitHub style={{ width: px(19), height: px(19) }} /* strokeWidth={2.25} */ />
 						&nbsp;&nbsp;
 						<span>
-							Follow on Twitter
+							Follow me!
 						</span>
 					</span>
 				</p>
