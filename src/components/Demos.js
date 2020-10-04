@@ -5,6 +5,7 @@ import SVG from "lib/x/SVG"
 
 import {
 	EyeOff as SVGEyeOff,
+	Eye as SVGEyeOn,
 	GitHub as SVGGitHub,
 	Heart as SVGHeart,
 	Instagram as SVGInstagram,
@@ -132,10 +133,16 @@ export function Demo2() {
 						onClick={e => setShowPassword(!showPassword)}
 					>
 						<div className="flex flex-row items-center h-full">
-							<SVGEyeOff
-								className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out"
-								style={{ width: px(18), height: px(18) }}
+							{showPassword ? 
+								<SVGEyeOn
+									className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out cursor-pointer"
+									style={{ width: px(18), height: px(18) }}
+							/>: 
+								<SVGEyeOff
+									className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out cursor-pointer"
+									style={{ width: px(18), height: px(18) }}
 							/>
+							}
 						</div>
 					</div>
 
