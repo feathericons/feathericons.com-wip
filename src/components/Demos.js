@@ -134,11 +134,11 @@ export function Demo2() {
 					>
 						<div className="flex flex-row items-center h-full">
 							{showPassword ? 
-								<SVGEyeOff
+								<SVGEyeOn
 									className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out cursor-pointer"
 									style={{ width: px(18), height: px(18) }}
 							/>: 
-								<SVGEyeOn
+								<SVGEyeOff
 									className="text-gray-400 group-hover:text-gray-800 transition duration-300 ease-out cursor-pointer"
 									style={{ width: px(18), height: px(18) }}
 							/>
