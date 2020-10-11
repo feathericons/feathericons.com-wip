@@ -1,6 +1,6 @@
-import "stylesheets/tailwind/out.css" // Takes precedence
-import "stylesheets/tailwind/color-vars.css"
-import "stylesheets/tailwind/shadow-vars.css"
+import "stylesheets/tailwind.base.css"
+import "stylesheets/tailwind.colors.css"
+import "stylesheets/tailwind.shadows.css"
 
 function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />

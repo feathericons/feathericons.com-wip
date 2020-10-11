@@ -1,7 +1,5 @@
 // https://mathiasbynens.github.io/rel-noopener
-const target_blank = {
+export default {
 	target: "_blank",
 	rel: "noopener noreferrer",
 }
-
-export default target_blank

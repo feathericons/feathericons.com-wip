@@ -1,4 +1,4 @@
-import NextDocument, { Html, Head, Main, NextScript } from "next/document"
+import NextDocument, { Head, Html, Main, NextScript } from "next/document"
 
 class Document extends NextDocument {
 	static async getInitialProps(ctx) {
@@ -6,13 +6,19 @@ class Document extends NextDocument {
 		return { ...initialProps }
 	}
 
+	// prettier-ignore
 	render() {
 		return (
-			<Html className="antialiased bg-cool-gray-50" lang="en">
+			<Html lang="en">
 				<Head>
-					<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-					<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
-					{/* <link href="/fonts/InterDisplay/index.css" rel="stylesheet" /> */}
+					<link
+						href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+						rel="stylesheet"
+					/>
+					<link
+						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+						rel="stylesheet"
+					/>
 					{process.env.NODE_ENV === "production" && (
 						<script async src="https://cdn.splitbee.io/sb.js" />
 					)}

@@ -1,4 +1,5 @@
 function themePreferenceDark() {
+	// prettier-ignore
 	const ok = (
 		"themePreference" in localStorage &&
 		localStorage.themePreference === "dark"
@@ -7,6 +8,7 @@ function themePreferenceDark() {
 }
 
 function prefersColorShemeDark() {
+	// prettier-ignore
 	const ok = (
 		window.matchMedia &&
 		window.matchMedia("(prefers-color-scheme: dark)").matches

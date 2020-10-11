@@ -1,12 +1,9 @@
 {
 	"name": "feathericons.dev",
 	"scripts": {
-		"tw-dev": "tailwind build -o src/stylesheets/tailwind/out.css",
-		"tw-build": "NODE_ENV=production yarn tw-dev",
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start",
-		"out": "rm -rf .next && yarn tw-build && yarn build && yarn next export && osascript -e 'display notification \"Production build ready\" with title \"yarn compile\"' && yarn tw-dev && osascript -e 'display notification \"Development build ready\" with title \"yarn tw-dev\"'"
+		"start": "next start"
 	},
 	"dependencies": {
 		"downloadjs": "^1.4.7",
@@ -15,14 +12,12 @@
 		"next": "^9.5.3",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-feather": "^2.0.8"
+		"react-feather": "^2.0.8",
+		"styled-components": "^5.2.0"
 	},
 	"devDependencies": {
-		"@tailwindcss/ui": "^0.6.2",
-		"babel-eslint": "^10.1.0",
 		"babel-jest": "^26.3.0",
 		"eslint": "^7.10.0",
-		"jest": "^26.4.2",
-		"tailwindcss": "^1.8.10"
+		"jest": "^26.4.2"
 	}
 }

@@ -1,9 +1,7 @@
 // https://davidwalsh.name/disable-autocorrect
-const disableAutoCorrect = {
+export default {
 	autoCapitalize: "off",
 	autoComplete: "off",
 	autoCorrect: "off",
 	spellCheck: false,
 }
-
-export default disableAutoCorrect

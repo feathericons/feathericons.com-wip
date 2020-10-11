@@ -1,7 +1,7 @@
-import React from "react"
+import { useEffect } from "react"
 
-const DocumentTitle = ({ title, children }) => {
-	React.useEffect(() => {
+export default function DocumentTitle({ title, children }) {
+	useEffect(() => {
 		const originalTitle = document.title
 		document.title = title
 		return () => {
@@ -11,5 +11,3 @@ const DocumentTitle = ({ title, children }) => {
 
 	return children || null
 }
-
-export default DocumentTitle
