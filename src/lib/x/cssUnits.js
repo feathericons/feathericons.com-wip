@@ -1,11 +1,15 @@
-// Converts 16px -> 1rem.
-export function rem(n) {
-	const rem = n / 16
-	return rem + "rem"
+// Ex:
+//
+// rem(16) // "1rem"
+//
+export function rem(px) {
+	return px / 16 + "rem"
 }
 
-// Converts 16px -> 1em.
-export function em(n) {
-	const rem = n / 16
-	return rem + "em"
+// Ex:
+//
+// em(16) // "1em"
+//
+export function em(px) {
+	return px / 16 + "em"
 }

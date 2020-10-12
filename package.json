@@ -2,8 +2,7 @@
 	"name": "feathericons.dev",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
+		"out": "yarn next build && yarn next export"
 	},
 	"dependencies": {
 		"downloadjs": "^1.4.7",

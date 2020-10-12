@@ -1,9 +1,6 @@
 import "stylesheets/tailwind.base.css"
-import "stylesheets/tailwind.colors.css"
-import "stylesheets/tailwind.shadows.css"
+import "stylesheets/tailwind.vars.css"
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />
 }
-
-export default MyApp
