@@ -1,6 +1,8 @@
 import Link from "next/link"
+import dataset from "../data/dataset"
 
 export default function Home() {
+	console.log(dataset)
 	return (
 		<>
 			<div>

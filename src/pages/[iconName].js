@@ -1,5 +1,15 @@
+import Link from "next/link"
+
 export default function Icon(props) {
-	return <>Hello from {props.iconName}</>
+	return (
+		<>
+			<Link href="/">
+				<a>Back to home</a>
+			</Link>
+			<div></div>
+			<div>Welcome to {props.iconName}</div>
+		</>
+	)
 }
 
 // getStaticProps forwards params as props.
