@@ -2,21 +2,12 @@
 	"name": "feathericons.dev",
 	"scripts": {
 		"dev": "next dev",
-		"out": "yarn next build && yarn next export"
+		"build": "next build",
+		"start": "next start"
 	},
 	"dependencies": {
-		"downloadjs": "^1.4.7",
-		"feather-icons": "^4.28.0",
-		"jszip": "^3.5.0",
-		"next": "^9.5.3",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-feather": "^2.0.8",
-		"styled-components": "^5.2.0"
-	},
-	"devDependencies": {
-		"babel-jest": "^26.3.0",
-		"eslint": "^7.10.0",
-		"jest": "^26.4.2"
+		"next": "9.5.5",
+		"react": "17.0.1",
+		"react-dom": "17.0.1"
 	}
 }
