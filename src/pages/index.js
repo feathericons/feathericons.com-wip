@@ -29,7 +29,7 @@ import TopRow from "../components/TopRow"
 
 function App() {
 	return (
-		<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
+		<div className="hstack">
 			{/* LHS */}
 			<div className="spacer vstack">
 				<div className="sticky t-0 xl:-mt-24 xl:pt-24">hello</div>
@@ -83,7 +83,7 @@ function App() {
 			</div>
 
 			{/* RHS */}
-			<div className="hidden lg:vstack bg-cool-gray-100" style={{ width: 20 * 16 /* 320px */ }}>
+			<div className="hidden lg:vstack bg-cool-gray-100 xl:rounded-r-24" style={{ width: 20 * 16 /* 320px */ }}>
 				<div className="sticky t-0 xl:-mt-24 xl:pt-24">hello</div>
 				<div className="spacer" />
 			</div>
@@ -104,11 +104,15 @@ export default function Home() {
 				<Header />
 			</div>
 			{/* NOTE: Resets var(--spacing). */}
-			<div className="sp-0 xl:px-24 xl:pb-24">
-				<div className="hidden xl:block sticky t-0">
-					<div className="h-24 bg-red-100" />
+			<div className="hstack sp-0 xl:px-24 xl:pb-24">
+				<div style={{ width: "100%", maxWidth: 84 * 16 /* 1344px */ }}>
+					<div className="hidden xl:block sticky t-0 -mt-24">
+						<div className="h-24 bg-red-100" />
+					</div>
+					<div className="bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
+						<App />
+					</div>
 				</div>
-				<App />
 			</div>
 		</div>
 	)
