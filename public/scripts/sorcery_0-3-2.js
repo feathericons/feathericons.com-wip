@@ -1,5 +1,5 @@
 window.sorcery = {
-	__version: "0.3.1",
+	__version: "0.3.x",
 
 	init({ ssr } = { ssr: false }) {
 		const ssrWrapper = !ssr ? fn => fn() : fn => setTimeout(fn, 0)
