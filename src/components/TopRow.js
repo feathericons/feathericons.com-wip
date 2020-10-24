@@ -9,13 +9,12 @@ function A(props) {
 // TODO: Add analytic events.
 export default function TopRow() {
 	return (
-		<div className="hstack sp-8">
+		<div className="hstack s-8">
 			{/* LHS */}
 			<A href={hrefs.shareOnTwitter}>
 				<SVGTwitter style={{ width: "1.25em", height: "1.25em" }} fill="currentColor" strokeWidth={0} />
 				<span>Tweet thank you!</span>
 			</A>
-
 			{/* RHS */}
 			<div className="spacer" />
 			{/* prettier-ignore */}
