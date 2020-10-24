@@ -59,39 +59,39 @@ function HeaderRHS() {
 			</div>
 			{/* NOTE: Must use style={{ ... }} because of xs:stack precedence. */}
 			<div className="xs:hstack xl:hidden wrap -m-sp/2 pt-sp">
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
 			</div>
 			{/* NOTE: Must use style={{ ... }} because of xs:stack precedence. */}
 			<div className="hidden xl:hstack hidden -m-sp/2 pt-sp">
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
 			</div>
 			<div className="hidden xl:hstack hidden -m-sp/2 pt-sp">
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
-				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+				<div class="xs:m-sp/2">
 					<Sponsor />
 				</div>
 			</div>
