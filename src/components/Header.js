@@ -97,7 +97,7 @@ function Sponsors() {
 // TODO: Add anchors and analytics.
 function HeaderRHS() {
 	return (
-		<div className="hidden xs:vstack sp-24">
+		<div className="vstack sp-24">
 			<div className="hstack sp-8 font-700 text-11 leading-1">
 				<div>CHECK OUT OUR SPONSORS</div>
 				<div>·</div>
@@ -111,11 +111,13 @@ function HeaderRHS() {
 
 export default function Header() {
 	return (
-		<div className="hstack pt-48">
+		<div className="hstack">
 			<div className="vstack xl:hstack align-center xl:align-end sp-48 xl:sp-0 w-full max-w-lg" style={{ width: "100%", maxWidth: 68 * 16 /* 1088px */ }}>
 				<HeaderLHS />
-				<div className="spacer" />
-				<HeaderRHS />
+				<div className="hidden xs:block spacer" />
+				<div className="hidden xs:block">
+					<HeaderRHS />
+				</div>
 			</div>
 		</div>
 	)
