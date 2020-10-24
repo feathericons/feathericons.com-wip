@@ -7,7 +7,7 @@ const GitHubLicenseHref = "https://github.com/feathericons/feather/blob/master/L
 const GitHubReleaseHref = "https://github.com/feathericons/feather/releases"
 
 // TODO: Add analytic events.
-export default function ExtAnchors() {
+export default function TopRow() {
 	return (
 		<div className="font-500">
 			<div className="hstack sp-8 py-12">
