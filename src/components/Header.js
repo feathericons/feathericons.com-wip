@@ -57,13 +57,46 @@ function HeaderRHS() {
 				<div>BECOME A SPONSOR</div>
 				<div className="w-12 h-12 bg-gray-200 rounded-full" />
 			</div>
-			<div className="hstack wrap -m-sp/2 pt-sp">
-				<div class="m-sp/2">
+			{/* NOTE: Must use style={{ ... }} because of xs:stack precedence. */}
+			<div className="xs:hstack xl:hidden wrap -m-sp/2 pt-sp">
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
 					<Sponsor />
 				</div>
-				<div class="m-sp/2">
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
 					<Sponsor />
 				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+			</div>
+			{/* NOTE: Must use style={{ ... }} because of xs:stack precedence. */}
+			<div className="hidden xl:hstack hidden -m-sp/2 pt-sp">
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+			</div>
+			<div className="hidden xl:hstack hidden -m-sp/2 pt-sp">
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+				<div style={{ margin: "calc(var(--spacing, 0) / 2)" }}>
+					<Sponsor />
+				</div>
+			</div>
+
+			{/* <div className="hstack -m-sp/2 pt-sp">
 				<div class="m-sp/2">
 					<Sponsor />
 				</div>
@@ -74,6 +107,14 @@ function HeaderRHS() {
 					<Sponsor />
 				</div>
 			</div>
+			<div className="hstack -m-sp/2 pt-sp">
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+			</div> */}
 		</div>
 	)
 }
