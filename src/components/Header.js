@@ -3,7 +3,7 @@ import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
 // TODO: Add anchors and analytics.
 function HeaderLHS() {
 	return (
-		<div className="vstack sp-24" style={{ width: 28 * 16 /* 448px */ }}>
+		<div className="vstack sp-24 max-w-xs">
 			<div className="hstack">
 				<div className="w-64 h-64 bg-cool-gray-100 rounded-full" />
 			</div>
@@ -48,63 +48,32 @@ function Sponsor() {
 }
 
 // TODO: Add anchors and analytics.
-function Sponsors() {
-	return (
-		<>
-			{/* (xs-xl) */}
-			<div className="hidden xs:hstack xl:hidden wrap -m-sp/2 pt-sp">
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-			</div>
-
-			{/* (xl+) */}
-			<div className="hidden xl:hstack -m-sp/2 pt-sp">
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-			</div>
-			<div className="hidden xl:hstack -m-sp/2 pt-sp">
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-				<div class="m-sp/2">
-					<Sponsor />
-				</div>
-			</div>
-		</>
-	)
-}
-
-// TODO: Add anchors and analytics.
 function HeaderRHS() {
 	return (
-		<div className="vstack sp-24">
+		<div className="vstack sp-24 xl:max-w-xs">
 			<div className="hstack sp-8 font-700 text-11 leading-1">
 				<div>CHECK OUT OUR SPONSORS</div>
 				<div>·</div>
 				<div>BECOME A SPONSOR</div>
 				<div className="w-12 h-12 bg-gray-200 rounded-full" />
 			</div>
-			<Sponsors />
+			<div className="hstack wrap -m-sp/2 pt-sp">
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+				<div class="m-sp/2">
+					<Sponsor />
+				</div>
+			</div>
 		</div>
 	)
 }
