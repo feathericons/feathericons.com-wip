@@ -27,7 +27,7 @@ import TopRow from "../components/TopRow"
 // 	)
 // }
 
-function App() {
+function IconApp() {
 	return (
 		<div className="hstack">
 			{/* LHS */}
@@ -91,7 +91,7 @@ function App() {
 	)
 }
 
-// TODO: bg-cool-gray-50
+// TODO: Extract <IconAppContainer>.
 export default function Home() {
 	return (
 		<div className="vstack sp-96">
@@ -104,13 +104,14 @@ export default function Home() {
 				<Header />
 			</div>
 			{/* NOTE: Resets var(--spacing). */}
-			<div className="hstack sp-0 xl:px-24 xl:pb-24">
+			<div className="hstack sp-0 xl:px-24 xl:pb-sp/2">
 				<div style={{ width: "100%", maxWidth: 84 * 16 /* 1344px */ }}>
 					<div className="hidden xl:block sticky t-0 -mt-24">
+						{/* TODO */}
 						<div className="h-24 bg-red-100" />
 					</div>
 					<div className="bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
-						<App />
+						<IconApp />
 					</div>
 				</div>
 			</div>
