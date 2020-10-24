@@ -10,7 +10,7 @@ const GitHubReleaseHref = "https://github.com/feathericons/feather/releases"
 export default function TopRow() {
 	return (
 		<div className="font-500">
-			<div className="hstack sp-8 py-12">
+			<div className="hstack sp-8">
 				{/* LHS */}
 				<a className="hstack align-center hover:underline" href={TwitterHref} {...target_blank}>
 					<SVGTwitter style={{ width: "1.25em", height: "1.25em" }} fill="currentColor" strokeWidth={0} />
