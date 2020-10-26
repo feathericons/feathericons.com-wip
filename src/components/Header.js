@@ -17,18 +17,18 @@ function HeaderLHS() {
 					Open source icons
 				</div>
 				<div className="text-center font-500 text-17 leading-1.25">
-					Created by <span className="font-600 hover:underline">@colebemis</span> and{" "}
-					<span className="font-600 hover:underline">@username_ZAYDEK</span>
+					Created by <span className="font-700 hover:underline">@colebemis</span> and{" "}
+					<span className="font-700 hover:underline">@username_ZAYDEK</span>
 				</div>
 			</div>
 			<div className="vstack xs:hstack s-12">
-				<div className="hstack align-center px-32 h-56 bg-cool-gray-100 rounded-16 xs:rounded-full">
+				<div className="hstack align-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
 					<SVGGitHub className="w-20 h-20" strokeWidth={2.25} />
 					<div className="font-500 text-17 leading-1">
 						Read docs
 					</div>
 				</div>
-				<div className="hstack align-center px-32 h-56 bg-cool-gray-100 rounded-16 xs:rounded-full">
+				<div className="hstack align-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
 					<SVGDownload className="w-20 h-20" strokeWidth={2.25} />
 					<div className="font-500 text-17 leading-1">
 						Download

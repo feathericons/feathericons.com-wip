@@ -1,14 +1,14 @@
-import Link from "next/link"
+// import Link from "next/link"
 
-export default function Icon(props) {
+import AppWrapper from "../components/AppWrapper"
+import dataset from "../data/dataset"
+
+export default function Top(props) {
 	return (
-		<>
-			<Link href="/">
-				<a>Back to home</a>
-			</Link>
-			<div></div>
-			<div>Welcome to {props.iconName}</div>
-		</>
+		// prettier-ignore
+		<AppWrapper>
+			{props.iconName}
+		</AppWrapper>
 	)
 }
 
@@ -20,12 +20,9 @@ export async function getStaticProps(ctx) {
 // getStaticPaths enumerates pages as params.
 export async function getStaticPaths() {
 	return {
-		// prettier-ignore
-		paths: [
-			{ params: { iconName: "a" } },
-			{ params: { iconName: "b" } },
-			{ params: { iconName: "c" } },
-		],
+		paths: dataset.map(each => ({
+			params: { iconName: each.name },
+		})),
 		fallback: false,
 	}
 }

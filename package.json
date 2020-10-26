@@ -1,9 +1,9 @@
 {
-	"name": "feathericons.dev",
+	"name": "feathericons.com",
+	"license": "MIT",
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
-		"start": "next start"
+		"prod": "next build && next export && osascript -e 'display notification \"Production build ready\" with title \"yarn prod\"'"
 	},
 	"dependencies": {
 		"next": "9.5.5",
