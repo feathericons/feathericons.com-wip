@@ -3,16 +3,12 @@
 
 // prettier-ignore
 @mixin reset-margins {
-	& > *:first-child { margin-top: 0 !important; }
-	& > *:last-child { margin-bottom: 0 !important; }
+	& > *:first-child { margin-top: 0; }
+	& > *:last-child { margin-bottom: 0; }
 }
 
 .prose {
 	@include reset-margins;
-
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
-	tab-size: 2;
 
 	$base-font-size: 18;
 	font: 400 rem($base-font-size) / 1.6 $sans;
@@ -64,15 +60,10 @@
 	h6 > a {
 		text-decoration: none;
 		color: var(--black);
-	}
-	h1 > a:hover,
-	h2 > a:hover,
-	h3 > a:hover,
-	h4 > a:hover,
-	h5 > a:hover,
-	h6 > a:hover {
-		text-decoration: underline;
-		color: var(--black);
+		&:hover {
+			text-decoration: underline;
+			color: var(--black);
+		}
 	}
 
 	pre {
@@ -85,11 +76,11 @@
 	pre {
 		margin: rem($base-font-size * 1.25) rem(-16);
 		border-radius: 0;
-	}
-	@media (min-width: $md) {
-		pre {
-			margin: rem($base-font-size * 1.25) 0;
-			border-radius: rem(8);
+		@media (min-width: $md) {
+			& {
+				margin: rem($base-font-size * 1.25) 0;
+				border-radius: rem(8);
+			}
 		}
 	}
 
@@ -98,11 +89,11 @@
 	ul {
 		margin-left: rem($list-offset);
 	}
-	ul li {
+	ul > li {
 		margin-top: rem(6);
 		margin-bottom: rem(6);
 	}
-	ul li::before {
+	ul > li::before {
 		margin-left: rem(-1 * $list-offset);
 		position: absolute;
 		content: "• ";
@@ -112,14 +103,14 @@
 	ol {
 		margin-left: rem($list-offset);
 	}
-	ol li {
+	ol > li {
 		margin-top: rem(4);
 		margin-bottom: rem(4);
 	}
-	ol li:first-of-type {
+	ol > li:first-of-type {
 		counter-reset: count;
 	}
-	ol li::before {
+	ol > li::before {
 		margin-left: rem(-1 * $list-offset);
 		position: absolute;
 		content: counter(count) ". ";
@@ -128,18 +119,13 @@
 		color: var(--blue-500);
 	}
 
-	[data-emoji] {
-		margin: 0 0.2ch;
-		display: inline-block;
-		transform: scale(1.2);
-	}
 	em {
 		font-style: italic;
 	}
 	strong {
 		font-weight: 600;
 	}
-	:not(pre) > code {
+	*:not(pre) code {
 		@include no-macos-retina;
 		padding: em(2) em(4);
 		font-size: em(12.5);

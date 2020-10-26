@@ -1,13 +1,8 @@
-// function E({ e }) {
-// 	// prettier-ignore
-// 	return <span role="img" data-emoji={e}>{e}</span>
-// }
-
 import { Fragment } from "react"
 
-function Docs() {
+export default function IconInfo({ icon }) {
 	return (
-		<Fragment>
+		<div className="prose">
 			<Fragment>
 				<h2 id="simply-beautiful-open-source-icons">
 					<a href="#simply-beautiful-open-source-icons">Simply beautiful open source icons</a>
@@ -92,14 +87,6 @@ function Docs() {
 					</small>
 				</p>
 			</Fragment>
-		</Fragment>
-	)
-}
-
-export default function IconInfo({ icon }) {
-	return (
-		<div className="prose">
-			<Docs />
 		</div>
 	)
 }
