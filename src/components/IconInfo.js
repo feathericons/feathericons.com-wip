@@ -1,185 +1,105 @@
-function E({ e }) {
-	// prettier-ignore
-	return <span role="img" data-emoji={e}>{e}</span>
-}
+// function E({ e }) {
+// 	// prettier-ignore
+// 	return <span role="img" data-emoji={e}>{e}</span>
+// }
 
-// <h2 id="getting-started">
-// 	{/* prettier-ignore */}
-// 	<a href="#getting-started">
-// 		Getting started
-// 	</a>
-// </h2>
+import { Fragment } from "react"
+
+function Docs() {
+	return (
+		<Fragment>
+			<Fragment>
+				<h2 id="simply-beautiful-open-source-icons">
+					<a href="#simply-beautiful-open-source-icons">Simply beautiful open source icons</a>
+				</h2>
+				<p>
+					<a href="TODO">Feather</a> is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on
+					simplicity, consistency, and flexibility.
+				</p>
+				<p>
+					To use Feather with JavaScript (<a href="TODO">docs here</a>), run this command:
+				</p>
+				<pre>
+					<code>
+						yarn add feather-icons
+						<br />
+						<span className="text-gray-300"># or npm install feather-icons</span>
+					</code>
+				</pre>
+				<p>
+					Or for React.js (<a href="TODO">docs here</a>), run this command:
+				</p>
+				<pre>
+					<code>
+						yarn add react-feather
+						<br />
+						<span className="text-gray-300"># or npm install react-feather</span>
+					</code>
+				</pre>
+				<p>
+					Feather can be used in almost everywhere. <a href="TODO">Click here</a> to see all supported environments.
+				</p>
+				<p>
+					Learn more on <a href="TODO">GitHub</a>.
+				</p>
+			</Fragment>
+
+			<Fragment>
+				<h2 id="using-classes">
+					<a href="#using-classes">Using Classes</a>
+				</h2>
+				<p>
+					Because icons are SVGs, you can add classes like <code>class=&quot;icon-sm&quot;</code> or <code>class=&quot;icon-lg&quot;</code> to style them. In
+					your CSS, write rules for the corresponding classes, e.g. <code>.icon-sm</code> or <code>.icon-lg</code>. All icons have a 1:1 aspect ratio, so their{" "}
+					<code>width</code> and <code>height</code> should be the same.
+				</p>
+				<p>
+					If you use <a href="TODO">Tailwind CSS</a>, you can add <code>class=&quot;w-6 h-6&quot;</code> for <code>24px</code> or{" "}
+					<code>class=&quot;w-8 h-8&quot;</code> for <code>32px</code>.
+				</p>
+			</Fragment>
+
+			<Fragment>
+				<h2 id="using-inline-styles">
+					<a href="#using-inline-styles">Using Inline Styles</a>
+				</h2>
+				<p>
+					Another trick you can use is <code>style=&quot;width: 1em; height: 1em;&quot;</code>. This means that an icon will assume the <code>width</code> and{" "}
+					<code>height</code> of the parent element’s <code>font-size</code>, which by default is <code>16px</code>. If the parent element’s{" "}
+					<code>font-size</code> is <code>32px</code>, your icon will also appear as <code>32px</code>.
+				</p>
+				<p>You can always extract this pattern as a CSS class so you don&#39;t need to repeat yourself.</p>
+			</Fragment>
+
+			<Fragment>
+				<h2 id="contribute-on-github">
+					<a href="#contribute-on-github">Contribute on GitHub</a>
+				</h2>
+				<p>You are more than welcome to submit a pull request to enhance the docs, add translations, and contribute examples.</p>
+				<ul>
+					<li>
+						<a href="TODO">Star Feather on GitHub</a>
+					</li>
+					<li>
+						<a href="TODO">Star the new feathericons.com on GitHub</a>
+					</li>
+				</ul>
+				<p>
+					<small>
+						<a href="TODO">Cole Bemis</a> created Feather and <a href="TODO">Zaydek Michels-Gualtieri</a> created the new <a href="TODO">feathericons.com</a>.
+						<br />
+						Both are licenesed as <a href="TODO">MIT open source</a>.
+					</small>
+				</p>
+			</Fragment>
+		</Fragment>
+	)
+}
 
 export default function IconInfo({ icon }) {
 	return (
 		<div className="prose">
-			<h1 id="simply-beautiful-open-source-icons">
-				{/* prettier-ignore */}
-				<a href="#simply-beautiful-open-source-icons">
-					Simply beautiful open source icons
-				</a>
-			</h1>
-
-			<p>
-				<a href="TODO">Feather</a> is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on simplicity,
-				consistency, and flexibility.
-			</p>
-			<p>
-				The easiest way to get started is to simply click-to-copy an icon and paste as needed. For the best experience, we recommend using the provided
-				JavaScript (Node.js) or React.js packages. <a href="TODO">Click here</a> for more packages.
-			</p>
-			<p>
-				<small>
-					<a href="TODO">Cole Bemis</a> created Feather and and <a href="TODO">Zaydek Michels-Gualtieri</a> created the new <a href="TODO">feathericons.com</a>.
-					<br />
-					Both are licenesed as <a href="TODO">MIT open source</a>.
-				</small>
-			</p>
-
-			<hr />
-
-			<h2 id="get-started">
-				{/* prettier-ignore */}
-				<a href="#get-started">
-					Get Started
-				</a>
-			</h2>
-
-			<h3 id="javascript">
-				{/* prettier-ignore */}
-				<a href="#javascript">
-					JavaScript (Node.js)
-				</a>
-			</h3>
-			<p>To use Feather with JavaScript, use this command:</p>
-			<pre>
-				<code>
-					npm install feather-icons
-					<br />
-					<span data-type="comm"># or yarn add feather-icons</span>
-				</code>
-			</pre>
-
-			{/* ... */}
-
-			<h3 id="react">
-				{/* prettier-ignore */}
-				<a href="#react">
-					React.js
-				</a>
-			</h3>
-			<p>Or if you prefer React.js, use this command:</p>
-			<pre>
-				<code>
-					npm install react-feather
-					<br />
-					<span data-type="comm"># or yarn add react-feather</span>
-				</code>
-			</pre>
-
-			{/* ... */}
-
-			<h3 id="codepen">
-				{/* prettier-ignore */}
-				<a href="#codepen">
-					CodePen
-				</a>
-			</h3>
-			<p>
-				Finally, you can experiment by editing this <a href="TODO">CodePen template</a>.
-			</p>
-
-			<hr />
-
-			<h2 id="quick-start">
-				{/* prettier-ignore */}
-				<a href="#quick-start">
-					Quick Start
-				</a>
-			</h2>
-
-			<h3 id="css-classes">
-				{/* prettier-ignore */}
-				<a href="#css-classes">
-					CSS Classes
-				</a>
-			</h3>
-			<p>Depending on your needs, one technique is to author several icon classes like this:</p>
-			<pre>
-				<code>
-					{`
-/* CSS */
-.icon-sm {
-	width: 12px;
-	height: 12px;
-}
-
-<!-- HTML -->
-<svg class="icon-sm" ...>
-`.trim()}
-				</code>
-			</pre>
-			<p>
-				Then you can tack on classes as you need them. Note that Feather icons by default will appear as 24px by <code>24px</code> and have a 1:1 aspect ratio.
-			</p>
-			<p>
-				If you use <a href="TODO">Tailwind CSS</a>, you can add <code>class="w-6 h-6"</code> for <code>24px</code> or <code>class="w-8 h-8"</code> for{" "}
-				<code>32px</code>.
-			</p>
-
-			{/* ... */}
-
-			<h3 id="inline-styles-in-html">
-				{/* prettier-ignore */}
-				<a href="#inline-styles-in-html">
-					Inline Styles in HTML
-				</a>
-			</h3>
-			<p>
-				Another technique is to use inline styles like this: <code>style="width: 1em; height: 1em;"</code>. Now an icon will assume the same <code>width</code>{" "}
-				and <code>height</code> as the parent element’s <code>font-size</code>.
-			</p>
-
-			<hr />
-
-			<h2 id="contribute-on-github">
-				{/* prettier-ignore */}
-				<a href="#contribute-on-github">
-					Contribute on GitHub
-				</a>
-			</h2>
-
-			<p>
-				<a href="TODO">Feather Icons</a> and <a href="TODO">feathericons.com</a> are MIT open source software and contributions are welcome. Some examples of
-				useful contributions include:
-				{/* Some examples of useful contributions include creating an issue to report a bug or request a new icon, submitting a pull request to enhance the docs, add translations. */}
-			</p>
-			{/* prettier-ignore */}
-			<ul>
-				<li>
-					Create an issue to report a bug
-				</li>
-				<li>
-					Create an issue to request an icon
-				</li>
-				<li>
-					Submit a pull request to enhance the docs
-				</li>
-				{/* <li>Submit a pull request to add translations for the docs</li> */}
-				<li>
-					Have your own idea? <a href="TODO">Let us know!</a>
-				</li>
-			</ul>
-			<p>
-				Follow <a href="TODO">@colebemis</a> and <a href="TODO">@username_ZAYDEK</a> on Twitter.
-			</p>
-			<p>
-				<small>
-					<a href="TODO">Feather</a> is licensed as <a href="TODO">MIT open source</a> software.
-					<br />
-					That means you can use Feather Icons personally and commercially without attribution. <E e="👌" />
-				</small>
-			</p>
+			<Docs />
 		</div>
 	)
 }

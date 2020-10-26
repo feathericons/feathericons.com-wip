@@ -15,15 +15,11 @@ function InteractiveWrapper({ children }) {
 				)} */}
 				<div className="bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
 					<div className="hstack">
-						{/* LHS */}
 						<div className="spacer" />
-						<div className="px-16 xl:px-24 py-48">
-							{/* prettier-ignore */}
-							<div className="w-full max-w-md">
-								{children}
-							</div>
+						{/* prettier-ignore */}
+						<div className="w-full max-w-md px-16 xl:px-24 py-64">
+							{children}
 						</div>
-						{/* RHS */}
 						<div className="spacer" />
 						{screen.md && (
 							<div className="vstack bg-cool-gray-100 xl:rounded-r-24" style={{ flexShrink: 0, width: 20 * 16 /* 320px */ }}>

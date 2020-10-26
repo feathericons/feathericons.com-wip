@@ -3,8 +3,8 @@
 
 // prettier-ignore
 @mixin reset-margins {
-	& > *:first-child { margin-top: 0; }
-	& > *:last-child { margin-bottom: 0; }
+	& > *:first-child { margin-top: 0 !important; }
+	& > *:last-child { margin-bottom: 0 !important; }
 }
 
 .prose {
@@ -19,20 +19,32 @@
 	color: var(--gray-800);
 
 	& > * {
-		margin-bottom: rem($base-font-size);
+		margin-top: rem($base-font-size);
+	}
+	& > h1,
+	& > h2,
+	& > h3,
+	& > h4,
+	& > h5,
+	& > h6 {
+		margin-top: rem(2 * $base-font-size);
+	}
+	& > h1 + *,
+	& > h2 + *,
+	& > h3 + *,
+	& > h4 + *,
+	& > h5 + *,
+	& > h6 + * {
+		margin-top: rem(8);
 	}
 
 	h1 {
 		$font-size: 28;
-		margin-top: rem(32);
-		margin-bottom: rem(16);
 		font: 600 rem($font-size) / 1.4 $sans;
 		color: var(--black);
 	}
 	h2 {
 		$font-size: 24;
-		margin-top: rem(32);
-		margin-bottom: rem(8);
 		font: 600 rem($font-size) / 1.4 $sans;
 		color: var(--black);
 	}
@@ -41,8 +53,6 @@
 	h5,
 	h6 {
 		$font-size: $base-font-size;
-		margin-top: rem(32);
-		margin-bottom: rem(8);
 		font: 600 rem($font-size) / 1.4 $sans;
 		color: var(--black);
 	}
@@ -64,29 +74,23 @@
 		text-decoration: underline;
 		color: var(--black);
 	}
-	hr {
-		margin: rem(64) auto;
-		max-width: rem(128);
-		border-top-color: var(--gray-300);
-	}
-
-	// & > p:first-child {
-	// 	// TODO
-	// 	font: 400 rem(22) / 1.5 "DM Sans", $sans;
-	// 	// letter-spacing: ${percent(-1.25)};
-	// 	color: var(--gray-500);
-	// }
 
 	pre {
 		@include no-macos-retina;
-		padding: rem(8) rem(24);
+		padding: rem(12) rem(24);
 		background-color: var(--gray-800);
 		font: 400 rem(13) / 1.75 $mono;
 		color: var(--gray-50);
-		border-radius: rem(6);
 	}
-	pre [data-type="comm"] {
-		color: var(--gray-300);
+	pre {
+		margin: rem($base-font-size * 1.25) rem(-16);
+		border-radius: 0;
+	}
+	@media (min-width: $md) {
+		pre {
+			margin: rem($base-font-size * 1.25) 0;
+			border-radius: rem(8);
+		}
 	}
 
 	$list-offset: 24;
@@ -95,8 +99,8 @@
 		margin-left: rem($list-offset);
 	}
 	ul li {
-		margin-top: rem(4);
-		margin-bottom: rem(4);
+		margin-top: rem(6);
+		margin-bottom: rem(6);
 	}
 	ul li::before {
 		margin-left: rem(-1 * $list-offset);
