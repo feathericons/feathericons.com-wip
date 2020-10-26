@@ -1,10 +1,11 @@
 // Ex:
 //
 // <script
-// 	id="sorcery-script"
-// 	src="/scripts/sorcery.js"
-// 	data-node-env={process.env.NODE_ENV}
-// 	data-ssr
+//   async
+//   id="sorcery-script"
+//   src="/scripts/sorcery.js"
+//   data-node-env={process.env.NODE_ENV}
+//   data-ssr
 // />
 window.sorcery = {
 	__version: "0.3.x",
@@ -59,7 +60,6 @@ window.sorcery = {
 		}
 	},
 }
-
 ;(() => {
 	window.sorcery.init()
 })()

@@ -1,12 +1,12 @@
-import AppWrapper from "../components/AppWrapper"
 import IconInfo from "../components/IconInfo"
+import PageWrapper from "../components/PageWrapper"
 import dataset from "../data/dataset"
 
 export default function Top(props) {
 	return (
-		<AppWrapper>
+		<PageWrapper>
 			<IconInfo icon={dataset.find(each => each.name === props.iconName)} />
-		</AppWrapper>
+		</PageWrapper>
 	)
 }
 

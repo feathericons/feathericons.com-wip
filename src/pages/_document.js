@@ -16,6 +16,7 @@ export default class Document extends NextDocument {
 
 					{/* prettier-ignore */}
 					<script
+						async
 						id="sorcery-script"
 						src="/scripts/sorcery_0-3-x.js"
 						data-node-env={process.env.NODE_ENV}
