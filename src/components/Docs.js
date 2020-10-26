@@ -26,7 +26,7 @@ export default function IconInfo({ icon }) {
 			</p>
 			<p>
 				The easiest way to get started is to simply click-to-copy an icon and paste as needed. For the best experience, we recommend using the provided
-				JavaScript (Node.js) or React.js packages. <a href="TODO">Click here</a> for more packages.
+				JavaScript (Node) or React.js packages. <a href="TODO">Click here</a> for more packages.
 			</p>
 			<p>
 				<small>
@@ -48,7 +48,7 @@ export default function IconInfo({ icon }) {
 			<h3 id="javascript">
 				{/* prettier-ignore */}
 				<a href="#javascript">
-					JavaScript (Node.js)
+					JavaScript (Node)
 				</a>
 			</h3>
 			<p>To use Feather with JavaScript, use this command:</p>
@@ -68,7 +68,9 @@ export default function IconInfo({ icon }) {
 					React.js
 				</a>
 			</h3>
-			<p>Or if you prefer React.js, use this command:</p>
+			<p>
+				Or if you prefer <a href="TODO">React.js</a>, use this command:
+			</p>
 			<pre>
 				<code>
 					npm install react-feather
