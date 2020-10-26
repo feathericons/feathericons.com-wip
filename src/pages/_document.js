@@ -13,9 +13,16 @@ export default class Document extends NextDocument {
 					{/* <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" /> */}
 					{/* <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" /> */}
 					{/* {process.env.NODE_ENV === "production" && <script async src="https://cdn.splitbee.io/sb.js" />} */}
-					{process.env.NODE_ENV !== "production" && <script src="/scripts/sorcery_0-3-2.js" />}
+
+					{/* prettier-ignore */}
+					<script
+						id="sorcery-script"
+						src="/scripts/sorcery_0-3-x.js"
+						data-node-env={process.env.NODE_ENV}
+						data-ssr
+					/>
 				</Head>
-				<body>
+				<body className="macos-retina">
 					<Main />
 					<NextScript />
 				</body>

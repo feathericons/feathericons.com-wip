@@ -1,5 +1,6 @@
 import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
 
+import Link from "next/link"
 import useBreakpoints from "../utils/useBreakpoints"
 
 // TODO: Add anchors and analytics.
@@ -10,7 +11,11 @@ function HeaderLHS() {
 	return (
 		<div className="vstack s-24" style={{ width: !screen.xs && "100%", maxWidth: 32 * 16 /* 512px */ }}>
 			<div className="hstack">
-				<div className="w-64 h-64 bg-cool-gray-100 rounded-full" />
+				<Link href="/">
+					<a>
+						<div className="w-64 h-64 bg-cool-gray-100 rounded-full" />
+					</a>
+				</Link>
 			</div>
 			<div className="vstack s-12">
 				<div className="text-center font-500 text-36 leading-1">

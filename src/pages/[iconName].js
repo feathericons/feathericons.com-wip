@@ -1,13 +1,11 @@
-// import Link from "next/link"
-
 import AppWrapper from "../components/AppWrapper"
+import IconInfo from "../components/IconInfo"
 import dataset from "../data/dataset"
 
 export default function Top(props) {
 	return (
-		// prettier-ignore
 		<AppWrapper>
-			{props.iconName}
+			<IconInfo icon={dataset.find(each => each.name === props.iconName)} />
 		</AppWrapper>
 	)
 }

@@ -1,5 +1,5 @@
-import Header from "../components/Header"
-import TopRow from "../components/TopRow"
+import Header from "./Header"
+import TopRow from "./TopRow"
 import useBreakpoints from "../utils/useBreakpoints"
 
 export default function AppWrapper({ children }) {
