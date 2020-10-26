@@ -1,0 +1,29 @@
+// Ex:
+//
+// 16 -> 1rem
+@function rem($n) {
+	@if type-of($n) != "number" {
+		@return $n;
+	}
+	@return $n / 16 + rem;
+}
+
+// Ex:
+//
+// 16 -> 1em
+@function em($n) {
+	@if type-of($n) != "number" {
+		@return $n;
+	}
+	@return $n / 16 + em;
+}
+
+@mixin no-macos-retina {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+@mixin macos-retina {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

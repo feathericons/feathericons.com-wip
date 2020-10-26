@@ -1,3 +1,8 @@
+function Emoji({ emoji }) {
+	// prettier-ignore
+	return <span role="img" data-emoji={emoji}>{emoji}</span>
+}
+
 export default function IconInfo({ icon }) {
 	// console.log(icon)
 	return (
@@ -18,16 +23,44 @@ export default function IconInfo({ icon }) {
 				<code>font-size</code> is <code>32px</code>, your icon will also appear as <code>32px</code>.
 			</p>
 			<p>You can always extact this rule as a CSS class so you don’t need to write inline styles everywhere.</p>
-			<h6>Contribute on GitHub</h6>
-			<p>You are welcome to submit a pull request to enhance the docs, add translations, and contribute examples.</p>
+			<h2>Contribute on GitHub</h2>
+			<p>
+				<a href="TODO">Feather Icons</a> and <a href="TODO">feathericons.com</a> are MIT open source software and contributions are welcome. Some examples of
+				useful contributions include:
+				{/* Some examples of useful contributions include creating an issue to report a bug or request a new icon, submitting a pull request to enhance the docs, add translations. */}
+			</p>
+			<ul>
+				<li>Create an issue to report a bug</li>
+				<li>Create an issue to request an icon</li>
+				<li>Submit a pull request to enhance the docs</li>
+				{/* <li>Submit a pull request to add translations for the docs</li> */}
+			</ul>
+			<ol>
+				<li>a</li>
+				<li>b</li>
+				<ol>
+					<li>a</li>
+					<li>b</li>
+					<ol>
+						<li>a</li>
+						<li>b</li>
+						<li>c</li>
+						<li>d</li>
+					</ol>
+					<li>c</li>
+					<li>d</li>
+				</ol>
+				<li>c</li>
+				<li>d</li>
+			</ol>
 			<p>
 				Follow <a href="TODO">@colebemis</a> and <a href="TODO">@username_ZAYDEK</a> on Twitter.
 			</p>
 			<p>
 				<small>
-					Feather Icons is licensed as MIT open source software.
+					<a href="TODO">Feather Icons</a> is licensed as <a href="TODO">MIT open source</a> software.
 					<br />
-					You can use the icons personally and commerically without attribution.
+					That means you can use Feather Icons personally and commercially without attribution. <Emoji emoji="👌" />
 				</small>
 			</p>
 		</div>
