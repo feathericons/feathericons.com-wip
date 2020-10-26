@@ -95,33 +95,41 @@ function IconApp() {
 	)
 }
 
+function AbsoluteTopRow() {
+	return (
+		<div className="absolute t-0 x-0">
+			<div className="px-16 sm:px-24 py-12">
+				<TopRow />
+			</div>
+		</div>
+	)
+}
+
 export default function Home() {
 	const screen = useBreakpoints()
 	return (
-		<div className="vstack s-96">
-			<div className="absolute t-0 x-0">
-				{/* {screen.xs && ( */}
-				<div className="px-16 sm:px-24 py-12">
-					<TopRow />
+		<>
+			<AbsoluteTopRow />
+			<div className="vstack s-96 pt-96 xl:pb-48">
+				<div className="px-16 sm:px-24">
+					<Header />
 				</div>
-				{/* )} */}
-			</div>
-			<div className="px-16 sm:px-24">
-				<Header />
-			</div>
-			{/* TODO: Extract <IconAppContainer>. */}
-			<div className="hstack s-0 xl:px-24 xl:pb-s/2">
-				<div style={{ width: "100%", maxWidth: 84 * 16 /* 1344px */ }}>
-					{screen.xs && (
-						<div className="sticky t-0 -mt-24">
-							<div className="h-24 bg-red-100" />
+				<div className="hstack xl:px-24">
+					<div style={{ width: "100%", maxWidth: 84 * 16 /* 1344px */ }}>
+						{screen.xs && (
+							<div className="sticky t-0 -mt-24">
+								<div className="h-24 bg-red-100" />
+							</div>
+						)}
+						<div className="bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
+							{/* NOTE: Resets var(--spacing). */}
+							<div className="s-0">
+								<IconApp />
+							</div>
 						</div>
-					)}
-					<div className="bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
-						<IconApp />
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }

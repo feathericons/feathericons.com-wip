@@ -15,51 +15,50 @@ function Sponsor() {
 // TODO: Add sponsors.
 export default function Sponsors() {
 	const screen = useBreakpoints()
-
-	if (screen.xs && !screen.xl) {
-		return (
-			<div className="hstack -m-s/2 pt-s" style={{ flexWrap: "wrap" }}>
-				<div className="m-s/2">
-					<Sponsor />
-				</div>
-				<div className="m-s/2">
-					<Sponsor />
-				</div>
-				<div className="m-s/2">
-					<Sponsor />
-				</div>
-				<div className="m-s/2">
-					<Sponsor />
-				</div>
-				<div className="m-s/2">
-					<Sponsor />
-				</div>
-			</div>
-		)
-	} else if (screen.xl) {
-		return (
-			<>
-				<div className="hstack -m-s/2 pt-s">
-					<div className="m-s/2">
+	return (
+		<>
+			{screen.xs && !screen.xl && (
+				<div className="hstack -m-s-1/2 pt-s" style={{ flexWrap: "wrap" }}>
+					<div className="m-s-1/2">
 						<Sponsor />
 					</div>
-					<div className="m-s/2">
+					<div className="m-s-1/2">
 						<Sponsor />
 					</div>
-					<div className="m-s/2">
+					<div className="m-s-1/2">
+						<Sponsor />
+					</div>
+					<div className="m-s-1/2">
+						<Sponsor />
+					</div>
+					<div className="m-s-1/2">
 						<Sponsor />
 					</div>
 				</div>
-				<div className="hstack -m-s/2 pt-s">
-					<div className="m-s/2">
-						<Sponsor />
+			)}
+			{screen.xl && (
+				<>
+					<div className="hstack -m-s-1/2 pt-s">
+						<div className="m-s-1/2">
+							<Sponsor />
+						</div>
+						<div className="m-s-1/2">
+							<Sponsor />
+						</div>
+						<div className="m-s-1/2">
+							<Sponsor />
+						</div>
 					</div>
-					<div className="m-s/2">
-						<Sponsor />
+					<div className="hstack -m-s-1/2 pt-s">
+						<div className="m-s-1/2">
+							<Sponsor />
+						</div>
+						<div className="m-s-1/2">
+							<Sponsor />
+						</div>
 					</div>
-				</div>
-			</>
-		)
-	}
-	return null
+				</>
+			)}
+		</>
+	)
 }
