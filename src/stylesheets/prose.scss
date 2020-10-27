@@ -68,14 +68,16 @@
 
 	pre {
 		@include no-macos-retina;
-		margin: rem(24) 0;
 		padding: rem(12) rem(24);
 		background-color: var(--gray-800);
-		font: 400 rem(13) / 1.75 $mono;
+		font: 400 rem(13) / 1.6 $mono;
 		color: var(--gray-50);
-		border-radius: rem(8);
 	}
-	@media (max-width: $md - 1) {
+	pre {
+		margin: rem(24) 0;
+		border-radius: rem(4);
+	}
+	@media (max-width: $md - 1 + px) {
 		pre {
 			margin: rem(24) rem(-16);
 			border-radius: 0;

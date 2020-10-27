@@ -4,15 +4,15 @@ export default function IconInfo({ icon }) {
 	return (
 		<div className="prose">
 			<Fragment>
-				<h2 id="simply-beautiful-open-source-icons">
-					<a href="#simply-beautiful-open-source-icons">Simply beautiful open source icons</a>
+				<h2 id="get-started">
+					<a href="#get-started">Get Started</a>
 				</h2>
 				<p>
 					<a href="TODO">Feather</a> is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an emphasis on
 					simplicity, consistency, and flexibility.
 				</p>
 				<p>
-					To use Feather with JavaScript (<a href="TODO">docs here</a>), run this command:
+					Get started with JavaScript (<a href="TODO">docs here</a>) by running this command:
 				</p>
 				<pre>
 					<code>
@@ -22,7 +22,7 @@ export default function IconInfo({ icon }) {
 					</code>
 				</pre>
 				<p>
-					Or for React.js (<a href="TODO">docs here</a>), run this command:
+					Or for React.js (<a href="TODO">docs here</a>) with this command:
 				</p>
 				<pre>
 					<code>
@@ -35,7 +35,7 @@ export default function IconInfo({ icon }) {
 					Feather can be used in almost everywhere. <a href="TODO">Click here</a> to see all supported environments.
 				</p>
 				<p>
-					Learn more on <a href="TODO">GitHub</a>.
+					Go further on <a href="TODO">GitHub</a>.
 				</p>
 			</Fragment>
 
