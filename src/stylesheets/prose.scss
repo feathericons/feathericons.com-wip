@@ -68,19 +68,17 @@
 
 	pre {
 		@include no-macos-retina;
+		margin: rem(24) 0;
 		padding: rem(12) rem(24);
 		background-color: var(--gray-800);
 		font: 400 rem(13) / 1.75 $mono;
 		color: var(--gray-50);
+		border-radius: rem(8);
 	}
-	pre {
-		margin: rem($base-font-size * 1.25) rem(-16);
-		border-radius: 0;
-		@media (min-width: $md) {
-			& {
-				margin: rem($base-font-size * 1.25) 0;
-				border-radius: rem(8);
-			}
+	@media (max-width: $md - 1) {
+		pre {
+			margin: rem(24) rem(-16);
+			border-radius: 0;
 		}
 	}
 
@@ -89,11 +87,10 @@
 	ul {
 		margin-left: rem($list-offset);
 	}
-	ul > li {
-		margin-top: rem(6);
-		margin-bottom: rem(6);
+	ul li {
+		margin: rem(6) 0;
 	}
-	ul > li::before {
+	ul li::before {
 		margin-left: rem(-1 * $list-offset);
 		position: absolute;
 		content: "• ";
@@ -103,14 +100,13 @@
 	ol {
 		margin-left: rem($list-offset);
 	}
-	ol > li {
-		margin-top: rem(4);
-		margin-bottom: rem(4);
+	ol li {
+		margin: rem(6) 0;
 	}
-	ol > li:first-of-type {
+	ol li:first-of-type {
 		counter-reset: count;
 	}
-	ol > li::before {
+	ol li::before {
 		margin-left: rem(-1 * $list-offset);
 		position: absolute;
 		content: counter(count) ". ";

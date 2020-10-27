@@ -18,7 +18,7 @@ export default function IconInfo({ icon }) {
 					<code>
 						yarn add feather-icons
 						<br />
-						<span className="text-gray-300"># or npm install feather-icons</span>
+						<span className="text-gray-300"># or npm i feather-icons</span>
 					</code>
 				</pre>
 				<p>
@@ -28,7 +28,7 @@ export default function IconInfo({ icon }) {
 					<code>
 						yarn add react-feather
 						<br />
-						<span className="text-gray-300"># or npm install react-feather</span>
+						<span className="text-gray-300"># or npm i react-feather</span>
 					</code>
 				</pre>
 				<p>

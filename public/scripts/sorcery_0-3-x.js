@@ -1,11 +1,10 @@
 // Ex:
 //
 // <script
-//   async
-//   id="sorcery-script"
-//   src="/scripts/sorcery.js"
-//   data-node-env={process.env.NODE_ENV}
-//   data-ssr
+// 	id="sorcery-script"
+// 	src="/scripts/sorcery.js"
+// 	data-node-env={process.env.NODE_ENV}
+// 	data-ssr
 // />
 window.sorcery = {
 	__version: "0.3.x",
@@ -34,9 +33,9 @@ window.sorcery = {
 
 			if (script.getAttribute("data-node-env") !== "production") {
 				document.addEventListener("keydown", e => {
-					if (!e.ctrlKey && e.key === "d") {
+					if (!e.ctrlKey && e.key.toLowerCase() === "d") {
 						sorcery.toggleDarkMode()
-					} else if (e.ctrlKey && e.key === "d") {
+					} else if (e.ctrlKey && e.key.toLowerCase() === "d") {
 						sorcery.toggleDebugMode()
 					}
 				})
@@ -60,6 +59,7 @@ window.sorcery = {
 		}
 	},
 }
+
 ;(() => {
 	window.sorcery.init()
 })()
