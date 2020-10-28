@@ -8,14 +8,14 @@ function InteractiveWrapper({ children }) {
 	return (
 		<div className="hstack s-0">
 			<div className="w-full max-w-xl">
-				{/* NOTE: Do not use stack because of sticky. */}
+				{/* NOTE: Do not use a stack because of sticky. */}
 				{screen.xs && (
 					<div className="sticky t-0 -mt-24">
 						<div className="h-24 bg-red-100" />
 					</div>
 				)}
 				<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
-					{/* NOTE: Do not use stack because of sticky. */}
+					{/* NOTE: Do not use a stack because of sticky. */}
 					<div className="spacer">
 						<div className="sticky t-0 xl:-mt-24 xl:pt-24">hello</div>
 						<div className="px-16 sm:px-24 xl:px-64 py-64 w-full">
