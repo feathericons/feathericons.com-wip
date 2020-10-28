@@ -1,0 +1,25 @@
+@import "./base";
+@import "./code";
+@import "./headers";
+@import "./lists";
+
+@import "./functions";
+@import "./variables";
+
+$h1-fs: 24;
+$h2-fs: 20;
+$h3-fs: 18;
+$fs: 16;
+$fs-small-em: em(13);
+
+$sm-h1-fs: 28;
+$sm-h2-fs: 24;
+$sm-h3-fs: 20;
+$sm-fs: 18;
+
+.prose {
+	@include base;
+	@include code;
+	@include headers;
+	@include lists;
+}

@@ -81,7 +81,7 @@ export default function IconInfo({ icon }) {
 				</ul>
 				<p>
 					<small>
-						<a href="TODO">Cole Bemis</a> created Feather and <a href="TODO">Zaydek Michels-Gualtieri</a> created the new <a href="TODO">feathericons.com</a>.
+						<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and the new <a href="TODO">feathericons.com</a> is by <a href="TODO">Zaydek MG</a>.
 						<br />
 						Both are licenesed as <a href="TODO">MIT open source</a>.
 					</small>
