@@ -10,7 +10,7 @@ interface IconPageProps {
 export default function IconPage({ iconName }: IconPageProps) {
 	return (
 		<AppWrapper>
-			<IconInfo iconInfo={dataset.find(each => each.name === iconName)} />
+			<IconInfo iconInfo={dataset.find(each => each.name === iconName)!} />
 		</AppWrapper>
 	)
 }
@@ -22,9 +22,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 // `getStaticPaths` enumerates pages as parameters.
 export async function getStaticPaths() {
-	const paths = {
-		paths: dataset.map(each => ({ params: { iconName: each.name } })),
+	return {
+		paths: dataset.map(each => ({
+			params: { iconName: each.name },
+		})),
 		fallback: false,
 	}
-	return paths
 }

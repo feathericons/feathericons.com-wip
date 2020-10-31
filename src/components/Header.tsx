@@ -1,5 +1,5 @@
-import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
 import Link from "next/link"
+import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 // TODO: Add anchors and analytics.
@@ -8,6 +8,7 @@ import { useBreakpoints } from "@zaydek/lib/hooks"
 function HeaderLHS() {
 	const screen = useBreakpoints()
 	return (
+		// @ts-ignore
 		<div className="vstack s-24" style={{ width: !screen.xs && "100%", maxWidth: 32 * 16 /* 512px */ }}>
 			<div className="hstack">
 				<Link href="/">

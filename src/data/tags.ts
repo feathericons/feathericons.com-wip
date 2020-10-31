@@ -1,4 +1,4 @@
-import { TagMap } from "types"
+import { Tags } from "types"
 
 // https://github.com/feathericons/feather/blob/master/src/tags.json
 const tags: Tags = {

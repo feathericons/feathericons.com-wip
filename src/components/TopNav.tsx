@@ -1,4 +1,4 @@
-import hrefs from "../fixtures/hrefs"
+import { hrefs } from "fixtures"
 import { target_blank } from "@zaydek/lib/attrs"
 import { Twitter as SVGTwitter } from "react-feather"
 

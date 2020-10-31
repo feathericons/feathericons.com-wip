@@ -1,5 +1,5 @@
 import * as Feather from "react-feather"
-import tags from "./tags"
+import tags from "data/tags"
 import { Icon } from "types"
 import { kebabCase } from "lodash"
 

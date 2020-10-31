@@ -1,4 +1,4 @@
-export default {
+export const hrefs = {
 	shareOnTwitter: `https://twitter.com/intent/tweet?text=${encodeURI(
 		"Check out Feathericons! ✨\n\nMany thanks to @colebemis for Feather Icons and @username_ZAYDEK for feathericons.com. ❤️",
 	)}`,

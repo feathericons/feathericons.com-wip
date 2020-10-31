@@ -1,9 +1,14 @@
-import { Fragment } from "react"
+import React from "react"
+import { Icon } from "types"
 
-export default function IconInfo({ icon }) {
+interface IconInfoProps {
+	iconInfo: Icon
+}
+
+export default function IconInfo({ iconInfo }: IconInfoProps) {
 	return (
 		<div className="prose">
-			<Fragment>
+			<React.Fragment>
 				<h2 id="get-started">
 					<a href="#get-started">Get Started</a>
 				</h2>
@@ -37,9 +42,9 @@ export default function IconInfo({ icon }) {
 				<p>
 					Go further on <a href="TODO">GitHub</a>.
 				</p>
-			</Fragment>
+			</React.Fragment>
 
-			<Fragment>
+			<React.Fragment>
 				<h2 id="using-classes">
 					<a href="#using-classes">Using Classes</a>
 				</h2>
@@ -52,9 +57,9 @@ export default function IconInfo({ icon }) {
 					If you use <a href="TODO">Tailwind CSS</a>, you can add <code>class=&quot;w-6 h-6&quot;</code> for <code>24px</code> or{" "}
 					<code>class=&quot;w-8 h-8&quot;</code> for <code>32px</code>.
 				</p>
-			</Fragment>
+			</React.Fragment>
 
-			<Fragment>
+			<React.Fragment>
 				<h2 id="using-inline-styles">
 					<a href="#using-inline-styles">Using Inline Styles</a>
 				</h2>
@@ -64,9 +69,9 @@ export default function IconInfo({ icon }) {
 					<code>font-size</code> is <code>32px</code>, your icon will also appear as <code>32px</code>.
 				</p>
 				<p>You can always extract this pattern as a CSS class so you don&#39;t need to repeat yourself.</p>
-			</Fragment>
+			</React.Fragment>
 
-			<Fragment>
+			<React.Fragment>
 				<h2 id="contribute-on-github">
 					<a href="#contribute-on-github">Contribute on GitHub</a>
 				</h2>
@@ -86,7 +91,7 @@ export default function IconInfo({ icon }) {
 						Both are licenesed as <a href="TODO">MIT open source</a>.
 					</small>
 				</p>
-			</Fragment>
+			</React.Fragment>
 		</div>
 	)
 }
