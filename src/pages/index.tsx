@@ -1,10 +1,10 @@
-import Link from "next/link"
-import PageWrapper from "../components/PageWrapper"
+import AppWrapper from "../components/AppWrapper"
 import dataset from "../data/dataset"
+import Link from "next/link"
 
-export default function Top() {
+export default function Home() {
 	return (
-		<PageWrapper>
+		<AppWrapper>
 			<div className="spacer vstack">
 				{dataset.map(each => (
 					<Link key={each.name} href={`/${each.name}`}>
@@ -15,6 +15,6 @@ export default function Top() {
 					</Link>
 				))}
 			</div>
-		</PageWrapper>
+		</AppWrapper>
 	)
 }
