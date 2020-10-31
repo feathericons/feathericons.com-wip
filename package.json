@@ -6,6 +6,9 @@
 		"prod": "next build && next export && osascript -e 'display notification \"Production build ready\" with title \"yarn prod\"'"
 	},
 	"dependencies": {
+		"@zaydek/lib": "^0.4.0",
+		"@zaydek/prose": "^0.1.7",
+		"@zaydek/sorcery": "^0.3.8",
 		"next": "^10.0.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",

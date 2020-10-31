@@ -1,6 +1,6 @@
 import { Twitter as SVGTwitter } from "react-feather"
 import hrefs from "../fixtures/hrefs"
-import target_blank from "../utils/target_blank"
+import { target_blank } from "@zaydek/lib/attrs"
 
 function A(props) {
 	return <a className="hstack align-center font-500 hover:underline" {...target_blank} {...props} />

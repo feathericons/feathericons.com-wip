@@ -1,7 +1,6 @@
 import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
-
 import Link from "next/link"
-import useBreakpoints from "../utils/useBreakpoints"
+import { useBreakpoints } from "@zaydek/lib/hooks"
 
 // TODO: Add anchors and analytics.
 //

@@ -1,7 +1,7 @@
 import { Fragment } from "react"
 import Header from "./Header"
 import TopRow from "./TopRow"
-import useBreakpoints from "../utils/useBreakpoints"
+import { useBreakpoints } from "@zaydek/lib/hooks"
 
 function InteractiveWrapper({ children }) {
 	const screen = useBreakpoints()
