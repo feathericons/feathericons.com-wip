@@ -1,5 +1,7 @@
+import { TagMap } from "types"
+
 // https://github.com/feathericons/feather/blob/master/src/tags.json
-export default {
+const tags: Tags = {
 	activity: ["pulse", "health", "action", "motion"],
 	airplay: ["stream", "cast", "mirroring"],
 	"alert-circle": ["warning", "alert", "danger"],
@@ -236,3 +238,5 @@ export default {
 	"zoom-in": ["magnifying glass"],
 	"zoom-out": ["magnifying glass"],
 }
+
+export default tags

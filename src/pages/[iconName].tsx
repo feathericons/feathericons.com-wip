@@ -1,6 +1,6 @@
-import AppWrapper from "../components/AppWrapper"
-import dataset from "../data/dataset"
-import IconInfo from "../components/IconInfo"
+import AppWrapper from "components/AppWrapper"
+import dataset from "data/dataset"
+import IconInfo from "components/IconInfo"
 import { GetStaticPropsContext } from "next"
 
 interface IconPageProps {

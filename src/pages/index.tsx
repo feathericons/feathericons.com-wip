@@ -1,5 +1,5 @@
-import AppWrapper from "../components/AppWrapper"
-import dataset from "../data/dataset"
+import AppWrapper from "components/AppWrapper"
+import dataset from "data/dataset"
 import Link from "next/link"
 
 export default function Home() {

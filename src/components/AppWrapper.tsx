@@ -1,9 +1,13 @@
-import { Fragment } from "react"
 import Header from "./Header"
-import TopRow from "./TopRow"
+import React from "react"
+import TopNav from "./TopNav"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
-function InteractiveWrapper({ children }) {
+interface InteractiveWrapperProps {
+	children?: React.ReactNode
+}
+
+function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	const screen = useBreakpoints()
 	return (
 		<div className="hstack s-0">
@@ -40,12 +44,16 @@ function InteractiveWrapper({ children }) {
 	)
 }
 
-export default function PageWrapper({ children }) {
+interface AppWrapperProps {
+	children?: React.ReactNode
+}
+
+export default function AppWrapper({ children }: AppWrapperProps) {
 	return (
-		<Fragment>
+		<React.Fragment>
 			<div className="absolute t-0 x-0">
 				<div className="px-16 sm:px-24 py-12">
-					<TopRow />
+					<TopNav />
 				</div>
 			</div>
 			<div className="vstack s-96 pt-96 xl:pb-48">
@@ -57,6 +65,6 @@ export default function PageWrapper({ children }) {
 					{children}
 				</InteractiveWrapper>
 			</div>
-		</Fragment>
+		</React.Fragment>
 	)
 }
