@@ -5,7 +5,10 @@ import { kebabCase } from "lodash"
 
 // TODO: Warning: Text content did not match. Server: "arrow-down" Client: "arrow-down-circle"
 const dataset: Icon[] = Object.keys(Feather).map(each => ({
-	name: kebabCase(each),
+	name: {
+		title: each,
+		kebab: kebabCase(each),
+	},
 	tags: [],
 	svgs: {
 		// TODO: Use [key: string]: React.FC<Feather.Props>)?
@@ -29,7 +32,7 @@ function parseTags(name: string) {
 
 ;(() => {
 	for (const each of dataset) {
-		const parsed = parseTags(each.name)
+		const parsed = parseTags(each.name.kebab)
 		;(tags[each.name] || []).forEach(each => {
 			parsed.push(...parseTags(each))
 		})

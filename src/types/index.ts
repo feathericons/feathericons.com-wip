@@ -6,7 +6,10 @@ export interface Tags {
 }
 
 export interface Icon {
-	name: string
+	name: {
+		title: string
+		kebab: string
+	}
 	tags: string[]
 	// TODO: Change svgs -> svg?
 	svgs: {

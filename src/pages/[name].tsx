@@ -4,13 +4,13 @@ import IconInfo from "components/IconInfo"
 import { GetStaticPropsContext } from "next"
 
 interface IconPageProps {
-	iconName: string
+	name: string
 }
 
-export default function IconPage({ iconName }: IconPageProps) {
+export default function IconPage({ name }: IconPageProps) {
 	return (
 		<AppWrapper>
-			<IconInfo iconInfo={dataset.find(each => each.name === iconName)!} />
+			<IconInfo iconInfo={dataset.find(each => each.name.kebab === name)!} />
 		</AppWrapper>
 	)
 }
@@ -24,7 +24,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 export async function getStaticPaths() {
 	return {
 		paths: dataset.map(each => ({
-			params: { iconName: each.name },
+			params: { name: each.name.kebab },
 		})),
 		fallback: false,
 	}

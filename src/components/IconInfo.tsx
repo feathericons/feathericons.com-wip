@@ -8,21 +8,7 @@ interface IconInfoProps {
 
 export default function IconInfo({ iconInfo }: IconInfoProps) {
 	return (
-		<div className="vstack s-64">
-			{/* <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 gap-8"> */}
-
-			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
-			<div className="s-0">
-				<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
-					<Demos.Demo1 />
-					<Demos.Demo2 />
-					<Demos.Demo3 />
-					<Demos.Demo4 />
-					<Demos.Demo5 />
-					<Demos.Demo6 />
-				</div>
-			</div>
-
+		<div className="vstack s-48">
 			<div className="prose">
 				<React.Fragment>
 					<h2 id="get-started">
@@ -55,12 +41,12 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 					<p>
 						Feather can be used in almost everywhere. <a href="TODO">Click here</a> to see all supported environments.
 					</p>
-					<p>
+					{/* <p>
 						Go further on <a href="TODO">GitHub</a>.
-					</p>
+					</p> */}
 				</React.Fragment>
 
-				<React.Fragment>
+				{/* <React.Fragment>
 					<h2 id="using-classes">
 						<a href="#using-classes">Using Classes</a>
 					</h2>
@@ -73,9 +59,9 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 						If you use <a href="TODO">Tailwind CSS</a>, you can add <code>class=&quot;w-6 h-6&quot;</code> for <code>24px</code> or{" "}
 						<code>class=&quot;w-8 h-8&quot;</code> for <code>32px</code>.
 					</p>
-				</React.Fragment>
+				</React.Fragment> */}
 
-				<React.Fragment>
+				{/* <React.Fragment>
 					<h2 id="using-inline-styles">
 						<a href="#using-inline-styles">Using Inline Styles</a>
 					</h2>
@@ -85,7 +71,7 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 						<code>font-size</code> is <code>32px</code>, your icon will also appear as <code>32px</code>.
 					</p>
 					<p>You can always extract this pattern as a CSS class so you don&#39;t need to repeat yourself.</p>
-				</React.Fragment>
+				</React.Fragment> */}
 
 				<React.Fragment>
 					<h2 id="contribute-on-github">
@@ -100,6 +86,8 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 							<a href="TODO">Star the new feathericons.com on GitHub</a>
 						</li>
 					</ul>
+					{/* <br />
+					<hr /> */}
 					<p>
 						<small>
 							<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and the new <a href="TODO">feathericons.com</a> is by <a href="TODO">Zaydek MG</a>.
@@ -108,6 +96,29 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 						</small>
 					</p>
 				</React.Fragment>
+			</div>
+
+			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
+			<div className="vstack s-24">
+				<div className="prose">
+					<h2 id="demo">
+						<a href="#demo">
+							{/* TODO: `no-macos-retina` */}
+							Demos Using <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{iconInfo.name.title}&gt;</code>
+						</a>
+					</h2>
+				</div>
+				<div className="s-0">
+					{/* TODO: Add grid-cols-256? */}
+					<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
+						<Demos.Demo1 />
+						<Demos.Demo2 />
+						<Demos.Demo3 />
+						<Demos.Demo4 />
+						<Demos.Demo5 />
+						<Demos.Demo6 />
+					</div>
+				</div>
 			</div>
 		</div>
 	)

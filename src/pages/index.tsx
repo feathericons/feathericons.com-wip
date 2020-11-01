@@ -7,10 +7,10 @@ export default function Home() {
 		<AppWrapper>
 			<div className="spacer vstack">
 				{dataset.map(each => (
-					<Link key={each.name} href={`/${each.name}`}>
+					<Link key={each.name.kebab} href={`/${each.name.kebab}`}>
 						{/* prettier-ignore */}
 						<a>
-						{each.name}
+						{each.name.kebab}
 					</a>
 					</Link>
 				))}

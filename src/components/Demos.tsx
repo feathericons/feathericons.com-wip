@@ -20,10 +20,7 @@ interface DemoWrapperProps {
 function DemoVStack({ children }: DemoWrapperProps) {
 	return (
 		<div className="hstack bg-gray-100" style={{ height: `${160 / 16}rem` }}>
-			{/* prettier-ignore */}
-			<div className="vstack">
-				{children}
-			</div>
+			<div className="vstack">{children}</div>
 		</div>
 	)
 }
