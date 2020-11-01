@@ -1,5 +1,3 @@
-import "stylesheets/grid.scss" // TODO: Extract to @zaydek/sorcery.
-
 import "@zaydek/sorcery"
 import "@zaydek/prose"
 
