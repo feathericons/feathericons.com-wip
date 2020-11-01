@@ -1,7 +1,7 @@
 import Header from "./Header"
 import React from "react"
 import TopNav from "./TopNav"
-import { px } from "@zaydek/sorcery/dist/runtime"
+import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 interface InteractiveWrapperProps {
@@ -79,8 +79,19 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 					{/* NOTE: Do not use a stack because of sticky. */}
 					<div className="spacer">
 						{/* prettier-ignore */}
-						<div className="sticky t-0 -mt-16 pt-16">
-							<div className="!bg-red-100">hello</div>
+						<div className="sticky t-0 xl:-mt-16 xl:pt-16 z-10">
+							<div className="hstack align-center s-16 px-32 h-64 xl:h-80 bg-white rounded-tl-24" style={{ borderBottom: `${rem(1)} solid var(--gray-200)` }}>
+								<div className="w-32 h-32 bg-gray-200 rounded-full" />
+								<div className="spacer" />
+								{screen.md && (
+									<div className="hstack align-center px-12 h-40 bg-gray-100 rounded-full" style={{ width: rem(160) }}>
+										<div className="w-24 h-24 bg-gray-300 rounded-full" />
+										<div className="spacer"></div>
+									</div>
+								)}
+								{/* <div className="w-32 h-32 bg-gray-200 rounded-full" /> */}
+								<div className="w-32 h-32 bg-gray-200 rounded-full" />
+							</div>
 						</div>
 						<div className="px-16 sm:px-24 xl:px-64 py-64 w-full">
 							{/* prettier-ignore */}
