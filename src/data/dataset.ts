@@ -3,19 +3,20 @@ import tags from "data/tags"
 import { IIcon } from "types"
 import { kebabCase } from "lodash"
 
-// TODO: Warning: Text content did not match. Server: "arrow-down" Client: "arrow-down-circle"
-const dataset: IIcon[] = Object.keys(Feather).map(each => ({
-	name: {
-		title: each,
-		kebab: kebabCase(each),
-	},
-	tags: [],
-	svgs: {
-		// TODO: Use [key: string]: React.FC<Feather.Props>)?
-		stroke: (Feather as any)[each],
-	},
-	new: false,
-}))
+// NOTE: FOR THE LOVE OF GOD KEYS MUST BE SORTED. DO NOT REMOVE SORT.
+const dataset: IIcon[] = Object.keys(Feather)
+	.sort()
+	.map(each => ({
+		name: {
+			title: each,
+			kebab: kebabCase(each),
+		},
+		tags: [],
+		svgs: {
+			stroke: (Feather as Record<string, React.FC<Feather.Props>>)[each],
+		},
+		new: false,
+	}))
 
 // Ex:
 //

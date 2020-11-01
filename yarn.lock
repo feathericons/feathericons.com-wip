@@ -1327,11 +1327,6 @@
   resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.1.9.tgz#9720b55f6ba33e3b8356fd221d5a816da1c92a86"
   integrity sha512-c/Aov47LaZ4GsI30aQh9fzc6YBoMJkaZl6eeZAlHSvIXvF2HCwS5NAsEYCdzoj5WNeSw3B9ys2rJqIWCcb+1Bg==
 
-"@zaydek/sorcery@^0.3.8":
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/@zaydek/sorcery/-/sorcery-0.3.8.tgz#c0fee1e5f251f92b0b86b1d996a51f6f3b0cc61b"
-  integrity sha512-U70JfM/rUE3IYXmceSRsfd/UUqxvSZDMCCMlWpP4/h7rnsE5Aeb0iG3Pdx5zwVUqrjEtW7WE9IiX+5C659aMnQ==
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -4911,9 +4906,9 @@ regenerate-unicode-properties@^8.2.0:
     regenerate "^1.4.0"
 
 regenerate@^1.4.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.1.tgz#cad92ad8e6b591773485fbe05a485caf4f457e6f"
-  integrity sha512-j2+C8+NtXQgEKWk49MMP5P/u2GhnahTtVkRIHr5R5lVRlbKvmQ+oS+A5aLKWp2ma5VkT8sh6v+v4hbH0YHR66A==
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
+  integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
 
 regenerator-runtime@^0.13.4:
   version "0.13.7"
