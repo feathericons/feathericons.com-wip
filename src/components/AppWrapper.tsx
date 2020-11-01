@@ -11,7 +11,7 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	const screen = useBreakpoints()
 	return (
 		<div className="hstack s-0">
-			<div className="w-full max-w-xl">
+			<div className="w-full !max-w-xl" style={{ maxWidth: 1344 }}>
 				{/* NOTE: Do not use a stack because of sticky. */}
 				{screen.xs && (
 					<div className="sticky t-0 -mt-24">
