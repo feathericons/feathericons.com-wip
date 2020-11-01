@@ -10,22 +10,17 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 	return (
 		<div className="vstack s-64">
 			{/* <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 gap-8"> */}
-			<style>
-				{`
-					#bento-box {
-						display: grid;
-						grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
-						gap: 12px;
-					}
-				`}
-			</style>
-			<div id="bento-box">
-				<Demos.Demo1 />
-				<Demos.Demo2 />
-				<Demos.Demo3 />
-				<Demos.Demo4 />
-				<Demos.Demo5 />
-				<Demos.Demo6 />
+
+			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
+			<div className="s-0">
+				<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
+					<Demos.Demo1 />
+					<Demos.Demo2 />
+					<Demos.Demo3 />
+					<Demos.Demo4 />
+					<Demos.Demo5 />
+					<Demos.Demo6 />
+				</div>
 			</div>
 
 			<div className="prose">
