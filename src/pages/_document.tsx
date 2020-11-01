@@ -6,14 +6,14 @@ export default class MyDocument extends Document {
 	}
 	render() {
 		return (
-			<Html lang="en">
+			<Html className="macos-retina bg-gray-50" lang="en">
 				<Head>
 					{/* TODO */}
 					{/* <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" /> */}
 					{/* <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" /> */}
 					{/* {process.env.NODE_ENV === "production" && <script async src="https://cdn.splitbee.io/sb.js" />} */}
 				</Head>
-				<body className="macos-retina">
+				<body>
 					<Main />
 					<NextScript />
 				</body>

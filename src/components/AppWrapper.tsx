@@ -12,11 +12,11 @@ interface InteractiveWrapperProps {
 
 function StickyTopObscureEffect() {
 	return (
-		<div className="sticky t-0 -mb-24 z-10">
+		<div className="sticky t-0 -mx-8 -mb-24 z-10">
 			{/* prettier-ignore */}
-			<div className="-mx-2 hstack">
+			<div className="hstack">
 				<svg
-					className="w-1 h-40"
+					className="w-8 h-40"
 					style={{ color: "hsl(215, 100%, 50%)" }}
 					fill="currentColor"
 					preserveAspectRatio="none"
@@ -54,7 +54,7 @@ function StickyTopObscureEffect() {
 					<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 				</svg>
 				<svg
-					className="w-1 h-40"
+					className="w-8 h-40"
 					style={{ color: "hsl(215, 100%, 50%)" }}
 					fill="currentColor"
 					preserveAspectRatio="none"
@@ -73,14 +73,14 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	return (
 		// TODO: Add `transform-z`.
 		<div className="hstack" style={{ transform: "translateZ(0)" }}>
-			<div className="w-full !max-w-xl z-10" style={{ maxWidth: 1344 }}>
+			<div className="z-10" style={{ width: "100%", maxWidth: px(1344) }}>
 				{screen.xl && <StickyTopObscureEffect />}
 				<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
 					{/* NOTE: Do not use a stack because of sticky. */}
 					<div className="spacer">
 						{/* prettier-ignore */}
-						<div className="sticky t-0 xl:-mt-24 xl:pt-24">
-							hello
+						<div className="sticky t-0 -mt-16 pt-16">
+							<div className="!bg-red-100">hello</div>
 						</div>
 						<div className="px-16 sm:px-24 xl:px-64 py-64 w-full">
 							{/* prettier-ignore */}
@@ -91,7 +91,9 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 					</div>
 					{screen.md && (
 						<div className="vstack bg-cool-gray-100 xl:rounded-r-24" style={{ width: px(20 * 16) /* 320px */ }}>
-							<div className="sticky t-0 xl:-mt-24 xl:pt-24">hello</div>
+							<div className="sticky t-0 -mt-16 pt-16">
+								<div className="!bg-red-100">hello</div>
+							</div>
 							<div className="spacer" />
 						</div>
 					)}
