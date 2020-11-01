@@ -7,11 +7,10 @@ export interface ITags {
 
 export interface IIcon {
 	name: {
-		title: string
 		kebab: string
+		title: string
 	}
 	tags: string[]
-	// TODO: Change svgs -> svg?
 	svgs: {
 		stroke: React.FC<Feather.Props>
 	}

@@ -1,9 +1,9 @@
-import * as Demos from "components/Demos" // TODO: Move to submodule?
-import { IconGrid, LinkedIcon } from "components/IconGrid"
+import * as Demos from "components/Demos"
+import dataset from "data/dataset"
 import React from "react"
 import SmallText from "components/SmallText"
+import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
-import dataset from "data/dataset"
 
 interface IconInfoProps {
 	icon: IIcon

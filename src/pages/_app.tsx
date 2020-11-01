@@ -10,6 +10,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		SorceryCSS.init()
 	}, [])
-
 	return <Component {...pageProps} />
 }

@@ -2,7 +2,6 @@ import Header from "./Header"
 import React from "react"
 import TopNav from "./TopNav"
 import { useBreakpoints } from "@zaydek/lib/hooks"
-import { RotateCcw } from "react-feather"
 
 interface InteractiveWrapperProps {
 	children?: React.ReactNode
