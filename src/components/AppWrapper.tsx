@@ -1,5 +1,6 @@
 import Header from "./Header"
 import React from "react"
+import SmallText from "components/SmallText"
 import TopNav from "./TopNav"
 import { px } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
@@ -31,7 +32,7 @@ function StickyTopObscureEffect() {
 					viewBox="0 0 24 40"
 					xmlns="http://www.w3.org/2000/svg"
 				>
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
+					<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 				</svg>
 				<svg
 					className="w-full h-16"
@@ -50,7 +51,7 @@ function StickyTopObscureEffect() {
 					viewBox="0 0 24 40"
 					xmlns="http://www.w3.org/2000/svg"
 				>
-					<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
+					<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 				</svg>
 				<svg
 					className="w-1 h-40"
@@ -70,7 +71,7 @@ function StickyTopObscureEffect() {
 function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	const screen = useBreakpoints()
 	return (
-		<div className="hstack s-0">
+		<div className="hstack">
 			<div className="w-full !max-w-xl" style={{ maxWidth: 1344 }}>
 				{screen.xl && <StickyTopObscureEffect />}
 				<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>

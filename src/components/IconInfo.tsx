@@ -1,7 +1,6 @@
 import * as Demos from "components/Demos"
 import dataset from "data/dataset"
 import React from "react"
-import SmallText from "components/SmallText"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
 
@@ -88,7 +87,7 @@ export default function IconInfo({ icon }: IconInfoProps) {
 			</div>
 
 			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
-			<div className="vstack s-24">
+			<div className="vstack s-20">
 				<div className="prose">
 					<h2 id="demo">
 						<a href="#demo">
@@ -97,27 +96,31 @@ export default function IconInfo({ icon }: IconInfoProps) {
 						</a>
 					</h2>
 				</div>
-				<div className="s-0">
-					{/* TODO: Add grid-cols-256? */}
-					<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
-						<Demos.Demo1 />
-						<Demos.Demo2 />
-						<Demos.Demo3 />
-						<Demos.Demo4 />
-						<Demos.Demo5 />
-						<Demos.Demo6 />
-					</div>
+				{/* TODO: Add grid-cols-256? */}
+				<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
+					<Demos.Demo1 />
+					<Demos.Demo2 />
+					<Demos.Demo3 />
+					<Demos.Demo4 />
+					<Demos.Demo5 />
+					<Demos.Demo6 />
 				</div>
 			</div>
 
-			<IconGrid>
-				{dataset.slice(0, 6).map(each => (
-					<LinkedIcon icon={each} />
-				))}
-			</IconGrid>
-
-			<div className="prose">
-				<SmallText />
+			<div className="vstack s-20">
+				<div className="prose">
+					<h2 id="related">
+						<a href="#related">
+							{/* TODO: `no-macos-retina` */}
+							Related to <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code>
+						</a>
+					</h2>
+				</div>
+				<IconGrid>
+					{dataset.slice(0, 6).map(each => (
+						<LinkedIcon icon={each} />
+					))}
+				</IconGrid>
 			</div>
 		</div>
 	)
