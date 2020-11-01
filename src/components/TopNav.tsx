@@ -1,38 +1,28 @@
-import { hrefs } from "fixtures"
-import { target_blank } from "@zaydek/lib/attrs"
 import { Twitter as SVGTwitter } from "react-feather"
+
+// TODO: Add `--spacing: 0.25em`?
+// TODO: Add `... w-1em w-1.1em w-1.15em w-1.2em w-1.25em`
 
 // TODO: Add analytic events.
 export default function TopNav() {
 	return (
-		// prettier-ignore
-		<div className="hstack s-8">
-			{/* LHS */}
-			<a
-				className="hstack align-center font-500 hover:underline"
-				href={hrefs.shareOnTwitter}
-				{...target_blank}
-			>
-				<SVGTwitter style={{ width: "1.25em", height: "1.25em" }} fill="currentColor" strokeWidth={0} />
-				<span>Tweet thank you!</span>
-			</a>
-			{/* RHS */}
-			<div className="spacer" />
-			<a
-				className="hstack align-center font-500 hover:underline"
-				href={hrefs.GitHubLicense}
-				{...target_blank}
-			>
-				MIT-license
-			</a>
-			<span>&middot;</span>
-			<a
-				className="hstack align-center font-500 hover:underline"
-				href={hrefs.GitHubRelease}
-				{...target_blank}
-			>
-				v4.28
-			</a>
+		<div className="font-500 text-17 text-white">
+			<div className="hstack">
+				{/* LHS */}
+				<a className="hover:underline">
+					<div className="hstack align-center s-8">
+						<SVGTwitter style={{ width: "1.25em", height: "1.25em" }} fill="currentColor" strokeWidth={0} />
+						<span>Tweet thank you!</span>
+					</div>
+				</a>
+				{/* RHS */}
+				<div className="spacer" />
+				<div className="hstack align-center s-8">
+					<a className="hover:underline">MIT-license</a>
+					<span>&middot;</span>
+					<a className="hover:underline">v4.28</a>
+				</div>
+			</div>
 		</div>
 	)
 }

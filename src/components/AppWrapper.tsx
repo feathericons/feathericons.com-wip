@@ -1,6 +1,5 @@
 import Header from "./Header"
 import React from "react"
-import SmallText from "components/SmallText"
 import TopNav from "./TopNav"
 import { px } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
@@ -9,10 +8,11 @@ interface InteractiveWrapperProps {
 	children?: React.ReactNode
 }
 
+// NOTE: Uses `overflow-x-hidden` because of `-mx-2`.
+
 function StickyTopObscureEffect() {
 	return (
-		// NOTE: Uses `overflow-x-hidden` because of `-mx-2`.
-		<div className="sticky t-0 -mb-24 z-10 !bg-red-100 overflow-x-hidden">
+		<div className="sticky t-0 -mb-24 z-10">
 			{/* prettier-ignore */}
 			<div className="-mx-2 hstack">
 				<svg
@@ -71,8 +71,9 @@ function StickyTopObscureEffect() {
 function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	const screen = useBreakpoints()
 	return (
-		<div className="hstack">
-			<div className="w-full !max-w-xl" style={{ maxWidth: 1344 }}>
+		// TODO: Add `transform-z`.
+		<div className="hstack" style={{ transform: "translateZ(0)" }}>
+			<div className="w-full !max-w-xl z-10" style={{ maxWidth: 1344 }}>
 				{screen.xl && <StickyTopObscureEffect />}
 				<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
 					{/* NOTE: Do not use a stack because of sticky. */}
@@ -105,37 +106,55 @@ interface AppWrapperProps {
 }
 
 export default function AppWrapper({ children }: AppWrapperProps) {
+	const screen = useBreakpoints()
 	return (
 		<>
-			<div className="absolute t-0 x-0">
+			<div className="absolute t-0 x-0 z-10">
 				<div className="px-16 sm:px-24 py-12">
 					<TopNav />
 				</div>
 			</div>
-			<div className="vstack s-96 pt-96 pb-32 xl:pb-48">
-				<div className="px-16 sm:px-24">
-					<Header />
-				</div>
-				{/* prettier-ignore */}
-				<InteractiveWrapper>
-					{children}
-				</InteractiveWrapper>
+			{/* TODO: Extract to `<Header>`. */}
+			<div className="relative px-16 sm:px-24 py-96" style={{ backgroundColor: "hsl(215, 100%, 50%)" }}>
+				{screen.xl && (
+					<>
+						<div className="absolute t-full x-0">
+							<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
+							<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+							</svg>
+						</div>
+						<div className="fixed t-0 x-0 -z-1">
+							<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
+							<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+							</svg>
+						</div>
+					</>
+				)}
+				<Header />
 			</div>
-			<div className="pb-32 xl:pb-48">
-				<div className="prose">
-					<p className="text-center">
-						{/* prettier-ignore */}
-						<small>
-							<a href="TODO">Feather</a>{" "}
-							is by <a href="TODO">Cole Bemis</a>{" "}
-							and the new <a href="TODO">feathericons.com</a>{" "}
-							is by <a href="TODO">Zaydek MG</a>.
-							<br />
-							Both are licenesed as <a href="TODO">MIT open source</a>.
-						</small>
-					</p>
+			{/* prettier-ignore */}
+			<InteractiveWrapper>
+				{children}
+			</InteractiveWrapper>
+			{screen.xl && (
+				<div className="py-48">
+					<div className="prose">
+						<p className="text-center">
+							{/* prettier-ignore */}
+							<small>
+								<a href="TODO">Feather</a>{" "}
+								is by <a href="TODO">Cole Bemis</a>{" "}
+								and the new <a href="TODO">feathericons.com</a>{" "}
+								is by <a href="TODO">Zaydek MG</a>.
+								<br />
+								Both are licenesed as <a href="TODO">MIT open source</a>.
+							</small>
+						</p>
+					</div>
 				</div>
-			</div>
+			)}
 		</>
 	)
 }
