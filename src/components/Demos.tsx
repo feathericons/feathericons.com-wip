@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { rem } from "@zaydek/sorcery/dist/runtime"
 
 import {
 	Eye as SVGEye,
@@ -19,8 +20,11 @@ interface DemoWrapperProps {
 
 function DemoVStack({ children }: DemoWrapperProps) {
 	return (
-		<div className="hstack bg-gray-100" style={{ height: `${160 / 16}rem` }}>
-			<div className="vstack">{children}</div>
+		<div className="hstack bg-gray-100" style={{ height: rem(160) }}>
+			{/* prettier-ignore */}
+			<div className="vstack">
+				{children}
+			</div>
 		</div>
 	)
 }
@@ -44,7 +48,7 @@ export function Demo2() {
 	const [show, setShow] = useState(false)
 	return (
 		<DemoVStack>
-			<div className="bg-white rounded-8" style={{ width: `${240 / 16}rem`, boxShadow: "var(--shadow-xs), var(--shadow)" }}>
+			<div className="bg-white rounded-8" style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow)" }}>
 				<div className="hstack align-center s-16 px-16 h-48">
 					<SVGGitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
+import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 // TODO: Add anchors and analytics.
@@ -9,7 +10,7 @@ function HeaderLHS() {
 	const screen = useBreakpoints()
 	return (
 		// @ts-ignore
-		<div className="vstack s-24" style={{ width: !screen.xs && "100%", maxWidth: 32 * 16 /* 512px */ }}>
+		<div className="vstack s-24" style={{ width: !screen.xs && "100%", maxWidth: px(32 * 16) /* 512px */ }}>
 			<div className="hstack">
 				<Link href="/">
 					<a>
@@ -47,7 +48,7 @@ function HeaderLHS() {
 function Sponsor() {
 	return (
 		<div className="vstack s-8">
-			<div className="h-56 bg-cool-gray-100 rounded-full" style={{ width: `${176 / 16}rem` }} />
+			<div className="h-56 bg-cool-gray-100 rounded-full" style={{ width: rem(176) }} />
 			{/* prettier-ignore */}
 			<div className="font-500 text-center text-12 leading-1">
 				Placeholder
@@ -126,7 +127,7 @@ export default function Header() {
 	const screen = useBreakpoints()
 	return (
 		<div className="hstack">
-			<div className="vstack xl:hstack align-center xl:align-end s-48" style={{ width: "100%", maxWidth: 68 * 16 /* 1088px */ }}>
+			<div className="vstack xl:hstack align-center xl:align-end s-48" style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}>
 				<HeaderLHS />
 				{screen.xs && (
 					<>

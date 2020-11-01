@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { IIcon } from "types"
+import { rem } from "@zaydek/sorcery/dist/runtime"
 
 interface SVGProps extends React.ComponentProps<"svg"> {
 	// https://github.com/microsoft/TypeScript/issues/28631#issuecomment-472606019
@@ -38,17 +39,13 @@ interface IconGridProps {
 	children?: React.ReactNode
 }
 
-function rem(value: number) {
-	return value / 16 + "rem"
-}
-
 export function IconGrid({ children }: IconGridProps) {
 	return (
 		<div
 			style={{
 				display: "grid",
-				gridGap: rem(12),
-				gridTemplateColumns: "repeat(auto-fill, minmax(112px, 1fr))",
+				// gridGap: rem(12),
+				gridTemplateColumns: `repeat(auto-fill, minmax(${rem(128)}, 1fr))`,
 			}}
 		>
 			{children}

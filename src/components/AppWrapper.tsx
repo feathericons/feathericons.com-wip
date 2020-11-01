@@ -1,6 +1,7 @@
 import Header from "./Header"
 import React from "react"
 import TopNav from "./TopNav"
+import { px } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 interface InteractiveWrapperProps {
@@ -87,7 +88,7 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 						</div>
 					</div>
 					{screen.md && (
-						<div className="vstack bg-cool-gray-100 xl:rounded-r-24" style={{ width: 20 * 16 /* 320px */ }}>
+						<div className="vstack bg-cool-gray-100 xl:rounded-r-24" style={{ width: px(20 * 16) /* 320px */ }}>
 							<div className="sticky t-0 xl:-mt-24 xl:pt-24">hello</div>
 							<div className="spacer" />
 						</div>
@@ -104,7 +105,7 @@ interface AppWrapperProps {
 
 export default function AppWrapper({ children }: AppWrapperProps) {
 	return (
-		<React.Fragment>
+		<>
 			<div className="absolute t-0 x-0">
 				<div className="px-16 sm:px-24 py-12">
 					<TopNav />
@@ -119,6 +120,6 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 					{children}
 				</InteractiveWrapper>
 			</div>
-		</React.Fragment>
+		</>
 	)
 }

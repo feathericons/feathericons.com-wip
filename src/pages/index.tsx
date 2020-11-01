@@ -5,16 +5,18 @@ import { IconGrid, LinkedIcon } from "components/IconGrid"
 
 export default function Home() {
 	return (
-		<AppWrapper>
-			<IconGrid>
-				{dataset.map(each => (
-					<LinkedIcon key={each.name.kebab} icon={each} />
-				))}
-			</IconGrid>
-			<div className="h-64" />
+		<>
+			<AppWrapper>
+				<IconGrid>
+					{dataset.map(each => (
+						<LinkedIcon key={each.name.kebab} icon={each} />
+					))}
+				</IconGrid>
+				<div className="h-64" />
+			</AppWrapper>
 			<div className="prose">
 				<SmallText />
 			</div>
-		</AppWrapper>
+		</>
 	)
 }
