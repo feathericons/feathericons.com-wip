@@ -1,10 +1,10 @@
 import * as Feather from "react-feather"
 import tags from "data/tags"
-import { Icon } from "types"
+import { IIcon } from "types"
 import { kebabCase } from "lodash"
 
 // TODO: Warning: Text content did not match. Server: "arrow-down" Client: "arrow-down-circle"
-const dataset: Icon[] = Object.keys(Feather).map(each => ({
+const dataset: IIcon[] = Object.keys(Feather).map(each => ({
 	name: {
 		title: each,
 		kebab: kebabCase(each),
@@ -33,7 +33,7 @@ function parseTags(name: string) {
 ;(() => {
 	for (const each of dataset) {
 		const parsed = parseTags(each.name.kebab)
-		;(tags[each.name] || []).forEach(each => {
+		;(tags[each.name.kebab] || []).forEach(each => {
 			parsed.push(...parseTags(each))
 		})
 		// https://stackoverflow.com/a/48647301

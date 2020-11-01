@@ -1,12 +1,15 @@
-import * as Demos from "components/Demos" // TODO: Move to subfolder.
+import * as Demos from "components/Demos" // TODO: Move to submodule?
+import { IconGrid, LinkedIcon } from "components/IconGrid"
 import React from "react"
-import { Icon } from "types"
+import SmallText from "components/SmallText"
+import { IIcon } from "types"
+import dataset from "data/dataset"
 
 interface IconInfoProps {
-	iconInfo: Icon
+	icon: IIcon
 }
 
-export default function IconInfo({ iconInfo }: IconInfoProps) {
+export default function IconInfo({ icon }: IconInfoProps) {
 	return (
 		<div className="vstack s-48">
 			<div className="prose">
@@ -41,9 +44,6 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 					<p>
 						Feather can be used in almost everywhere. <a href="TODO">Click here</a> to see all supported environments.
 					</p>
-					{/* <p>
-						Go further on <a href="TODO">GitHub</a>.
-					</p> */}
 				</React.Fragment>
 
 				{/* <React.Fragment>
@@ -73,7 +73,7 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 					<p>You can always extract this pattern as a CSS class so you don&#39;t need to repeat yourself.</p>
 				</React.Fragment> */}
 
-				<React.Fragment>
+				{/* <React.Fragment>
 					<h2 id="contribute-on-github">
 						<a href="#contribute-on-github">Contribute on GitHub</a>
 					</h2>
@@ -86,16 +86,7 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 							<a href="TODO">Star the new feathericons.com on GitHub</a>
 						</li>
 					</ul>
-					{/* <br />
-					<hr /> */}
-					<p>
-						<small>
-							<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and the new <a href="TODO">feathericons.com</a> is by <a href="TODO">Zaydek MG</a>.
-							<br />
-							Both are licenesed as <a href="TODO">MIT open source</a>.
-						</small>
-					</p>
-				</React.Fragment>
+				</React.Fragment> */}
 			</div>
 
 			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
@@ -104,7 +95,7 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 					<h2 id="demo">
 						<a href="#demo">
 							{/* TODO: `no-macos-retina` */}
-							Demos Using <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{iconInfo.name.title}&gt;</code>
+							Demos Using <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code>
 						</a>
 					</h2>
 				</div>
@@ -119,6 +110,16 @@ export default function IconInfo({ iconInfo }: IconInfoProps) {
 						<Demos.Demo6 />
 					</div>
 				</div>
+			</div>
+
+			<IconGrid>
+				{dataset.slice(0, 6).map(each => (
+					<LinkedIcon icon={each} />
+				))}
+			</IconGrid>
+
+			<div className="prose">
+				<SmallText />
 			</div>
 		</div>
 	)

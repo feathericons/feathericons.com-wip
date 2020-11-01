@@ -13,7 +13,7 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 		<div className="hstack s-0">
 			<div className="w-full !max-w-xl" style={{ maxWidth: 1344 }}>
 				{/* NOTE: Do not use a stack because of sticky. */}
-				{screen.xs && (
+				{screen.xl && (
 					<div className="sticky t-0 -mt-24">
 						<div className="h-24 bg-red-100" />
 					</div>

@@ -1,11 +1,11 @@
 import Feather from "react-feather"
 import React from "react"
 
-export interface Tags {
+export interface ITags {
 	[key: string]: string[]
 }
 
-export interface Icon {
+export interface IIcon {
 	name: {
 		title: string
 		kebab: string

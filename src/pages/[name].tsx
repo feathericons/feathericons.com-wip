@@ -10,7 +10,7 @@ interface IconPageProps {
 export default function IconPage({ name }: IconPageProps) {
 	return (
 		<AppWrapper>
-			<IconInfo iconInfo={dataset.find(each => each.name.kebab === name)!} />
+			<IconInfo icon={dataset.find(each => each.name.kebab === name)!} />
 		</AppWrapper>
 	)
 }

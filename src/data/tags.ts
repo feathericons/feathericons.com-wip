@@ -1,7 +1,7 @@
-import { Tags } from "types"
+import { ITags } from "types"
 
 // https://github.com/feathericons/feather/blob/master/src/tags.json
-const tags: Tags = {
+const tags: ITags = {
 	activity: ["pulse", "health", "action", "motion"],
 	airplay: ["stream", "cast", "mirroring"],
 	"alert-circle": ["warning", "alert", "danger"],
