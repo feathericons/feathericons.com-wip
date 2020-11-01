@@ -1,7 +1,6 @@
-// prettier-ignore
 {
 	"compilerOptions": {
-		"baseUrl": "./src", // Added
+		"baseUrl": "./src",
 
 		"target": "es5",
 		"lib": [
@@ -24,7 +23,7 @@
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
-		"**/*.tsx"
+		"**/*.tsx", "src/components/IconInfo.js"
 	],
 	"exclude": [
 		"node_modules"
