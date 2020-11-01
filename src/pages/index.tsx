@@ -1,9 +1,15 @@
 import AppWrapper from "components/AppWrapper"
 import dataset from "data/dataset"
 import SmallText from "components/SmallText"
+// import SorceryRuntime from "@zaydek/sorcery/dist/runtime"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
+// import { useEffect } from "react"
 
 export default function Home() {
+	// useEffect(() => {
+	// 	SorceryRuntime.init()
+	// }, [])
+
 	return (
 		<AppWrapper>
 			<IconGrid>

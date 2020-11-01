@@ -1,7 +1,9 @@
 import AppWrapper from "components/AppWrapper"
 import dataset from "data/dataset"
 import IconInfo from "components/IconInfo"
+// import SorceryRuntime from "@zaydek/sorcery/dist/runtime"
 import { GetStaticPropsContext } from "next"
+// import { useEffect } from "react"
 
 interface IconPageProps {
 	name: string
