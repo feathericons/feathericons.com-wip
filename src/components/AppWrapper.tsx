@@ -112,7 +112,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 					<TopNav />
 				</div>
 			</div>
-			<div className="vstack s-96 pt-96 xl:pb-48">
+			<div className="vstack s-96 pt-96 pb-32 xl:pb-48">
 				<div className="px-16 sm:px-24">
 					<Header />
 				</div>
@@ -120,6 +120,21 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 				<InteractiveWrapper>
 					{children}
 				</InteractiveWrapper>
+			</div>
+			<div className="pb-32 xl:pb-48">
+				<div className="prose">
+					<p className="text-center">
+						{/* prettier-ignore */}
+						<small>
+							<a href="TODO">Feather</a>{" "}
+							is by <a href="TODO">Cole Bemis</a>{" "}
+							and the new <a href="TODO">feathericons.com</a>{" "}
+							is by <a href="TODO">Zaydek MG</a>.
+							<br />
+							Both are licenesed as <a href="TODO">MIT open source</a>.
+						</small>
+					</p>
+				</div>
 			</div>
 		</>
 	)
