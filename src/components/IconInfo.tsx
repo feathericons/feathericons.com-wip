@@ -1,16 +1,34 @@
 import * as Demos from "components/Demos"
 import dataset from "data/dataset"
 import React from "react"
+import { GitHub as SVGGitHub } from "react-feather"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
+import { rem } from "@zaydek/sorcery/dist/runtime"
 
 interface IconInfoProps {
 	icon: IIcon
 }
 
+// TODO: Use `stack-center` not `align-center`?
 export default function IconInfo({ icon }: IconInfoProps) {
 	return (
-		<div className="vstack s-48">
+		<div className="vstack space-96">
+			<div className="vstack space-24">
+				<div className="prose">
+					<h2 id="get-started">
+						<a href="#get-started">
+							The <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code> Icon
+						</a>
+					</h2>
+				</div>
+				<div className="hstack bg-gray-100" style={{ height: rem(320) }}>
+					<div className="vstack">
+						<SVGGitHub className="w-48 h-48" />
+					</div>
+				</div>
+			</div>
+
 			<div className="prose">
 				<h2 id="get-started">
 					<a href="#get-started">Get Started</a>
@@ -87,16 +105,16 @@ export default function IconInfo({ icon }: IconInfoProps) {
 			</div>
 
 			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
-			<div className="vstack s-20">
+			{/* TODO: Add grid-cols-256? */}
+			{/* TODO: `no-macos-retina` */}
+			{/* <div className="vstack space-24">
 				<div className="prose">
 					<h2 id="demo">
 						<a href="#demo">
-							{/* TODO: `no-macos-retina` */}
 							Demos Using <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code>
 						</a>
 					</h2>
 				</div>
-				{/* TODO: Add grid-cols-256? */}
 				<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
 					<Demos.Demo1 />
 					<Demos.Demo2 />
@@ -105,9 +123,9 @@ export default function IconInfo({ icon }: IconInfoProps) {
 					<Demos.Demo5 />
 					<Demos.Demo6 />
 				</div>
-			</div>
+			</div> */}
 
-			<div className="vstack s-20">
+			<div className="vstack space-24">
 				<div className="prose">
 					<h2 id="related">
 						<a href="#related">

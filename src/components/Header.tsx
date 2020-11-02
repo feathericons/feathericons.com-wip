@@ -10,7 +10,7 @@ function HeaderLHS() {
 	const screen = useBreakpoints()
 	return (
 		// @ts-ignore
-		<div className="vstack s-24" style={{ width: !screen.xs && "100%", maxWidth: px(32 * 16) /* 512px */ }}>
+		<div className="vstack space-24" style={{ width: !screen.xs && "100%", maxWidth: px(32 * 16) /* 512px */ }}>
 			<div className="hstack">
 				<Link href="/">
 					<a>
@@ -18,16 +18,16 @@ function HeaderLHS() {
 					</a>
 				</Link>
 			</div>
-			<div className="vstack s-12">
-				<div className="text-center font-500 text-36 leading-1">
+			<div className="vstack space-12">
+				<div className="text-center font-500 text-32 leading-1 text-white">
 					Open source icons
 				</div>
-				<div className="text-center font-500 text-17 leading-1.25">
+				<div className="text-center font-500 text-17 leading-1.25 text-white">
 					Created by <span className="font-700 hover:underline">@colebemis</span> and{" "}
 					<span className="font-700 hover:underline">@username_ZAYDEK</span>
 				</div>
 			</div>
-			<div className="vstack xs:hstack s-12">
+			<div className="vstack xs:hstack space-12">
 				<div className="hstack align-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
 					<SVGGitHub className="w-20 h-20" strokeWidth={2.25} />
 					<div className="font-500 text-17 leading-1">
@@ -47,7 +47,7 @@ function HeaderLHS() {
 
 function Sponsor() {
 	return (
-		<div className="vstack s-8">
+		<div className="vstack space-8">
 			<div className="h-56 bg-cool-gray-100 rounded-full" style={{ width: rem(176) }} />
 			{/* prettier-ignore */}
 			<div className="font-500 text-center text-12 leading-1">
@@ -111,8 +111,8 @@ function Sponsors() {
 // TODO: Add anchors and analytics.
 function HeaderRHS() {
 	return (
-		<div className="vstack s-24 xl:max-w-xs">
-			<div className="hstack s-8 font-700 text-11 leading-1">
+		<div className="vstack space-24 xl:max-w-xs">
+			<div className="hstack space-8 font-700 text-11 leading-1">
 				<div>CHECK OUT OUR SPONSORS</div>
 				<div>·</div>
 				<div>BECOME A SPONSOR</div>
@@ -127,7 +127,7 @@ export default function Header() {
 	const screen = useBreakpoints()
 	return (
 		<div className="hstack">
-			<div className="vstack xl:hstack align-center xl:align-end s-48" style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}>
+			<div className="vstack xl:hstack align-center xl:align-end space-48" style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}>
 				<HeaderLHS />
 				{screen.xs && (
 					<>

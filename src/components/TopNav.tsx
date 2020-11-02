@@ -10,14 +10,14 @@ export default function TopNav() {
 			<div className="hstack">
 				{/* LHS */}
 				<a className="hover:underline">
-					<div className="hstack align-center s-8">
+					<div className="hstack align-center space-8">
 						<SVGTwitter style={{ width: "1.25em", height: "1.25em" }} fill="currentColor" strokeWidth={0} />
 						<span>Tweet thank you!</span>
 					</div>
 				</a>
 				{/* RHS */}
 				<div className="spacer" />
-				<div className="hstack align-center s-8">
+				<div className="hstack align-center space-8">
 					<a className="hover:underline">MIT-license</a>
 					<span>&middot;</span>
 					<a className="hover:underline">v4.28</a>

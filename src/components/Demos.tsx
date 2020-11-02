@@ -34,7 +34,7 @@ function DemoVStack({ children }: DemoWrapperProps) {
 export function Demo1() {
 	return (
 		<DemoVStack>
-			<div className="hstack align-center s-20">
+			<div className="hstack align-center space-20">
 				<SVGGitHub className="text-gray-800" style={{ width: 16, height: 16 }} />
 				<SVGGitHub className="text-gray-800" style={{ width: 24, height: 24 }} />
 				<SVGGitHub className="text-gray-800" style={{ width: 36, height: 36 }} />
@@ -49,7 +49,7 @@ export function Demo2() {
 	return (
 		<DemoVStack>
 			<div className="bg-white rounded-8" style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow)" }}>
-				<div className="hstack align-center s-16 px-16 h-48">
+				<div className="hstack align-center space-16 px-16 h-48">
 					<SVGGitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
 					<div className="spacer vstack h-full overflow-x-scroll">
@@ -57,7 +57,7 @@ export function Demo2() {
 					</div>
 				</div>
 				<div className="h-1 bg-gray-100" />
-				<div className="hstack align-center s-16 px-16 h-48">
+				<div className="hstack align-center space-16 px-16 h-48">
 					<SVGLock className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
 					<div className="spacer vstack h-full overflow-x-scroll">
@@ -87,7 +87,7 @@ export function Demo2() {
 export function Demo3() {
 	return (
 		<DemoVStack>
-			<div className="hstack align-center s-8 px-20 py-14 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
+			<div className="hstack align-center space-8 px-20 py-14 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
 				<SVGGitHub className="w-20 h-20 text-white" />
 				<div className="font-500 text-17 leading-1 text-white">Follow on Twitter!</div>
 			</div>
@@ -102,20 +102,20 @@ export function Demo4() {
 export function Demo5() {
 	return (
 		<DemoVStack>
-			<div className="hstack s-20">
-				<div className="hstack align-center s-8">
+			<div className="hstack space-20">
+				<div className="hstack align-center space-8">
 					<SVGHeart className="w-17 h-17 text-gray-800" />
 					<div className="text-15 leading-1">31</div>
 				</div>
-				<div className="hstack s-8">
+				<div className="hstack space-8">
 					<SVGSend className="w-17 h-17 text-gray-800" />
 					<div className="text-15 leading-1">41</div>
 				</div>
-				<div className="hstack s-8">
+				<div className="hstack space-8">
 					<SVGMessageCircle className="w-17 h-17 text-gray-800" />
 					<div className="text-15 leading-1">59</div>
 				</div>
-				<div className="hstack s-8">
+				<div className="hstack space-8">
 					<SVGGitHub className="w-17 h-17 text-gray-800" />
 				</div>
 			</div>
@@ -127,7 +127,7 @@ export function Demo5() {
 export function Demo6() {
 	return (
 		<DemoVStack>
-			<div className="hstack s-24">
+			<div className="hstack space-24">
 				<SVGGitHub className="w-20 h-20 text-gray-800" />
 				<SVGInstagram className="w-20 h-20 text-gray-800" />
 				<SVGMail className="w-20 h-20 text-gray-800" />
