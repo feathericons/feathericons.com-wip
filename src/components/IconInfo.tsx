@@ -1,27 +1,31 @@
 import * as Demos from "components/Demos"
 import dataset from "data/dataset"
-import React from "react"
+import Prose from "components/Prose"
 import { GitHub as SVGGitHub } from "react-feather"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
 import { rem } from "@zaydek/sorcery/dist/runtime"
+// import IconInfoTitle from "components/IconInfoTitle.mdx"
 
 interface IconInfoProps {
 	icon: IIcon
 }
 
+// console.log(IconInfoTitle)
+
 // TODO: Use `stack-center` not `align-center`?
 export default function IconInfo({ icon }: IconInfoProps) {
 	return (
-		<div className="vstack space-96">
+		<div className="vstack space-64">
 			<div className="vstack space-24">
-				<div className="prose">
+				{/* <IconInfoTitle icon={icon} /> */}
+				<Prose>
 					<h2 id="get-started">
 						<a href="#get-started">
 							The <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code> Icon
 						</a>
 					</h2>
-				</div>
+				</Prose>
 				<div className="hstack bg-gray-100" style={{ height: rem(320) }}>
 					<div className="vstack">
 						<SVGGitHub className="w-48 h-48" />
@@ -29,7 +33,7 @@ export default function IconInfo({ icon }: IconInfoProps) {
 				</div>
 			</div>
 
-			<div className="prose">
+			<Prose>
 				<h2 id="get-started">
 					<a href="#get-started">Get Started</a>
 				</h2>
@@ -61,7 +65,7 @@ export default function IconInfo({ icon }: IconInfoProps) {
 					Feather can be used in almost everywhere. <a href="TODO">Click here</a> to see all supported environments.
 				</p>
 
-				{/* <>
+				<>
 					<h2 id="using-classes">
 						<a href="#using-classes">Using Classes</a>
 					</h2>
@@ -74,9 +78,9 @@ export default function IconInfo({ icon }: IconInfoProps) {
 						If you use <a href="TODO">Tailwind CSS</a>, you can add <code>class=&quot;w-6 h-6&quot;</code> for <code>24px</code> or{" "}
 						<code>class=&quot;w-8 h-8&quot;</code> for <code>32px</code>.
 					</p>
-				</> */}
+				</>
 
-				{/* <>
+				<>
 					<h2 id="using-inline-styles">
 						<a href="#using-inline-styles">Using Inline Styles</a>
 					</h2>
@@ -86,35 +90,36 @@ export default function IconInfo({ icon }: IconInfoProps) {
 						<code>font-size</code> is <code>32px</code>, your icon will also appear as <code>32px</code>.
 					</p>
 					<p>You can always extract this pattern as a CSS class so you don&#39;t need to repeat yourself.</p>
-				</> */}
+				</>
 
-				{/* <>
+				<>
 					<h2 id="contribute-on-github">
 						<a href="#contribute-on-github">Contribute on GitHub</a>
 					</h2>
-					<p>You are more than welcome to submit a pull request to enhance the docs, add translations, and contribute examples.</p>
-					<ul>
-						<li>
-							<a href="TODO">Star Feather on GitHub</a>
-						</li>
-						<li>
-							<a href="TODO">Star the new feathericons.com on GitHub</a>
-						</li>
-					</ul>
-				</> */}
-			</div>
+					<p>You are welcome to submit a pull request to enhance the docs, add translations, and contribute examples.</p>
+					<p>
+						<small>
+							<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and <a href="TODO">feathericons.com</a> by <a href="TODO">Zaydek</a>.
+							<br />
+							Licensed as <a href="TODO">MIT</a>. You can use the icons personally and commerically without attribution.
+							<br />
+							Built using <a href="TODO">Sorcery 🔮</a> and <a href="TODO">Prose 🧐</a>.
+						</small>
+					</p>
+				</>
+			</Prose>
 
 			{/* TODO: https://github.com/zaydek/sorcery/issues/47 */}
 			{/* TODO: Add grid-cols-256? */}
 			{/* TODO: `no-macos-retina` */}
-			{/* <div className="vstack space-24">
-				<div className="prose">
+			<div className="vstack space-24">
+				<Prose>
 					<h2 id="demo">
 						<a href="#demo">
 							Demos Using <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code>
 						</a>
 					</h2>
-				</div>
+				</Prose>
 				<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
 					<Demos.Demo1 />
 					<Demos.Demo2 />
@@ -123,20 +128,20 @@ export default function IconInfo({ icon }: IconInfoProps) {
 					<Demos.Demo5 />
 					<Demos.Demo6 />
 				</div>
-			</div> */}
+			</div>
 
 			<div className="vstack space-24">
-				<div className="prose">
+				<Prose>
 					<h2 id="related">
 						<a href="#related">
 							{/* TODO: `no-macos-retina` */}
 							Related to <code style={{ WebkitFontSmoothing: "antialiased" }}>&lt;{icon.name.title}&gt;</code>
 						</a>
 					</h2>
-				</div>
+				</Prose>
 				<IconGrid>
 					{dataset.slice(0, 6).map(each => (
-						<LinkedIcon icon={each} />
+						<LinkedIcon key={each.name.kebab} icon={each} />
 					))}
 				</IconGrid>
 			</div>

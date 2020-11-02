@@ -1,5 +1,4 @@
 import Feather from "react-feather"
-import React from "react"
 
 export interface ITags {
 	[key: string]: string[]

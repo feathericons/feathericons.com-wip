@@ -1,5 +1,5 @@
 import Header from "./Header"
-import React from "react"
+import Prose from "components/Prose"
 import TopNav from "./TopNav"
 import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
@@ -73,6 +73,7 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 	return (
 		// TODO: Add `transform-z`.
 		<div className="hstack" style={{ transform: "translateZ(0)" }}>
+			{/* <div className="w-full max-w-xl z-10"></div> */}
 			<div className="z-10" style={{ width: "100%", maxWidth: px(1344) }}>
 				{screen.xl && <StickyObscureEffect />}
 				<div className="hstack bg-white xl:rounded-24" style={{ boxShadow: "var(--shadow-xs), var(--shadow-md)" }}>
@@ -158,17 +159,15 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 			</InteractiveWrapper>
 			{screen.xl && (
 				<div className="pt-32 pb-48">
-					<div className="prose">
+					<Prose>
 						<p className="text-center">
 							<small>
-								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and the new <a href="TODO">feathericons.com</a> is by{" "}
-								<a href="TODO">Zaydek MG</a>
+								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and <a href="TODO">feathericons.com</a> by <a href="TODO">Zaydek</a>
 								<br />
-								{/* Both are licenesed as <a href="TODO">MIT open source</a><br /> */}
-								Built using <a href="TODO">Sorcery SCSS 🔮</a>
+								Built using <a href="TODO">Sorcery 🔮</a> and <a href="TODO">Prose 🧐</a>
 							</small>
 						</p>
-					</div>
+					</Prose>
 				</div>
 			)}
 		</>
