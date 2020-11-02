@@ -3,6 +3,8 @@ import tags from "data/tags"
 import { IIcon } from "types"
 import { kebabCase } from "lodash"
 
+// TODO: Check `GitHub` vs. `Github`.
+
 // NOTE: FOR THE LOVE OF GOD KEYS MUST BE SORTED. DO NOT REMOVE SORT.
 const dataset: IIcon[] = Object.keys(Feather)
 	.sort()

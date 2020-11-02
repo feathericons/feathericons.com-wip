@@ -1,4 +1,5 @@
 import Link from "next/link"
+import SVGEmbossedFeather from "components/SVGEmbossedFeather"
 import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
 import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
@@ -14,7 +15,8 @@ function HeaderLHS() {
 			<div className="hstack">
 				<Link href="/">
 					<a>
-						<div className="w-64 h-64 bg-cool-gray-100 rounded-full" />
+						{/* <div className="w-64 h-64 bg-cool-gray-100 rounded-full" /> */}
+						<SVGEmbossedFeather className="w-56 h-56 text-white" />
 					</a>
 				</Link>
 			</div>

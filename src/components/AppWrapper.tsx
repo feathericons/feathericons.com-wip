@@ -131,41 +131,41 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 				</div>
 			</div>
 			{/* TODO: Extract to `<Header>`. */}
-			<div className="relative px-16 sm:px-24 py-96" style={{ backgroundColor: "hsl(215, 100%, 50%)" }}>
-				{screen.xl && (
-					<>
-						<div className="absolute t-full x-0">
-							<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
-							<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
-							</svg>
-						</div>
-						<div className="fixed t-0 x-0 -z-1">
-							<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
-							<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
-								<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
-							</svg>
-						</div>
-					</>
-				)}
-				<Header />
+			<div className="relative">
+				<div className="px-16 sm:px-24 py-96" style={{ backgroundColor: "hsl(215, 100%, 50%)" }}>
+					{screen.xl && (
+						<>
+							<div className="absolute t-full x-0">
+								<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
+								<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+								</svg>
+							</div>
+							<div className="fixed t-0 x-0 -z-1">
+								<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
+								<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
+								</svg>
+							</div>
+						</>
+					)}
+					<Header />
+				</div>
 			</div>
 			{/* prettier-ignore */}
 			<InteractiveWrapper>
 				{children}
 			</InteractiveWrapper>
 			{screen.xl && (
-				<div className="py-48">
+				<div className="pt-32 pb-48">
 					<div className="prose">
 						<p className="text-center">
-							{/* prettier-ignore */}
 							<small>
-								<a href="TODO">Feather</a>{" "}
-								is by <a href="TODO">Cole Bemis</a>{" "}
-								and the new <a href="TODO">feathericons.com</a>{" "}
-								is by <a href="TODO">Zaydek MG</a>.
+								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and the new <a href="TODO">feathericons.com</a> is by{" "}
+								<a href="TODO">Zaydek MG</a>
 								<br />
-								Both are licenesed as <a href="TODO">MIT open source</a>.
+								{/* Both are licenesed as <a href="TODO">MIT open source</a><br /> */}
+								Built using <a href="TODO">Sorcery SCSS 🔮</a>
 							</small>
 						</p>
 					</div>

@@ -1,6 +1,6 @@
 import { Twitter as SVGTwitter } from "react-feather"
 
-// TODO: Add `--spacing: 0.25em`?
+// TODO: Add `--space: 0.25em`?
 // TODO: Add `... w-1em w-1.1em w-1.15em w-1.2em w-1.25em`
 
 // TODO: Add analytic events.
