@@ -129,7 +129,10 @@ export default function Header() {
 	const screen = useBreakpoints()
 	return (
 		<div className="hstack">
-			<div className="vstack xl:hstack align-center xl:align-end space-48" style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}>
+			<div
+				className="vstack xl:hstack align-center xl:align-end space-48"
+				style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}
+			>
 				<HeaderLHS />
 				{screen.xs && (
 					<>

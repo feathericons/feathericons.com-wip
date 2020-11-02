@@ -1,4 +1,3 @@
-import { MDXProvider } from "@mdx-js/react"
 import { Sorcery as SorceryCSS } from "@zaydek/sorcery/dist/runtime"
 import { useEffect } from "react"
 
@@ -11,10 +10,5 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		SorceryCSS.init()
 	}, [])
-	return (
-		// @ts-ignore
-		<MDXProvider>
-			<Component {...pageProps} />
-		</MDXProvider>
-	)
+	return <Component {...pageProps} />
 }

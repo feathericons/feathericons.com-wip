@@ -138,13 +138,23 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 						<>
 							<div className="absolute t-full x-0">
 								<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
-								<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+								<svg
+									style={{ color: "hsl(215, 100%, 50%)" }}
+									fill="currentColor"
+									viewBox="0 0 32 1"
+									xmlns="http://www.w3.org/2000/svg"
+								>
 									<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 								</svg>
 							</div>
 							<div className="fixed t-0 x-0 -z-1">
 								<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
-								<svg style={{ color: "hsl(215, 100%, 50%)" }} fill="currentColor" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+								<svg
+									style={{ color: "hsl(215, 100%, 50%)" }}
+									fill="currentColor"
+									viewBox="0 0 32 1"
+									xmlns="http://www.w3.org/2000/svg"
+								>
 									<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 								</svg>
 							</div>
@@ -162,7 +172,8 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 					<Prose>
 						<p className="text-center">
 							<small>
-								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and <a href="TODO">feathericons.com</a> by <a href="TODO">Zaydek</a>
+								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and <a href="TODO">feathericons.com</a>{" "}
+								by <a href="TODO">Zaydek</a>
 								<br />
 								Built using <a href="TODO">Sorcery 🔮</a> and <a href="TODO">Prose 🧐</a>
 							</small>
