@@ -1,3 +1,7 @@
+# The <code><Icon></code> Icon
+
+<BentoBox />
+
 ## Get Started
 
 [Feather]() is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an
@@ -46,3 +50,13 @@ You are welcome to submit a pull request to enhance the docs, add translations, 
 		Built using [Sorcery 🔮]() and [Prose 🧐]().
 	</small>
 </p>
+
+## Demos Using <code><Icon></code>
+
+<div>
+	<Demos />
+</div>
+
+## Recommended for <code><Icon></code>
+
+<Recommended />

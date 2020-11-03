@@ -1,7 +1,7 @@
 import Markdown from "markdown-to-jsx"
 import Prose from "components/Prose"
 import React from "react"
-import { reduceEachLeadingCommentRange } from "typescript"
+import Overrides from "markdown-to-jsx"
 
 // import remarkGFM from "remark-gfm"
 // import remarkParse from "remark-parse"
@@ -44,73 +44,72 @@ function detab(str: string) {
 }
 
 interface ProseMarkdownProps {
-	components?: { [key: string]: React.ReactComponentElement<any> | string }
 	markdown?: string
+	components?: typeof Overrides
 	children?: string
 }
 
-enum HeaderTags {
-	h1 = "h1",
-	h2 = "h2",
-	h3 = "h3",
-	h4 = "h4",
-	h5 = "h5",
-	h6 = "h6",
-}
-
-// NOTE: Uses `h1` as a placeholder.
-interface AnchorHeaderProps extends React.ComponentProps<"h1"> {
-	tag: HeaderTags
-	id: string
-	children?: React.ReactNode
-}
-
-function AnchorHeader({ tag, id, children, ...props }: AnchorHeaderProps) {
-	return React.createElement(
-		tag,
-		{
-			id,
-			...props,
-		},
-		<a href={"#" + id}>{children}</a>,
-	)
-}
+// enum HeaderTags {
+// 	h1 = "h1",
+// 	h2 = "h2",
+// 	h3 = "h3",
+// 	h4 = "h4",
+// 	h5 = "h5",
+// 	h6 = "h6",
+// }
+//
+// // NOTE: Uses `h1` as a placeholder.
+// interface AnchorHeaderProps extends React.ComponentProps<"h1"> {
+// 	tag: HeaderTags
+// 	id: string
+// 	children?: React.ReactNode
+// }
+//
+// function AnchorHeader({ tag, id, children, ...props }: AnchorHeaderProps) {
+// 	return React.createElement(
+// 		tag,
+// 		{
+// 			id,
+// 			...props,
+// 		},
+// 		<a href={"#" + id}>{children}</a>,
+// 	)
+// }
+//
+// // TODO https://github.com/zaydek/lib/issues/4
+// overrides: {
+// 	h1: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h1" },
+// 	},
+// 	h2: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h2" },
+// 	},
+// 	h3: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h3" },
+// 	},
+// 	h4: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h4" },
+// 	},
+// 	h5: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h5" },
+// 	},
+// 	h6: {
+// 		component: AnchorHeader,
+// 		props: { tag: "h6" },
+// 	},
+// },
 
 export default function ProseMarkdown({ markdown, components, children }: ProseMarkdownProps) {
 	const detabbed = detab(markdown || children || "")
 	return (
 		<Prose>
-			<Markdown
-				options={{
-					// TODO https://github.com/zaydek/lib/issues/4
-					overrides: {
-						h1: {
-							component: AnchorHeader,
-							props: { tag: "h1" },
-						},
-						h2: {
-							component: AnchorHeader,
-							props: { tag: "h2" },
-						},
-						h3: {
-							component: AnchorHeader,
-							props: { tag: "h3" },
-						},
-						h4: {
-							component: AnchorHeader,
-							props: { tag: "h4" },
-						},
-						h5: {
-							component: AnchorHeader,
-							props: { tag: "h5" },
-						},
-						h6: {
-							component: AnchorHeader,
-							props: { tag: "h6" },
-						},
-					},
-				}}
-			>
+			{/* prettier-ignore */}
+			<Markdown options={{ overrides: components } as any /* FIXME */}>
 				{detabbed}
 			</Markdown>
 		</Prose>

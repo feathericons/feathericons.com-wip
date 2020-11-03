@@ -1,7 +1,7 @@
 // TODO: https://github.com/zaydek/sorcery/issues/54
 
 // TODO: Can add an enum for "16:9" etc.
-interface AspectRatioProps extends React.ComponentProps<"svg"> {
+export interface AspectRatioProps extends React.ComponentProps<"svg"> {
 	aspectRatio: number
 	children?: React.ReactNode
 }
