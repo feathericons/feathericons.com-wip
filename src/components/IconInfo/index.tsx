@@ -1,13 +1,11 @@
 import dataset from "data/dataset"
-import ProseMarkdown from "components/ProseMarkdown"
+import Markdown from "./icon-docs.md"
 import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "components/Demos"
 import { GitHub as SVGGitHub } from "react-feather"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
 import { rem } from "@zaydek/sorcery/dist/runtime"
-
-// @ts-ignore
-import markdown from "./IconInfoMarkdown.md"
+import { MDXProvider } from "@mdx-js/react"
 
 interface IconInfoProps {
 	icon: IIcon
@@ -54,17 +52,19 @@ function Recommended() {
 
 // TODO: Use `stack-center` not `align-center`?
 export default function IconInfo({ icon }: IconInfoProps) {
+	console.log(Markdown)
 	return (
-		<ProseMarkdown
-			allowDangerousHtml
-			components={{
-				Icon: { component: Icon, props: { icon } },
-				BentoBox,
-				Demos,
-				Recommended,
-			}}
-		>
-			{markdown}
-		</ProseMarkdown>
+		<div className="prose">
+			<MDXProvider
+				components={{
+					IconName: () => icon.name.kebab, // `<i data-feather=${icon.name.kebab}></i>`,
+					BentoBox,
+					Demos,
+					Recommended,
+				}}
+			>
+				<Markdown />
+			</MDXProvider>
+		</div>
 	)
 }

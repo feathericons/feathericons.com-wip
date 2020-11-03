@@ -1,4 +1,4 @@
-# The <code><Icon></code> Icon
+# The <code><IconName /></code> Icon
 
 <BentoBox />
 
@@ -44,19 +44,22 @@ You can always extract this pattern as a CSS class so you don't need to repeat y
 You are welcome to submit a pull request to enhance the docs, add translations, and contribute examples.
 
 <p>
-	<small>
-		[Feather]() is by [Cole Bemis]() and [feathericons.com]() by [Zaydek]().<br>
-		Licensed as [MIT](). You can use the icons personally and commerically without attribution.<br>
-		Built using [Sorcery 🔮]() and [Prose 🧐]().
-	</small>
+<small>
+
+<!-- prettier-ignore -->
+[Feather]() is by [Cole Bemis]() and [feathericons.com]() by [Zaydek]().<br />
+Licensed as [MIT](). You can use the icons personally and commerically without attribution.<br />
+Built using [Sorcery 🔮]() and [Prose 🧐]().
+
+</small>
 </p>
 
-## Demos Using <code><Icon></code>
+## Demos Using <code><IconName /></code>
 
 <div>
 	<Demos />
 </div>
 
-## Recommended for <code><Icon></code>
+## Recommended for <code><IconName /></code>
 
 <Recommended />

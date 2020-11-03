@@ -1,4 +1,4 @@
-import AspectRatio from "components/AspectRatio"
+import AspectRatio from "components/TODO/AspectRatio"
 import Link from "next/link"
 import { IIcon } from "types"
 import { rem } from "@zaydek/sorcery/dist/runtime"

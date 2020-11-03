@@ -1,5 +1,5 @@
 import Header from "./Header"
-import Prose from "components/Prose"
+import Prose from "components/TODO/Prose"
 import TopNav from "./TopNav"
 import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"

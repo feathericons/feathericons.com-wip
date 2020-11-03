@@ -1,5 +1,5 @@
-import gfm from "remark-gfm"
-import ReactMarkdown from "react-markdown"
+import React from "react"
+import { MDXProvider } from "@mdx-js/react"
 
 // Ex:
 //
@@ -36,14 +36,11 @@ function detab(str: string) {
 	return str2
 }
 
-interface ProseMarkdown2Props {
+interface ProseMarkdownProps {
 	children?: string
 }
 
-export default function Prose2({ children }: ProseMarkdown2Props) {
-	return (
-		<ReactMarkdown plugins={[gfm]} allowDangerousHtml>
-			{detab(children || "")}
-		</ReactMarkdown>
-	)
+// TODO: Add `components`.
+export default function ProseMarkdown({ children }: ProseMarkdownProps) {
+	return <MDXProvider>{children}</MDXProvider>
 }
