@@ -4,19 +4,10 @@ import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "components/Demos"
 import { GitHub as SVGGitHub } from "react-feather"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
-import { rem } from "@zaydek/sorcery/dist/runtime"
 import { MDXProvider } from "@mdx-js/react"
+import { rem } from "@zaydek/sorcery/dist/runtime"
 
-interface IconInfoProps {
-	icon: IIcon
-}
-
-// TODO: https://github.com/zaydek/sorcery/issues/47
-
-function Icon({ icon }: { icon: IIcon }) {
-	return <>&lt;{icon.name.kebab}&gt;</>
-}
-
+// TODO
 function BentoBox() {
 	return (
 		<div className="hstack bg-gray-100" style={{ height: rem(320) }}>
@@ -50,9 +41,12 @@ function Recommended() {
 	)
 }
 
+interface IconInfoProps extends React.ComponentProps<"div"> {
+	icon: IIcon
+}
+
 // TODO: Use `stack-center` not `align-center`?
 export default function IconInfo({ icon }: IconInfoProps) {
-	console.log(Markdown)
 	return (
 		<div className="prose">
 			<MDXProvider
