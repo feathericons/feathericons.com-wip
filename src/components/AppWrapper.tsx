@@ -1,5 +1,4 @@
 import Header from "./Header"
-import Prose from "components/TODO/Prose"
 import TopNav from "./TopNav"
 import { px, rem } from "@zaydek/sorcery/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
@@ -169,7 +168,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 			</InteractiveWrapper>
 			{screen.xl && (
 				<div className="pt-32 pb-48">
-					<Prose>
+					<div className="prose">
 						<p className="text-center">
 							<small>
 								<a href="TODO">Feather</a> is by <a href="TODO">Cole Bemis</a> and <a href="TODO">feathericons.com</a>{" "}
@@ -178,7 +177,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 								Built using <a href="TODO">Sorcery 🔮</a> and <a href="TODO">Prose 🧐</a>
 							</small>
 						</p>
-					</Prose>
+					</div>
 				</div>
 			)}
 		</>

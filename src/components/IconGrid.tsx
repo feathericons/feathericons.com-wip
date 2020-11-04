@@ -1,5 +1,5 @@
-import AspectRatio from "components/TODO/AspectRatio"
 import Link from "next/link"
+import { AspectRatio } from "@zaydek/sorcery/dist/runtime"
 import { IIcon } from "types"
 import { rem } from "@zaydek/sorcery/dist/runtime"
 

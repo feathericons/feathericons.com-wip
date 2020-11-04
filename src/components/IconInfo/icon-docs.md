@@ -60,6 +60,6 @@ Built using [Sorcery 🔮]() and [Prose 🧐]().
 	<Demos />
 </div>
 
-## Recommended for <code><IconName /></code>
+## Recommended for Use with <code><IconName /></code>
 
 <Recommended />

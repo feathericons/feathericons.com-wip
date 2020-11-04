@@ -2,7 +2,7 @@ import { Sorcery as SorceryCSS } from "@zaydek/sorcery/dist/runtime"
 import { useEffect } from "react"
 
 import "@zaydek/sorcery/dist/index.css"
-import "@zaydek/prose"
+import "@zaydek/prose/dist/index.css"
 
 import type { AppProps } from "next/app"
 
