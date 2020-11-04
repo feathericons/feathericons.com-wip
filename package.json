@@ -1,28 +1,24 @@
 {
-	"name": "feathericons.dev",
+	"name": "feathericons.com",
+	"license": "MIT",
 	"scripts": {
-		"tw-dev": "tailwind build -o src/stylesheets/tailwind/out.css",
-		"tw-build": "NODE_ENV=production yarn tw-dev",
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"out": "rm -rf .next && yarn tw-build && yarn build && yarn next export && osascript -e 'display notification \"Production build ready\" with title \"yarn compile\"' && yarn tw-dev && osascript -e 'display notification \"Development build ready\" with title \"yarn tw-dev\"'"
+		"start": "next dev",
+		"build": "next build && next export && osascript -e 'display notification \"Production build ready\" with title \"yarn prod\"'"
 	},
 	"dependencies": {
-		"downloadjs": "^1.4.7",
-		"feather-icons": "^4.28.0",
-		"jszip": "^3.5.0",
-		"next": "^9.5.3",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-feather": "^2.0.8"
-	},
-	"devDependencies": {
-		"@tailwindcss/ui": "^0.6.2",
-		"babel-eslint": "^10.1.0",
-		"babel-jest": "^26.3.0",
-		"eslint": "^7.10.0",
-		"jest": "^26.4.2",
-		"tailwindcss": "^1.8.10"
+		"@mdx-js/loader": "^1.6.19",
+		"@next/mdx": "^10.0.0",
+		"@types/lodash": "^4.14.164",
+		"@types/mdx-js__react": "^1.5.3",
+		"@types/node": "^14.14.6",
+		"@types/react": "^16.9.55",
+		"@zaydek/lib": "^0.4.0",
+		"lodash": "^4.17.20",
+		"next": "^10.0.0",
+		"node-sass": "^5.0.0",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-feather": "^2.0.8",
+		"typescript": "^4.0.5"
 	}
 }
