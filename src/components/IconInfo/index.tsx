@@ -45,7 +45,6 @@ interface IconInfoProps extends React.ComponentProps<"div"> {
 	icon: IIcon
 }
 
-// TODO: Use `stack-center` not `align-center`?
 export default function IconInfo({ icon }: IconInfoProps) {
 	return (
 		<div className="prose">

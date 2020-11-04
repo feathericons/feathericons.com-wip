@@ -20,7 +20,7 @@ export function LinkedIcon({ icon }: IconProps) {
 		<Link href={`/${icon.name.kebab}`}>
 			<a>
 				<AspectRatio aspectRatio={1 / 1}>
-					<div className="hstack align-center h-full">
+					<div className="hstack stack-center h-full">
 						<SVG className="w-32 h-32" svg={icon.svgs.stroke} />
 						<div className="absolute b-0 x-0">
 							{/* TODO: Add tracking */}

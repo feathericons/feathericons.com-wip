@@ -30,13 +30,13 @@ function HeaderLHS() {
 				</div>
 			</div>
 			<div className="vstack xs:hstack space-12">
-				<div className="hstack align-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
+				<div className="hstack stack-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
 					<SVGGitHub className="w-20 h-20" strokeWidth={2.25} />
 					<div className="font-500 text-17 leading-1">
 						Read docs
 					</div>
 				</div>
-				<div className="hstack align-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
+				<div className="hstack stack-center px-40 h-56 bg-cool-gray-100 rounded-12 xs:rounded-full">
 					<SVGDownload className="w-20 h-20" strokeWidth={2.25} />
 					<div className="font-500 text-17 leading-1">
 						Download
@@ -130,7 +130,7 @@ export default function Header() {
 	return (
 		<div className="hstack">
 			<div
-				className="vstack xl:hstack align-center xl:align-end space-48"
+				className="vstack xl:hstack stack-center xl:stack-end space-48"
 				style={{ width: "100%", maxWidth: px(68 * 16) /* 1088px */ }}
 			>
 				<HeaderLHS />

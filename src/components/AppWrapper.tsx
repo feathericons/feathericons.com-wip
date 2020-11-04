@@ -80,13 +80,13 @@ function InteractiveWrapper({ children }: InteractiveWrapperProps) {
 					<div className="spacer">
 						<div className="sticky t-0 xl:-mt-16 xl:pt-16 z-10">
 							<div
-								className="hstack align-center space-16 px-32 h-64 xl:h-80 bg-white rounded-tl-24"
+								className="hstack stack-center space-16 px-32 h-64 xl:h-80 bg-white rounded-tl-24"
 								style={{ borderBottom: `${rem(1)} solid var(--gray-200)` }}
 							>
 								<div className="w-32 h-32 bg-gray-200 rounded-full" />
 								<div className="spacer" />
 								{screen.md && (
-									<div className="hstack align-center px-12 h-40 bg-gray-100 rounded-full" style={{ width: rem(160) }}>
+									<div className="hstack stack-center px-12 h-40 bg-gray-100 rounded-full" style={{ width: rem(160) }}>
 										<div className="w-24 h-24 bg-gray-300 rounded-full" />
 										<div className="spacer"></div>
 									</div>
