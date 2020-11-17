@@ -5,7 +5,7 @@ import { GitHub as SVGGitHub } from "react-feather"
 import { IconGrid, LinkedIcon } from "components/IconGrid"
 import { IIcon } from "types"
 import { MDXProvider } from "@mdx-js/react"
-import { rem } from "@zaydek/sorcery/dist/runtime"
+import { rem } from "@zaydek/duomo/dist/runtime"
 
 // TODO
 function BentoBox() {

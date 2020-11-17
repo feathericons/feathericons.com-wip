@@ -1,14 +1,15 @@
-import { Sorcery as SorceryCSS } from "@zaydek/sorcery/dist/runtime"
+import { Duomo as DuomoCSS } from "@zaydek/duomo/dist/runtime"
 import { useEffect } from "react"
 
-import "@zaydek/sorcery/dist/index.css"
-import "@zaydek/prose/dist/index.css"
+import "@zaydek/duomo"
+import "@zaydek/prose"
 
 import type { AppProps } from "next/app"
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
-		SorceryCSS.init()
+		const defer = DuomoCSS.init(process.env.NODE_ENV)
+		return defer
 	}, [])
 	return <Component {...pageProps} />
 }

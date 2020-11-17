@@ -1419,10 +1419,20 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+"@zaydek/duomo@^0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.5.tgz#3e95cde44c93d7b849025024015d147e4f83c4e9"
+  integrity sha512-bGr3X64hsDxGPZOF1c4DxgCqFvCmlV8t6tZC7f8IZOrKDGH78qD09stzzQFuhcAAk60ws9fnvs0+xFpnfPZFJQ==
+
 "@zaydek/lib@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.4.0.tgz#12cbec41e83457d1052dcac9d552616df84e3bc2"
   integrity sha512-BxNXVhpqLUAcPIZ7KlzcD2n6XOy+K+0+KyZI1XzknZ91JW6wEKPyM31dsI4F9pkcF4PI74RIMJ3KhjWhkhSbTw==
+
+"@zaydek/prose@^0.2.6":
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.2.6.tgz#52801a30259686dddf83f99a167d4f7ebd751879"
+  integrity sha512-twc3djHsIfXFGhLIdhzaFWeNHJIoXIZHiZgnPOO+MR3u5Y5wZg5ftmOyHLVyHv9rVEwrQvlTRDMQnFBxB9MaOA==
 
 abbrev@1:
   version "1.1.1"

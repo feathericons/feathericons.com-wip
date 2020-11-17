@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { rem } from "@zaydek/sorcery/dist/runtime"
+import { rem } from "@zaydek/duomo/dist/runtime"
 
 import {
 	Eye as SVGEye,

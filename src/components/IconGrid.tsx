@@ -1,7 +1,6 @@
 import Link from "next/link"
-import { AspectRatio } from "@zaydek/sorcery/dist/runtime"
+import { AspectRatio, rem } from "@zaydek/duomo/dist/runtime"
 import { IIcon } from "types"
-import { rem } from "@zaydek/sorcery/dist/runtime"
 
 interface SVGProps extends React.ComponentProps<"svg"> {
 	svg: React.ElementType

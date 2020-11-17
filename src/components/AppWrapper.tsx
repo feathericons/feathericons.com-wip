@@ -1,6 +1,6 @@
 import Header from "./Header"
 import TopNav from "./TopNav"
-import { px, rem } from "@zaydek/sorcery/dist/runtime"
+import { px, rem } from "@zaydek/duomo/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 interface InteractiveWrapperProps {
@@ -146,7 +146,7 @@ export default function AppWrapper({ children }: AppWrapperProps) {
 									<path d="M16 1C4 1 0 0 0 0H32C32 0 28 1 16 1Z" />
 								</svg>
 							</div>
-							<div className="fixed t-0 x-0 -z-1">
+							<div className="fixed t-0 x-0 -z-10">
 								<div className="h-128" style={{ backgroundColor: "hsl(215, 100%, 50%)" }} />
 								<svg
 									style={{ color: "hsl(215, 100%, 50%)" }}

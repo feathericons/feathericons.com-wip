@@ -1,7 +1,7 @@
 import Link from "next/link"
 import SVGEmbossedFeather from "components/SVGEmbossedFeather"
 import { Download as SVGDownload, GitHub as SVGGitHub } from "react-feather"
-import { px, rem } from "@zaydek/sorcery/dist/runtime"
+import { px, rem } from "@zaydek/duomo/dist/runtime"
 import { useBreakpoints } from "@zaydek/lib/hooks"
 
 // TODO: Add anchors and analytics.

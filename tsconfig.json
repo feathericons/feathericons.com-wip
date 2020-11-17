@@ -36,7 +36,7 @@
 	"include": [
 		"next-env.d.ts",
 		"**/*.ts",
-		"**/*.tsx", "src/components/IconInfo.js"
+		"**/*.tsx", "src/components/IconInfo.js" // LOL WTF?
 	],
 	"exclude": [
 		"node_modules"
