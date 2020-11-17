@@ -3,6 +3,8 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "next dev",
+		"watch-duomo": "yarn watch --interval 1 'yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/index.css' src/stylesheets",
+		"build-duomo": "yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/index.css",
 		"build": "next build && next export && osascript -e 'display notification \"Production build ready\" with title \"yarn prod\"'"
 	},
 	"dependencies": {
@@ -12,15 +14,18 @@
 		"@types/mdx-js__react": "^1.5.3",
 		"@types/node": "^14.14.6",
 		"@types/react": "^16.9.55",
-		"@zaydek/duomo": "^0.6.5",
-		"@zaydek/lib": "^0.4.0",
+		"@zaydek/duomo": "^0.6.6",
+		"@zaydek/lib": "^0.4.1",
 		"@zaydek/prose": "^0.2.6",
 		"lodash": "^4.17.20",
 		"next": "^10.0.0",
-		"node-sass": "^5.0.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
 		"react-feather": "^2.0.8",
 		"typescript": "^4.0.5"
+	},
+	"devDependencies": {
+		"sass": "^1.29.0",
+		"watch": "^1.0.2"
 	}
 }

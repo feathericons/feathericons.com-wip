@@ -1,6 +1,6 @@
-import AppWrapper from "components/AppWrapper"
-import dataset from "data/dataset"
-import IconInfo from "components/IconInfo"
+// import AppWrapper from "components/AppWrapper"
+// import dataset from "data/dataset"
+// import IconInfo from "components/IconInfo"
 import { GetStaticPropsContext } from "next"
 
 interface IconPageProps {
@@ -9,9 +9,10 @@ interface IconPageProps {
 
 export default function IconPage({ name }: IconPageProps) {
 	return (
-		<AppWrapper>
-			<IconInfo icon={dataset.find(each => each.name.kebab === name)!} />
-		</AppWrapper>
+		// <AppWrapper>
+		// 	<IconInfo icon={dataset.find(each => each.name.kebab === name)!} />
+		// </AppWrapper>
+		"TODO"
 	)
 }
 
