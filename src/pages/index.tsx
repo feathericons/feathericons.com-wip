@@ -1,7 +1,10 @@
+// import { rem } from "@zaydek/duomo/dist/runtime"
+
 import Head from "next/head"
-import { rem } from "@zaydek/duomo/dist/runtime"
+import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 
+// TODO: Extract `<AppContainer>`.
 export default function Home() {
 	const screen = useBreakpoints({
 		xs: 512,
@@ -114,12 +117,12 @@ export default function Home() {
 													<Sponsor />
 													<Sponsor />
 												</div> */}
-												<div className="hstack space-32">
+												<div className="hstack space-16">
 													<Sponsor />
 													<Sponsor />
 													<Sponsor />
 												</div>
-												<div className="hstack space-32">
+												<div className="hstack space-16">
 													<Sponsor />
 													<Sponsor />
 												</div>
@@ -137,14 +140,12 @@ export default function Home() {
 				{/* App */}
 				<div className="hstack">
 					{/* TODO: Add `overflow-x-hidden` because of `sticky t-0`? */}
-					<div className="w-full max-w-xl bg-white border-1 xl:rounded-24">
+					<div className="w-full max-w-xl bg-white xl:rounded-24 shadow-app">
 						{screen.xl && (
 							<div className="sticky t-0 -mx-8 -mb-24 z-10">
 								<div className="hstack">
 									<svg
-										// fill="currentColor"
-										className="w-8 h-40"
-										style={{ fill: "currentColor", color: "rgb(255, 0, 0)" }}
+										className="w-8 h-40 text-gray-50 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -152,18 +153,15 @@ export default function Home() {
 										<rect width={1} height={1} />
 									</svg>
 									<svg
-										// fill="currentColor"
-										style={{ fill: "currentColor", color: "rgb(255, 0, 0)" }}
-										className="w-24 h-40"
+										className="w-24 h-40 text-gray-50 fill-currentColor"
+										preserveAspectRatio="none"
 										viewBox="0 0 24 40"
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 									</svg>
 									<svg
-										// fill="currentColor"
-										className="w-full h-16"
-										style={{ fill: "currentColor", color: "rgb(255, 0, 0)" }}
+										className="w-full h-16 text-gray-50 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -171,18 +169,15 @@ export default function Home() {
 										<rect width={1} height={1} />
 									</svg>
 									<svg
-										// fill="currentColor"
-										className="w-24 h-40"
-										style={{ fill: "currentColor", color: "rgb(255, 0, 0)" }}
+										className="w-24 h-40 text-gray-50 fill-currentColor"
+										preserveAspectRatio="none"
 										viewBox="0 0 24 40"
 										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 									</svg>
 									<svg
-										// fill="currentColor"
-										className="w-8 h-40"
-										style={{ fill: "currentColor", color: "rgb(255, 0, 0)" }}
+										className="w-8 h-40 text-gray-50 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -212,9 +207,9 @@ export default function Home() {
 									</div>
 								</div>
 								{/* Icons */}
-								<div className="custom-grid px-16 sm:px-24 xl:px-64 py-64">
-									{new Array(60).fill().map((_, x) => (
-										<div key={x} className="custom-grid-item">
+								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
+									{range(60).map(each => (
+										<div key={each} className="aspect-ratio-1:1">
 											<div className="vstack stack-center space-16">
 												<div className="w-56 h-56 bg-gray-400 rounded-full" />
 												<div className="w-96 h-12 bg-gray-200 rounded-full" />
@@ -228,7 +223,7 @@ export default function Home() {
 							{/* TODO: Add `bg-white rounded-tr-*` somewhere. */}
 							<div className="hidden lg:block w-320 border-l-1">
 								<div className="sticky t-0 xl:t-16 z-10">
-									<div className="vstack h-288">
+									<div className="vstack h-288 border-b-1">
 										<div className="hstack stack-center space-16 p-24">
 											<div className="w-32 h-32 bg-gray-200 rounded-full" />
 											<div className="w-160 h-16 bg-gray-100 rounded-full" />
@@ -236,25 +231,16 @@ export default function Home() {
 										</div>
 										<div className="spacer" />
 									</div>
-									<hr />
-									<div className="vstack">
-										<div className="hstack stack-center space-16 p-24">
-											<div className="w-32 h-32 bg-gray-200 rounded-full" />
-											<div className="w-160 h-16 bg-gray-100 rounded-full" />
+									{range(2).map(each => (
+										<div key={each} className="vstack border-b-1">
+											<div className="hstack stack-center space-16 p-24">
+												<div className="w-32 h-32 bg-gray-200 rounded-full" />
+												<div className="w-160 h-16 bg-gray-100 rounded-full" />
+												<div className="spacer" />
+											</div>
 											<div className="spacer" />
 										</div>
-										<div className="spacer" />
-									</div>
-									<hr />
-									<div className="vstack">
-										<div className="hstack stack-center space-16 p-24">
-											<div className="w-32 h-32 bg-gray-200 rounded-full" />
-											<div className="w-160 h-16 bg-gray-100 rounded-full" />
-											<div className="spacer" />
-										</div>
-										<div className="spacer" />
-									</div>
-									<hr />
+									))}
 								</div>
 							</div>
 						</div>
