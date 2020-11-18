@@ -219,11 +219,10 @@ export default function Home() {
 								</div>
 							</div>
 							{/* RHS */}
-							{/* NOTE: No need to use `vstack`. */}
-							{/* TODO: Add `bg-white rounded-tr-*` somewhere. */}
-							<div className="hidden lg:block w-320 bg-gray-50 border-l-1">
+							<div className="hidden lg:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
 								<div className="sticky t-0 xl:t-16 z-10">
-									<div className="vstack h-288 bg-white border-b-1">
+									{/* Preview */}
+									<div className="vstack h-288 bg-white border-b-1 rounded-tr-24">
 										<div className="hstack stack-center space-16 p-24">
 											<div className="w-32 h-32 bg-gray-200 rounded-full" />
 											<div className="w-160 h-16 bg-gray-100 rounded-full" />
@@ -231,6 +230,7 @@ export default function Home() {
 										</div>
 										<div className="spacer" />
 									</div>
+									{/* Controls */}
 									{range(2).map(key => (
 										<div key={key} className="vstack space-24 p-24 border-b-1">
 											<div className="hstack stack-center">
@@ -245,16 +245,19 @@ export default function Home() {
 												<div className="w-64 h-32 bg-gray-200 rounded-full" />
 											</div>
 										</div>
-
-										// <div key={key} className="vstack border-b-1">
-										// 	<div className="hstack stack-center space-16 p-24">
-										// 		<div className="w-32 h-32 bg-gray-200 rounded-full" />
-										// 		<div className="w-160 h-16 bg-gray-100 rounded-full" />
-										// 		<div className="spacer" />
-										// 	</div>
-										// 	<div className="spacer" />
-										// </div>
 									))}
+									{/* Carbon */}
+									<div className="hstack space-16 p-24 border-b-1">
+										<div className="w-128 h-96 bg-gray-200 rounded-4" />
+										<div className="spacer vstack space-8" data-stagger>
+											<div className="h-8 bg-gray-200 rounded-full" />
+											<div className="h-8 bg-gray-200 rounded-full" />
+											<div className="h-8 bg-gray-200 rounded-full" />
+											<div className="h-8 bg-gray-200 rounded-full" />
+											<div className="spacer" />
+											<div className="h-8 bg-gray-200 rounded-full" style={{ alignSelf: "flex-end" }} />
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

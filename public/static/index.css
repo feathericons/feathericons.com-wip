@@ -519,32 +519,27 @@ body {
   background-color: rgba(0, 255, 255, 0.1);
 }
 
-.stagger > [class]:nth-child(4n+1),
-.stagger > [style]:nth-child(4n+1),
-.stagger-1 {
+[data-stagger] > [class]:nth-child(4n+1),
+[data-stagger-1] {
   width: 50%;
 }
 
-.stagger > [class]:nth-child(4n+2),
-.stagger > [style]:nth-child(4n+2),
-.stagger-2 {
+[data-stagger] > [class]:nth-child(4n+2),
+[data-stagger-2] {
   width: 75%;
 }
 
-.stagger > [class]:nth-child(4n+3),
-.stagger > [style]:nth-child(4n+3),
-.stagger-3 {
+[data-stagger] > [class]:nth-child(4n+3),
+[data-stagger-3] {
   width: 87.5%;
 }
 
-.stagger > [class]:nth-child(4n+4),
-.stagger > [style]:nth-child(4n+4),
-.stagger-4 {
+[data-stagger] > [class]:nth-child(4n+4),
+[data-stagger-4] {
   width: 62.5%;
 }
 
-.stagger > [class]:last-child,
-.stagger > [style]:last-child {
+[data-stagger] > [class]:last-child {
   width: 50%;
 }
 
@@ -11987,30 +11982,6 @@ body:not([data-theme-effect=true]) .ease-in-out {
     text-decoration: underline;
   }
 
-  .xs\:on\:line-through:hover,
-.xs\:on\:line-through:focus,
-.group:hover .xs\:group-on\:line-through,
-.group:focus .xs\:group-on\:line-through {
-    text-decoration: line-through;
-  }
-
-  .xs\:on\:underline:hover,
-.xs\:on\:underline:focus,
-.group:hover .xs\:group-on\:underline,
-.group:focus .xs\:group-on\:underline {
-    text-decoration: underline;
-  }
-
-  .xs\:down\:line-through:active,
-.group:active .xs\:group-down\:line-through {
-    text-decoration: line-through;
-  }
-
-  .xs\:down\:underline:active,
-.group:active .xs\:group-down\:underline {
-    text-decoration: underline;
-  }
-
   .xs\:text-transparent {
     --text-opacity: 1;
     color: transparent;
@@ -18924,30 +18895,6 @@ body:not([data-theme-effect=true]) .ease-in-out {
   }
 
   .sm\:underline {
-    text-decoration: underline;
-  }
-
-  .sm\:on\:line-through:hover,
-.sm\:on\:line-through:focus,
-.group:hover .sm\:group-on\:line-through,
-.group:focus .sm\:group-on\:line-through {
-    text-decoration: line-through;
-  }
-
-  .sm\:on\:underline:hover,
-.sm\:on\:underline:focus,
-.group:hover .sm\:group-on\:underline,
-.group:focus .sm\:group-on\:underline {
-    text-decoration: underline;
-  }
-
-  .sm\:down\:line-through:active,
-.group:active .sm\:group-down\:line-through {
-    text-decoration: line-through;
-  }
-
-  .sm\:down\:underline:active,
-.group:active .sm\:group-down\:underline {
     text-decoration: underline;
   }
 
@@ -25867,30 +25814,6 @@ body:not([data-theme-effect=true]) .ease-in-out {
     text-decoration: underline;
   }
 
-  .md\:on\:line-through:hover,
-.md\:on\:line-through:focus,
-.group:hover .md\:group-on\:line-through,
-.group:focus .md\:group-on\:line-through {
-    text-decoration: line-through;
-  }
-
-  .md\:on\:underline:hover,
-.md\:on\:underline:focus,
-.group:hover .md\:group-on\:underline,
-.group:focus .md\:group-on\:underline {
-    text-decoration: underline;
-  }
-
-  .md\:down\:line-through:active,
-.group:active .md\:group-down\:line-through {
-    text-decoration: line-through;
-  }
-
-  .md\:down\:underline:active,
-.group:active .md\:group-down\:underline {
-    text-decoration: underline;
-  }
-
   .md\:text-transparent {
     --text-opacity: 1;
     color: transparent;
@@ -32807,30 +32730,6 @@ body:not([data-theme-effect=true]) .ease-in-out {
     text-decoration: underline;
   }
 
-  .lg\:on\:line-through:hover,
-.lg\:on\:line-through:focus,
-.group:hover .lg\:group-on\:line-through,
-.group:focus .lg\:group-on\:line-through {
-    text-decoration: line-through;
-  }
-
-  .lg\:on\:underline:hover,
-.lg\:on\:underline:focus,
-.group:hover .lg\:group-on\:underline,
-.group:focus .lg\:group-on\:underline {
-    text-decoration: underline;
-  }
-
-  .lg\:down\:line-through:active,
-.group:active .lg\:group-down\:line-through {
-    text-decoration: line-through;
-  }
-
-  .lg\:down\:underline:active,
-.group:active .lg\:group-down\:underline {
-    text-decoration: underline;
-  }
-
   .lg\:text-transparent {
     --text-opacity: 1;
     color: transparent;
@@ -39744,30 +39643,6 @@ body:not([data-theme-effect=true]) .ease-in-out {
   }
 
   .xl\:underline {
-    text-decoration: underline;
-  }
-
-  .xl\:on\:line-through:hover,
-.xl\:on\:line-through:focus,
-.group:hover .xl\:group-on\:line-through,
-.group:focus .xl\:group-on\:line-through {
-    text-decoration: line-through;
-  }
-
-  .xl\:on\:underline:hover,
-.xl\:on\:underline:focus,
-.group:hover .xl\:group-on\:underline,
-.group:focus .xl\:group-on\:underline {
-    text-decoration: underline;
-  }
-
-  .xl\:down\:line-through:active,
-.group:active .xl\:group-down\:line-through {
-    text-decoration: line-through;
-  }
-
-  .xl\:down\:underline:active,
-.group:active .xl\:group-down\:underline {
     text-decoration: underline;
   }
 
