@@ -220,7 +220,7 @@ export default function Home() {
 								</div>
 							</div>
 							{/* RHS */}
-							<div className="hidden sm:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
+							<div className="hidden md:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Preview */}
 									{/* NOTE: Uses a nested `sticky` so preview appears on top. */}
