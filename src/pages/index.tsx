@@ -142,10 +142,11 @@ export default function Home() {
 					{/* TODO: Add `overflow-x-hidden` because of `sticky t-0`? */}
 					<div className="w-full max-w-xl bg-white xl:rounded-24 shadow-app">
 						{screen.xl && (
-							<div className="sticky t-0 -mx-8 -mb-24 z-10">
+							// NOTE: Use `>= z-20` not `z-10` here.
+							<div className="sticky t-0 -mx-8 -mb-24 z-20">
 								<div className="hstack">
 									<svg
-										className="w-8 h-40 text-gray-50 fill-currentColor"
+										className="w-8 h-40 text-gray-200 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +154,7 @@ export default function Home() {
 										<rect width={1} height={1} />
 									</svg>
 									<svg
-										className="w-24 h-40 text-gray-50 fill-currentColor"
+										className="w-24 h-40 text-gray-200 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 24 40"
 										xmlns="http://www.w3.org/2000/svg"
@@ -161,7 +162,7 @@ export default function Home() {
 										<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 									</svg>
 									<svg
-										className="w-full h-16 text-gray-50 fill-currentColor"
+										className="w-full h-16 text-gray-200 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +170,7 @@ export default function Home() {
 										<rect width={1} height={1} />
 									</svg>
 									<svg
-										className="w-24 h-40 text-gray-50 fill-currentColor"
+										className="w-24 h-40 text-gray-200 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 24 40"
 										xmlns="http://www.w3.org/2000/svg"
@@ -177,7 +178,7 @@ export default function Home() {
 										<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 									</svg>
 									<svg
-										className="w-8 h-40 text-gray-50 fill-currentColor"
+										className="w-8 h-40 text-gray-200 fill-currentColor"
 										preserveAspectRatio="none"
 										viewBox="0 0 1 1"
 										xmlns="http://www.w3.org/2000/svg"
@@ -190,14 +191,14 @@ export default function Home() {
 
 						<div className="hstack">
 							{/* LHS */}
-							{/* NOTE: No need to use `vstack`. */}
 							<div className="spacer">
 								{/* Searh bar */}
 								<div className="sticky t-0 xl:t-16 z-10">
 									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-tl-24">
 										<div className="w-32 h-32 bg-gray-200 rounded-full" />
 										<div className="spacer" />
-										<div className="hidden sm:vstack px-6 w-128 h-32 bg-gray-100 rounded-full">
+										{/* TODO: Change to `sm` or `lg`? */}
+										<div className="hidden md:vstack px-6 w-128 h-32 bg-gray-100 rounded-full">
 											<div className="hstack">
 												<div className="w-20 h-20 bg-gray-300 rounded-full" />
 												<div className="spacer" />
@@ -219,20 +220,23 @@ export default function Home() {
 								</div>
 							</div>
 							{/* RHS */}
-							<div className="hidden lg:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
+							<div className="hidden sm:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Preview */}
-									<div className="vstack h-288 bg-white border-b-1 rounded-tr-24">
-										<div className="hstack stack-center space-16 p-24">
-											<div className="w-32 h-32 bg-gray-200 rounded-full" />
-											<div className="w-160 h-16 bg-gray-100 rounded-full" />
+									{/* NOTE: Uses a nested `sticky` so preview appears on top. */}
+									<div className="sticky t-0 xl:t-16 z-10">
+										<div className="vstack h-288 bg-white border-b-1 rounded-tr-24">
+											<div className="hstack stack-center space-16 p-24">
+												<div className="w-32 h-32 bg-gray-200 rounded-full" />
+												<div className="w-160 h-16 bg-gray-100 rounded-full" />
+												<div className="spacer" />
+											</div>
 											<div className="spacer" />
 										</div>
-										<div className="spacer" />
 									</div>
 									{/* Controls */}
 									{range(2).map(key => (
-										<div key={key} className="vstack space-24 p-24 border-b-1">
+										<div key={key} className="vstack space-16 p-24 border-b-1">
 											<div className="hstack stack-center">
 												<div className="w-96 h-12 bg-gray-200 rounded-full" />
 												<div className="spacer" />
@@ -264,7 +268,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="hidden xl:hstack mt-24">
+				{/* <div className="hidden xl:hstack mt-24">
 					<div className="prose">
 						<p className="text-center">
 							<small>
@@ -275,7 +279,7 @@ export default function Home() {
 							</small>
 						</p>
 					</div>
-				</div>
+				</div> */}
 
 				{/**/}
 			</div>
