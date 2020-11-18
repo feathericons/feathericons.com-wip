@@ -36,8 +36,11 @@
 	left: 0;
 }
 
-.fill-currentColor {
+.fill-current {
 	fill: currentColor;
+}
+.stroke-0 {
+	stroke-width: 0;
 }
 
 .shadow-app {
