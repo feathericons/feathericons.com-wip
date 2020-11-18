@@ -2,10 +2,6 @@
 	$xl: 1280 + 64,
 );
 
-// .font-dm-sans {
-// 	font-family: "DM Sans", font-family(sans-serif);
-// }
-
 .t-16 {
 	top: rem(16);
 }
@@ -15,11 +11,9 @@
 	}
 }
 
-@each $v in (96, 112, 128) {
-	.grid-cols-#{$v} {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(rem($v), 1fr));
-	}
+.grid-cols-128 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(128), 1fr));
 }
 
 // https://ratiobuddy.com
@@ -46,3 +40,24 @@
 .stroke-0 {
 	stroke-width: 0;
 }
+
+// // https://primer.style/octicons
+// [data-primer-grid] {
+// 	background-image: linear-gradient(
+// 			0deg,
+// 			rgba(225, 228, 232, 0),
+// 			rgba(225, 228, 232, 0) 5px,
+// 			rgb(225, 228, 232, 0.5),
+// 			rgba(225, 228, 232, 0) 6px
+// 		),
+// 		linear-gradient(
+// 			90deg,
+// 			rgba(225, 228, 232, 0),
+// 			rgba(225, 228, 232, 0) 5px,
+// 			rgb(225, 228, 232, 0.5),
+// 			rgba(225, 228, 232, 0) 6px
+// 		);
+// 	background-color: color(white);
+// 	background-size: 10px 10px;
+// 	background-position: center center;
+// }

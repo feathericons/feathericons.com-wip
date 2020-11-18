@@ -5671,7 +5671,7 @@ body {
   color: transparent;
 }
 
-.text-currentColor {
+.text-current {
   --text-opacity: 1;
   color: currentColor;
 }
@@ -6221,7 +6221,7 @@ body {
   color: transparent;
 }
 
-.bg-currentColor {
+.bg-current {
   --bg-opacity: 1;
   color: currentColor;
 }
@@ -6891,7 +6891,7 @@ body {
   color: transparent;
 }
 
-.border-currentColor {
+.border-current {
   --border-opacity: 1;
   color: currentColor;
 }
@@ -13187,7 +13187,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xs\:text-currentColor {
+  .xs\:text-current {
     --text-opacity: 1;
     color: currentColor;
   }
@@ -13737,7 +13737,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xs\:bg-currentColor {
+  .xs\:bg-current {
     --bg-opacity: 1;
     color: currentColor;
   }
@@ -14407,7 +14407,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xs\:border-currentColor {
+  .xs\:border-current {
     --border-opacity: 1;
     color: currentColor;
   }
@@ -20703,7 +20703,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .sm\:text-currentColor {
+  .sm\:text-current {
     --text-opacity: 1;
     color: currentColor;
   }
@@ -21253,7 +21253,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .sm\:bg-currentColor {
+  .sm\:bg-current {
     --bg-opacity: 1;
     color: currentColor;
   }
@@ -21923,7 +21923,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .sm\:border-currentColor {
+  .sm\:border-current {
     --border-opacity: 1;
     color: currentColor;
   }
@@ -28219,7 +28219,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .md\:text-currentColor {
+  .md\:text-current {
     --text-opacity: 1;
     color: currentColor;
   }
@@ -28769,7 +28769,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .md\:bg-currentColor {
+  .md\:bg-current {
     --bg-opacity: 1;
     color: currentColor;
   }
@@ -29439,7 +29439,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .md\:border-currentColor {
+  .md\:border-current {
     --border-opacity: 1;
     color: currentColor;
   }
@@ -35735,7 +35735,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .lg\:text-currentColor {
+  .lg\:text-current {
     --text-opacity: 1;
     color: currentColor;
   }
@@ -36285,7 +36285,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .lg\:bg-currentColor {
+  .lg\:bg-current {
     --bg-opacity: 1;
     color: currentColor;
   }
@@ -36955,7 +36955,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .lg\:border-currentColor {
+  .lg\:border-current {
     --border-opacity: 1;
     color: currentColor;
   }
@@ -43251,7 +43251,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xl\:text-currentColor {
+  .xl\:text-current {
     --text-opacity: 1;
     color: currentColor;
   }
@@ -43801,7 +43801,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xl\:bg-currentColor {
+  .xl\:bg-current {
     --bg-opacity: 1;
     color: currentColor;
   }
@@ -44471,7 +44471,7 @@ body:not([data-theme-effect=true]) .ease-in-out {
     color: transparent;
   }
 
-  .xl\:border-currentColor {
+  .xl\:border-current {
     --border-opacity: 1;
     color: currentColor;
   }
@@ -45758,10 +45758,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
   left: 0;
 }
 
-.fill-currentColor {
+.fill-current {
   fill: currentColor;
 }
 
-.shadow-app {
-  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+.stroke-0 {
+  stroke-width: 0;
 }

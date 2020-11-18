@@ -275,7 +275,6 @@ export default function Home() {
 									</div>
 								</div>
 								{/* Icons */}
-								{/* TODO: `grid-cols-112` does not work? */}
 								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
 									{dataset.map(each => (
 										<div key={each.kebab} className="aspect-ratio-1:1">
@@ -290,18 +289,37 @@ export default function Home() {
 								</div>
 							</div>
 							{/* RHS */}
-							<div className="hidden md:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
+							<div className="hidden md:block w-320 bg-gray-50 border-l-1 rounded-r-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Preview */}
 									{/* NOTE: Uses a nested `sticky`. */}
 									<div className="sticky t-0 xl:t-16 z-10">
-										<div className="vstack h-288 bg-white border-b-1 rounded-tr-24">
-											<div className="hstack stack-center space-16 p-24">
+										<div className="hstack h-320 bg-white border-b-1 rounded-tr-24">
+											<div className="vstack">
+												<div className="w-64 h-64 bg-gray-300 rounded-full"></div>
+											</div>
+											{/* TODO: Move `p-24` off of `absolute`? */}
+											<div className="absolute x-0 t-0 p-24">
+												<div className="hstack">
+													<div className="spacer"></div>
+													<div className="w-24 h-24 bg-gray-200 rounded-full" />
+												</div>
+											</div>
+											{/* TODO: Move `p-24` off of `absolute`? */}
+											<div className="absolute x-0 b-0 p-24">
+												<div className="hstack stack-center space-24">
+													<div className="spacer">
+														<div className="w-full h-8 bg-gray-200 rounded-full" />
+													</div>
+													<div className="w-64 h-32 bg-gray-200 rounded-full" />
+												</div>
+											</div>
+											{/* <div className="hstack stack-center space-16 p-24">
 												<div className="w-32 h-32 bg-gray-200 rounded-full" />
 												<div className="w-160 h-16 bg-gray-100 rounded-full" />
 												<div className="spacer" />
 											</div>
-											<div className="spacer" />
+											<div className="spacer" /> */}
 										</div>
 									</div>
 									{/* Controls */}

@@ -3,8 +3,8 @@
 	"license": "MIT",
 	"scripts": {
 		"start": "next dev",
-		"watch-duomo": "yarn watch --interval 1 'yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/index.css' src/stylesheets",
-		"build-duomo": "yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/index.css",
+		"watch-duomo": "yarn watch --interval 1 'yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/stylesheets/index.css' src/stylesheets",
+		"build-duomo": "yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/stylesheets/index.css",
 		"build": "next build && next export && osascript -e 'display notification \"Production build ready\" with title \"yarn prod\"'"
 	},
 	"dependencies": {
