@@ -42250,21 +42250,31 @@ body:not([data-theme-effect=true]) .ease-in-out {
     --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
+.t-16 {
+  top: 1rem;
+}
+
+@media (min-width: 1344px) {
+  .xl\:t-16 {
+    top: 1rem;
+  }
+}
 .custom-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   gap: 1rem;
 }
-.custom-grid > .custom-grid-item {
+
+.custom-grid-item {
   position: relative;
 }
-.custom-grid > .custom-grid-item:before {
+.custom-grid-item:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 100%;
 }
-.custom-grid > .custom-grid-item > * {
+.custom-grid-item > * {
   position: absolute;
   top: 0;
   right: 0;

@@ -198,7 +198,7 @@ export default function Home() {
 							{/* NOTE: No need to use `vstack`. */}
 							<div className="spacer">
 								{/* Searh bar */}
-								<div className="sticky t-0 xl:-mt-16 xl:pt-16 z-10">
+								<div className="sticky t-0 xl:t-16 z-10">
 									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-tl-24">
 										<div className="w-32 h-32 bg-gray-200 rounded-full" />
 										<div className="spacer" />
@@ -227,7 +227,7 @@ export default function Home() {
 							{/* NOTE: No need to use `vstack`. */}
 							{/* TODO: Add `bg-white rounded-tr-*` somewhere. */}
 							<div className="hidden lg:block w-320 border-l-1">
-								<div className="sticky t-0 xl:-mt-16 xl:pt-16 z-10">
+								<div className="sticky t-0 xl:t-16 z-10">
 									<div className="vstack h-288">
 										<div className="hstack stack-center space-16 p-24">
 											<div className="w-32 h-32 bg-gray-200 rounded-full" />
@@ -261,7 +261,7 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="hidden xl:hstack mt-32">
+				<div className="hidden xl:hstack mt-24">
 					<div className="prose">
 						<p className="text-center">
 							<small>
