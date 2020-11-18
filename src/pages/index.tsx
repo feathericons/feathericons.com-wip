@@ -52,10 +52,15 @@ interface SponsorProps {
 
 function Sponsor({ sponsor, className }: SponsorProps) {
 	return (
-		<div className={"vstack stack-center space-8" + (!className ? "" : " " + className)}>
-			<img src={sponsor.src} className="h-48" />
-			<p className="text-center">{sponsor.subtext}</p>
-		</div>
+		<ExtAnchor className={className} href={sponsor.href}>
+			<div className="group vstack stack-center space-8">
+				<img src={sponsor.src} className="h-48" />
+				<div className="hstack stack-center space-6">
+					<span className="font-500 text-11 leading-1 group-on:underline">{sponsor.subtext}</span>
+					<ExternalLink className="w-13 h-13" />
+				</div>
+			</div>
+		</ExtAnchor>
 	)
 }
 
@@ -85,31 +90,31 @@ export default function Home() {
 					<div className="vstack xl:hstack space-32 w-full" style={{ maxWidth: 1024 + 64 }}>
 						{/**/}
 
-						{/* LHS: CTA */}
+						{/* LHS: CTA buttons */}
 						<div className="hstack">
 							<div className="vstack stack-center space-16 w-full max-w-xs">
 								<div className="w-64 h-64 bg-gray-400 rounded-full" />
 								<h1 className="text-center">Open source icons</h1>
 								<h2 className="mt-8 text-center">
 									Created by{" "}
-									<a href="TODO" className="on:underline">
+									<ExtAnchor className="on:underline" href="TODO">
 										@colebemis
-									</a>{" "}
+									</ExtAnchor>{" "}
 									and{" "}
-									<a href="TODO" className="on:underline">
+									<ExtAnchor className="on:underline" href="TODO">
 										@username_ZAYDEK
-									</a>
+									</ExtAnchor>
 								</h2>
 								{/* CTA buttons */}
 								<div className="vstack sm:hstack space-16 w-full max-w-sm">
-									{/* CTA button 1 */}
+									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
 									<div className="vstack sm:w-192 h-56 bg-gray-200 rounded-12 sm:rounded-full">
 										<div className="hstack space-8">
 											<div className="w-24 h-24 bg-gray-400 rounded-full" />
 											<p>Read docs</p>
 										</div>
 									</div>
-									{/* CTA button 2 */}
+									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
 									<div className="vstack sm:w-192 h-56 bg-gray-200 rounded-12 sm:rounded-full">
 										<div className="hstack space-8">
 											<div className="w-24 h-24 bg-gray-400 rounded-full" />
@@ -126,6 +131,7 @@ export default function Home() {
 								<div className="spacer" />
 								<div className="hstack">
 									<div className="vstack stack-center space-16">
+										{/* TODO */}
 										<div className="hstack stack-center space-8">
 											<span className="font-500 text-11 tracking-2.5 leading-1">CHECK OUT OUR SPONSORS</span>
 											<span className="font-500 text-11 tracking-2.5 leading-1">&middot;</span>
@@ -134,7 +140,7 @@ export default function Home() {
 												<ExternalLink className="w-13 h-13" />
 											</a>
 										</div>
-										{/* NOTE: Escape the `-m-*` context. */}
+										{/* NOTE: Added `<div>` escapes the `-m-*` context. */}
 										<div className="block xl:hidden">
 											<div className="-m-8 hstack" style={{ flexWrap: "wrap" }}>
 												{sponsors.map(each => (

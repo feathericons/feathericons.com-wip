@@ -6,7 +6,7 @@ const sponsors: ISponsor[] = [
 		name: "QA Wolf",
 		href: "https://github.com/qawolf/qawolf",
 		src: "/static/images/sponsors/qawolf.png",
-		subtext: "Create Browser Tests Faster",
+		subtext: "Awesome Browser Testing",
 	},
 	{
 		name: "SPELLL",
