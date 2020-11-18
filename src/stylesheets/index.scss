@@ -2,6 +2,10 @@
 	$xl: 1280 + 64,
 );
 
+// .font-dm-sans {
+// 	font-family: "DM Sans", font-family(sans-serif);
+// }
+
 .t-16 {
 	top: rem(16);
 }
@@ -11,7 +15,7 @@
 	}
 }
 
-@each $v in (128) {
+@each $v in (96, 112, 128) {
 	.grid-cols-#{$v} {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(rem($v), 1fr));
@@ -42,11 +46,3 @@
 .stroke-0 {
 	stroke-width: 0;
 }
-
-.shadow-app {
-	box-shadow: 0 2px 4px -2px hsla(0, 0%, 0%, 0.25);
-}
-
-// .preserve-aspect-ratio-none {
-// 	preserve-aspect-ratio: none;
-// }

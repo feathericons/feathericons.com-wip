@@ -1,4 +1,7 @@
+import dataset from "data/dataset"
 import Head from "next/head"
+import Link from "next/link"
+import React from "react"
 import sponsors from "fixtures/sponsors"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
@@ -6,6 +9,14 @@ import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
 import { ISponsor } from "types"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
+
+const breakpoints = {
+	xs: 512,
+	sm: 640,
+	md: 768,
+	lg: 1024,
+	xl: 1280 + 64,
+}
 
 function EmbossedFeather(props: React.ComponentProps<"svg">) {
 	return (
@@ -15,16 +26,6 @@ function EmbossedFeather(props: React.ComponentProps<"svg">) {
 		</svg>
 	)
 }
-
-// function OctofaceIcon16x16(props: React.ComponentProps<"svg">) {
-// 	return (
-// 		// prettier-ignore
-// 		<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-// 			<path fillRule="evenodd" d="M1.326 1.973a1.2 1.2 0 011.49-.832c.387.112.977.307 1.575.602.586.291 1.243.71 1.7 1.296.022.027.042.056.061.084A13.22 13.22 0 018 3c.67 0 1.289.037 1.861.108l.051-.07c.457-.586 1.114-1.004 1.7-1.295a9.654 9.654 0 011.576-.602 1.2 1.2 0 011.49.832c.14.493.356 1.347.479 2.29.079.604.123 1.28.07 1.936.541.977.773 2.11.773 3.301C16 13 14.5 15 8 15s-8-2-8-5.5c0-1.034.238-2.128.795-3.117-.08-.712-.034-1.46.052-2.12.122-.943.34-1.797.479-2.29zM8 13.065c6 0 6.5-2 6-4.27C13.363 5.905 11.25 5 8 5s-5.363.904-6 3.796c-.5 2.27 0 4.27 6 4.27z" />
-// 			<path d="M4 8a1 1 0 012 0v1a1 1 0 01-2 0V8zm2.078 2.492c-.083-.264.146-.492.422-.492h3c.276 0 .505.228.422.492C9.67 11.304 8.834 12 8 12c-.834 0-1.669-.696-1.922-1.508zM10 8a1 1 0 112 0v1a1 1 0 11-2 0V8z" />
-// 		</svg>
-// 	)
-// }
 
 function OctofaceIcon24x24(props: React.ComponentProps<"svg">) {
 	return (
@@ -41,14 +42,14 @@ function AbsoluteTopRow() {
 		// TODO: Add analytics here.
 		<div className="absolute x-0 t-0">
 			<div className="hstack space-8 px-16 lg:px-24 p-12">
-				<ExtAnchor className="hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
+				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
 					{/* NOTE: `fill-current stroke-0` does not work here. */}
 					<Twitter className="w-24 h-24" style={{ fill: "currentColor", strokeWidth: 0 }} />
-					<p>Tweet thank you!</p>
+					<p className="group-on:underline">Tweet thank you!</p>
 				</ExtAnchor>
 				<div className="spacer" />
-				<ExtAnchor className="hstack stack-center space-8" href={GitHub_FeatherSite}>
-					<p>Star on GitHub!</p>
+				<ExtAnchor className="group hstack stack-center space-8" href={GitHub_FeatherSite}>
+					<p className="group-on:underline">Star on GitHub!</p>
 					<OctofaceIcon24x24 className="w-20 h-20" />
 				</ExtAnchor>
 			</div>
@@ -75,6 +76,61 @@ function Sponsor({ sponsor, className }: SponsorProps) {
 	)
 }
 
+function StickyObscureEffect() {
+	const screen = useBreakpoints(breakpoints)
+	return (
+		<>
+			{screen.xl && (
+				// NOTE: Use `z-20` not `z-10` here.
+				<div className="sticky t-0 -mx-8 -mb-24 z-20">
+					<div className="hstack">
+						<svg
+							className="w-8 h-40 text-gray-200 fill-current"
+							preserveAspectRatio="none"
+							viewBox="0 0 1 1"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width={1} height={1} />
+						</svg>
+						<svg
+							className="w-24 h-40 text-gray-200 fill-current"
+							preserveAspectRatio="none"
+							viewBox="0 0 24 40"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
+						</svg>
+						<svg
+							className="w-full h-16 text-gray-200 fill-current"
+							preserveAspectRatio="none"
+							viewBox="0 0 1 1"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width={1} height={1} />
+						</svg>
+						<svg
+							className="w-24 h-40 text-gray-200 fill-current"
+							preserveAspectRatio="none"
+							viewBox="0 0 24 40"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
+						</svg>
+						<svg
+							className="w-8 h-40 text-gray-200 fill-current"
+							preserveAspectRatio="none"
+							viewBox="0 0 1 1"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width={1} height={1} />
+						</svg>
+					</div>
+				</div>
+			)}
+		</>
+	)
+}
+
 // TODO: Extract `<AppContainer>`.
 export default function Home() {
 	const screen = useBreakpoints({
@@ -89,7 +145,11 @@ export default function Home() {
 		<>
 			<Head>
 				<title>Feathericons</title>
+				{/* Duomo CSS */}
 				<link href="static/stylesheets/index.css" rel="stylesheet" />
+				{/* Google Fonts / DM Sans */}
+				<link rel="preconnect" href="https://fonts.gstatic.com" />
+				<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 			</Head>
 
 			<AbsoluteTopRow />
@@ -103,10 +163,19 @@ export default function Home() {
 
 						{/* CTA buttons */}
 						<div className="hstack">
-							<div className="vstack stack-center space-16 w-full max-w-xs">
-								<EmbossedFeather className="w-56 h-56 text-gray-400" />
-								<h1 className="text-center font-500 text-32">Open source icons</h1>
-								<h2 className="mt-4 text-center text-17">
+							<div className="vstack stack-center space-20 w-full max-w-xs">
+								<Link href="/">
+									<a>
+										<EmbossedFeather className="w-56 h-56 text-gray-400" />
+									</a>
+								</Link>
+								<h1
+									className="text-center font-500 text-32 -tracking-2.5 leading-1"
+									style={{ fontFamily: "'DM Sans', ui-sans-serif, sans-serif" }}
+								>
+									Open source icons
+								</h1>
+								<h2 className="mt-12 text-center text-17">
 									Created by{" "}
 									<ExtAnchor className="font-500 on:underline" href="TODO">
 										@colebemis
@@ -141,7 +210,7 @@ export default function Home() {
 							<>
 								<div className="spacer" />
 								<div className="hstack">
-									<div className="vstack stack-center space-16">
+									<div className="vstack stack-center space-20">
 										{/* TODO */}
 										<div className="hstack stack-center space-8">
 											<span className="font-500 text-11 tracking-2.5 leading-1">CHECK OUT OUR SPONSORS</span>
@@ -182,55 +251,11 @@ export default function Home() {
 
 				{/* App */}
 				<div className="hstack">
-					<div className="w-full max-w-xl bg-white xl:rounded-24 shadow-app">
-						{screen.xl && (
-							// NOTE: Use `z-20` not `z-10` here.
-							<div className="sticky t-0 -mx-8 -mb-24 z-20">
-								<div className="hstack">
-									<svg
-										className="w-8 h-40 text-gray-200 fill-current"
-										preserveAspectRatio="none"
-										viewBox="0 0 1 1"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<rect width={1} height={1} />
-									</svg>
-									<svg
-										className="w-24 h-40 text-gray-200 fill-current"
-										preserveAspectRatio="none"
-										viewBox="0 0 24 40"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
-									</svg>
-									<svg
-										className="w-full h-16 text-gray-200 fill-current"
-										preserveAspectRatio="none"
-										viewBox="0 0 1 1"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<rect width={1} height={1} />
-									</svg>
-									<svg
-										className="w-24 h-40 text-gray-200 fill-current"
-										preserveAspectRatio="none"
-										viewBox="0 0 24 40"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
-									</svg>
-									<svg
-										className="w-8 h-40 text-gray-200 fill-current"
-										preserveAspectRatio="none"
-										viewBox="0 0 1 1"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<rect width={1} height={1} />
-									</svg>
-								</div>
-							</div>
-						)}
-
+					<div
+						className="w-full max-w-xl bg-white xl:rounded-24"
+						style={{ boxShadow: "0 2px 4px -2px hsla(0, 0%, 0%, 0.25)" }}
+					>
+						<StickyObscureEffect />
 						<div className="hstack">
 							{/* LHS */}
 							<div className="spacer">
@@ -250,12 +275,15 @@ export default function Home() {
 									</div>
 								</div>
 								{/* Icons */}
+								{/* TODO: `grid-cols-112` does not work? */}
 								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
-									{range(60).map(key => (
-										<div key={key} className="aspect-ratio-1:1">
-											<div className="vstack stack-center space-16">
-												<div className="w-56 h-56 bg-gray-400 rounded-full" />
-												<div className="w-96 h-12 bg-gray-200 rounded-full" />
+									{dataset.map(each => (
+										<div key={each.kebab} className="aspect-ratio-1:1">
+											<div className="group vstack stack-center space-16">
+												{React.createElement(each.svg, { className: "w-32 h-32" })}
+												<div className="absolute x-0 b-0">
+													<div className="text-center text-14 text-gray-600 group-on:underline">{each.kebab}</div>
+												</div>
 											</div>
 										</div>
 									))}
@@ -265,7 +293,7 @@ export default function Home() {
 							<div className="hidden md:block w-320 bg-gray-50 border-l-1 rounded-tr-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Preview */}
-									{/* NOTE: Uses a nested `sticky` so preview appears on top. */}
+									{/* NOTE: Uses a nested `sticky`. */}
 									<div className="sticky t-0 xl:t-16 z-10">
 										<div className="vstack h-288 bg-white border-b-1 rounded-tr-24">
 											<div className="hstack stack-center space-16 p-24">

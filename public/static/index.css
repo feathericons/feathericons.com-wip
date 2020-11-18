@@ -45734,6 +45734,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     top: 1rem;
   }
 }
+.grid-cols-96 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+}
+
+.grid-cols-112 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+}
+
 .grid-cols-128 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
@@ -45764,8 +45774,4 @@ body:not([data-theme-effect=true]) .ease-in-out {
 
 .stroke-0 {
   stroke-width: 0;
-}
-
-.shadow-app {
-  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.25);
 }

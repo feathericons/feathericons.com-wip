@@ -1,15 +1,12 @@
 import Feather from "react-feather"
 
+// prettier-ignore
 export interface IIcon {
-	name: {
-		kebabCase: string
-		titleCase: string
-	}
+	title:      string
+	kebab:      string
 	searchTags: string[]
-	svgs: {
-		stroke: React.FC<Feather.Props>
-	}
-	statusNew: boolean
+	svg:        React.FC<Feather.Props>
+	statusNew:  boolean
 }
 
 // TODO: Do we need this?
