@@ -1,7 +1,8 @@
 import Head from "next/head"
 import sponsors from "fixtures/sponsors"
-import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
+import { ExtAnchor } from "@zaydek/lib/dist/components"
+import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
 import { ISponsor } from "types"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
@@ -37,15 +38,16 @@ function OctofaceIcon24x24(props: React.ComponentProps<"svg">) {
 
 function AbsoluteTopRow() {
 	return (
+		// TODO: Add analytics here.
 		<div className="absolute x-0 t-0">
 			<div className="hstack space-8 px-16 lg:px-24 p-12">
-				<ExtAnchor className="hstack stack-center space-8" href="TODO">
+				<ExtAnchor className="hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
 					{/* NOTE: `fill-current stroke-0` does not work here. */}
 					<Twitter className="w-24 h-24" style={{ fill: "currentColor", strokeWidth: 0 }} />
 					<p>Tweet thank you!</p>
 				</ExtAnchor>
 				<div className="spacer" />
-				<ExtAnchor className="hstack stack-center space-8" href="TODO">
+				<ExtAnchor className="hstack stack-center space-8" href={GitHub_FeatherSite}>
 					<p>Star on GitHub!</p>
 					<OctofaceIcon24x24 className="w-20 h-20" />
 				</ExtAnchor>
@@ -94,12 +96,12 @@ export default function Home() {
 			<div className="vstack space-96 pt-96 xl:pb-64 bg-gray-50">
 				{/**/}
 
-				{/* CTA and sponsors */}
+				{/* Top */}
 				<div className="hstack px-16 lg:px-24">
 					<div className="vstack xl:hstack space-32 w-full" style={{ maxWidth: 1024 + 64 }}>
 						{/**/}
 
-						{/* LHS: CTA buttons */}
+						{/* CTA buttons */}
 						<div className="hstack">
 							<div className="vstack stack-center space-16 w-full max-w-xs">
 								<EmbossedFeather className="w-56 h-56 text-gray-400" />
@@ -115,16 +117,16 @@ export default function Home() {
 									</ExtAnchor>
 								</h2>
 								{/* CTA buttons */}
-								<div className="vstack sm:hstack space-16 w-full max-w-sm">
+								<div className="vstack md:hstack space-16 w-full max-w-md">
 									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
-									<div className="vstack sm:w-192 h-56 bg-gray-300 rounded-12 sm:rounded-full">
+									<div className="vstack md:w-192 h-56 bg-gray-200 rounded-12 md:rounded-full">
 										<div className="hstack stack-center space-8">
 											<GitHub className="w-20 h-20" />
 											<p className="font-500 text-17">Read docs</p>
 										</div>
 									</div>
 									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
-									<div className="vstack sm:w-192 h-56 bg-gray-200 rounded-12 sm:rounded-full">
+									<div className="vstack md:w-192 h-56 bg-gray-200 rounded-12 md:rounded-full">
 										<div className="hstack stack-center space-8">
 											<Download className="w-20 h-20" />
 											<p className="font-500 text-17">Download</p>
@@ -134,8 +136,8 @@ export default function Home() {
 							</div>
 						</div>
 
-						{/* RHS: Sponsors */}
-						{screen.sm && (
+						{/* Sponsors */}
+						{screen.md && (
 							<>
 								<div className="spacer" />
 								<div className="hstack">
@@ -180,10 +182,9 @@ export default function Home() {
 
 				{/* App */}
 				<div className="hstack">
-					{/* TODO: Add `overflow-x-hidden` because of `sticky t-0`? */}
 					<div className="w-full max-w-xl bg-white xl:rounded-24 shadow-app">
 						{screen.xl && (
-							// NOTE: Use `>= z-20` not `z-10` here.
+							// NOTE: Use `z-20` not `z-10` here.
 							<div className="sticky t-0 -mx-8 -mb-24 z-20">
 								<div className="hstack">
 									<svg
