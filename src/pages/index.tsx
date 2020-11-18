@@ -197,9 +197,9 @@ export default function Home() {
 									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-tl-24">
 										<div className="w-32 h-32 bg-gray-200 rounded-full" />
 										<div className="spacer" />
-										<div className="hidden sm:vstack px-8 w-160 h-40 bg-gray-100 rounded-full">
+										<div className="hidden sm:vstack px-6 w-128 h-32 bg-gray-100 rounded-full">
 											<div className="hstack">
-												<div className="w-24 h-24 bg-gray-300 rounded-full" />
+												<div className="w-20 h-20 bg-gray-300 rounded-full" />
 												<div className="spacer" />
 											</div>
 										</div>
@@ -208,8 +208,8 @@ export default function Home() {
 								</div>
 								{/* Icons */}
 								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
-									{range(60).map(each => (
-										<div key={each} className="aspect-ratio-1:1">
+									{range(60).map(key => (
+										<div key={key} className="aspect-ratio-1:1">
 											<div className="vstack stack-center space-16">
 												<div className="w-56 h-56 bg-gray-400 rounded-full" />
 												<div className="w-96 h-12 bg-gray-200 rounded-full" />
@@ -221,9 +221,9 @@ export default function Home() {
 							{/* RHS */}
 							{/* NOTE: No need to use `vstack`. */}
 							{/* TODO: Add `bg-white rounded-tr-*` somewhere. */}
-							<div className="hidden lg:block w-320 border-l-1">
+							<div className="hidden lg:block w-320 bg-gray-50 border-l-1">
 								<div className="sticky t-0 xl:t-16 z-10">
-									<div className="vstack h-288 border-b-1">
+									<div className="vstack h-288 bg-white border-b-1">
 										<div className="hstack stack-center space-16 p-24">
 											<div className="w-32 h-32 bg-gray-200 rounded-full" />
 											<div className="w-160 h-16 bg-gray-100 rounded-full" />
@@ -231,15 +231,29 @@ export default function Home() {
 										</div>
 										<div className="spacer" />
 									</div>
-									{range(2).map(each => (
-										<div key={each} className="vstack border-b-1">
-											<div className="hstack stack-center space-16 p-24">
-												<div className="w-32 h-32 bg-gray-200 rounded-full" />
-												<div className="w-160 h-16 bg-gray-100 rounded-full" />
+									{range(2).map(key => (
+										<div key={key} className="vstack space-24 p-24 border-b-1">
+											<div className="hstack stack-center">
+												<div className="w-96 h-12 bg-gray-200 rounded-full" />
 												<div className="spacer" />
+												<div className="w-16 h-16 bg-gray-200 rounded-full" />
 											</div>
-											<div className="spacer" />
+											<div className="hstack stack-center space-24">
+												<div className="spacer">
+													<div className="w-full h-8 bg-gray-200 rounded-full" />
+												</div>
+												<div className="w-64 h-32 bg-gray-200 rounded-full" />
+											</div>
 										</div>
+
+										// <div key={key} className="vstack border-b-1">
+										// 	<div className="hstack stack-center space-16 p-24">
+										// 		<div className="w-32 h-32 bg-gray-200 rounded-full" />
+										// 		<div className="w-160 h-16 bg-gray-100 rounded-full" />
+										// 		<div className="spacer" />
+										// 	</div>
+										// 	<div className="spacer" />
+										// </div>
 									))}
 								</div>
 							</div>
