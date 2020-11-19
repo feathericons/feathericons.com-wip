@@ -1430,9 +1430,9 @@
   integrity sha512-CXnPG6RH2Kvdyn3+RWkyy5rkv5PblSA6s8jja6y3LZtgFGKKZDriB64r4DD07pqpYEry5aFaxygl4yrPntfPGg==
 
 "@zaydek/prose@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.2.6.tgz#52801a30259686dddf83f99a167d4f7ebd751879"
-  integrity sha512-twc3djHsIfXFGhLIdhzaFWeNHJIoXIZHiZgnPOO+MR3u5Y5wZg5ftmOyHLVyHv9rVEwrQvlTRDMQnFBxB9MaOA==
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.2.7.tgz#cc2a81082e82b47ea68ed566be605dd5af5c9b41"
+  integrity sha512-0jeLTKlNjt9bMinmwr1ig16P5WoTDX0QX+X6Gb7xQJT4n4juvdR28UIoukTauJpMS4Y4WWSBKlpJ4KoSYp/SFg==
 
 abort-controller@3.0.0:
   version "3.0.0"
