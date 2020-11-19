@@ -1,5 +1,6 @@
 {
 	"Activity": {
+		"name": "Activity",
 		"tags": [
 			"pulse",
 			"health",
@@ -9,6 +10,7 @@
 		"hasTagsInCommon": []
 	},
 	"Airplay": {
+		"name": "Airplay",
 		"tags": [
 			"stream",
 			"cast",
@@ -19,6 +21,7 @@
 		]
 	},
 	"AlertCircle": {
+		"name": "AlertCircle",
 		"tags": [
 			"warning",
 			"alert",
@@ -31,6 +34,7 @@
 		]
 	},
 	"AlertOctagon": {
+		"name": "AlertOctagon",
 		"tags": [
 			"warning",
 			"alert",
@@ -43,6 +47,7 @@
 		]
 	},
 	"AlertTriangle": {
+		"name": "AlertTriangle",
 		"tags": [
 			"warning",
 			"alert",
@@ -55,10 +60,9 @@
 		]
 	},
 	"AlignCenter": {
+		"name": "AlignCenter",
 		"tags": [
 			"text alignment",
-			"text",
-			"alignment",
 			"center"
 		],
 		"hasTagsInCommon": [
@@ -68,10 +72,9 @@
 		]
 	},
 	"AlignJustify": {
+		"name": "AlignJustify",
 		"tags": [
 			"text alignment",
-			"text",
-			"alignment",
 			"justified"
 		],
 		"hasTagsInCommon": [
@@ -81,10 +84,9 @@
 		]
 	},
 	"AlignLeft": {
+		"name": "AlignLeft",
 		"tags": [
 			"text alignment",
-			"text",
-			"alignment",
 			"left"
 		],
 		"hasTagsInCommon": [
@@ -94,10 +96,9 @@
 		]
 	},
 	"AlignRight": {
+		"name": "AlignRight",
 		"tags": [
 			"text alignment",
-			"text",
-			"alignment",
 			"right"
 		],
 		"hasTagsInCommon": [
@@ -107,10 +108,12 @@
 		]
 	},
 	"Anchor": {
+		"name": "Anchor",
 		"tags": [],
 		"hasTagsInCommon": []
 	},
 	"Aperture": {
+		"name": "Aperture",
 		"tags": [
 			"camera",
 			"photo"
@@ -126,6 +129,7 @@
 		]
 	},
 	"Archive": {
+		"name": "Archive",
 		"tags": [
 			"index",
 			"box"
@@ -136,54 +140,55 @@
 		]
 	},
 	"ArrowDown": {
-		"tags": [],
+		"name": "ArrowDown",
 		"hasTagsInCommon": []
 	},
 	"ArrowDownCircle": {
-		"tags": [],
+		"name": "ArrowDownCircle",
 		"hasTagsInCommon": []
 	},
 	"ArrowDownLeft": {
-		"tags": [],
+		"name": "ArrowDownLeft",
 		"hasTagsInCommon": []
 	},
 	"ArrowDownRight": {
-		"tags": [],
+		"name": "ArrowDownRight",
 		"hasTagsInCommon": []
 	},
 	"ArrowLeft": {
-		"tags": [],
+		"name": "ArrowLeft",
 		"hasTagsInCommon": []
 	},
 	"ArrowLeftCircle": {
-		"tags": [],
+		"name": "ArrowLeftCircle",
 		"hasTagsInCommon": []
 	},
 	"ArrowRight": {
-		"tags": [],
+		"name": "ArrowRight",
 		"hasTagsInCommon": []
 	},
 	"ArrowRightCircle": {
-		"tags": [],
+		"name": "ArrowRightCircle",
 		"hasTagsInCommon": []
 	},
 	"ArrowUp": {
-		"tags": [],
+		"name": "ArrowUp",
 		"hasTagsInCommon": []
 	},
 	"ArrowUpCircle": {
-		"tags": [],
+		"name": "ArrowUpCircle",
 		"hasTagsInCommon": []
 	},
 	"ArrowUpLeft": {
-		"tags": [],
+		"name": "ArrowUpLeft",
 		"hasTagsInCommon": []
 	},
 	"ArrowUpRight": {
-		"tags": [],
+		"name": "ArrowUpRight",
 		"hasTagsInCommon": []
 	},
 	"AtSign": {
+		"name": "AtSign",
 		"tags": [
 			"mention",
 			"at",
@@ -197,6 +202,7 @@
 		]
 	},
 	"Award": {
+		"name": "Award",
 		"tags": [
 			"achievement",
 			"badge"
@@ -204,6 +210,7 @@
 		"hasTagsInCommon": []
 	},
 	"BarChart": {
+		"name": "BarChart",
 		"tags": [
 			"statistics",
 			"diagram",
@@ -215,10 +222,11 @@
 		]
 	},
 	"BarChart2": {
-		"tags": [],
+		"name": "BarChart2",
 		"hasTagsInCommon": []
 	},
 	"Battery": {
+		"name": "Battery",
 		"tags": [
 			"power",
 			"electricity"
@@ -228,6 +236,7 @@
 		]
 	},
 	"BatteryCharging": {
+		"name": "BatteryCharging",
 		"tags": [
 			"power",
 			"electricity"
@@ -237,6 +246,7 @@
 		]
 	},
 	"Bell": {
+		"name": "Bell",
 		"tags": [
 			"alarm",
 			"notification",
@@ -255,6 +265,7 @@
 		]
 	},
 	"BellOff": {
+		"name": "BellOff",
 		"tags": [
 			"alarm",
 			"notification",
@@ -266,6 +277,7 @@
 		]
 	},
 	"Bluetooth": {
+		"name": "Bluetooth",
 		"tags": [
 			"wireless"
 		],
@@ -274,10 +286,11 @@
 		]
 	},
 	"Bold": {
-		"tags": [],
+		"name": "Bold",
 		"hasTagsInCommon": []
 	},
 	"Book": {
+		"name": "Book",
 		"tags": [
 			"read",
 			"dictionary",
@@ -291,6 +304,7 @@
 		]
 	},
 	"BookOpen": {
+		"name": "BookOpen",
 		"tags": [
 			"read",
 			"library"
@@ -301,6 +315,7 @@
 		]
 	},
 	"Bookmark": {
+		"name": "Bookmark",
 		"tags": [
 			"read",
 			"clip",
@@ -314,12 +329,14 @@
 		]
 	},
 	"Box": {
+		"name": "Box",
 		"tags": [
 			"cube"
 		],
 		"hasTagsInCommon": []
 	},
 	"Briefcase": {
+		"name": "Briefcase",
 		"tags": [
 			"work",
 			"bag",
@@ -329,12 +346,14 @@
 		"hasTagsInCommon": []
 	},
 	"Calendar": {
+		"name": "Calendar",
 		"tags": [
 			"date"
 		],
 		"hasTagsInCommon": []
 	},
 	"Camera": {
+		"name": "Camera",
 		"tags": [
 			"photo"
 		],
@@ -344,10 +363,11 @@
 		]
 	},
 	"CameraOff": {
-		"tags": [],
+		"name": "CameraOff",
 		"hasTagsInCommon": []
 	},
 	"Cast": {
+		"name": "Cast",
 		"tags": [
 			"chromecast",
 			"airplay"
@@ -355,54 +375,55 @@
 		"hasTagsInCommon": []
 	},
 	"Check": {
-		"tags": [],
+		"name": "Check",
 		"hasTagsInCommon": []
 	},
 	"CheckCircle": {
-		"tags": [],
+		"name": "CheckCircle",
 		"hasTagsInCommon": []
 	},
 	"CheckSquare": {
-		"tags": [],
+		"name": "CheckSquare",
 		"hasTagsInCommon": []
 	},
 	"ChevronDown": {
-		"tags": [],
+		"name": "ChevronDown",
 		"hasTagsInCommon": []
 	},
 	"ChevronLeft": {
-		"tags": [],
+		"name": "ChevronLeft",
 		"hasTagsInCommon": []
 	},
 	"ChevronRight": {
-		"tags": [],
+		"name": "ChevronRight",
 		"hasTagsInCommon": []
 	},
 	"ChevronUp": {
-		"tags": [],
+		"name": "ChevronUp",
 		"hasTagsInCommon": []
 	},
 	"ChevronsDown": {
-		"tags": [],
+		"name": "ChevronsDown",
 		"hasTagsInCommon": []
 	},
 	"ChevronsLeft": {
-		"tags": [],
+		"name": "ChevronsLeft",
 		"hasTagsInCommon": []
 	},
 	"ChevronsRight": {
-		"tags": [],
+		"name": "ChevronsRight",
 		"hasTagsInCommon": []
 	},
 	"ChevronsUp": {
-		"tags": [],
+		"name": "ChevronsUp",
 		"hasTagsInCommon": []
 	},
 	"Chrome": {
-		"tags": [],
+		"name": "Chrome",
 		"hasTagsInCommon": []
 	},
 	"Circle": {
+		"name": "Circle",
 		"tags": [
 			"off",
 			"zero",
@@ -417,12 +438,14 @@
 		]
 	},
 	"Clipboard": {
+		"name": "Clipboard",
 		"tags": [
 			"copy"
 		],
 		"hasTagsInCommon": []
 	},
 	"Clock": {
+		"name": "Clock",
 		"tags": [
 			"time",
 			"watch",
@@ -439,6 +462,7 @@
 		]
 	},
 	"Cloud": {
+		"name": "Cloud",
 		"tags": [
 			"weather"
 		],
@@ -456,6 +480,7 @@
 		]
 	},
 	"CloudDrizzle": {
+		"name": "CloudDrizzle",
 		"tags": [
 			"weather",
 			"shower"
@@ -474,6 +499,7 @@
 		]
 	},
 	"CloudLightning": {
+		"name": "CloudLightning",
 		"tags": [
 			"weather",
 			"bolt"
@@ -492,10 +518,11 @@
 		]
 	},
 	"CloudOff": {
-		"tags": [],
+		"name": "CloudOff",
 		"hasTagsInCommon": []
 	},
 	"CloudRain": {
+		"name": "CloudRain",
 		"tags": [
 			"weather"
 		],
@@ -513,6 +540,7 @@
 		]
 	},
 	"CloudSnow": {
+		"name": "CloudSnow",
 		"tags": [
 			"weather",
 			"blizzard"
@@ -531,6 +559,7 @@
 		]
 	},
 	"Code": {
+		"name": "Code",
 		"tags": [
 			"source",
 			"programming"
@@ -538,6 +567,7 @@
 		"hasTagsInCommon": []
 	},
 	"Codepen": {
+		"name": "Codepen",
 		"tags": [
 			"logo"
 		],
@@ -560,6 +590,7 @@
 		]
 	},
 	"Codesandbox": {
+		"name": "Codesandbox",
 		"tags": [
 			"logo"
 		],
@@ -582,6 +613,7 @@
 		]
 	},
 	"Coffee": {
+		"name": "Coffee",
 		"tags": [
 			"drink",
 			"cup",
@@ -594,12 +626,14 @@
 		"hasTagsInCommon": []
 	},
 	"Columns": {
+		"name": "Columns",
 		"tags": [
 			"layout"
 		],
 		"hasTagsInCommon": []
 	},
 	"Command": {
+		"name": "Command",
 		"tags": [
 			"keyboard",
 			"cmd",
@@ -611,6 +645,7 @@
 		]
 	},
 	"Compass": {
+		"name": "Compass",
 		"tags": [
 			"navigation",
 			"safari",
@@ -626,6 +661,7 @@
 		]
 	},
 	"Copy": {
+		"name": "Copy",
 		"tags": [
 			"clone",
 			"duplicate"
@@ -633,6 +669,7 @@
 		"hasTagsInCommon": []
 	},
 	"CornerDownLeft": {
+		"name": "CornerDownLeft",
 		"tags": [
 			"arrow",
 			"return"
@@ -653,6 +690,7 @@
 		]
 	},
 	"CornerDownRight": {
+		"name": "CornerDownRight",
 		"tags": [
 			"arrow"
 		],
@@ -672,6 +710,7 @@
 		]
 	},
 	"CornerLeftDown": {
+		"name": "CornerLeftDown",
 		"tags": [
 			"arrow"
 		],
@@ -691,6 +730,7 @@
 		]
 	},
 	"CornerLeftUp": {
+		"name": "CornerLeftUp",
 		"tags": [
 			"arrow"
 		],
@@ -710,6 +750,7 @@
 		]
 	},
 	"CornerRightDown": {
+		"name": "CornerRightDown",
 		"tags": [
 			"arrow"
 		],
@@ -729,6 +770,7 @@
 		]
 	},
 	"CornerRightUp": {
+		"name": "CornerRightUp",
 		"tags": [
 			"arrow"
 		],
@@ -748,6 +790,7 @@
 		]
 	},
 	"CornerUpLeft": {
+		"name": "CornerUpLeft",
 		"tags": [
 			"arrow"
 		],
@@ -767,6 +810,7 @@
 		]
 	},
 	"CornerUpRight": {
+		"name": "CornerUpRight",
 		"tags": [
 			"arrow"
 		],
@@ -786,6 +830,7 @@
 		]
 	},
 	"Cpu": {
+		"name": "Cpu",
 		"tags": [
 			"processor",
 			"technology"
@@ -793,6 +838,7 @@
 		"hasTagsInCommon": []
 	},
 	"CreditCard": {
+		"name": "CreditCard",
 		"tags": [
 			"purchase",
 			"payment",
@@ -805,6 +851,7 @@
 		]
 	},
 	"Crop": {
+		"name": "Crop",
 		"tags": [
 			"photo",
 			"image"
@@ -815,6 +862,7 @@
 		]
 	},
 	"Crosshair": {
+		"name": "Crosshair",
 		"tags": [
 			"aim",
 			"target"
@@ -822,6 +870,7 @@
 		"hasTagsInCommon": []
 	},
 	"Database": {
+		"name": "Database",
 		"tags": [
 			"storage",
 			"memory"
@@ -831,6 +880,7 @@
 		]
 	},
 	"Delete": {
+		"name": "Delete",
 		"tags": [
 			"remove"
 		],
@@ -846,6 +896,7 @@
 		]
 	},
 	"Disc": {
+		"name": "Disc",
 		"tags": [
 			"album",
 			"cd",
@@ -872,18 +923,19 @@
 		]
 	},
 	"Divide": {
-		"tags": [],
+		"name": "Divide",
 		"hasTagsInCommon": []
 	},
 	"DivideCircle": {
-		"tags": [],
+		"name": "DivideCircle",
 		"hasTagsInCommon": []
 	},
 	"DivideSquare": {
-		"tags": [],
+		"name": "DivideSquare",
 		"hasTagsInCommon": []
 	},
 	"DollarSign": {
+		"name": "DollarSign",
 		"tags": [
 			"currency",
 			"money",
@@ -894,24 +946,26 @@
 		]
 	},
 	"Download": {
-		"tags": [],
+		"name": "Download",
 		"hasTagsInCommon": []
 	},
 	"DownloadCloud": {
-		"tags": [],
+		"name": "DownloadCloud",
 		"hasTagsInCommon": []
 	},
 	"Dribbble": {
-		"tags": [],
+		"name": "Dribbble",
 		"hasTagsInCommon": []
 	},
 	"Droplet": {
+		"name": "Droplet",
 		"tags": [
 			"water"
 		],
 		"hasTagsInCommon": []
 	},
 	"Edit": {
+		"name": "Edit",
 		"tags": [
 			"pencil",
 			"change"
@@ -922,20 +976,22 @@
 		]
 	},
 	"Edit2": {
-		"tags": [],
+		"name": "Edit2",
 		"hasTagsInCommon": []
 	},
 	"Edit3": {
-		"tags": [],
+		"name": "Edit3",
 		"hasTagsInCommon": []
 	},
 	"ExternalLink": {
+		"name": "ExternalLink",
 		"tags": [
 			"outbound"
 		],
 		"hasTagsInCommon": []
 	},
 	"Eye": {
+		"name": "Eye",
 		"tags": [
 			"view",
 			"watch"
@@ -946,6 +1002,7 @@
 		]
 	},
 	"EyeOff": {
+		"name": "EyeOff",
 		"tags": [
 			"view",
 			"watch",
@@ -958,6 +1015,7 @@
 		]
 	},
 	"Facebook": {
+		"name": "Facebook",
 		"tags": [
 			"logo",
 			"social"
@@ -981,6 +1039,7 @@
 		]
 	},
 	"FastForward": {
+		"name": "FastForward",
 		"tags": [
 			"music"
 		],
@@ -1004,10 +1063,11 @@
 		]
 	},
 	"Feather": {
-		"tags": [],
+		"name": "Feather",
 		"hasTagsInCommon": []
 	},
 	"Figma": {
+		"name": "Figma",
 		"tags": [
 			"logo",
 			"design",
@@ -1032,10 +1092,11 @@
 		]
 	},
 	"File": {
-		"tags": [],
+		"name": "File",
 		"hasTagsInCommon": []
 	},
 	"FileMinus": {
+		"name": "FileMinus",
 		"tags": [
 			"delete",
 			"remove",
@@ -1054,6 +1115,7 @@
 		]
 	},
 	"FilePlus": {
+		"name": "FilePlus",
 		"tags": [
 			"add",
 			"create",
@@ -1067,6 +1129,7 @@
 		]
 	},
 	"FileText": {
+		"name": "FileText",
 		"tags": [
 			"data",
 			"txt",
@@ -1077,6 +1140,7 @@
 		]
 	},
 	"Film": {
+		"name": "Film",
 		"tags": [
 			"movie",
 			"video"
@@ -1088,6 +1152,7 @@
 		]
 	},
 	"Filter": {
+		"name": "Filter",
 		"tags": [
 			"funnel",
 			"hopper"
@@ -1095,12 +1160,14 @@
 		"hasTagsInCommon": []
 	},
 	"Flag": {
+		"name": "Flag",
 		"tags": [
 			"report"
 		],
 		"hasTagsInCommon": []
 	},
 	"Folder": {
+		"name": "Folder",
 		"tags": [
 			"directory"
 		],
@@ -1110,6 +1177,7 @@
 		]
 	},
 	"FolderMinus": {
+		"name": "FolderMinus",
 		"tags": [
 			"directory"
 		],
@@ -1119,6 +1187,7 @@
 		]
 	},
 	"FolderPlus": {
+		"name": "FolderPlus",
 		"tags": [
 			"directory"
 		],
@@ -1128,6 +1197,7 @@
 		]
 	},
 	"Framer": {
+		"name": "Framer",
 		"tags": [
 			"logo",
 			"design",
@@ -1152,6 +1222,7 @@
 		]
 	},
 	"Frown": {
+		"name": "Frown",
 		"tags": [
 			"emoji",
 			"face",
@@ -1168,6 +1239,7 @@
 		]
 	},
 	"Gift": {
+		"name": "Gift",
 		"tags": [
 			"present",
 			"box",
@@ -1180,11 +1252,10 @@
 		]
 	},
 	"GitBranch": {
+		"name": "GitBranch",
 		"tags": [
 			"code",
-			"version control",
-			"version",
-			"control"
+			"version control"
 		],
 		"hasTagsInCommon": [
 			"GitCommit",
@@ -1196,11 +1267,10 @@
 		]
 	},
 	"GitCommit": {
+		"name": "GitCommit",
 		"tags": [
 			"code",
-			"version control",
-			"version",
-			"control"
+			"version control"
 		],
 		"hasTagsInCommon": [
 			"GitBranch",
@@ -1212,15 +1282,14 @@
 		]
 	},
 	"GitHub": {
-		"tags": [],
+		"name": "GitHub",
 		"hasTagsInCommon": []
 	},
 	"GitMerge": {
+		"name": "GitMerge",
 		"tags": [
 			"code",
-			"version control",
-			"version",
-			"control"
+			"version control"
 		],
 		"hasTagsInCommon": [
 			"GitBranch",
@@ -1232,11 +1301,10 @@
 		]
 	},
 	"GitPullRequest": {
+		"name": "GitPullRequest",
 		"tags": [
 			"code",
-			"version control",
-			"version",
-			"control"
+			"version control"
 		],
 		"hasTagsInCommon": [
 			"GitBranch",
@@ -1248,11 +1316,10 @@
 		]
 	},
 	"Gitlab": {
+		"name": "Gitlab",
 		"tags": [
 			"logo",
-			"version control",
-			"version",
-			"control"
+			"version control"
 		],
 		"hasTagsInCommon": [
 			"Codepen",
@@ -1277,6 +1344,7 @@
 		]
 	},
 	"Globe": {
+		"name": "Globe",
 		"tags": [
 			"world",
 			"browser",
@@ -1286,10 +1354,11 @@
 		"hasTagsInCommon": []
 	},
 	"Grid": {
-		"tags": [],
+		"name": "Grid",
 		"hasTagsInCommon": []
 	},
 	"HardDrive": {
+		"name": "HardDrive",
 		"tags": [
 			"computer",
 			"server",
@@ -1302,6 +1371,7 @@
 		]
 	},
 	"Hash": {
+		"name": "Hash",
 		"tags": [
 			"hashtag",
 			"number",
@@ -1310,6 +1380,7 @@
 		"hasTagsInCommon": []
 	},
 	"Headphones": {
+		"name": "Headphones",
 		"tags": [
 			"music",
 			"audio",
@@ -1338,6 +1409,7 @@
 		]
 	},
 	"Heart": {
+		"name": "Heart",
 		"tags": [
 			"like",
 			"love",
@@ -1353,14 +1425,14 @@
 		]
 	},
 	"HelpCircle": {
+		"name": "HelpCircle",
 		"tags": [
-			"question mark",
-			"question",
-			"mark"
+			"question mark"
 		],
 		"hasTagsInCommon": []
 	},
 	"Hexagon": {
+		"name": "Hexagon",
 		"tags": [
 			"shape",
 			"node.js",
@@ -1385,6 +1457,7 @@
 		]
 	},
 	"Home": {
+		"name": "Home",
 		"tags": [
 			"house",
 			"living"
@@ -1392,12 +1465,14 @@
 		"hasTagsInCommon": []
 	},
 	"Image": {
+		"name": "Image",
 		"tags": [
 			"picture"
 		],
 		"hasTagsInCommon": []
 	},
 	"Inbox": {
+		"name": "Inbox",
 		"tags": [
 			"email"
 		],
@@ -1408,10 +1483,11 @@
 		]
 	},
 	"Info": {
-		"tags": [],
+		"name": "Info",
 		"hasTagsInCommon": []
 	},
 	"Instagram": {
+		"name": "Instagram",
 		"tags": [
 			"logo",
 			"camera"
@@ -1440,10 +1516,11 @@
 		]
 	},
 	"Italic": {
-		"tags": [],
+		"name": "Italic",
 		"hasTagsInCommon": []
 	},
 	"Key": {
+		"name": "Key",
 		"tags": [
 			"password",
 			"login",
@@ -1456,12 +1533,14 @@
 		]
 	},
 	"Layers": {
+		"name": "Layers",
 		"tags": [
 			"stack"
 		],
 		"hasTagsInCommon": []
 	},
 	"Layout": {
+		"name": "Layout",
 		"tags": [
 			"window",
 			"webpage"
@@ -1469,10 +1548,11 @@
 		"hasTagsInCommon": []
 	},
 	"LifeBuoy": {
-		"tags": [],
+		"name": "LifeBuoy",
 		"hasTagsInCommon": []
 	},
 	"Link": {
+		"name": "Link",
 		"tags": [
 			"chain",
 			"url"
@@ -1482,15 +1562,14 @@
 		]
 	},
 	"Link2": {
-		"tags": [],
+		"name": "Link2",
 		"hasTagsInCommon": []
 	},
 	"Linkedin": {
+		"name": "Linkedin",
 		"tags": [
 			"logo",
-			"social media",
-			"social",
-			"media"
+			"social media"
 		],
 		"hasTagsInCommon": [
 			"Codepen",
@@ -1511,16 +1590,18 @@
 		]
 	},
 	"List": {
+		"name": "List",
 		"tags": [
 			"options"
 		],
 		"hasTagsInCommon": []
 	},
 	"Loader": {
-		"tags": [],
+		"name": "Loader",
 		"hasTagsInCommon": []
 	},
 	"Lock": {
+		"name": "Lock",
 		"tags": [
 			"security",
 			"password",
@@ -1534,10 +1615,9 @@
 		]
 	},
 	"LogIn": {
+		"name": "LogIn",
 		"tags": [
 			"sign in",
-			"sign",
-			"in",
 			"arrow",
 			"enter"
 		],
@@ -1557,10 +1637,9 @@
 		]
 	},
 	"LogOut": {
+		"name": "LogOut",
 		"tags": [
 			"sign out",
-			"sign",
-			"out",
 			"arrow",
 			"exit"
 		],
@@ -1580,6 +1659,7 @@
 		]
 	},
 	"Mail": {
+		"name": "Mail",
 		"tags": [
 			"email",
 			"message"
@@ -1591,6 +1671,7 @@
 		]
 	},
 	"Map": {
+		"name": "Map",
 		"tags": [
 			"location",
 			"navigation",
@@ -1605,6 +1686,7 @@
 		]
 	},
 	"MapPin": {
+		"name": "MapPin",
 		"tags": [
 			"location",
 			"navigation",
@@ -1621,6 +1703,7 @@
 		]
 	},
 	"Maximize": {
+		"name": "Maximize",
 		"tags": [
 			"fullscreen"
 		],
@@ -1629,10 +1712,11 @@
 		]
 	},
 	"Maximize2": {
-		"tags": [],
+		"name": "Maximize2",
 		"hasTagsInCommon": []
 	},
 	"Meh": {
+		"name": "Meh",
 		"tags": [
 			"emoji",
 			"face",
@@ -1648,6 +1732,7 @@
 		]
 	},
 	"Menu": {
+		"name": "Menu",
 		"tags": [
 			"bars",
 			"navigation",
@@ -1660,6 +1745,7 @@
 		]
 	},
 	"MessageCircle": {
+		"name": "MessageCircle",
 		"tags": [
 			"comment",
 			"chat"
@@ -1669,6 +1755,7 @@
 		]
 	},
 	"MessageSquare": {
+		"name": "MessageSquare",
 		"tags": [
 			"comment",
 			"chat"
@@ -1678,6 +1765,7 @@
 		]
 	},
 	"Mic": {
+		"name": "Mic",
 		"tags": [
 			"record",
 			"sound",
@@ -1695,6 +1783,7 @@
 		]
 	},
 	"MicOff": {
+		"name": "MicOff",
 		"tags": [
 			"record",
 			"sound",
@@ -1713,10 +1802,9 @@
 		]
 	},
 	"Minimize": {
+		"name": "Minimize",
 		"tags": [
 			"exit fullscreen",
-			"exit",
-			"fullscreen",
 			"close"
 		],
 		"hasTagsInCommon": [
@@ -1727,24 +1815,26 @@
 		]
 	},
 	"Minimize2": {
-		"tags": [],
+		"name": "Minimize2",
 		"hasTagsInCommon": []
 	},
 	"Minus": {
+		"name": "Minus",
 		"tags": [
 			"subtract"
 		],
 		"hasTagsInCommon": []
 	},
 	"MinusCircle": {
-		"tags": [],
+		"name": "MinusCircle",
 		"hasTagsInCommon": []
 	},
 	"MinusSquare": {
-		"tags": [],
+		"name": "MinusSquare",
 		"hasTagsInCommon": []
 	},
 	"Monitor": {
+		"name": "Monitor",
 		"tags": [
 			"tv",
 			"screen",
@@ -1753,6 +1843,7 @@
 		"hasTagsInCommon": []
 	},
 	"Moon": {
+		"name": "Moon",
 		"tags": [
 			"dark",
 			"night"
@@ -1762,6 +1853,7 @@
 		]
 	},
 	"MoreHorizontal": {
+		"name": "MoreHorizontal",
 		"tags": [
 			"ellipsis"
 		],
@@ -1770,6 +1862,7 @@
 		]
 	},
 	"MoreVertical": {
+		"name": "MoreVertical",
 		"tags": [
 			"ellipsis"
 		],
@@ -1778,6 +1871,7 @@
 		]
 	},
 	"MousePointer": {
+		"name": "MousePointer",
 		"tags": [
 			"arrow",
 			"cursor"
@@ -1798,6 +1892,7 @@
 		]
 	},
 	"Move": {
+		"name": "Move",
 		"tags": [
 			"arrows"
 		],
@@ -1810,12 +1905,14 @@
 		]
 	},
 	"Music": {
+		"name": "Music",
 		"tags": [
 			"note"
 		],
 		"hasTagsInCommon": []
 	},
 	"Navigation": {
+		"name": "Navigation",
 		"tags": [
 			"location",
 			"travel"
@@ -1828,10 +1925,11 @@
 		]
 	},
 	"Navigation2": {
-		"tags": [],
+		"name": "Navigation2",
 		"hasTagsInCommon": []
 	},
 	"Octagon": {
+		"name": "Octagon",
 		"tags": [
 			"stop"
 		],
@@ -1842,6 +1940,7 @@
 		]
 	},
 	"Package": {
+		"name": "Package",
 		"tags": [
 			"box",
 			"container"
@@ -1852,12 +1951,14 @@
 		]
 	},
 	"Paperclip": {
+		"name": "Paperclip",
 		"tags": [
 			"attachment"
 		],
 		"hasTagsInCommon": []
 	},
 	"Pause": {
+		"name": "Pause",
 		"tags": [
 			"music",
 			"stop"
@@ -1884,6 +1985,7 @@
 		]
 	},
 	"PauseCircle": {
+		"name": "PauseCircle",
 		"tags": [
 			"music",
 			"audio",
@@ -1911,6 +2013,7 @@
 		]
 	},
 	"PenTool": {
+		"name": "PenTool",
 		"tags": [
 			"vector",
 			"drawing"
@@ -1918,12 +2021,14 @@
 		"hasTagsInCommon": []
 	},
 	"Percent": {
+		"name": "Percent",
 		"tags": [
 			"discount"
 		],
 		"hasTagsInCommon": []
 	},
 	"Phone": {
+		"name": "Phone",
 		"tags": [
 			"call"
 		],
@@ -1936,12 +2041,14 @@
 		]
 	},
 	"PhoneCall": {
+		"name": "PhoneCall",
 		"tags": [
 			"ring"
 		],
 		"hasTagsInCommon": []
 	},
 	"PhoneForwarded": {
+		"name": "PhoneForwarded",
 		"tags": [
 			"call"
 		],
@@ -1954,6 +2061,7 @@
 		]
 	},
 	"PhoneIncoming": {
+		"name": "PhoneIncoming",
 		"tags": [
 			"call"
 		],
@@ -1966,6 +2074,7 @@
 		]
 	},
 	"PhoneMissed": {
+		"name": "PhoneMissed",
 		"tags": [
 			"call"
 		],
@@ -1978,6 +2087,7 @@
 		]
 	},
 	"PhoneOff": {
+		"name": "PhoneOff",
 		"tags": [
 			"call",
 			"mute"
@@ -1994,6 +2104,7 @@
 		]
 	},
 	"PhoneOutgoing": {
+		"name": "PhoneOutgoing",
 		"tags": [
 			"call"
 		],
@@ -2006,6 +2117,7 @@
 		]
 	},
 	"PieChart": {
+		"name": "PieChart",
 		"tags": [
 			"statistics",
 			"diagram"
@@ -2016,6 +2128,7 @@
 		]
 	},
 	"Play": {
+		"name": "Play",
 		"tags": [
 			"music",
 			"start"
@@ -2040,6 +2153,7 @@
 		]
 	},
 	"PlayCircle": {
+		"name": "PlayCircle",
 		"tags": [
 			"music",
 			"start"
@@ -2064,6 +2178,7 @@
 		]
 	},
 	"Plus": {
+		"name": "Plus",
 		"tags": [
 			"add",
 			"new"
@@ -2076,6 +2191,7 @@
 		]
 	},
 	"PlusCircle": {
+		"name": "PlusCircle",
 		"tags": [
 			"add",
 			"new"
@@ -2088,6 +2204,7 @@
 		]
 	},
 	"PlusSquare": {
+		"name": "PlusSquare",
 		"tags": [
 			"add",
 			"new"
@@ -2100,6 +2217,7 @@
 		]
 	},
 	"Pocket": {
+		"name": "Pocket",
 		"tags": [
 			"logo",
 			"save"
@@ -2123,6 +2241,7 @@
 		]
 	},
 	"Power": {
+		"name": "Power",
 		"tags": [
 			"on",
 			"off"
@@ -2134,6 +2253,7 @@
 		]
 	},
 	"Printer": {
+		"name": "Printer",
 		"tags": [
 			"fax",
 			"office",
@@ -2145,6 +2265,7 @@
 		]
 	},
 	"Radio": {
+		"name": "Radio",
 		"tags": [
 			"signal"
 		],
@@ -2153,6 +2274,7 @@
 		]
 	},
 	"RefreshCcw": {
+		"name": "RefreshCcw",
 		"tags": [
 			"arrows"
 		],
@@ -2165,6 +2287,7 @@
 		]
 	},
 	"RefreshCw": {
+		"name": "RefreshCw",
 		"tags": [
 			"synchronise",
 			"arrows"
@@ -2178,6 +2301,7 @@
 		]
 	},
 	"Repeat": {
+		"name": "Repeat",
 		"tags": [
 			"loop",
 			"arrows"
@@ -2191,6 +2315,7 @@
 		]
 	},
 	"Rewind": {
+		"name": "Rewind",
 		"tags": [
 			"music"
 		],
@@ -2214,6 +2339,7 @@
 		]
 	},
 	"RotateCcw": {
+		"name": "RotateCcw",
 		"tags": [
 			"arrow"
 		],
@@ -2233,6 +2359,7 @@
 		]
 	},
 	"RotateCw": {
+		"name": "RotateCw",
 		"tags": [
 			"arrow"
 		],
@@ -2252,6 +2379,7 @@
 		]
 	},
 	"Rss": {
+		"name": "Rss",
 		"tags": [
 			"feed",
 			"subscribe"
@@ -2261,26 +2389,25 @@
 		]
 	},
 	"Save": {
+		"name": "Save",
 		"tags": [
-			"floppy disk",
-			"floppy",
-			"disk"
+			"floppy disk"
 		],
 		"hasTagsInCommon": []
 	},
 	"Scissors": {
+		"name": "Scissors",
 		"tags": [
 			"cut"
 		],
 		"hasTagsInCommon": []
 	},
 	"Search": {
+		"name": "Search",
 		"tags": [
 			"find",
 			"magnifier",
-			"magnifying glass",
-			"magnifying",
-			"glass"
+			"magnifying glass"
 		],
 		"hasTagsInCommon": [
 			"ZoomIn",
@@ -2288,15 +2415,13 @@
 		]
 	},
 	"Send": {
+		"name": "Send",
 		"tags": [
 			"message",
 			"mail",
 			"email",
 			"paper airplane",
-			"paper",
-			"airplane",
-			"paper aeroplane",
-			"aeroplane"
+			"paper aeroplane"
 		],
 		"hasTagsInCommon": [
 			"AtSign",
@@ -2305,10 +2430,11 @@
 		]
 	},
 	"Server": {
-		"tags": [],
+		"name": "Server",
 		"hasTagsInCommon": []
 	},
 	"Settings": {
+		"name": "Settings",
 		"tags": [
 			"cog",
 			"edit",
@@ -2318,14 +2444,15 @@
 		"hasTagsInCommon": []
 	},
 	"Share": {
-		"tags": [],
+		"name": "Share",
 		"hasTagsInCommon": []
 	},
 	"Share2": {
-		"tags": [],
+		"name": "Share2",
 		"hasTagsInCommon": []
 	},
 	"Shield": {
+		"name": "Shield",
 		"tags": [
 			"security",
 			"secure"
@@ -2338,6 +2465,7 @@
 		]
 	},
 	"ShieldOff": {
+		"name": "ShieldOff",
 		"tags": [
 			"security",
 			"insecure"
@@ -2349,6 +2477,7 @@
 		]
 	},
 	"ShoppingBag": {
+		"name": "ShoppingBag",
 		"tags": [
 			"ecommerce",
 			"cart",
@@ -2361,6 +2490,7 @@
 		]
 	},
 	"ShoppingCart": {
+		"name": "ShoppingCart",
 		"tags": [
 			"ecommerce",
 			"cart",
@@ -2373,6 +2503,7 @@
 		]
 	},
 	"Shuffle": {
+		"name": "Shuffle",
 		"tags": [
 			"music"
 		],
@@ -2396,10 +2527,11 @@
 		]
 	},
 	"Sidebar": {
-		"tags": [],
+		"name": "Sidebar",
 		"hasTagsInCommon": []
 	},
 	"SkipBack": {
+		"name": "SkipBack",
 		"tags": [
 			"music"
 		],
@@ -2423,6 +2555,7 @@
 		]
 	},
 	"SkipForward": {
+		"name": "SkipForward",
 		"tags": [
 			"music"
 		],
@@ -2446,6 +2579,7 @@
 		]
 	},
 	"Slack": {
+		"name": "Slack",
 		"tags": [
 			"logo"
 		],
@@ -2468,6 +2602,7 @@
 		]
 	},
 	"Slash": {
+		"name": "Slash",
 		"tags": [
 			"ban",
 			"no"
@@ -2475,6 +2610,7 @@
 		"hasTagsInCommon": []
 	},
 	"Sliders": {
+		"name": "Sliders",
 		"tags": [
 			"settings",
 			"controls"
@@ -2484,6 +2620,7 @@
 		]
 	},
 	"Smartphone": {
+		"name": "Smartphone",
 		"tags": [
 			"cellphone",
 			"device"
@@ -2494,6 +2631,7 @@
 		]
 	},
 	"Smile": {
+		"name": "Smile",
 		"tags": [
 			"emoji",
 			"face",
@@ -2510,6 +2648,7 @@
 		]
 	},
 	"Speaker": {
+		"name": "Speaker",
 		"tags": [
 			"audio",
 			"music"
@@ -2534,10 +2673,11 @@
 		]
 	},
 	"Square": {
-		"tags": [],
+		"name": "Square",
 		"hasTagsInCommon": []
 	},
 	"Star": {
+		"name": "Star",
 		"tags": [
 			"bookmark",
 			"favorite",
@@ -2549,6 +2689,7 @@
 		]
 	},
 	"StopCircle": {
+		"name": "StopCircle",
 		"tags": [
 			"media",
 			"music"
@@ -2573,6 +2714,7 @@
 		]
 	},
 	"Sun": {
+		"name": "Sun",
 		"tags": [
 			"brightness",
 			"weather",
@@ -2592,6 +2734,7 @@
 		]
 	},
 	"Sunrise": {
+		"name": "Sunrise",
 		"tags": [
 			"weather",
 			"time",
@@ -2614,6 +2757,7 @@
 		]
 	},
 	"Sunset": {
+		"name": "Sunset",
 		"tags": [
 			"weather",
 			"time",
@@ -2637,6 +2781,7 @@
 		]
 	},
 	"Tablet": {
+		"name": "Tablet",
 		"tags": [
 			"device"
 		],
@@ -2646,12 +2791,14 @@
 		]
 	},
 	"Tag": {
+		"name": "Tag",
 		"tags": [
 			"label"
 		],
 		"hasTagsInCommon": []
 	},
 	"Target": {
+		"name": "Target",
 		"tags": [
 			"logo",
 			"bullseye"
@@ -2675,11 +2822,10 @@
 		]
 	},
 	"Terminal": {
+		"name": "Terminal",
 		"tags": [
 			"code",
 			"command line",
-			"command",
-			"line",
 			"prompt"
 		],
 		"hasTagsInCommon": [
@@ -2691,6 +2837,7 @@
 		]
 	},
 	"Thermometer": {
+		"name": "Thermometer",
 		"tags": [
 			"temperature",
 			"celsius",
@@ -2711,6 +2858,7 @@
 		]
 	},
 	"ThumbsDown": {
+		"name": "ThumbsDown",
 		"tags": [
 			"dislike",
 			"bad",
@@ -2725,6 +2873,7 @@
 		]
 	},
 	"ThumbsUp": {
+		"name": "ThumbsUp",
 		"tags": [
 			"like",
 			"good",
@@ -2740,6 +2889,7 @@
 		]
 	},
 	"ToggleLeft": {
+		"name": "ToggleLeft",
 		"tags": [
 			"on",
 			"off",
@@ -2752,6 +2902,7 @@
 		]
 	},
 	"ToggleRight": {
+		"name": "ToggleRight",
 		"tags": [
 			"on",
 			"off",
@@ -2764,6 +2915,7 @@
 		]
 	},
 	"Tool": {
+		"name": "Tool",
 		"tags": [
 			"settings",
 			"spanner"
@@ -2773,6 +2925,7 @@
 		]
 	},
 	"Trash": {
+		"name": "Trash",
 		"tags": [
 			"garbage",
 			"delete",
@@ -2792,28 +2945,30 @@
 		]
 	},
 	"Trash2": {
-		"tags": [],
+		"name": "Trash2",
 		"hasTagsInCommon": []
 	},
 	"Trello": {
-		"tags": [],
+		"name": "Trello",
 		"hasTagsInCommon": []
 	},
 	"TrendingDown": {
-		"tags": [],
+		"name": "TrendingDown",
 		"hasTagsInCommon": []
 	},
 	"TrendingUp": {
-		"tags": [],
+		"name": "TrendingUp",
 		"hasTagsInCommon": []
 	},
 	"Triangle": {
+		"name": "Triangle",
 		"tags": [
 			"delta"
 		],
 		"hasTagsInCommon": []
 	},
 	"Truck": {
+		"name": "Truck",
 		"tags": [
 			"delivery",
 			"van",
@@ -2824,6 +2979,7 @@
 		"hasTagsInCommon": []
 	},
 	"Tv": {
+		"name": "Tv",
 		"tags": [
 			"television",
 			"stream"
@@ -2833,6 +2989,7 @@
 		]
 	},
 	"Twitch": {
+		"name": "Twitch",
 		"tags": [
 			"logo"
 		],
@@ -2855,6 +3012,7 @@
 		]
 	},
 	"Twitter": {
+		"name": "Twitter",
 		"tags": [
 			"logo",
 			"social"
@@ -2878,12 +3036,14 @@
 		]
 	},
 	"Type": {
+		"name": "Type",
 		"tags": [
 			"text"
 		],
 		"hasTagsInCommon": []
 	},
 	"Umbrella": {
+		"name": "Umbrella",
 		"tags": [
 			"rain",
 			"weather"
@@ -2902,10 +3062,11 @@
 		]
 	},
 	"Underline": {
-		"tags": [],
+		"name": "Underline",
 		"hasTagsInCommon": []
 	},
 	"Unlock": {
+		"name": "Unlock",
 		"tags": [
 			"security"
 		],
@@ -2916,14 +3077,15 @@
 		]
 	},
 	"Upload": {
-		"tags": [],
+		"name": "Upload",
 		"hasTagsInCommon": []
 	},
 	"UploadCloud": {
-		"tags": [],
+		"name": "UploadCloud",
 		"hasTagsInCommon": []
 	},
 	"User": {
+		"name": "User",
 		"tags": [
 			"person",
 			"account"
@@ -2931,6 +3093,7 @@
 		"hasTagsInCommon": []
 	},
 	"UserCheck": {
+		"name": "UserCheck",
 		"tags": [
 			"followed",
 			"subscribed"
@@ -2938,6 +3101,7 @@
 		"hasTagsInCommon": []
 	},
 	"UserMinus": {
+		"name": "UserMinus",
 		"tags": [
 			"delete",
 			"remove",
@@ -2957,6 +3121,7 @@
 		]
 	},
 	"UserPlus": {
+		"name": "UserPlus",
 		"tags": [
 			"new",
 			"add",
@@ -2973,6 +3138,7 @@
 		]
 	},
 	"UserX": {
+		"name": "UserX",
 		"tags": [
 			"delete",
 			"remove",
@@ -2993,12 +3159,14 @@
 		]
 	},
 	"Users": {
+		"name": "Users",
 		"tags": [
 			"group"
 		],
 		"hasTagsInCommon": []
 	},
 	"Video": {
+		"name": "Video",
 		"tags": [
 			"camera",
 			"movie",
@@ -3014,6 +3182,7 @@
 		]
 	},
 	"VideoOff": {
+		"name": "VideoOff",
 		"tags": [
 			"camera",
 			"movie",
@@ -3029,12 +3198,14 @@
 		]
 	},
 	"Voicemail": {
+		"name": "Voicemail",
 		"tags": [
 			"phone"
 		],
 		"hasTagsInCommon": []
 	},
 	"Volume": {
+		"name": "Volume",
 		"tags": [
 			"music",
 			"sound",
@@ -3064,14 +3235,15 @@
 		]
 	},
 	"Volume1": {
-		"tags": [],
+		"name": "Volume1",
 		"hasTagsInCommon": []
 	},
 	"Volume2": {
-		"tags": [],
+		"name": "Volume2",
 		"hasTagsInCommon": []
 	},
 	"VolumeX": {
+		"name": "VolumeX",
 		"tags": [
 			"music",
 			"sound",
@@ -3101,6 +3273,7 @@
 		]
 	},
 	"Watch": {
+		"name": "Watch",
 		"tags": [
 			"clock",
 			"time"
@@ -3112,6 +3285,7 @@
 		]
 	},
 	"Wifi": {
+		"name": "Wifi",
 		"tags": [
 			"connection",
 			"signal",
@@ -3123,12 +3297,14 @@
 		]
 	},
 	"WifiOff": {
+		"name": "WifiOff",
 		"tags": [
 			"disabled"
 		],
 		"hasTagsInCommon": []
 	},
 	"Wind": {
+		"name": "Wind",
 		"tags": [
 			"weather",
 			"air"
@@ -3147,6 +3323,7 @@
 		]
 	},
 	"X": {
+		"name": "X",
 		"tags": [
 			"cancel",
 			"close",
@@ -3170,6 +3347,7 @@
 		]
 	},
 	"XCircle": {
+		"name": "XCircle",
 		"tags": [
 			"cancel",
 			"close",
@@ -3193,6 +3371,7 @@
 		]
 	},
 	"XOctagon": {
+		"name": "XOctagon",
 		"tags": [
 			"delete",
 			"stop",
@@ -3219,6 +3398,7 @@
 		]
 	},
 	"XSquare": {
+		"name": "XSquare",
 		"tags": [
 			"cancel",
 			"close",
@@ -3242,6 +3422,7 @@
 		]
 	},
 	"Youtube": {
+		"name": "Youtube",
 		"tags": [
 			"logo",
 			"video",
@@ -3267,6 +3448,7 @@
 		]
 	},
 	"Zap": {
+		"name": "Zap",
 		"tags": [
 			"flash",
 			"camera",
@@ -3281,6 +3463,7 @@
 		]
 	},
 	"ZapOff": {
+		"name": "ZapOff",
 		"tags": [
 			"flash",
 			"camera",
@@ -3295,10 +3478,9 @@
 		]
 	},
 	"ZoomIn": {
+		"name": "ZoomIn",
 		"tags": [
-			"magnifying glass",
-			"magnifying",
-			"glass"
+			"magnifying glass"
 		],
 		"hasTagsInCommon": [
 			"Search",
@@ -3306,10 +3488,9 @@
 		]
 	},
 	"ZoomOut": {
+		"name": "ZoomOut",
 		"tags": [
-			"magnifying glass",
-			"magnifying",
-			"glass"
+			"magnifying glass"
 		],
 		"hasTagsInCommon": [
 			"Search",
