@@ -55,7 +55,7 @@ function AbsoluteTopRow() {
 	)
 }
 
-function Sponsor({ sponsor, className }: { sponsor: ISponsor; className?: stirng }) {
+function Sponsor({ sponsor, className }: { sponsor: ISponsor; className?: string }) {
 	return (
 		<ExtAnchor className={className} href={sponsor.href}>
 			<div className="group vstack stack-center space-8">
@@ -124,7 +124,7 @@ function StickyObscureEffect() {
 	)
 }
 
-export default function AppBackpack({ children }: { children?: React.ReactNode }) {
+export default function App({ children }: { children?: React.ReactNode }) {
 	const screen = useBreakpoints(breakpoints)
 
 	return (
@@ -149,12 +149,11 @@ export default function AppBackpack({ children }: { children?: React.ReactNode }
 						{/* CTA buttons */}
 						<div className="hstack">
 							<div className="vstack stack-center space-20 w-full max-w-xs">
-								{/* TODO */}
-								{/* <Link href="/">
+								<Link href="/">
 									<a>
 										<EmbossedFeather className="w-56 h-56 text-gray-400" />
 									</a>
-								</Link> */}
+								</Link>
 								<h1
 									className="text-center font-500 text-32 -tracking-2.5 leading-1"
 									style={{ fontFamily: "'DM Sans', ui-sans-serif, sans-serif" }}

@@ -1,15 +1,13 @@
 import * as Feather from "react-feather"
 import tags from "./tags.json"
-import { IIcon } from "../types"
-import { toKebabCase, toTitleCase } from "@zaydek/lib/dist/helpers"
+import { IDataset } from "../types"
+import { toKebabCase } from "@zaydek/lib/dist/helpers"
 
 interface Lookup {
 	[key: string]: string[]
 }
 
-interface Precomputed {
-	[key: string]: IIcon
-}
+const kebabCaseKeys = Object.keys(Feather).map(each => toKebabCase(each))
 
 function common(tags1: string[], tags2: string[]) {
 	for (const t1 of tags1) {
@@ -22,13 +20,11 @@ function common(tags1: string[], tags2: string[]) {
 	return false
 }
 
-const kebebCaseFeatherKeys = Object.keys(Feather).map(each => toKebabCase(each))
-
-const tagsInCommon: Lookup = kebebCaseFeatherKeys.reduce<Lookup>((acc, name1) => {
+const tagsInCommon: Lookup = kebabCaseKeys.reduce<Lookup>((acc, name1) => {
 	acc[name1] = Object.keys(tags).reduce<string[]>((acc, name2) => {
 		if (name1 !== name2) {
-			if (common(tags[name1] || [], tags[name2] || [])) {
-				return [...acc, toTitleCase(name2)]
+			if (common((tags as Lookup)[name1] || [], (tags as Lookup)[name2] || [])) {
+				return [...acc, name2]
 			}
 		}
 		return acc
@@ -37,13 +33,14 @@ const tagsInCommon: Lookup = kebebCaseFeatherKeys.reduce<Lookup>((acc, name1) =>
 }, {})
 
 ;(() => {
-	const dataset = Object.keys(Feather).reduce<Precomputed>((acc, each) => {
+	const dataset = kebabCaseKeys.reduce<IDataset>((acc, each) => {
 		acc[each] = {
 			name: each,
-			tags: tags[toKebabCase(each)] || [],
-			more: tagsInCommon[toKebabCase(each)] || [],
+			tags: (tags as Lookup)[each] || [],
+			more: tagsInCommon[each] || [],
 		}
 		return acc
 	}, {})
+
 	console.log(JSON.stringify(dataset, null, "\t"))
 })()

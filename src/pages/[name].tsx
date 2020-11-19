@@ -1,19 +1,11 @@
-import AppBackpack from "components/AppBackpack"
-import datasetAsArray from "data/datasetAsArray"
-import IconInfo from "components/IconInfo"
+import App from "../components/App"
+import dataset_arr from "../data/dataset_arr"
+import IconInfo from "../components/IconInfo"
 import { GetStaticPropsContext } from "next"
-// import dataset from "data/dataset"
-
-// <AppWrapper>
-// 	<IconInfo icon={dataset.find(each => each.name.kebab === name)!} />
-// </AppWrapper>
 
 export default function IconPage({ name }: { name: string }) {
-	return (
-		<AppBackpack>
-			<IconInfo name={name} />
-		</AppBackpack>
-	)
+	// prettier-ignore
+	return <App><IconInfo name={name} /></App>
 }
 
 // `getStaticProps` forwards parameters as props.
@@ -24,9 +16,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 // `getStaticPaths` enumerates pages as parameters.
 export async function getStaticPaths() {
 	return {
-		paths: datasetAsArray.map(each => ({
+		paths: dataset_arr.map(each => ({
 			params: {
-				name: each,
+				name: each.name,
 			},
 		})),
 		fallback: false,

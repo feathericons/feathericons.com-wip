@@ -1,5 +1,6 @@
+// TODO
 import * as Feather from "react-feather"
-import dataset from "data/dataset.json"
+import dataset from "../../data/dataset.json"
 import MarkdownDocs from "./docs.md"
 import React from "react"
 import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "./Demos"

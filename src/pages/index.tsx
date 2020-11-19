@@ -1,17 +1,15 @@
-import AppBackpack from "../components/AppBackpack"
-import datasetAsArray from "../data/datasetAsArray"
-import React from "react"
+import App from "../components/App"
+import dataset_arr from "../data/dataset_arr"
 import { Icon, IconGrid } from "../components/Icon"
 
 export default function Home() {
 	return (
-		<AppBackpack>
+		<App>
 			<IconGrid>
-				{/* TODO */}
-				{datasetAsArray.map(each => (
+				{dataset_arr.map(each => (
 					<Icon icon={each} />
 				))}
 			</IconGrid>
-		</AppBackpack>
+		</App>
 	)
 }

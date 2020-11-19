@@ -1,5 +1,5 @@
 import dataset from "./dataset.json"
-import { IIcon } from "../types"
+import { IDataset } from "../types"
 
 // TODO: Sort keys?
-export default Object.keys(dataset).map(each => (dataset as { [key: string]: IIcon })[each])
+export default Object.keys(dataset).map(each => (dataset as IDataset)[each])
