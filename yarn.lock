@@ -1425,9 +1425,9 @@
   integrity sha512-65jHqSuMseUrch7wzsgBYE/6TFHvmc+vOgI8+wxsNUSWQGP8tQ9wS6kWeD3Wz7jbL1TZPsElxrXxiQbQal1Ucw==
 
 "@zaydek/lib@^0.6.2":
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.6.2.tgz#c2aae4d7f7afe00ebeecaaeee616cd74e43a34cc"
-  integrity sha512-w8VY0iXYBD92qL57JH+KV+EmXZgMsuYCH1y2YrUN+lk2nXUp2XXM6UcJn/8vA0SZDOENPvu0ipVriiDLqM/iKw==
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.6.3.tgz#8e9713d096f4c86256e8f24d6b12a5e57e231874"
+  integrity sha512-CXnPG6RH2Kvdyn3+RWkyy5rkv5PblSA6s8jja6y3LZtgFGKKZDriB64r4DD07pqpYEry5aFaxygl4yrPntfPGg==
 
 "@zaydek/prose@^0.2.6":
   version "0.2.6"

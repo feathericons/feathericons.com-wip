@@ -7,7 +7,7 @@ export default function Home() {
 		<App>
 			<IconGrid>
 				{dataset_arr.map(each => (
-					<Icon icon={each} />
+					<Icon key={each.name} icon={each} />
 				))}
 			</IconGrid>
 		</App>
