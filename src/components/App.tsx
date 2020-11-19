@@ -1,52 +1,26 @@
 import EmbossedFeather from "./EmbossedFeather"
 import Head from "next/head"
 import Link from "next/link"
-import OctofaceIcon24x24 from "./OctofaceIcon24x24"
 import React from "react"
-import sponsors, { ISponsor } from "../fixtures/sponsors"
+import sponsors from "../fixtures/sponsors"
 import StickyObscureEffect from "./StickyObscureEffect"
 import useBreakpoints from "./useBreakpoints"
-import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
+import { AbsoluteTopRow } from "./AbsoluteTopRow"
+import { Download, ExternalLink, GitHub } from "react-feather"
+import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
-import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../fixtures/hrefs"
 import { range } from "@zaydek/lib/dist/helpers"
+import { Sponsor } from "./Sponsor"
+import { useEffect } from "react"
 
-// TODO: Add analytics.
-function AbsoluteTopRow() {
-	return (
-		<div className="absolute x-0 t-0">
-			<div className="hstack px-16 lg:px-24 py-12">
-				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
-					{/* NOTE: `fill-current stroke-0` does not work here. */}
-					<Twitter className="w-24 h-24" style={{ fill: "currentColor", strokeWidth: 0 }} />
-					<p className="group-on:underline">Tweet thank you!</p>
-				</ExtAnchor>
-				<div className="spacer" />
-				<ExtAnchor className="group hstack stack-center space-8" href={GitHub_FeatherSite}>
-					<p className="group-on:underline">Star on GitHub!</p>
-					<OctofaceIcon24x24 className="w-20 h-20" />
-				</ExtAnchor>
-			</div>
-		</div>
-	)
-}
-
-function Sponsor({ sponsor, className }: { sponsor: ISponsor; className?: string }) {
-	return (
-		<ExtAnchor className={className} href={sponsor.href}>
-			<div className="group vstack stack-center space-8">
-				<img src={sponsor.src} className="h-48" />
-				<div className="hstack stack-center space-6">
-					<span className="font-500 text-11 leading-1 group-on:underline">{sponsor.subtext}</span>
-					<ExternalLink className="w-13 h-13" />
-				</div>
-			</div>
-		</ExtAnchor>
-	)
-}
+import "@zaydek/prose"
 
 export default function App({ children }: { children?: React.ReactNode }) {
 	const screen = useBreakpoints()
+
+	useEffect(() => {
+		return Duomo.init(process.env.NODE_ENV)
+	}, [])
 
 	return (
 		<>
