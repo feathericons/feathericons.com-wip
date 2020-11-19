@@ -1,5 +1,5 @@
 import * as Feather from "react-feather"
-import dataset from "data/dataset.json"
+import datasetAsArray from "data/datasetAsArray"
 import Head from "next/head"
 import Link from "next/link"
 import React from "react"
@@ -7,11 +7,8 @@ import sponsors, { ISponsor } from "fixtures/sponsors"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
-import { IIcon } from "types"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
-
-const datasetAsArray = Object.keys(dataset).map(each => (dataset as { [key: string]: IIcon })[each])
 
 const breakpoints = {
 	xs: 512,
@@ -181,7 +178,7 @@ export default function Home() {
 									</ExtAnchor>
 								</h2>
 								{/* CTA buttons */}
-								<div className="vstack md:hstack space-16 w-full max-w-md">
+								<div className="vstack md:hstack space-12 md:space-16 w-full max-w-md">
 									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
 									<div className="vstack md:w-192 h-56 bg-gray-200 rounded-12 md:rounded-full">
 										<div className="hstack stack-center space-8">
