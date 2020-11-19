@@ -1,8 +1,9 @@
-interface ITags {
-	[key: string]: string[]
-}
+// TODO: Change to JSON.
+//
 // https://github.com/feathericons/feather/blob/master/src/tags.json
-const tags: ITags = {
+const tags: {
+	[key: string]: string[]
+} = {
 	activity: ["pulse", "health", "action", "motion"],
 	airplay: ["stream", "cast", "mirroring"],
 	"alert-circle": ["warning", "alert", "danger"],

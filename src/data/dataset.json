@@ -1,0 +1,4586 @@
+{
+	"Activity": {
+		"name": {
+			"title": "Activity",
+			"kebab": "activity"
+		},
+		"tags": [
+			"pulse",
+			"health",
+			"action",
+			"motion"
+		],
+		"common": []
+	},
+	"Airplay": {
+		"name": {
+			"title": "Airplay",
+			"kebab": "airplay"
+		},
+		"tags": [
+			"stream",
+			"cast",
+			"mirroring"
+		],
+		"common": [
+			"tv"
+		]
+	},
+	"AlertCircle": {
+		"name": {
+			"title": "AlertCircle",
+			"kebab": "alert-circle"
+		},
+		"tags": [
+			"warning",
+			"alert",
+			"danger"
+		],
+		"common": [
+			"alert-octagon",
+			"alert-triangle",
+			"x-octagon"
+		]
+	},
+	"AlertOctagon": {
+		"name": {
+			"title": "AlertOctagon",
+			"kebab": "alert-octagon"
+		},
+		"tags": [
+			"warning",
+			"alert",
+			"danger"
+		],
+		"common": [
+			"alert-circle",
+			"alert-triangle",
+			"x-octagon"
+		]
+	},
+	"AlertTriangle": {
+		"name": {
+			"title": "AlertTriangle",
+			"kebab": "alert-triangle"
+		},
+		"tags": [
+			"warning",
+			"alert",
+			"danger"
+		],
+		"common": [
+			"alert-circle",
+			"alert-octagon",
+			"x-octagon"
+		]
+	},
+	"AlignCenter": {
+		"name": {
+			"title": "AlignCenter",
+			"kebab": "align-center"
+		},
+		"tags": [
+			"text alignment",
+			"text",
+			"alignment",
+			"center"
+		],
+		"common": [
+			"align-justify",
+			"align-left",
+			"align-right"
+		]
+	},
+	"AlignJustify": {
+		"name": {
+			"title": "AlignJustify",
+			"kebab": "align-justify"
+		},
+		"tags": [
+			"text alignment",
+			"text",
+			"alignment",
+			"justified"
+		],
+		"common": [
+			"align-center",
+			"align-left",
+			"align-right"
+		]
+	},
+	"AlignLeft": {
+		"name": {
+			"title": "AlignLeft",
+			"kebab": "align-left"
+		},
+		"tags": [
+			"text alignment",
+			"text",
+			"alignment",
+			"left"
+		],
+		"common": [
+			"align-center",
+			"align-justify",
+			"align-right"
+		]
+	},
+	"AlignRight": {
+		"name": {
+			"title": "AlignRight",
+			"kebab": "align-right"
+		},
+		"tags": [
+			"text alignment",
+			"text",
+			"alignment",
+			"right"
+		],
+		"common": [
+			"align-center",
+			"align-justify",
+			"align-left"
+		]
+	},
+	"Anchor": {
+		"name": {
+			"title": "Anchor",
+			"kebab": "anchor"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Aperture": {
+		"name": {
+			"title": "Aperture",
+			"kebab": "aperture"
+		},
+		"tags": [
+			"camera",
+			"photo"
+		],
+		"common": [
+			"camera",
+			"crop",
+			"instagram",
+			"video-off",
+			"video",
+			"zap-off",
+			"zap"
+		]
+	},
+	"Archive": {
+		"name": {
+			"title": "Archive",
+			"kebab": "archive"
+		},
+		"tags": [
+			"index",
+			"box"
+		],
+		"common": [
+			"gift",
+			"package"
+		]
+	},
+	"ArrowDown": {
+		"name": {
+			"title": "ArrowDown",
+			"kebab": "arrow-down"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowDownCircle": {
+		"name": {
+			"title": "ArrowDownCircle",
+			"kebab": "arrow-down-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowDownLeft": {
+		"name": {
+			"title": "ArrowDownLeft",
+			"kebab": "arrow-down-left"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowDownRight": {
+		"name": {
+			"title": "ArrowDownRight",
+			"kebab": "arrow-down-right"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowLeft": {
+		"name": {
+			"title": "ArrowLeft",
+			"kebab": "arrow-left"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowLeftCircle": {
+		"name": {
+			"title": "ArrowLeftCircle",
+			"kebab": "arrow-left-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowRight": {
+		"name": {
+			"title": "ArrowRight",
+			"kebab": "arrow-right"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowRightCircle": {
+		"name": {
+			"title": "ArrowRightCircle",
+			"kebab": "arrow-right-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowUp": {
+		"name": {
+			"title": "ArrowUp",
+			"kebab": "arrow-up"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowUpCircle": {
+		"name": {
+			"title": "ArrowUpCircle",
+			"kebab": "arrow-up-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowUpLeft": {
+		"name": {
+			"title": "ArrowUpLeft",
+			"kebab": "arrow-up-left"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ArrowUpRight": {
+		"name": {
+			"title": "ArrowUpRight",
+			"kebab": "arrow-up-right"
+		},
+		"tags": [],
+		"common": []
+	},
+	"AtSign": {
+		"name": {
+			"title": "AtSign",
+			"kebab": "at-sign"
+		},
+		"tags": [
+			"mention",
+			"at",
+			"email",
+			"message"
+		],
+		"common": [
+			"inbox",
+			"mail",
+			"send"
+		]
+	},
+	"Award": {
+		"name": {
+			"title": "Award",
+			"kebab": "award"
+		},
+		"tags": [
+			"achievement",
+			"badge"
+		],
+		"common": []
+	},
+	"BarChart": {
+		"name": {
+			"title": "BarChart",
+			"kebab": "bar-chart"
+		},
+		"tags": [
+			"statistics",
+			"diagram",
+			"graph"
+		],
+		"common": [
+			"bar-chart-2",
+			"pie-chart"
+		]
+	},
+	"BarChart2": {
+		"name": {
+			"title": "BarChart2",
+			"kebab": "bar-chart-2"
+		},
+		"tags": [
+			"statistics",
+			"diagram",
+			"graph"
+		],
+		"common": [
+			"bar-chart",
+			"pie-chart"
+		]
+	},
+	"Battery": {
+		"name": {
+			"title": "Battery",
+			"kebab": "battery"
+		},
+		"tags": [
+			"power",
+			"electricity"
+		],
+		"common": [
+			"battery-charging"
+		]
+	},
+	"BatteryCharging": {
+		"name": {
+			"title": "BatteryCharging",
+			"kebab": "battery-charging"
+		},
+		"tags": [
+			"power",
+			"electricity"
+		],
+		"common": [
+			"battery"
+		]
+	},
+	"Bell": {
+		"name": {
+			"title": "Bell",
+			"kebab": "bell"
+		},
+		"tags": [
+			"alarm",
+			"notification",
+			"sound"
+		],
+		"common": [
+			"bell-off",
+			"clock",
+			"headphones",
+			"mic-off",
+			"mic",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"BellOff": {
+		"name": {
+			"title": "BellOff",
+			"kebab": "bell-off"
+		},
+		"tags": [
+			"alarm",
+			"notification",
+			"silent"
+		],
+		"common": [
+			"bell",
+			"clock"
+		]
+	},
+	"Bluetooth": {
+		"name": {
+			"title": "Bluetooth",
+			"kebab": "bluetooth"
+		},
+		"tags": [
+			"wireless"
+		],
+		"common": [
+			"wifi"
+		]
+	},
+	"Bold": {
+		"name": {
+			"title": "Bold",
+			"kebab": "bold"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Book": {
+		"name": {
+			"title": "Book",
+			"kebab": "book"
+		},
+		"tags": [
+			"read",
+			"dictionary",
+			"booklet",
+			"magazine",
+			"library"
+		],
+		"common": [
+			"book-open",
+			"bookmark"
+		]
+	},
+	"BookOpen": {
+		"name": {
+			"title": "BookOpen",
+			"kebab": "book-open"
+		},
+		"tags": [
+			"read",
+			"library"
+		],
+		"common": [
+			"book",
+			"bookmark"
+		]
+	},
+	"Bookmark": {
+		"name": {
+			"title": "Bookmark",
+			"kebab": "bookmark"
+		},
+		"tags": [
+			"read",
+			"clip",
+			"marker",
+			"tag"
+		],
+		"common": [
+			"book-open",
+			"book",
+			"map-pin"
+		]
+	},
+	"Box": {
+		"name": {
+			"title": "Box",
+			"kebab": "box"
+		},
+		"tags": [
+			"cube"
+		],
+		"common": []
+	},
+	"Briefcase": {
+		"name": {
+			"title": "Briefcase",
+			"kebab": "briefcase"
+		},
+		"tags": [
+			"work",
+			"bag",
+			"baggage",
+			"folder"
+		],
+		"common": []
+	},
+	"Calendar": {
+		"name": {
+			"title": "Calendar",
+			"kebab": "calendar"
+		},
+		"tags": [
+			"date"
+		],
+		"common": []
+	},
+	"Camera": {
+		"name": {
+			"title": "Camera",
+			"kebab": "camera"
+		},
+		"tags": [
+			"photo"
+		],
+		"common": [
+			"aperture",
+			"crop"
+		]
+	},
+	"CameraOff": {
+		"name": {
+			"title": "CameraOff",
+			"kebab": "camera-off"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Cast": {
+		"name": {
+			"title": "Cast",
+			"kebab": "cast"
+		},
+		"tags": [
+			"chromecast",
+			"airplay"
+		],
+		"common": []
+	},
+	"Check": {
+		"name": {
+			"title": "Check",
+			"kebab": "check"
+		},
+		"tags": [],
+		"common": []
+	},
+	"CheckCircle": {
+		"name": {
+			"title": "CheckCircle",
+			"kebab": "check-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"CheckSquare": {
+		"name": {
+			"title": "CheckSquare",
+			"kebab": "check-square"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronDown": {
+		"name": {
+			"title": "ChevronDown",
+			"kebab": "chevron-down"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronLeft": {
+		"name": {
+			"title": "ChevronLeft",
+			"kebab": "chevron-left"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronRight": {
+		"name": {
+			"title": "ChevronRight",
+			"kebab": "chevron-right"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronUp": {
+		"name": {
+			"title": "ChevronUp",
+			"kebab": "chevron-up"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronsDown": {
+		"name": {
+			"title": "ChevronsDown",
+			"kebab": "chevrons-down"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronsLeft": {
+		"name": {
+			"title": "ChevronsLeft",
+			"kebab": "chevrons-left"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronsRight": {
+		"name": {
+			"title": "ChevronsRight",
+			"kebab": "chevrons-right"
+		},
+		"tags": [],
+		"common": []
+	},
+	"ChevronsUp": {
+		"name": {
+			"title": "ChevronsUp",
+			"kebab": "chevrons-up"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Chrome": {
+		"name": {
+			"title": "Chrome",
+			"kebab": "chrome"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Circle": {
+		"name": {
+			"title": "Circle",
+			"kebab": "circle"
+		},
+		"tags": [
+			"off",
+			"zero",
+			"record"
+		],
+		"common": [
+			"mic-off",
+			"mic",
+			"power",
+			"toggle-left",
+			"toggle-right"
+		]
+	},
+	"Clipboard": {
+		"name": {
+			"title": "Clipboard",
+			"kebab": "clipboard"
+		},
+		"tags": [
+			"copy"
+		],
+		"common": []
+	},
+	"Clock": {
+		"name": {
+			"title": "Clock",
+			"kebab": "clock"
+		},
+		"tags": [
+			"time",
+			"watch",
+			"alarm"
+		],
+		"common": [
+			"bell",
+			"bell-off",
+			"eye",
+			"eye-off",
+			"sunrise",
+			"sunset",
+			"watch"
+		]
+	},
+	"Cloud": {
+		"name": {
+			"title": "Cloud",
+			"kebab": "cloud"
+		},
+		"tags": [
+			"weather"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"CloudDrizzle": {
+		"name": {
+			"title": "CloudDrizzle",
+			"kebab": "cloud-drizzle"
+		},
+		"tags": [
+			"weather",
+			"shower"
+		],
+		"common": [
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"CloudLightning": {
+		"name": {
+			"title": "CloudLightning",
+			"kebab": "cloud-lightning"
+		},
+		"tags": [
+			"weather",
+			"bolt"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"CloudOff": {
+		"name": {
+			"title": "CloudOff",
+			"kebab": "cloud-off"
+		},
+		"tags": [],
+		"common": []
+	},
+	"CloudRain": {
+		"name": {
+			"title": "CloudRain",
+			"kebab": "cloud-rain"
+		},
+		"tags": [
+			"weather"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"CloudSnow": {
+		"name": {
+			"title": "CloudSnow",
+			"kebab": "cloud-snow"
+		},
+		"tags": [
+			"weather",
+			"blizzard"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"Code": {
+		"name": {
+			"title": "Code",
+			"kebab": "code"
+		},
+		"tags": [
+			"source",
+			"programming"
+		],
+		"common": []
+	},
+	"Codepen": {
+		"name": {
+			"title": "Codepen",
+			"kebab": "codepen"
+		},
+		"tags": [
+			"logo"
+		],
+		"common": [
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Codesandbox": {
+		"name": {
+			"title": "Codesandbox",
+			"kebab": "codesandbox"
+		},
+		"tags": [
+			"logo"
+		],
+		"common": [
+			"codepen",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Coffee": {
+		"name": {
+			"title": "Coffee",
+			"kebab": "coffee"
+		},
+		"tags": [
+			"drink",
+			"cup",
+			"mug",
+			"tea",
+			"cafe",
+			"hot",
+			"beverage"
+		],
+		"common": []
+	},
+	"Columns": {
+		"name": {
+			"title": "Columns",
+			"kebab": "columns"
+		},
+		"tags": [
+			"layout"
+		],
+		"common": []
+	},
+	"Command": {
+		"name": {
+			"title": "Command",
+			"kebab": "command"
+		},
+		"tags": [
+			"keyboard",
+			"cmd",
+			"terminal",
+			"prompt"
+		],
+		"common": [
+			"terminal"
+		]
+	},
+	"Compass": {
+		"name": {
+			"title": "Compass",
+			"kebab": "compass"
+		},
+		"tags": [
+			"navigation",
+			"safari",
+			"travel",
+			"direction"
+		],
+		"common": [
+			"map-pin",
+			"map",
+			"menu",
+			"navigation",
+			"navigation-2"
+		]
+	},
+	"Copy": {
+		"name": {
+			"title": "Copy",
+			"kebab": "copy"
+		},
+		"tags": [
+			"clone",
+			"duplicate"
+		],
+		"common": []
+	},
+	"CornerDownLeft": {
+		"name": {
+			"title": "CornerDownLeft",
+			"kebab": "corner-down-left"
+		},
+		"tags": [
+			"arrow",
+			"return"
+		],
+		"common": [
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerDownRight": {
+		"name": {
+			"title": "CornerDownRight",
+			"kebab": "corner-down-right"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerLeftDown": {
+		"name": {
+			"title": "CornerLeftDown",
+			"kebab": "corner-left-down"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerLeftUp": {
+		"name": {
+			"title": "CornerLeftUp",
+			"kebab": "corner-left-up"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerRightDown": {
+		"name": {
+			"title": "CornerRightDown",
+			"kebab": "corner-right-down"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerRightUp": {
+		"name": {
+			"title": "CornerRightUp",
+			"kebab": "corner-right-up"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerUpLeft": {
+		"name": {
+			"title": "CornerUpLeft",
+			"kebab": "corner-up-left"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"CornerUpRight": {
+		"name": {
+			"title": "CornerUpRight",
+			"kebab": "corner-up-right"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"Cpu": {
+		"name": {
+			"title": "Cpu",
+			"kebab": "cpu"
+		},
+		"tags": [
+			"processor",
+			"technology"
+		],
+		"common": []
+	},
+	"CreditCard": {
+		"name": {
+			"title": "CreditCard",
+			"kebab": "credit-card"
+		},
+		"tags": [
+			"purchase",
+			"payment",
+			"cc"
+		],
+		"common": [
+			"dollar-sign",
+			"shopping-bag",
+			"shopping-cart"
+		]
+	},
+	"Crop": {
+		"name": {
+			"title": "Crop",
+			"kebab": "crop"
+		},
+		"tags": [
+			"photo",
+			"image"
+		],
+		"common": [
+			"aperture",
+			"camera"
+		]
+	},
+	"Crosshair": {
+		"name": {
+			"title": "Crosshair",
+			"kebab": "crosshair"
+		},
+		"tags": [
+			"aim",
+			"target"
+		],
+		"common": []
+	},
+	"Database": {
+		"name": {
+			"title": "Database",
+			"kebab": "database"
+		},
+		"tags": [
+			"storage",
+			"memory"
+		],
+		"common": [
+			"hard-drive"
+		]
+	},
+	"Delete": {
+		"name": {
+			"title": "Delete",
+			"kebab": "delete"
+		},
+		"tags": [
+			"remove"
+		],
+		"common": [
+			"file-minus",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-square",
+			"x"
+		]
+	},
+	"Disc": {
+		"name": {
+			"title": "Disc",
+			"kebab": "disc"
+		},
+		"tags": [
+			"album",
+			"cd",
+			"dvd",
+			"music"
+		],
+		"common": [
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Divide": {
+		"name": {
+			"title": "Divide",
+			"kebab": "divide"
+		},
+		"tags": [],
+		"common": []
+	},
+	"DivideCircle": {
+		"name": {
+			"title": "DivideCircle",
+			"kebab": "divide-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"DivideSquare": {
+		"name": {
+			"title": "DivideSquare",
+			"kebab": "divide-square"
+		},
+		"tags": [],
+		"common": []
+	},
+	"DollarSign": {
+		"name": {
+			"title": "DollarSign",
+			"kebab": "dollar-sign"
+		},
+		"tags": [
+			"currency",
+			"money",
+			"payment"
+		],
+		"common": [
+			"credit-card"
+		]
+	},
+	"Download": {
+		"name": {
+			"title": "Download",
+			"kebab": "download"
+		},
+		"tags": [],
+		"common": []
+	},
+	"DownloadCloud": {
+		"name": {
+			"title": "DownloadCloud",
+			"kebab": "download-cloud"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Dribbble": {
+		"name": {
+			"title": "Dribbble",
+			"kebab": "dribbble"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Droplet": {
+		"name": {
+			"title": "Droplet",
+			"kebab": "droplet"
+		},
+		"tags": [
+			"water"
+		],
+		"common": []
+	},
+	"Edit": {
+		"name": {
+			"title": "Edit",
+			"kebab": "edit"
+		},
+		"tags": [
+			"pencil",
+			"change"
+		],
+		"common": [
+			"edit-2",
+			"edit-3"
+		]
+	},
+	"Edit2": {
+		"name": {
+			"title": "Edit2",
+			"kebab": "edit-2"
+		},
+		"tags": [
+			"pencil",
+			"change"
+		],
+		"common": [
+			"edit",
+			"edit-3"
+		]
+	},
+	"Edit3": {
+		"name": {
+			"title": "Edit3",
+			"kebab": "edit-3"
+		},
+		"tags": [
+			"pencil",
+			"change"
+		],
+		"common": [
+			"edit",
+			"edit-2"
+		]
+	},
+	"ExternalLink": {
+		"name": {
+			"title": "ExternalLink",
+			"kebab": "external-link"
+		},
+		"tags": [
+			"outbound"
+		],
+		"common": []
+	},
+	"Eye": {
+		"name": {
+			"title": "Eye",
+			"kebab": "eye"
+		},
+		"tags": [
+			"view",
+			"watch"
+		],
+		"common": [
+			"clock",
+			"eye-off"
+		]
+	},
+	"EyeOff": {
+		"name": {
+			"title": "EyeOff",
+			"kebab": "eye-off"
+		},
+		"tags": [
+			"view",
+			"watch",
+			"hide",
+			"hidden"
+		],
+		"common": [
+			"clock",
+			"eye"
+		]
+	},
+	"Facebook": {
+		"name": {
+			"title": "Facebook",
+			"kebab": "facebook"
+		},
+		"tags": [
+			"logo",
+			"social"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"FastForward": {
+		"name": {
+			"title": "FastForward",
+			"kebab": "fast-forward"
+		},
+		"tags": [
+			"music"
+		],
+		"common": [
+			"disc",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Feather": {
+		"name": {
+			"title": "Feather",
+			"kebab": "feather"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Figma": {
+		"name": {
+			"title": "Figma",
+			"kebab": "figma"
+		},
+		"tags": [
+			"logo",
+			"design",
+			"tool"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"File": {
+		"name": {
+			"title": "File",
+			"kebab": "file"
+		},
+		"tags": [],
+		"common": []
+	},
+	"FileMinus": {
+		"name": {
+			"title": "FileMinus",
+			"kebab": "file-minus"
+		},
+		"tags": [
+			"delete",
+			"remove",
+			"erase"
+		],
+		"common": [
+			"delete",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"FilePlus": {
+		"name": {
+			"title": "FilePlus",
+			"kebab": "file-plus"
+		},
+		"tags": [
+			"add",
+			"create",
+			"new"
+		],
+		"common": [
+			"plus",
+			"plus-circle",
+			"plus-square",
+			"user-plus"
+		]
+	},
+	"FileText": {
+		"name": {
+			"title": "FileText",
+			"kebab": "file-text"
+		},
+		"tags": [
+			"data",
+			"txt",
+			"pdf"
+		],
+		"common": [
+			"hard-drive"
+		]
+	},
+	"Film": {
+		"name": {
+			"title": "Film",
+			"kebab": "film"
+		},
+		"tags": [
+			"movie",
+			"video"
+		],
+		"common": [
+			"video-off",
+			"video",
+			"youtube"
+		]
+	},
+	"Filter": {
+		"name": {
+			"title": "Filter",
+			"kebab": "filter"
+		},
+		"tags": [
+			"funnel",
+			"hopper"
+		],
+		"common": []
+	},
+	"Flag": {
+		"name": {
+			"title": "Flag",
+			"kebab": "flag"
+		},
+		"tags": [
+			"report"
+		],
+		"common": []
+	},
+	"Folder": {
+		"name": {
+			"title": "Folder",
+			"kebab": "folder"
+		},
+		"tags": [
+			"directory"
+		],
+		"common": [
+			"folder-minus",
+			"folder-plus"
+		]
+	},
+	"FolderMinus": {
+		"name": {
+			"title": "FolderMinus",
+			"kebab": "folder-minus"
+		},
+		"tags": [
+			"directory"
+		],
+		"common": [
+			"folder-plus",
+			"folder"
+		]
+	},
+	"FolderPlus": {
+		"name": {
+			"title": "FolderPlus",
+			"kebab": "folder-plus"
+		},
+		"tags": [
+			"directory"
+		],
+		"common": [
+			"folder-minus",
+			"folder"
+		]
+	},
+	"Framer": {
+		"name": {
+			"title": "Framer",
+			"kebab": "framer"
+		},
+		"tags": [
+			"logo",
+			"design",
+			"tool"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Frown": {
+		"name": {
+			"title": "Frown",
+			"kebab": "frown"
+		},
+		"tags": [
+			"emoji",
+			"face",
+			"bad",
+			"sad",
+			"emotion"
+		],
+		"common": [
+			"heart",
+			"meh",
+			"smile",
+			"thumbs-down",
+			"thumbs-up"
+		]
+	},
+	"Gift": {
+		"name": {
+			"title": "Gift",
+			"kebab": "gift"
+		},
+		"tags": [
+			"present",
+			"box",
+			"birthday",
+			"party"
+		],
+		"common": [
+			"archive",
+			"package"
+		]
+	},
+	"GitBranch": {
+		"name": {
+			"title": "GitBranch",
+			"kebab": "git-branch"
+		},
+		"tags": [
+			"code",
+			"version control",
+			"version",
+			"control"
+		],
+		"common": [
+			"git-commit",
+			"git-merge",
+			"git-pull-request",
+			"github",
+			"gitlab",
+			"terminal"
+		]
+	},
+	"GitCommit": {
+		"name": {
+			"title": "GitCommit",
+			"kebab": "git-commit"
+		},
+		"tags": [
+			"code",
+			"version control",
+			"version",
+			"control"
+		],
+		"common": [
+			"git-branch",
+			"git-merge",
+			"git-pull-request",
+			"github",
+			"gitlab",
+			"terminal"
+		]
+	},
+	"GitHub": {
+		"name": {
+			"title": "GitHub",
+			"kebab": "git-hub"
+		},
+		"tags": [],
+		"common": []
+	},
+	"GitMerge": {
+		"name": {
+			"title": "GitMerge",
+			"kebab": "git-merge"
+		},
+		"tags": [
+			"code",
+			"version control",
+			"version",
+			"control"
+		],
+		"common": [
+			"git-branch",
+			"git-commit",
+			"git-pull-request",
+			"github",
+			"gitlab",
+			"terminal"
+		]
+	},
+	"GitPullRequest": {
+		"name": {
+			"title": "GitPullRequest",
+			"kebab": "git-pull-request"
+		},
+		"tags": [
+			"code",
+			"version control",
+			"version",
+			"control"
+		],
+		"common": [
+			"git-branch",
+			"git-commit",
+			"git-merge",
+			"github",
+			"gitlab",
+			"terminal"
+		]
+	},
+	"Gitlab": {
+		"name": {
+			"title": "Gitlab",
+			"kebab": "gitlab"
+		},
+		"tags": [
+			"logo",
+			"version control",
+			"version",
+			"control"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"git-branch",
+			"git-commit",
+			"git-merge",
+			"git-pull-request",
+			"github",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Globe": {
+		"name": {
+			"title": "Globe",
+			"kebab": "globe"
+		},
+		"tags": [
+			"world",
+			"browser",
+			"language",
+			"translate"
+		],
+		"common": []
+	},
+	"Grid": {
+		"name": {
+			"title": "Grid",
+			"kebab": "grid"
+		},
+		"tags": [],
+		"common": []
+	},
+	"HardDrive": {
+		"name": {
+			"title": "HardDrive",
+			"kebab": "hard-drive"
+		},
+		"tags": [
+			"computer",
+			"server",
+			"memory",
+			"data"
+		],
+		"common": [
+			"database",
+			"file-text"
+		]
+	},
+	"Hash": {
+		"name": {
+			"title": "Hash",
+			"kebab": "hash"
+		},
+		"tags": [
+			"hashtag",
+			"number",
+			"pound"
+		],
+		"common": []
+	},
+	"Headphones": {
+		"name": {
+			"title": "Headphones",
+			"kebab": "headphones"
+		},
+		"tags": [
+			"music",
+			"audio",
+			"sound"
+		],
+		"common": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Heart": {
+		"name": {
+			"title": "Heart",
+			"kebab": "heart"
+		},
+		"tags": [
+			"like",
+			"love",
+			"emotion"
+		],
+		"common": [
+			"frown",
+			"meh",
+			"smile",
+			"star",
+			"thumbs-down",
+			"thumbs-up"
+		]
+	},
+	"HelpCircle": {
+		"name": {
+			"title": "HelpCircle",
+			"kebab": "help-circle"
+		},
+		"tags": [
+			"question mark",
+			"question",
+			"mark"
+		],
+		"common": []
+	},
+	"Hexagon": {
+		"name": {
+			"title": "Hexagon",
+			"kebab": "hexagon"
+		},
+		"tags": [
+			"shape",
+			"node.js",
+			"logo"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Home": {
+		"name": {
+			"title": "Home",
+			"kebab": "home"
+		},
+		"tags": [
+			"house",
+			"living"
+		],
+		"common": []
+	},
+	"Image": {
+		"name": {
+			"title": "Image",
+			"kebab": "image"
+		},
+		"tags": [
+			"picture"
+		],
+		"common": []
+	},
+	"Inbox": {
+		"name": {
+			"title": "Inbox",
+			"kebab": "inbox"
+		},
+		"tags": [
+			"email"
+		],
+		"common": [
+			"at-sign",
+			"mail",
+			"send"
+		]
+	},
+	"Info": {
+		"name": {
+			"title": "Info",
+			"kebab": "info"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Instagram": {
+		"name": {
+			"title": "Instagram",
+			"kebab": "instagram"
+		},
+		"tags": [
+			"logo",
+			"camera"
+		],
+		"common": [
+			"aperture",
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"video-off",
+			"video",
+			"youtube",
+			"zap-off",
+			"zap"
+		]
+	},
+	"Italic": {
+		"name": {
+			"title": "Italic",
+			"kebab": "italic"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Key": {
+		"name": {
+			"title": "Key",
+			"kebab": "key"
+		},
+		"tags": [
+			"password",
+			"login",
+			"authentication",
+			"secure"
+		],
+		"common": [
+			"lock",
+			"shield"
+		]
+	},
+	"Layers": {
+		"name": {
+			"title": "Layers",
+			"kebab": "layers"
+		},
+		"tags": [
+			"stack"
+		],
+		"common": []
+	},
+	"Layout": {
+		"name": {
+			"title": "Layout",
+			"kebab": "layout"
+		},
+		"tags": [
+			"window",
+			"webpage"
+		],
+		"common": []
+	},
+	"LifeBuoy": {
+		"name": {
+			"title": "LifeBuoy",
+			"kebab": "life-buoy"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Link": {
+		"name": {
+			"title": "Link",
+			"kebab": "link"
+		},
+		"tags": [
+			"chain",
+			"url"
+		],
+		"common": [
+			"link-2"
+		]
+	},
+	"Link2": {
+		"name": {
+			"title": "Link2",
+			"kebab": "link-2"
+		},
+		"tags": [
+			"chain",
+			"url"
+		],
+		"common": [
+			"link"
+		]
+	},
+	"Linkedin": {
+		"name": {
+			"title": "Linkedin",
+			"kebab": "linkedin"
+		},
+		"tags": [
+			"logo",
+			"social media",
+			"social",
+			"media"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"List": {
+		"name": {
+			"title": "List",
+			"kebab": "list"
+		},
+		"tags": [
+			"options"
+		],
+		"common": []
+	},
+	"Loader": {
+		"name": {
+			"title": "Loader",
+			"kebab": "loader"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Lock": {
+		"name": {
+			"title": "Lock",
+			"kebab": "lock"
+		},
+		"tags": [
+			"security",
+			"password",
+			"secure"
+		],
+		"common": [
+			"key",
+			"shield",
+			"shield-off",
+			"unlock"
+		]
+	},
+	"LogIn": {
+		"name": {
+			"title": "LogIn",
+			"kebab": "log-in"
+		},
+		"tags": [
+			"sign in",
+			"sign",
+			"in",
+			"arrow",
+			"enter"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"LogOut": {
+		"name": {
+			"title": "LogOut",
+			"kebab": "log-out"
+		},
+		"tags": [
+			"sign out",
+			"sign",
+			"out",
+			"arrow",
+			"exit"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"mouse-pointer",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"Mail": {
+		"name": {
+			"title": "Mail",
+			"kebab": "mail"
+		},
+		"tags": [
+			"email",
+			"message"
+		],
+		"common": [
+			"at-sign",
+			"inbox",
+			"send"
+		]
+	},
+	"Map": {
+		"name": {
+			"title": "Map",
+			"kebab": "map"
+		},
+		"tags": [
+			"location",
+			"navigation",
+			"travel"
+		],
+		"common": [
+			"compass",
+			"map-pin",
+			"menu",
+			"navigation",
+			"navigation-2"
+		]
+	},
+	"MapPin": {
+		"name": {
+			"title": "MapPin",
+			"kebab": "map-pin"
+		},
+		"tags": [
+			"location",
+			"navigation",
+			"travel",
+			"marker"
+		],
+		"common": [
+			"bookmark",
+			"compass",
+			"map",
+			"menu",
+			"navigation",
+			"navigation-2"
+		]
+	},
+	"Maximize": {
+		"name": {
+			"title": "Maximize",
+			"kebab": "maximize"
+		},
+		"tags": [
+			"fullscreen"
+		],
+		"common": [
+			"maximize-2"
+		]
+	},
+	"Maximize2": {
+		"name": {
+			"title": "Maximize2",
+			"kebab": "maximize-2"
+		},
+		"tags": [
+			"fullscreen",
+			"arrows",
+			"expand"
+		],
+		"common": [
+			"maximize",
+			"minimize-2",
+			"move",
+			"refresh-cw",
+			"refresh-ccw",
+			"repeat"
+		]
+	},
+	"Meh": {
+		"name": {
+			"title": "Meh",
+			"kebab": "meh"
+		},
+		"tags": [
+			"emoji",
+			"face",
+			"neutral",
+			"emotion"
+		],
+		"common": [
+			"frown",
+			"heart",
+			"smile",
+			"thumbs-down",
+			"thumbs-up"
+		]
+	},
+	"Menu": {
+		"name": {
+			"title": "Menu",
+			"kebab": "menu"
+		},
+		"tags": [
+			"bars",
+			"navigation",
+			"hamburger"
+		],
+		"common": [
+			"compass",
+			"map-pin",
+			"map"
+		]
+	},
+	"MessageCircle": {
+		"name": {
+			"title": "MessageCircle",
+			"kebab": "message-circle"
+		},
+		"tags": [
+			"comment",
+			"chat"
+		],
+		"common": [
+			"message-square"
+		]
+	},
+	"MessageSquare": {
+		"name": {
+			"title": "MessageSquare",
+			"kebab": "message-square"
+		},
+		"tags": [
+			"comment",
+			"chat"
+		],
+		"common": [
+			"message-circle"
+		]
+	},
+	"Mic": {
+		"name": {
+			"title": "Mic",
+			"kebab": "mic"
+		},
+		"tags": [
+			"record",
+			"sound",
+			"listen"
+		],
+		"common": [
+			"bell",
+			"circle",
+			"headphones",
+			"mic-off",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"MicOff": {
+		"name": {
+			"title": "MicOff",
+			"kebab": "mic-off"
+		},
+		"tags": [
+			"record",
+			"sound",
+			"mute"
+		],
+		"common": [
+			"bell",
+			"circle",
+			"headphones",
+			"mic",
+			"phone-off",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Minimize": {
+		"name": {
+			"title": "Minimize",
+			"kebab": "minimize"
+		},
+		"tags": [
+			"exit fullscreen",
+			"exit",
+			"fullscreen",
+			"close"
+		],
+		"common": [
+			"minimize-2",
+			"x-circle",
+			"x-square",
+			"x"
+		]
+	},
+	"Minimize2": {
+		"name": {
+			"title": "Minimize2",
+			"kebab": "minimize-2"
+		},
+		"tags": [
+			"exit fullscreen",
+			"exit",
+			"fullscreen",
+			"arrows",
+			"close"
+		],
+		"common": [
+			"maximize-2",
+			"minimize",
+			"move",
+			"refresh-cw",
+			"refresh-ccw",
+			"repeat",
+			"x-circle",
+			"x-square",
+			"x"
+		]
+	},
+	"Minus": {
+		"name": {
+			"title": "Minus",
+			"kebab": "minus"
+		},
+		"tags": [
+			"subtract"
+		],
+		"common": []
+	},
+	"MinusCircle": {
+		"name": {
+			"title": "MinusCircle",
+			"kebab": "minus-circle"
+		},
+		"tags": [],
+		"common": []
+	},
+	"MinusSquare": {
+		"name": {
+			"title": "MinusSquare",
+			"kebab": "minus-square"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Monitor": {
+		"name": {
+			"title": "Monitor",
+			"kebab": "monitor"
+		},
+		"tags": [
+			"tv",
+			"screen",
+			"display"
+		],
+		"common": []
+	},
+	"Moon": {
+		"name": {
+			"title": "Moon",
+			"kebab": "moon"
+		},
+		"tags": [
+			"dark",
+			"night"
+		],
+		"common": [
+			"sunset"
+		]
+	},
+	"MoreHorizontal": {
+		"name": {
+			"title": "MoreHorizontal",
+			"kebab": "more-horizontal"
+		},
+		"tags": [
+			"ellipsis"
+		],
+		"common": [
+			"more-vertical"
+		]
+	},
+	"MoreVertical": {
+		"name": {
+			"title": "MoreVertical",
+			"kebab": "more-vertical"
+		},
+		"tags": [
+			"ellipsis"
+		],
+		"common": [
+			"more-horizontal"
+		]
+	},
+	"MousePointer": {
+		"name": {
+			"title": "MousePointer",
+			"kebab": "mouse-pointer"
+		},
+		"tags": [
+			"arrow",
+			"cursor"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"rotate-ccw",
+			"rotate-cw"
+		]
+	},
+	"Move": {
+		"name": {
+			"title": "Move",
+			"kebab": "move"
+		},
+		"tags": [
+			"arrows"
+		],
+		"common": [
+			"maximize-2",
+			"minimize-2",
+			"refresh-cw",
+			"refresh-ccw",
+			"repeat"
+		]
+	},
+	"Music": {
+		"name": {
+			"title": "Music",
+			"kebab": "music"
+		},
+		"tags": [
+			"note"
+		],
+		"common": []
+	},
+	"Navigation": {
+		"name": {
+			"title": "Navigation",
+			"kebab": "navigation"
+		},
+		"tags": [
+			"location",
+			"travel"
+		],
+		"common": [
+			"compass",
+			"map-pin",
+			"map",
+			"navigation-2"
+		]
+	},
+	"Navigation2": {
+		"name": {
+			"title": "Navigation2",
+			"kebab": "navigation-2"
+		},
+		"tags": [
+			"location",
+			"travel"
+		],
+		"common": [
+			"compass",
+			"map-pin",
+			"map",
+			"navigation"
+		]
+	},
+	"Octagon": {
+		"name": {
+			"title": "Octagon",
+			"kebab": "octagon"
+		},
+		"tags": [
+			"stop"
+		],
+		"common": [
+			"pause",
+			"pause-circle",
+			"x-octagon"
+		]
+	},
+	"Package": {
+		"name": {
+			"title": "Package",
+			"kebab": "package"
+		},
+		"tags": [
+			"box",
+			"container"
+		],
+		"common": [
+			"archive",
+			"gift"
+		]
+	},
+	"Paperclip": {
+		"name": {
+			"title": "Paperclip",
+			"kebab": "paperclip"
+		},
+		"tags": [
+			"attachment"
+		],
+		"common": []
+	},
+	"Pause": {
+		"name": {
+			"title": "Pause",
+			"kebab": "pause"
+		},
+		"tags": [
+			"music",
+			"stop"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"octagon",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x",
+			"x-octagon"
+		]
+	},
+	"PauseCircle": {
+		"name": {
+			"title": "PauseCircle",
+			"kebab": "pause-circle"
+		},
+		"tags": [
+			"music",
+			"audio",
+			"stop"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"octagon",
+			"pause",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x",
+			"x-octagon"
+		]
+	},
+	"PenTool": {
+		"name": {
+			"title": "PenTool",
+			"kebab": "pen-tool"
+		},
+		"tags": [
+			"vector",
+			"drawing"
+		],
+		"common": []
+	},
+	"Percent": {
+		"name": {
+			"title": "Percent",
+			"kebab": "percent"
+		},
+		"tags": [
+			"discount"
+		],
+		"common": []
+	},
+	"Phone": {
+		"name": {
+			"title": "Phone",
+			"kebab": "phone"
+		},
+		"tags": [
+			"call"
+		],
+		"common": [
+			"phone-forwarded",
+			"phone-incoming",
+			"phone-missed",
+			"phone-off",
+			"phone-outgoing"
+		]
+	},
+	"PhoneCall": {
+		"name": {
+			"title": "PhoneCall",
+			"kebab": "phone-call"
+		},
+		"tags": [
+			"ring"
+		],
+		"common": []
+	},
+	"PhoneForwarded": {
+		"name": {
+			"title": "PhoneForwarded",
+			"kebab": "phone-forwarded"
+		},
+		"tags": [
+			"call"
+		],
+		"common": [
+			"phone-incoming",
+			"phone-missed",
+			"phone-off",
+			"phone-outgoing",
+			"phone"
+		]
+	},
+	"PhoneIncoming": {
+		"name": {
+			"title": "PhoneIncoming",
+			"kebab": "phone-incoming"
+		},
+		"tags": [
+			"call"
+		],
+		"common": [
+			"phone-forwarded",
+			"phone-missed",
+			"phone-off",
+			"phone-outgoing",
+			"phone"
+		]
+	},
+	"PhoneMissed": {
+		"name": {
+			"title": "PhoneMissed",
+			"kebab": "phone-missed"
+		},
+		"tags": [
+			"call"
+		],
+		"common": [
+			"phone-forwarded",
+			"phone-incoming",
+			"phone-off",
+			"phone-outgoing",
+			"phone"
+		]
+	},
+	"PhoneOff": {
+		"name": {
+			"title": "PhoneOff",
+			"kebab": "phone-off"
+		},
+		"tags": [
+			"call",
+			"mute"
+		],
+		"common": [
+			"mic-off",
+			"phone-forwarded",
+			"phone-incoming",
+			"phone-missed",
+			"phone-outgoing",
+			"phone",
+			"volume",
+			"volume-x"
+		]
+	},
+	"PhoneOutgoing": {
+		"name": {
+			"title": "PhoneOutgoing",
+			"kebab": "phone-outgoing"
+		},
+		"tags": [
+			"call"
+		],
+		"common": [
+			"phone-forwarded",
+			"phone-incoming",
+			"phone-missed",
+			"phone-off",
+			"phone"
+		]
+	},
+	"PieChart": {
+		"name": {
+			"title": "PieChart",
+			"kebab": "pie-chart"
+		},
+		"tags": [
+			"statistics",
+			"diagram"
+		],
+		"common": [
+			"bar-chart",
+			"bar-chart-2"
+		]
+	},
+	"Play": {
+		"name": {
+			"title": "Play",
+			"kebab": "play"
+		},
+		"tags": [
+			"music",
+			"start"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"PlayCircle": {
+		"name": {
+			"title": "PlayCircle",
+			"kebab": "play-circle"
+		},
+		"tags": [
+			"music",
+			"start"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Plus": {
+		"name": {
+			"title": "Plus",
+			"kebab": "plus"
+		},
+		"tags": [
+			"add",
+			"new"
+		],
+		"common": [
+			"file-plus",
+			"plus-circle",
+			"plus-square",
+			"user-plus"
+		]
+	},
+	"PlusCircle": {
+		"name": {
+			"title": "PlusCircle",
+			"kebab": "plus-circle"
+		},
+		"tags": [
+			"add",
+			"new"
+		],
+		"common": [
+			"file-plus",
+			"plus",
+			"plus-square",
+			"user-plus"
+		]
+	},
+	"PlusSquare": {
+		"name": {
+			"title": "PlusSquare",
+			"kebab": "plus-square"
+		},
+		"tags": [
+			"add",
+			"new"
+		],
+		"common": [
+			"file-plus",
+			"plus",
+			"plus-circle",
+			"user-plus"
+		]
+	},
+	"Pocket": {
+		"name": {
+			"title": "Pocket",
+			"kebab": "pocket"
+		},
+		"tags": [
+			"logo",
+			"save"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Power": {
+		"name": {
+			"title": "Power",
+			"kebab": "power"
+		},
+		"tags": [
+			"on",
+			"off"
+		],
+		"common": [
+			"circle",
+			"toggle-left",
+			"toggle-right"
+		]
+	},
+	"Printer": {
+		"name": {
+			"title": "Printer",
+			"kebab": "printer"
+		},
+		"tags": [
+			"fax",
+			"office",
+			"device"
+		],
+		"common": [
+			"smartphone",
+			"tablet"
+		]
+	},
+	"Radio": {
+		"name": {
+			"title": "Radio",
+			"kebab": "radio"
+		},
+		"tags": [
+			"signal"
+		],
+		"common": [
+			"wifi"
+		]
+	},
+	"RefreshCcw": {
+		"name": {
+			"title": "RefreshCcw",
+			"kebab": "refresh-ccw"
+		},
+		"tags": [
+			"arrows"
+		],
+		"common": [
+			"maximize-2",
+			"minimize-2",
+			"move",
+			"refresh-cw",
+			"repeat"
+		]
+	},
+	"RefreshCw": {
+		"name": {
+			"title": "RefreshCw",
+			"kebab": "refresh-cw"
+		},
+		"tags": [
+			"synchronise",
+			"arrows"
+		],
+		"common": [
+			"maximize-2",
+			"minimize-2",
+			"move",
+			"refresh-ccw",
+			"repeat"
+		]
+	},
+	"Repeat": {
+		"name": {
+			"title": "Repeat",
+			"kebab": "repeat"
+		},
+		"tags": [
+			"loop",
+			"arrows"
+		],
+		"common": [
+			"maximize-2",
+			"minimize-2",
+			"move",
+			"refresh-cw",
+			"refresh-ccw"
+		]
+	},
+	"Rewind": {
+		"name": {
+			"title": "Rewind",
+			"kebab": "rewind"
+		},
+		"tags": [
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"RotateCcw": {
+		"name": {
+			"title": "RotateCcw",
+			"kebab": "rotate-ccw"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-cw"
+		]
+	},
+	"RotateCw": {
+		"name": {
+			"title": "RotateCw",
+			"kebab": "rotate-cw"
+		},
+		"tags": [
+			"arrow"
+		],
+		"common": [
+			"corner-down-left",
+			"corner-down-right",
+			"corner-left-down",
+			"corner-left-up",
+			"corner-right-down",
+			"corner-right-up",
+			"corner-up-left",
+			"corner-up-right",
+			"log-in",
+			"log-out",
+			"mouse-pointer",
+			"rotate-ccw"
+		]
+	},
+	"Rss": {
+		"name": {
+			"title": "Rss",
+			"kebab": "rss"
+		},
+		"tags": [
+			"feed",
+			"subscribe"
+		],
+		"common": [
+			"user-plus"
+		]
+	},
+	"Save": {
+		"name": {
+			"title": "Save",
+			"kebab": "save"
+		},
+		"tags": [
+			"floppy disk",
+			"floppy",
+			"disk"
+		],
+		"common": []
+	},
+	"Scissors": {
+		"name": {
+			"title": "Scissors",
+			"kebab": "scissors"
+		},
+		"tags": [
+			"cut"
+		],
+		"common": []
+	},
+	"Search": {
+		"name": {
+			"title": "Search",
+			"kebab": "search"
+		},
+		"tags": [
+			"find",
+			"magnifier",
+			"magnifying glass",
+			"magnifying",
+			"glass"
+		],
+		"common": [
+			"zoom-in",
+			"zoom-out"
+		]
+	},
+	"Send": {
+		"name": {
+			"title": "Send",
+			"kebab": "send"
+		},
+		"tags": [
+			"message",
+			"mail",
+			"email",
+			"paper airplane",
+			"paper",
+			"airplane",
+			"paper aeroplane",
+			"aeroplane"
+		],
+		"common": [
+			"at-sign",
+			"inbox",
+			"mail"
+		]
+	},
+	"Server": {
+		"name": {
+			"title": "Server",
+			"kebab": "server"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Settings": {
+		"name": {
+			"title": "Settings",
+			"kebab": "settings"
+		},
+		"tags": [
+			"cog",
+			"edit",
+			"gear",
+			"preferences"
+		],
+		"common": []
+	},
+	"Share": {
+		"name": {
+			"title": "Share",
+			"kebab": "share"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Share2": {
+		"name": {
+			"title": "Share2",
+			"kebab": "share-2"
+		},
+		"tags": [
+			"network",
+			"connections"
+		],
+		"common": []
+	},
+	"Shield": {
+		"name": {
+			"title": "Shield",
+			"kebab": "shield"
+		},
+		"tags": [
+			"security",
+			"secure"
+		],
+		"common": [
+			"key",
+			"lock",
+			"shield-off",
+			"unlock"
+		]
+	},
+	"ShieldOff": {
+		"name": {
+			"title": "ShieldOff",
+			"kebab": "shield-off"
+		},
+		"tags": [
+			"security",
+			"insecure"
+		],
+		"common": [
+			"lock",
+			"shield",
+			"unlock"
+		]
+	},
+	"ShoppingBag": {
+		"name": {
+			"title": "ShoppingBag",
+			"kebab": "shopping-bag"
+		},
+		"tags": [
+			"ecommerce",
+			"cart",
+			"purchase",
+			"store"
+		],
+		"common": [
+			"credit-card",
+			"shopping-cart"
+		]
+	},
+	"ShoppingCart": {
+		"name": {
+			"title": "ShoppingCart",
+			"kebab": "shopping-cart"
+		},
+		"tags": [
+			"ecommerce",
+			"cart",
+			"purchase",
+			"store"
+		],
+		"common": [
+			"credit-card",
+			"shopping-bag"
+		]
+	},
+	"Shuffle": {
+		"name": {
+			"title": "Shuffle",
+			"kebab": "shuffle"
+		},
+		"tags": [
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Sidebar": {
+		"name": {
+			"title": "Sidebar",
+			"kebab": "sidebar"
+		},
+		"tags": [],
+		"common": []
+	},
+	"SkipBack": {
+		"name": {
+			"title": "SkipBack",
+			"kebab": "skip-back"
+		},
+		"tags": [
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"SkipForward": {
+		"name": {
+			"title": "SkipForward",
+			"kebab": "skip-forward"
+		},
+		"tags": [
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Slack": {
+		"name": {
+			"title": "Slack",
+			"kebab": "slack"
+		},
+		"tags": [
+			"logo"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Slash": {
+		"name": {
+			"title": "Slash",
+			"kebab": "slash"
+		},
+		"tags": [
+			"ban",
+			"no"
+		],
+		"common": []
+	},
+	"Sliders": {
+		"name": {
+			"title": "Sliders",
+			"kebab": "sliders"
+		},
+		"tags": [
+			"settings",
+			"controls"
+		],
+		"common": [
+			"tool"
+		]
+	},
+	"Smartphone": {
+		"name": {
+			"title": "Smartphone",
+			"kebab": "smartphone"
+		},
+		"tags": [
+			"cellphone",
+			"device"
+		],
+		"common": [
+			"printer",
+			"tablet"
+		]
+	},
+	"Smile": {
+		"name": {
+			"title": "Smile",
+			"kebab": "smile"
+		},
+		"tags": [
+			"emoji",
+			"face",
+			"happy",
+			"good",
+			"emotion"
+		],
+		"common": [
+			"frown",
+			"heart",
+			"meh",
+			"thumbs-down",
+			"thumbs-up"
+		]
+	},
+	"Speaker": {
+		"name": {
+			"title": "Speaker",
+			"kebab": "speaker"
+		},
+		"tags": [
+			"audio",
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Square": {
+		"name": {
+			"title": "Square",
+			"kebab": "square"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Star": {
+		"name": {
+			"title": "Star",
+			"kebab": "star"
+		},
+		"tags": [
+			"bookmark",
+			"favorite",
+			"like"
+		],
+		"common": [
+			"heart",
+			"thumbs-up"
+		]
+	},
+	"StopCircle": {
+		"name": {
+			"title": "StopCircle",
+			"kebab": "stop-circle"
+		},
+		"tags": [
+			"media",
+			"music"
+		],
+		"common": [
+			"disc",
+			"fast-forward",
+			"headphones",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"volume",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Sun": {
+		"name": {
+			"title": "Sun",
+			"kebab": "sun"
+		},
+		"tags": [
+			"brightness",
+			"weather",
+			"light"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"wind"
+		]
+	},
+	"Sunrise": {
+		"name": {
+			"title": "Sunrise",
+			"kebab": "sunrise"
+		},
+		"tags": [
+			"weather",
+			"time",
+			"morning",
+			"day"
+		],
+		"common": [
+			"clock",
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunset",
+			"thermometer",
+			"umbrella",
+			"watch",
+			"wind"
+		]
+	},
+	"Sunset": {
+		"name": {
+			"title": "Sunset",
+			"kebab": "sunset"
+		},
+		"tags": [
+			"weather",
+			"time",
+			"evening",
+			"night"
+		],
+		"common": [
+			"clock",
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"moon",
+			"sun",
+			"sunrise",
+			"thermometer",
+			"umbrella",
+			"watch",
+			"wind"
+		]
+	},
+	"Tablet": {
+		"name": {
+			"title": "Tablet",
+			"kebab": "tablet"
+		},
+		"tags": [
+			"device"
+		],
+		"common": [
+			"printer",
+			"smartphone"
+		]
+	},
+	"Tag": {
+		"name": {
+			"title": "Tag",
+			"kebab": "tag"
+		},
+		"tags": [
+			"label"
+		],
+		"common": []
+	},
+	"Target": {
+		"name": {
+			"title": "Target",
+			"kebab": "target"
+		},
+		"tags": [
+			"logo",
+			"bullseye"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Terminal": {
+		"name": {
+			"title": "Terminal",
+			"kebab": "terminal"
+		},
+		"tags": [
+			"code",
+			"command line",
+			"command",
+			"line",
+			"prompt"
+		],
+		"common": [
+			"command",
+			"git-branch",
+			"git-commit",
+			"git-merge",
+			"git-pull-request"
+		]
+	},
+	"Thermometer": {
+		"name": {
+			"title": "Thermometer",
+			"kebab": "thermometer"
+		},
+		"tags": [
+			"temperature",
+			"celsius",
+			"fahrenheit",
+			"weather"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"umbrella",
+			"wind"
+		]
+	},
+	"ThumbsDown": {
+		"name": {
+			"title": "ThumbsDown",
+			"kebab": "thumbs-down"
+		},
+		"tags": [
+			"dislike",
+			"bad",
+			"emotion"
+		],
+		"common": [
+			"frown",
+			"heart",
+			"meh",
+			"smile",
+			"thumbs-up"
+		]
+	},
+	"ThumbsUp": {
+		"name": {
+			"title": "ThumbsUp",
+			"kebab": "thumbs-up"
+		},
+		"tags": [
+			"like",
+			"good",
+			"emotion"
+		],
+		"common": [
+			"frown",
+			"heart",
+			"meh",
+			"smile",
+			"star",
+			"thumbs-down"
+		]
+	},
+	"ToggleLeft": {
+		"name": {
+			"title": "ToggleLeft",
+			"kebab": "toggle-left"
+		},
+		"tags": [
+			"on",
+			"off",
+			"switch"
+		],
+		"common": [
+			"circle",
+			"power",
+			"toggle-right"
+		]
+	},
+	"ToggleRight": {
+		"name": {
+			"title": "ToggleRight",
+			"kebab": "toggle-right"
+		},
+		"tags": [
+			"on",
+			"off",
+			"switch"
+		],
+		"common": [
+			"circle",
+			"power",
+			"toggle-left"
+		]
+	},
+	"Tool": {
+		"name": {
+			"title": "Tool",
+			"kebab": "tool"
+		},
+		"tags": [
+			"settings",
+			"spanner"
+		],
+		"common": [
+			"sliders"
+		]
+	},
+	"Trash": {
+		"name": {
+			"title": "Trash",
+			"kebab": "trash"
+		},
+		"tags": [
+			"garbage",
+			"delete",
+			"remove",
+			"bin"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"Trash2": {
+		"name": {
+			"title": "Trash2",
+			"kebab": "trash-2"
+		},
+		"tags": [
+			"garbage",
+			"delete",
+			"remove",
+			"bin"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"trash",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"Trello": {
+		"name": {
+			"title": "Trello",
+			"kebab": "trello"
+		},
+		"tags": [],
+		"common": []
+	},
+	"TrendingDown": {
+		"name": {
+			"title": "TrendingDown",
+			"kebab": "trending-down"
+		},
+		"tags": [],
+		"common": []
+	},
+	"TrendingUp": {
+		"name": {
+			"title": "TrendingUp",
+			"kebab": "trending-up"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Triangle": {
+		"name": {
+			"title": "Triangle",
+			"kebab": "triangle"
+		},
+		"tags": [
+			"delta"
+		],
+		"common": []
+	},
+	"Truck": {
+		"name": {
+			"title": "Truck",
+			"kebab": "truck"
+		},
+		"tags": [
+			"delivery",
+			"van",
+			"shipping",
+			"transport",
+			"lorry"
+		],
+		"common": []
+	},
+	"Tv": {
+		"name": {
+			"title": "Tv",
+			"kebab": "tv"
+		},
+		"tags": [
+			"television",
+			"stream"
+		],
+		"common": [
+			"airplay"
+		]
+	},
+	"Twitch": {
+		"name": {
+			"title": "Twitch",
+			"kebab": "twitch"
+		},
+		"tags": [
+			"logo"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitter",
+			"youtube"
+		]
+	},
+	"Twitter": {
+		"name": {
+			"title": "Twitter",
+			"kebab": "twitter"
+		},
+		"tags": [
+			"logo",
+			"social"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"youtube"
+		]
+	},
+	"Type": {
+		"name": {
+			"title": "Type",
+			"kebab": "type"
+		},
+		"tags": [
+			"text"
+		],
+		"common": []
+	},
+	"Umbrella": {
+		"name": {
+			"title": "Umbrella",
+			"kebab": "umbrella"
+		},
+		"tags": [
+			"rain",
+			"weather"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"wind"
+		]
+	},
+	"Underline": {
+		"name": {
+			"title": "Underline",
+			"kebab": "underline"
+		},
+		"tags": [],
+		"common": []
+	},
+	"Unlock": {
+		"name": {
+			"title": "Unlock",
+			"kebab": "unlock"
+		},
+		"tags": [
+			"security"
+		],
+		"common": [
+			"lock",
+			"shield",
+			"shield-off"
+		]
+	},
+	"Upload": {
+		"name": {
+			"title": "Upload",
+			"kebab": "upload"
+		},
+		"tags": [],
+		"common": []
+	},
+	"UploadCloud": {
+		"name": {
+			"title": "UploadCloud",
+			"kebab": "upload-cloud"
+		},
+		"tags": [],
+		"common": []
+	},
+	"User": {
+		"name": {
+			"title": "User",
+			"kebab": "user"
+		},
+		"tags": [
+			"person",
+			"account"
+		],
+		"common": []
+	},
+	"UserCheck": {
+		"name": {
+			"title": "UserCheck",
+			"kebab": "user-check"
+		},
+		"tags": [
+			"followed",
+			"subscribed"
+		],
+		"common": []
+	},
+	"UserMinus": {
+		"name": {
+			"title": "UserMinus",
+			"kebab": "user-minus"
+		},
+		"tags": [
+			"delete",
+			"remove",
+			"unfollow",
+			"unsubscribe"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"trash",
+			"trash-2",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"UserPlus": {
+		"name": {
+			"title": "UserPlus",
+			"kebab": "user-plus"
+		},
+		"tags": [
+			"new",
+			"add",
+			"create",
+			"follow",
+			"subscribe"
+		],
+		"common": [
+			"file-plus",
+			"plus",
+			"plus-circle",
+			"plus-square",
+			"rss"
+		]
+	},
+	"UserX": {
+		"name": {
+			"title": "UserX",
+			"kebab": "user-x"
+		},
+		"tags": [
+			"delete",
+			"remove",
+			"unfollow",
+			"unsubscribe",
+			"unavailable"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"Users": {
+		"name": {
+			"title": "Users",
+			"kebab": "users"
+		},
+		"tags": [
+			"group"
+		],
+		"common": []
+	},
+	"Video": {
+		"name": {
+			"title": "Video",
+			"kebab": "video"
+		},
+		"tags": [
+			"camera",
+			"movie",
+			"film"
+		],
+		"common": [
+			"aperture",
+			"film",
+			"instagram",
+			"video-off",
+			"zap-off",
+			"zap"
+		]
+	},
+	"VideoOff": {
+		"name": {
+			"title": "VideoOff",
+			"kebab": "video-off"
+		},
+		"tags": [
+			"camera",
+			"movie",
+			"film"
+		],
+		"common": [
+			"aperture",
+			"film",
+			"instagram",
+			"video",
+			"zap-off",
+			"zap"
+		]
+	},
+	"Voicemail": {
+		"name": {
+			"title": "Voicemail",
+			"kebab": "voicemail"
+		},
+		"tags": [
+			"phone"
+		],
+		"common": []
+	},
+	"Volume": {
+		"name": {
+			"title": "Volume",
+			"kebab": "volume"
+		},
+		"tags": [
+			"music",
+			"sound",
+			"mute"
+		],
+		"common": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"phone-off",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume-1",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Volume1": {
+		"name": {
+			"title": "Volume1",
+			"kebab": "volume-1"
+		},
+		"tags": [
+			"music",
+			"sound"
+		],
+		"common": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-2",
+			"volume-x"
+		]
+	},
+	"Volume2": {
+		"name": {
+			"title": "Volume2",
+			"kebab": "volume-2"
+		},
+		"tags": [
+			"music",
+			"sound"
+		],
+		"common": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-x"
+		]
+	},
+	"VolumeX": {
+		"name": {
+			"title": "VolumeX",
+			"kebab": "volume-x"
+		},
+		"tags": [
+			"music",
+			"sound",
+			"mute"
+		],
+		"common": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"phone-off",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-2"
+		]
+	},
+	"Watch": {
+		"name": {
+			"title": "Watch",
+			"kebab": "watch"
+		},
+		"tags": [
+			"clock",
+			"time"
+		],
+		"common": [
+			"clock",
+			"sunrise",
+			"sunset"
+		]
+	},
+	"Wifi": {
+		"name": {
+			"title": "Wifi",
+			"kebab": "wifi"
+		},
+		"tags": [
+			"connection",
+			"signal",
+			"wireless"
+		],
+		"common": [
+			"bluetooth",
+			"radio"
+		]
+	},
+	"WifiOff": {
+		"name": {
+			"title": "WifiOff",
+			"kebab": "wifi-off"
+		},
+		"tags": [
+			"disabled"
+		],
+		"common": []
+	},
+	"Wind": {
+		"name": {
+			"title": "Wind",
+			"kebab": "wind"
+		},
+		"tags": [
+			"weather",
+			"air"
+		],
+		"common": [
+			"cloud-drizzle",
+			"cloud-lightning",
+			"cloud-rain",
+			"cloud-snow",
+			"cloud",
+			"sun",
+			"sunrise",
+			"sunset",
+			"thermometer",
+			"umbrella"
+		]
+	},
+	"X": {
+		"name": {
+			"title": "X",
+			"kebab": "x"
+		},
+		"tags": [
+			"cancel",
+			"close",
+			"delete",
+			"remove",
+			"times",
+			"clear"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"minimize",
+			"minimize-2",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square"
+		]
+	},
+	"XCircle": {
+		"name": {
+			"title": "XCircle",
+			"kebab": "x-circle"
+		},
+		"tags": [
+			"cancel",
+			"close",
+			"delete",
+			"remove",
+			"times",
+			"clear"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"minimize",
+			"minimize-2",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
+	},
+	"XOctagon": {
+		"name": {
+			"title": "XOctagon",
+			"kebab": "x-octagon"
+		},
+		"tags": [
+			"delete",
+			"stop",
+			"alert",
+			"warning",
+			"times",
+			"clear"
+		],
+		"common": [
+			"alert-circle",
+			"alert-octagon",
+			"alert-triangle",
+			"file-minus",
+			"octagon",
+			"pause",
+			"pause-circle",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-square",
+			"x"
+		]
+	},
+	"XSquare": {
+		"name": {
+			"title": "XSquare",
+			"kebab": "x-square"
+		},
+		"tags": [
+			"cancel",
+			"close",
+			"delete",
+			"remove",
+			"times",
+			"clear"
+		],
+		"common": [
+			"delete",
+			"file-minus",
+			"minimize",
+			"minimize-2",
+			"trash",
+			"trash-2",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x"
+		]
+	},
+	"Youtube": {
+		"name": {
+			"title": "Youtube",
+			"kebab": "youtube"
+		},
+		"tags": [
+			"logo",
+			"video",
+			"play"
+		],
+		"common": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"film",
+			"framer",
+			"github",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter"
+		]
+	},
+	"Zap": {
+		"name": {
+			"title": "Zap",
+			"kebab": "zap"
+		},
+		"tags": [
+			"flash",
+			"camera",
+			"lightning"
+		],
+		"common": [
+			"aperture",
+			"instagram",
+			"video-off",
+			"video",
+			"zap-off"
+		]
+	},
+	"ZapOff": {
+		"name": {
+			"title": "ZapOff",
+			"kebab": "zap-off"
+		},
+		"tags": [
+			"flash",
+			"camera",
+			"lightning"
+		],
+		"common": [
+			"aperture",
+			"instagram",
+			"video-off",
+			"video",
+			"zap"
+		]
+	},
+	"ZoomIn": {
+		"name": {
+			"title": "ZoomIn",
+			"kebab": "zoom-in"
+		},
+		"tags": [
+			"magnifying glass",
+			"magnifying",
+			"glass"
+		],
+		"common": [
+			"search",
+			"zoom-out"
+		]
+	},
+	"ZoomOut": {
+		"name": {
+			"title": "ZoomOut",
+			"kebab": "zoom-out"
+		},
+		"tags": [
+			"magnifying glass",
+			"magnifying",
+			"glass"
+		],
+		"common": [
+			"search",
+			"zoom-in"
+		]
+	}
+}

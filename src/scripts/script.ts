@@ -2,6 +2,12 @@ import * as Feather from "react-feather"
 import tags from "./tags"
 import { kebabCase } from "lodash"
 
+interface StringToStringArray {
+	[key: string]: string[]
+}
+
+const kebabFeatherKeys = Object.keys(Feather).map(each => kebabCase(each))
+
 // prettier-ignore
 interface IIcon {
 	name: {
@@ -17,7 +23,7 @@ interface IIcon {
 // Ex:
 //
 // "zoom" -> ["zoom"]
-// "zoom-out" -> ["zoom-out", "zoomout", "zoom", "out"]
+// "zoom-out" -> ["zoom-out", "zoom", "out"]
 //
 function expandTags(tag: string) {
 	const tags = tag.split(/[- ]/)
@@ -44,13 +50,35 @@ function getExpandedTags(name: string) {
 	return [...set]
 }
 
-interface IPrecomputedTags {
-	[key: string]: string[]
+// Precomputes expanded sets of tags.
+const precomputedTags: StringToStringArray = kebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+	acc[each] = getExpandedTags(each)
+	return acc
+}, {})
+
+// Returns whether two arrays have elements in common.
+function hasElementsInCommon(arr1: string[], arr2: string[]) {
+	for (const e1 of arr1) {
+		for (const e2 of arr2) {
+			if (e1 === e2) {
+				return true
+			}
+		}
+	}
+	return false
 }
 
-// Precomputes expanded sets of tags.
-const precomputedTags: IPrecomputedTags = Object.keys(Feather).reduce<IPrecomputedTags>((acc, each) => {
-	acc[each] = getExpandedTags(kebabCase(each))
+// Precomputes common tags.
+const precomputedCommon: StringToStringArray = kebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+	acc[each] = Object.keys(tags).reduce<string[]>((acc, compare) => {
+		if (each !== compare) {
+			if (hasElementsInCommon(tags[each] || [], tags[compare] || [])) {
+				acc.push(compare)
+			}
+		}
+		return acc
+	}, [])
+
 	return acc
 }, {})
 
@@ -58,19 +86,18 @@ interface IDataset {
 	[key: string]: IIcon
 }
 
-// // Searches for common tags.
-// function searchCommon() {}
-
 const dataset = Object.keys(Feather).reduce<IDataset>((acc, each) => {
 	acc[each] = {
 		name: {
 			title: each,
 			kebab: kebabCase(each),
 		},
-		tags: precomputedTags[each],
-		common: [], // TODO
+		tags: precomputedTags[kebabCase(each)],
+		common: precomputedCommon[kebabCase(each)],
 	}
 	return acc
 }, {})
 
-console.log(dataset)
+;(() => {
+	console.log(JSON.stringify(dataset, null, "\t"))
+})()
