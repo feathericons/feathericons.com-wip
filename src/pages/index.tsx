@@ -41,7 +41,7 @@ function AbsoluteTopRow() {
 	return (
 		// TODO: Add analytics here.
 		<div className="absolute x-0 t-0">
-			<div className="hstack space-8 px-16 lg:px-24 p-12">
+			<div className="hstack px-16 lg:px-24 py-12">
 				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
 					{/* NOTE: `fill-current stroke-0` does not work here. */}
 					<Twitter className="w-24 h-24" style={{ fill: "currentColor", strokeWidth: 0 }} />
@@ -281,7 +281,12 @@ export default function Home() {
 											<div className="group vstack stack-center space-16">
 												{React.createElement(each.svg, { className: "w-32 h-32" })}
 												<div className="absolute x-0 b-0">
-													<div className="text-center text-14 text-gray-600 group-on:underline">{each.kebab}</div>
+													{/* <div className="hstack stack-center space-6"> */}
+													<div className="text-center text-14 leading-1.25 text-gray-600 group-on:underline">
+														{each.kebab}
+													</div>
+													{/* <ExternalLink className="w-13 h-13 text-blue-500" /> */}
+													{/* </div> */}
 												</div>
 											</div>
 										</div>
@@ -289,12 +294,12 @@ export default function Home() {
 								</div>
 							</div>
 							{/* RHS */}
-							<div className="hidden md:block w-320 bg-gray-50 border-l-1 rounded-r-24">
+							<div className="hidden md:block w-320 bg-gray-50 border-l-1 xl:rounded-r-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Preview */}
 									{/* NOTE: Uses a nested `sticky`. */}
 									<div className="sticky t-0 xl:t-16 z-10">
-										<div className="hstack h-320 bg-white border-b-1 rounded-tr-24">
+										<div className="hstack h-320 bg-white border-b-1 xl:rounded-tr-24">
 											<div className="vstack">
 												<div className="w-64 h-64 bg-gray-300 rounded-full"></div>
 											</div>
@@ -302,7 +307,7 @@ export default function Home() {
 											<div className="absolute x-0 t-0 p-24">
 												<div className="hstack">
 													<div className="spacer"></div>
-													<div className="w-24 h-24 bg-gray-200 rounded-full" />
+													<div className="w-16 h-16 bg-gray-200 rounded-full" />
 												</div>
 											</div>
 											{/* TODO: Move `p-24` off of `absolute`? */}

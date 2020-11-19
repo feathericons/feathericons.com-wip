@@ -1,5 +1,7 @@
 import Feather from "react-feather"
 
+// TODO: Deprecate.
+//
 // prettier-ignore
 export interface IIcon {
 	title:      string
@@ -7,11 +9,6 @@ export interface IIcon {
 	searchTags: string[]
 	svg:        React.FC<Feather.Props>
 	statusNew:  boolean
-}
-
-// TODO: Do we need this?
-export interface ISearchTags {
-	[key: string]: string[]
 }
 
 // prettier-ignore

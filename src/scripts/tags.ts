@@ -1,7 +1,8 @@
-import { ISearchTags } from "types"
-
-// https://github.com/feathericons/feather/blob/master/src/searchTags.json
-const searchTags: ISearchTags = {
+interface ITags {
+	[key: string]: string[]
+}
+// https://github.com/feathericons/feather/blob/master/src/tags.json
+const tags: ITags = {
 	activity: ["pulse", "health", "action", "motion"],
 	airplay: ["stream", "cast", "mirroring"],
 	"alert-circle": ["warning", "alert", "danger"],
@@ -239,4 +240,4 @@ const searchTags: ISearchTags = {
 	"zoom-out": ["magnifying glass"],
 }
 
-export default searchTags
+export default tags
