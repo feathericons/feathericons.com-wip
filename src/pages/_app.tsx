@@ -1,10 +1,8 @@
+import { AppProps } from "next/app"
 import { Duomo as DuomoCSS } from "@zaydek/duomo/dist/runtime"
 import { useEffect } from "react"
 
-// import "@zaydek/duomo"
 import "@zaydek/prose"
-
-import type { AppProps } from "next/app"
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
