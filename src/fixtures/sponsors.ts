@@ -1,4 +1,9 @@
-import { ISponsor } from "types"
+export interface ISponsor {
+	name: string
+	href: string
+	src: string
+	subtext: string
+}
 
 // TODO: Add analytics metadata.
 const sponsors: ISponsor[] = [

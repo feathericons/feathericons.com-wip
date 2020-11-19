@@ -8,7 +8,10 @@ interface StringToStringArray {
 	[key: string]: string[]
 }
 
-const kebabFeatherKeys = Object.keys(Feather).map(each => kebabCase(each))
+const sortedKebabFeatherKeys = Object.keys(Feather)
+	.sort()
+	.map(each => kebabCase(each))
+const sortedFeatherKeys = Object.keys(Feather).sort()
 
 // prettier-ignore
 interface IIcon {
@@ -53,7 +56,7 @@ function getExpandedTags(name: string) {
 }
 
 // Precomputes expanded sets of tags.
-const precomputedTags: StringToStringArray = kebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+const precomputedTags: StringToStringArray = sortedKebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
 	acc[each] = getExpandedTags(each)
 	return acc
 }, {})
@@ -71,7 +74,7 @@ function hasElementsInCommon(arr1: string[], arr2: string[]) {
 }
 
 // Precomputes common tags.
-const precomputedCommon: StringToStringArray = kebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+const precomputedCommon: StringToStringArray = sortedKebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
 	acc[each] = Object.keys(tags).reduce<string[]>((acc, compare) => {
 		if (each !== compare) {
 			if (hasElementsInCommon(tags[each] || [], tags[compare] || [])) {
@@ -88,7 +91,7 @@ interface IDataset {
 	[key: string]: IIcon
 }
 
-const dataset = Object.keys(Feather).reduce<IDataset>((acc, each) => {
+const dataset = sortedFeatherKeys.reduce<IDataset>((acc, each) => {
 	acc[each] = {
 		name: {
 			title: each,

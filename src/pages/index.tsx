@@ -1,14 +1,15 @@
-import dataset from "data/dataset"
+import dataset from "data/dataset.json"
 import Head from "next/head"
 import Link from "next/link"
 import React from "react"
-import sponsors from "fixtures/sponsors"
+import sponsors, { ISponsor } from "fixtures/sponsors"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
-import { ISponsor } from "types"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
+
+console.log(Object.keys(dataset))
 
 const breakpoints = {
 	xs: 512,
@@ -276,21 +277,18 @@ export default function Home() {
 								</div>
 								{/* Icons */}
 								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
-									{dataset.map(each => (
-										<div key={each.kebab} className="aspect-ratio-1:1">
+									{/* {Object.keys(dataset).map(each => (
+										<div key={each.name.kebab} className="aspect-ratio-1:1">
 											<div className="group vstack stack-center space-16">
 												{React.createElement(each.svg, { className: "w-32 h-32" })}
 												<div className="absolute x-0 b-0">
-													{/* <div className="hstack stack-center space-6"> */}
 													<div className="text-center text-14 leading-1.25 text-gray-600 group-on:underline">
 														{each.kebab}
 													</div>
-													{/* <ExternalLink className="w-13 h-13 text-blue-500" /> */}
-													{/* </div> */}
 												</div>
 											</div>
 										</div>
-									))}
+									))} */}
 								</div>
 							</div>
 							{/* RHS */}
