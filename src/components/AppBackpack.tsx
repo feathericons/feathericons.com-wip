@@ -286,7 +286,7 @@ export default function AppBackpack({ children }: { children?: React.ReactNode }
 													<div className="spacer">
 														<div className="w-full h-8 bg-gray-200 rounded-full" />
 													</div>
-													<div className="w-64 h-32 bg-gray-200 rounded-full" />
+													<div className="w-64 h-28 bg-gray-200 rounded-full" />
 												</div>
 											</div>
 										</div>
@@ -303,7 +303,7 @@ export default function AppBackpack({ children }: { children?: React.ReactNode }
 												<div className="spacer">
 													<div className="w-full h-8 bg-gray-200 rounded-full" />
 												</div>
-												<div className="w-64 h-32 bg-gray-200 rounded-full" />
+												<div className="w-64 h-28 bg-gray-200 rounded-full" />
 											</div>
 										</div>
 									))}

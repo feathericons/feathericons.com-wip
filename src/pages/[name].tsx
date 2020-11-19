@@ -1,5 +1,6 @@
 import AppBackpack from "components/AppBackpack"
 import datasetAsArray from "data/datasetAsArray"
+import IconInfo from "components/IconInfo"
 import { GetStaticPropsContext } from "next"
 // import dataset from "data/dataset"
 
@@ -8,7 +9,11 @@ import { GetStaticPropsContext } from "next"
 // </AppWrapper>
 
 export default function IconPage({ name }: { name: string }) {
-	return <AppBackpack>{name}</AppBackpack>
+	return (
+		<AppBackpack>
+			<IconInfo name={name} />
+		</AppBackpack>
+	)
 }
 
 // `getStaticProps` forwards parameters as props.
