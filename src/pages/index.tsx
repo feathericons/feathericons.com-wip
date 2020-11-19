@@ -7,19 +7,11 @@ import sponsors, { ISponsor } from "fixtures/sponsors"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
+import { IIcon } from "types"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 
-interface IIcon {
-	name: {
-		title: string
-		kebab: string
-	}
-	tags: string[]
-	common: string[]
-}
-
-const datasetAsArray = Object.keys(dataset).map(each => (dataset as Record<string, IIcon>)[each])
+const datasetAsArray = Object.keys(dataset).map(each => (dataset as { [key: string]: IIcon })[each])
 
 const breakpoints = {
 	xs: 512,
@@ -142,23 +134,14 @@ function StickyObscureEffect() {
 	)
 }
 
-// TODO: Extract `<AppContainer>`.
 export default function Home() {
-	const screen = useBreakpoints({
-		xs: 512,
-		sm: 640,
-		md: 768,
-		lg: 1024,
-		xl: 1280 + 64,
-	})
+	const screen = useBreakpoints(breakpoints)
 
 	return (
 		<>
 			<Head>
 				<title>Feathericons</title>
-				{/* Duomo CSS */}
 				<link href="static/stylesheets/index.css" rel="stylesheet" />
-				{/* Google Fonts / DM Sans */}
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
 			</Head>
@@ -169,7 +152,8 @@ export default function Home() {
 
 				{/* Top */}
 				<div className="hstack px-16 lg:px-24">
-					<div className="vstack xl:hstack space-32 w-full" style={{ maxWidth: 1024 + 64 }}>
+					{/* NOTE: Uses `space-40`, `space-20`, and `space-10`. */}
+					<div className="vstack xl:hstack space-40 w-full" style={{ maxWidth: 1024 + 64 }}>
 						{/**/}
 
 						{/* CTA buttons */}
@@ -186,7 +170,7 @@ export default function Home() {
 								>
 									Open source icons
 								</h1>
-								<h2 className="mt-12 text-center text-17">
+								<h2 className="mt-10 text-center text-17">
 									Created by{" "}
 									<ExtAnchor className="font-500 on:underline" href="TODO">
 										@colebemis
@@ -275,7 +259,6 @@ export default function Home() {
 									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-tl-24">
 										<div className="w-32 h-32 bg-gray-200 rounded-full" />
 										<div className="spacer" />
-										{/* TODO: Change to `sm` or `lg`? */}
 										<div className="hidden md:vstack px-6 w-128 h-32 bg-gray-100 rounded-full">
 											<div className="hstack">
 												<div className="w-20 h-20 bg-gray-300 rounded-full" />
@@ -290,7 +273,9 @@ export default function Home() {
 									{datasetAsArray.map(each => (
 										<div key={each.name.kebab} className="aspect-ratio-1:1">
 											<div className="group vstack stack-center space-16">
-												{React.createElement(Feather[each.name.title], { className: "w-32 h-32" })}
+												{React.createElement((Feather as { [key: string]: React.FC<Feather.Props> })[each.name.title], {
+													className: "w-32 h-32",
+												})}
 												<div className="absolute x-0 b-0">
 													<div className="text-center text-14 leading-1.25 text-gray-600 group-on:underline">
 														{each.name.kebab}

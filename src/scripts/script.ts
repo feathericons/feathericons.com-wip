@@ -1,27 +1,19 @@
+import * as Feather from "react-feather"
+import { IIcon } from "../types"
+import { kebabCase } from "lodash"
+
 // https://stackoverflow.com/a/55490934
 const tags: { [key: string]: string[] } = require("./tags.json")
-
-import * as Feather from "react-feather"
-import { kebabCase } from "lodash"
 
 interface StringToStringArray {
 	[key: string]: string[]
 }
 
+// NOTE: FOR THE LOVE OF GOD KEYS MUST BE SORTED. DO NOT REMOVE SORT.
 const sortedKebabFeatherKeys = Object.keys(Feather)
 	.sort()
 	.map(each => kebabCase(each))
 const sortedFeatherKeys = Object.keys(Feather).sort()
-
-// prettier-ignore
-interface IIcon {
-	name: {
-		title: string,  // -> "ArrowRight"
-		kebab: string,  // -> "arrow-right"
-	}
-	tags: string[],   // -> ["arrow", "right"]
-	common: string[], // -> ["arrow-up", "arrow-down", "arrow-left"]
-}
 
 // Expands and dedupes one-off tags.
 //
