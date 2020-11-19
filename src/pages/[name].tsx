@@ -1,12 +1,14 @@
+import AppBackpack from "components/AppBackpack"
 import datasetAsArray from "data/datasetAsArray"
 import { GetStaticPropsContext } from "next"
+// import dataset from "data/dataset"
 
 // <AppWrapper>
 // 	<IconInfo icon={dataset.find(each => each.name.kebab === name)!} />
 // </AppWrapper>
 
 export default function IconPage({ name }: { name: string }) {
-	return <>{name}</>
+	return <AppBackpack>{name}</AppBackpack>
 }
 
 // `getStaticProps` forwards parameters as props.
