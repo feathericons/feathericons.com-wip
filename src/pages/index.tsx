@@ -1,3 +1,4 @@
+import * as Feather from "react-feather"
 import dataset from "data/dataset.json"
 import Head from "next/head"
 import Link from "next/link"
@@ -9,7 +10,16 @@ import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 
-console.log(Object.keys(dataset))
+interface IIcon {
+	name: {
+		title: string
+		kebab: string
+	}
+	tags: string[]
+	common: string[]
+}
+
+const datasetAsArray = Object.keys(dataset).map(each => (dataset as Record<string, IIcon>)[each])
 
 const breakpoints = {
 	xs: 512,
@@ -277,18 +287,18 @@ export default function Home() {
 								</div>
 								{/* Icons */}
 								<div className="grid-cols-128 gap-16 px-16 sm:px-24 xl:px-64 py-64">
-									{/* {Object.keys(dataset).map(each => (
+									{datasetAsArray.map(each => (
 										<div key={each.name.kebab} className="aspect-ratio-1:1">
 											<div className="group vstack stack-center space-16">
-												{React.createElement(each.svg, { className: "w-32 h-32" })}
+												{React.createElement(Feather[each.name.title], { className: "w-32 h-32" })}
 												<div className="absolute x-0 b-0">
 													<div className="text-center text-14 leading-1.25 text-gray-600 group-on:underline">
-														{each.kebab}
+														{each.name.kebab}
 													</div>
 												</div>
 											</div>
 										</div>
-									))} */}
+									))}
 								</div>
 							</div>
 							{/* RHS */}
