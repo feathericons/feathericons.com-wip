@@ -12,10 +12,6 @@ interface IIcon {
 	common: string[], // -> ["arrow-up", "arrow-down", "arrow-left"]
 }
 
-interface IIconMap {
-	[key: string]: IIcon
-}
-
 // Expands and dedupes one-off tags.
 //
 // Ex:
@@ -24,11 +20,11 @@ interface IIconMap {
 // "zoom-out" -> ["zoom-out", "zoomout", "zoom", "out"]
 //
 function expandTags(tag: string) {
-	const tags = tag.split("-")
+	const tags = tag.split(/[- ]/)
 	if (tags.length === 1) {
 		return tags
 	}
-	const set = new Set(...[tag, tags.join(""), ...tags])
+	const set = new Set([tag, ...tags])
 	return [...set]
 }
 
@@ -48,16 +44,33 @@ function getExpandedTags(name: string) {
 	return [...set]
 }
 
-const datasetMap = Object.keys(Feather).reduce<IIconMap>((acc, each) => {
+interface IPrecomputedTags {
+	[key: string]: string[]
+}
+
+// Precomputes expanded sets of tags.
+const precomputedTags: IPrecomputedTags = Object.keys(Feather).reduce<IPrecomputedTags>((acc, each) => {
+	acc[each] = getExpandedTags(kebabCase(each))
+	return acc
+}, {})
+
+interface IDataset {
+	[key: string]: IIcon
+}
+
+// // Searches for common tags.
+// function searchCommon() {}
+
+const dataset = Object.keys(Feather).reduce<IDataset>((acc, each) => {
 	acc[each] = {
 		name: {
 			title: each,
 			kebab: kebabCase(each),
 		},
-		tags: getExpandedTags(kebabCase(each)),
+		tags: precomputedTags[each],
 		common: [], // TODO
 	}
 	return acc
 }, {})
 
-console.log(datasetMap)
+console.log(dataset)
