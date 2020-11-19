@@ -1,7 +1,7 @@
 import * as Feather from "react-feather"
 import Link from "next/link"
 import React from "react"
-import { IIcon } from "types"
+import { IIcon } from "../types"
 import { toTitleCase } from "@zaydek/lib/dist/helpers"
 
 export function Icon({ icon }: { icon: IIcon }) {
