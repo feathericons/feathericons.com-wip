@@ -1,18 +1,18 @@
 import * as Feather from "react-feather"
+import tags from "./tags.json"
 import { IIcon } from "../types"
-import { kebabCase } from "lodash"
+import { toKebabCase, toTitleCase } from "@zaydek/lib/dist/helpers"
 
-// https://stackoverflow.com/a/55490934
-const tags: { [key: string]: string[] } = require("./tags.json")
-
-interface StringToStringArray {
+interface StringToStrings {
 	[key: string]: string[]
 }
 
-// NOTE: FOR THE LOVE OF GOD KEYS MUST BE SORTED. DO NOT REMOVE SORT.
+// NOTE: Keys are expected to be sorted.
 const sortedKebabFeatherKeys = Object.keys(Feather)
 	.sort()
-	.map(each => kebabCase(each))
+	.map(each => toKebabCase(each))
+
+// NOTE: Keys are expected to be sorted.
 const sortedFeatherKeys = Object.keys(Feather).sort()
 
 // Expands and dedupes one-off tags.
@@ -33,7 +33,7 @@ function expandTags(tag: string) {
 
 // Expands and dedupes sets of tags.
 function getExpandedTags(name: string) {
-	const found = tags[name]
+	const found = (tags as StringToStrings)[name]
 	if (!found) {
 		return []
 	}
@@ -48,13 +48,12 @@ function getExpandedTags(name: string) {
 }
 
 // Precomputes expanded sets of tags.
-const precomputedTags: StringToStringArray = sortedKebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+const precomputedTags: StringToStrings = sortedKebabFeatherKeys.reduce<StringToStrings>((acc, each) => {
 	acc[each] = getExpandedTags(each)
 	return acc
 }, {})
 
-// Returns whether two arrays have elements in common.
-function hasElementsInCommon(arr1: string[], arr2: string[]) {
+function compareTagsInCommon(arr1: string[], arr2: string[]) {
 	for (const e1 of arr1) {
 		for (const e2 of arr2) {
 			if (e1 === e2) {
@@ -66,11 +65,11 @@ function hasElementsInCommon(arr1: string[], arr2: string[]) {
 }
 
 // Precomputes common tags.
-const precomputedCommon: StringToStringArray = sortedKebabFeatherKeys.reduce<StringToStringArray>((acc, each) => {
+const precomputedHasTagsInCommon: StringToStrings = sortedKebabFeatherKeys.reduce<StringToStrings>((acc, each) => {
 	acc[each] = Object.keys(tags).reduce<string[]>((acc, compare) => {
 		if (each !== compare) {
-			if (hasElementsInCommon(tags[each] || [], tags[compare] || [])) {
-				acc.push(compare)
+			if (compareTagsInCommon((tags as StringToStrings)[each] || [], (tags as StringToStrings)[compare] || [])) {
+				acc.push(toTitleCase(compare))
 			}
 		}
 		return acc
@@ -85,12 +84,8 @@ interface IDataset {
 
 const dataset = sortedFeatherKeys.reduce<IDataset>((acc, each) => {
 	acc[each] = {
-		name: {
-			title: each,
-			kebab: kebabCase(each),
-		},
-		tags: precomputedTags[kebabCase(each)],
-		common: precomputedCommon[kebabCase(each)],
+		tags: precomputedTags[toKebabCase(each)],
+		hasTagsInCommon: precomputedHasTagsInCommon[toKebabCase(each)],
 	}
 	return acc
 }, {})

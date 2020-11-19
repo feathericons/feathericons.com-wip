@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 	return {
 		paths: datasetAsArray.map(each => ({
 			params: {
-				name: each.name.kebab,
+				name: each,
 			},
 		})),
 		fallback: false,

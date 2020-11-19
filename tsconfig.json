@@ -1,44 +1,32 @@
 // prettier-ignore
 {
-	"compilerOptions": {
-		"baseUrl": "./src",                   // Added
+  "compilerOptions": {
+		"downlevelIteration": true, // Added
 
-		"noImplicitAny": true,                // Added
-		"strictNullChecks": true,             // Added
-		"strictFunctionTypes": true,          // Added
-		"strictBindCallApply": true,          // Added
-		"strictPropertyInitialization": true, // Added
-		"noImplicitThis": true,               // Added
-		"alwaysStrict": true,                 // Added
-		"noUnusedLocals": true,               // Added
-		"noUnusedParameters": true,           // Added
-		"noImplicitReturns": true,            // Added
-		"noFallthroughCasesInSwitch": true,   // Added
-
-		"target": "es5",
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve"
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx", "src/components/IconInfo.js" // LOL WTF?
-	],
-	"exclude": [
-		"node_modules"
-	]
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "commonjs", // Changed (from `esnext`).
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

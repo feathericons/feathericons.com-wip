@@ -149,11 +149,12 @@ export default function AppBackpack({ children }: { children?: React.ReactNode }
 						{/* CTA buttons */}
 						<div className="hstack">
 							<div className="vstack stack-center space-20 w-full max-w-xs">
-								<Link href="/">
+								{/* TODO */}
+								{/* <Link href="/">
 									<a>
 										<EmbossedFeather className="w-56 h-56 text-gray-400" />
 									</a>
-								</Link>
+								</Link> */}
 								<h1
 									className="text-center font-500 text-32 -tracking-2.5 leading-1"
 									style={{ fontFamily: "'DM Sans', ui-sans-serif, sans-serif" }}

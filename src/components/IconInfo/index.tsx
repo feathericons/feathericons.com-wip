@@ -1,11 +1,12 @@
-import Markdown from "./icon-docs.md"
+import * as Feather from "react-feather"
+import dataset from "data/dataset.json"
+import MarkdownDocs from "./docs.md"
+import React from "react"
 import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "./Demos"
 import { GitHub as SVGGitHub } from "react-feather"
-// import { IIcon } from "types"
+import { Icon, IconGrid } from "../Icon"
 import { MDXProvider } from "@mdx-js/react"
 import { rem } from "@zaydek/duomo/dist/runtime"
-// import { IconGrid, LinkedIcon } from "components/IconGrid"
-// import dataset from "data/dataset.json"
 
 // TODO
 function BentoBox() {
@@ -31,15 +32,15 @@ function Demos() {
 	)
 }
 
-// function Recommended() {
-// 	return (
-// 		<IconGrid>
-// 			{dataset.slice(0, 6).map(each => (
-// 				<LinkedIcon key={each.name.kebab} icon={each} />
-// 			))}
-// 		</IconGrid>
-// 	)
-// }
+function SimilarIcons({ name }: { name: string }) {
+	return (
+		<IconGrid>
+			{(dataset as { [key: string]: any })[name].common.map(each => (
+				<Icon icon={dataset[each as string]} />
+			))}
+		</IconGrid>
+	)
+}
 
 // {(Feather as { [key: string]: React.FC<Feather.Props> })[name]}
 
@@ -47,16 +48,14 @@ export default function IconInfo({ name }: { name: string }) {
 	return (
 		<div className="prose">
 			<MDXProvider
-				components={
-					{
-						// IconName: () => icon.name.kebab, // `<i data-feather=${icon.name.kebab}></i>`,
-						// BentoBox,
-						// Demos,
-						// Recommended,
-					}
-				}
+				components={{
+					// IconName: () => icon.name.kebab, // `<i data-feather=${icon.name.kebab}></i>`,
+					// BentoBox,
+					// Demos,
+					SimilarIcons: () => <SimilarIcons name={name} />,
+				}}
 			>
-				<Markdown />
+				<MarkdownDocs />
 			</MDXProvider>
 		</div>
 	)
