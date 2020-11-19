@@ -1,43 +1,19 @@
+import EmbossedFeather from "./EmbossedFeather"
 import Head from "next/head"
 import Link from "next/link"
+import OctofaceIcon24x24 from "./OctofaceIcon24x24"
 import React from "react"
 import sponsors, { ISponsor } from "../fixtures/sponsors"
+import StickyObscureEffect from "./StickyObscureEffect"
+import useBreakpoints from "./useBreakpoints"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../fixtures/hrefs"
 import { range } from "@zaydek/lib/dist/helpers"
-import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 
-const breakpoints = {
-	xs: 512,
-	sm: 640,
-	md: 768,
-	lg: 1024,
-	xl: 1280 + 64,
-}
-
-function EmbossedFeather(props: React.ComponentProps<"svg">) {
-	return (
-		// prettier-ignore
-		<svg className="fill-current" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" {...props}>
-			<path fillRule="evenodd" clipRule="evenodd" d="M21.5308 13.5393L21.5329 13.5372C22.4712 12.5992 22.9983 11.327 22.9983 10.0004C22.9983 8.67391 22.4712 7.4017 21.5329 6.46369C21.4156 6.34644 21.2931 6.23561 21.1659 6.13143C20.2756 5.40218 19.1561 4.99872 17.995 4.99872C16.668 4.99872 15.3954 5.52568 14.4571 6.46369L8 12.9187L8 18.5885L17.2921 9.2994L17.2929 9.29857C17.6834 8.90817 18.3166 8.90817 18.7071 9.29857C19.0976 9.68897 19.0976 10.3219 18.7071 10.7123M18.7071 10.7123L13.4142 16.0035H19.0731L21.5308 13.5393M11.4142 18.0029L9.41421 20.0022H15.0849L17.079 18.0029H11.4142ZM7.41421 22.0016L4.70776 24.7072C4.31724 25.0976 3.68342 25.0982 3.29289 24.7078C2.90237 24.3174 2.90237 23.6845 3.29289 23.2941L3.29382 23.2932L6 20.5878L6 12.5046C6 12.2395 6.10536 11.9852 6.29289 11.7978L6.58523 11.5055L13.0429 5.04993C14.3563 3.73697 16.1376 2.99936 17.995 2.99936C19.8524 2.99936 21.6337 3.73697 22.9471 5.04993C23.1113 5.21405 23.2665 5.38548 23.4123 5.56345C24.4334 6.80927 24.9983 8.37575 24.9983 10.0004C24.9983 11.8567 24.2609 13.6369 22.9483 14.9497L22.9471 14.951L20.2937 17.6114C20.2409 17.6802 20.1794 17.7419 20.1107 17.7949L18.4957 19.4141L16.2082 21.7078C16.0205 21.8959 15.7657 22.0016 15.5 22.0016H7.41421ZM21.4601 19.2736L17.6245 23.1194C17.0616 23.6838 16.2972 24.001 15.5 24.001H8.24264L6.12132 26.1216C4.94975 27.2928 3.05025 27.2928 1.87868 26.1216C0.707109 24.9504 0.707106 23.0515 1.87868 21.8803L4 19.7597V12.5046C4 11.7093 4.31607 10.9464 4.87868 10.384L11.6287 3.63617C13.3171 1.94826 15.6072 1 17.995 1C20.3828 1 22.6729 1.94826 24.3613 3.63617C26.0498 5.32408 26.9983 7.61338 26.9983 10.0004C26.9983 12.3869 26.0502 14.6757 24.3625 16.3635L24.3613 16.3647L21.7769 18.956C21.6794 19.0696 21.5735 19.1758 21.4601 19.2736Z" />
-		</svg>
-	)
-}
-
-function OctofaceIcon24x24(props: React.ComponentProps<"svg">) {
-	return (
-		// prettier-ignore
-		<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-			<path d="M7.75 11c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5C9 11.56 8.44 11 7.75 11zm1.27 4.5a.469.469 0 01.48-.5h5a.47.47 0 01.48.5c-.116 1.316-.759 2.5-2.98 2.5s-2.864-1.184-2.98-2.5zm7.23-4.5c-.69 0-1.25.56-1.25 1.25v1.5a1.25 1.25 0 102.5 0v-1.5c0-.69-.56-1.25-1.25-1.25z" />
-			<path fillRule="evenodd" d="M21.255 3.82a1.725 1.725 0 00-2.141-1.195c-.557.16-1.406.44-2.264.866-.78.386-1.647.93-2.293 1.677A18.442 18.442 0 0012 5c-.93 0-1.784.059-2.569.17-.645-.74-1.505-1.28-2.28-1.664a13.876 13.876 0 00-2.265-.866 1.725 1.725 0 00-2.141 1.196 23.645 23.645 0 00-.69 3.292c-.125.97-.191 2.07-.066 3.112C1.254 11.882 1 13.734 1 15.527 1 19.915 3.13 23 12 23c8.87 0 11-3.053 11-7.473 0-1.794-.255-3.647-.99-5.29.127-1.046.06-2.15-.066-3.125a23.652 23.652 0 00-.689-3.292zM20.5 14c.5 3.5-1.5 6.5-8.5 6.5s-9-3-8.5-6.5c.583-4 3-6 8.5-6s7.928 2 8.5 6z" />
-		</svg>
-	)
-}
-
+// TODO: Add analytics.
 function AbsoluteTopRow() {
 	return (
-		// TODO: Add analytics here.
 		<div className="absolute x-0 t-0">
 			<div className="hstack px-16 lg:px-24 py-12">
 				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
@@ -69,63 +45,8 @@ function Sponsor({ sponsor, className }: { sponsor: ISponsor; className?: string
 	)
 }
 
-function StickyObscureEffect() {
-	const screen = useBreakpoints(breakpoints)
-	return (
-		<>
-			{screen.xl && (
-				// NOTE: Use `z-20` not `z-10` here.
-				<div className="sticky t-0 -mx-8 -mb-24 z-20">
-					<div className="hstack">
-						<svg
-							className="w-8 h-40 text-gray-200 fill-current"
-							preserveAspectRatio="none"
-							viewBox="0 0 1 1"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect width={1} height={1} />
-						</svg>
-						<svg
-							className="w-24 h-40 text-gray-200 fill-current"
-							preserveAspectRatio="none"
-							viewBox="0 0 24 40"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
-						</svg>
-						<svg
-							className="w-full h-16 text-gray-200 fill-current"
-							preserveAspectRatio="none"
-							viewBox="0 0 1 1"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect width={1} height={1} />
-						</svg>
-						<svg
-							className="w-24 h-40 text-gray-200 fill-current"
-							preserveAspectRatio="none"
-							viewBox="0 0 24 40"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
-						</svg>
-						<svg
-							className="w-8 h-40 text-gray-200 fill-current"
-							preserveAspectRatio="none"
-							viewBox="0 0 1 1"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<rect width={1} height={1} />
-						</svg>
-					</div>
-				</div>
-			)}
-		</>
-	)
-}
-
 export default function App({ children }: { children?: React.ReactNode }) {
-	const screen = useBreakpoints(breakpoints)
+	const screen = useBreakpoints()
 
 	return (
 		<>
