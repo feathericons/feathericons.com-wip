@@ -1,10 +1,10 @@
 import Head from "next/head"
 import Link from "next/link"
 import React from "react"
-import sponsors, { ISponsor } from "fixtures/sponsors"
+import sponsors, { ISponsor } from "../fixtures/sponsors"
 import { Download, ExternalLink, GitHub, Twitter } from "react-feather"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
-import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "fixtures/hrefs"
+import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../fixtures/hrefs"
 import { range } from "@zaydek/lib/dist/helpers"
 import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 

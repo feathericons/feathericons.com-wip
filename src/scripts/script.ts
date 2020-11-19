@@ -84,6 +84,7 @@ interface IDataset {
 
 const dataset = sortedFeatherKeys.reduce<IDataset>((acc, each) => {
 	acc[each] = {
+		name: each,
 		tags: precomputedTags[toKebabCase(each)],
 		hasTagsInCommon: precomputedHasTagsInCommon[toKebabCase(each)],
 	}

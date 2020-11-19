@@ -1,7 +1,7 @@
-import AppBackpack from "components/AppBackpack"
-import datasetAsArray from "data/datasetAsArray"
+import AppBackpack from "../components/AppBackpack"
+import datasetAsArray from "../data/datasetAsArray"
 import React from "react"
-import { Icon, IconGrid } from "components/Icon"
+import { Icon, IconGrid } from "../components/Icon"
 
 export default function Home() {
 	return (
