@@ -1,5 +1,7 @@
+// https://stackoverflow.com/a/55490934
+const tags: { [key: string]: string[] } = require("./tags.json")
+
 import * as Feather from "react-feather"
-import tags from "./tags"
 import { kebabCase } from "lodash"
 
 interface StringToStringArray {
