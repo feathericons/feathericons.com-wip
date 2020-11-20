@@ -1,7 +1,7 @@
 import React from "react"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { ExternalLink } from "react-feather"
-import { ISponsor } from "../fixtures/sponsors"
+import { ISponsor } from "../../fixtures/sponsors"
 
 interface SponsorProps {
 	className?: string

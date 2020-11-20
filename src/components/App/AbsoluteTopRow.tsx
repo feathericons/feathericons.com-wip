@@ -1,7 +1,7 @@
 import OctofaceIcon24x24 from "./OctofaceIcon24x24"
 import React from "react"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
-import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../fixtures/hrefs"
+import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../../fixtures/hrefs"
 import { Twitter } from "react-feather"
 
 // TODO: Add analytics.

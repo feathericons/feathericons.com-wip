@@ -1,4 +1,4 @@
-import useBreakpoints from "./useBreakpoints"
+import useBreakpoints from "../hooks/useBreakpoints"
 
 export default function StickyObscureEffect() {
 	const screen = useBreakpoints()
