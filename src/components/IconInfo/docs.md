@@ -6,7 +6,7 @@
 
 ## Get Started
 
-[Feather]() is a collection of simply beautiful open source icons. Each icon is designed on a 24x24 grid with an
+[Feather]() is a collection of simply beautiful open source icons. Each icon is designed on a `24x24` grid with an
 emphasis on simplicity, consistency, and flexibility.
 
 Get started with JavaScript ([docs here]()) by running this command:

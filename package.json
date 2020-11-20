@@ -2,7 +2,7 @@
 	"name": "feathericons.com",
 	"license": "MIT",
 	"scripts": {
-		"build-dataset": "yarn --silent ts-node src/scripts/script.ts > src/data/dataset.json",
+		"build-dataset": "yarn --silent ts-node src/scripts/script.ts > src/data/__dataset.json",
 		"watch-duomo": "yarn --silent watch --interval 1 'yarn sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/stylesheets/index.css' src/stylesheets",
 		"build-duomo": "yarn --silent sass --load-path node_modules/@zaydek/duomo --no-source-map src/stylesheets/index.scss public/static/stylesheets/index.css",
 		"start": "next dev",
