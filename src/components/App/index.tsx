@@ -10,9 +10,9 @@ import { Download, ExternalLink, GitHub } from "react-feather"
 import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { range } from "@zaydek/lib/dist/helpers"
-import { Router, useRouter } from "next/router"
 import { Sponsor } from "./Sponsor"
 import { useEffect } from "react"
+import { useRouter } from "next/router"
 
 import "@zaydek/prose"
 
