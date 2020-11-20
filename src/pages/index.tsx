@@ -1,5 +1,5 @@
 import App from "../components/App"
-import datasetAsArr from "../data/datasetAsArr"
+import { datasetAsArr } from "../data/dataset"
 import { Icon, IconGrid } from "../components/Icon"
 
 export default function Home() {

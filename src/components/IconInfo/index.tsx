@@ -1,13 +1,13 @@
-// TODO
 import * as Feather from "react-feather"
-import datasetAsMap from "../../data/datasetAsMap"
 import MarkdownDocs from "./docs.md"
 import React from "react"
+import { datasetAsMap } from "../../data/dataset"
 import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "./Demos"
 import { GitHub as SVGGitHub } from "react-feather"
 import { Icon, IconGrid } from "../Icon"
 import { MDXProvider } from "@mdx-js/react"
 import { rem } from "@zaydek/duomo/dist/runtime"
+// TODO
 
 // TODO
 function BentoBox() {

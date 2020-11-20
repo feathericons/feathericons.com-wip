@@ -1,6 +1,6 @@
 import * as Feather from "react-feather"
 import tags from "./tags.json"
-import { IDataset, IIconMetadata } from "../types"
+import { IDataset } from "../types"
 import { toKebabCase } from "@zaydek/lib/dist/helpers"
 
 interface Lookup {

@@ -1,6 +1,6 @@
 import App from "../components/App"
-import datasetAsArr from "../data/datasetAsArr"
 import IconInfo from "../components/IconInfo"
+import { datasetAsArr } from "../data/dataset"
 import { GetStaticPropsContext } from "next"
 
 export default function IconPage({ name }: { name: string }) {
