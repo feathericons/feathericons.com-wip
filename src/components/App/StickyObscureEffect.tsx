@@ -5,11 +5,12 @@ export default function StickyObscureEffect() {
 	return (
 		<>
 			{screen.xl && (
-				// NOTE: Use `z-20` not `z-10` here.
+				// NOTE: `z-index` must be 20 or more.
 				<div id="obscure-effect" className="sticky t-0 -mx-8 -mb-24 z-20">
 					<div className="hstack">
 						<svg
-							className="w-8 h-40 text-gray-200 fill-current"
+							className="w-8 h-40 text-gray-200"
+							fill="currentColor"
 							preserveAspectRatio="none"
 							viewBox="0 0 1 1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,8 @@ export default function StickyObscureEffect() {
 							<rect width={1} height={1} />
 						</svg>
 						<svg
-							className="w-24 h-40 text-gray-200 fill-current"
+							className="w-24 h-40 text-gray-200"
+							fill="currentColor"
 							preserveAspectRatio="none"
 							viewBox="0 0 24 40"
 							xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +27,8 @@ export default function StickyObscureEffect() {
 							<path fillRule="evenodd" clipRule="evenodd" d="M24 0H0V40C0 26.7451 10.7451 16 24 16V0Z" />
 						</svg>
 						<svg
-							className="w-full h-16 text-gray-200 fill-current"
+							className="w-full h-16 text-gray-200"
+							fill="currentColor"
 							preserveAspectRatio="none"
 							viewBox="0 0 1 1"
 							xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +36,8 @@ export default function StickyObscureEffect() {
 							<rect width={1} height={1} />
 						</svg>
 						<svg
-							className="w-24 h-40 text-gray-200 fill-current"
+							className="w-24 h-40 text-gray-200"
+							fill="currentColor"
 							preserveAspectRatio="none"
 							viewBox="0 0 24 40"
 							xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +45,8 @@ export default function StickyObscureEffect() {
 							<path fillRule="evenodd" clipRule="evenodd" d="M0 0H24V40C24 26.7451 13.2549 16 0 16V0Z" />
 						</svg>
 						<svg
-							className="w-8 h-40 text-gray-200 fill-current"
+							className="w-8 h-40 text-gray-200"
+							fill="currentColor"
 							preserveAspectRatio="none"
 							viewBox="0 0 1 1"
 							xmlns="http://www.w3.org/2000/svg"

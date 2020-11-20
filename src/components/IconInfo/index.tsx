@@ -4,7 +4,7 @@ import Demos from "./Demos"
 import Markdown from "./markdown.md"
 import React from "react"
 import { datasetAsMap } from "../../data/dataset"
-import { Icon, IconGrid } from "../Icon"
+import { IconBlock, IconGrid } from "../IconBlock"
 import { IFeather, IIcon } from "../../types"
 import { MDXProvider } from "@mdx-js/react"
 import { toTitleCase } from "@zaydek/lib/dist/helpers"
@@ -14,7 +14,7 @@ function More({ name }: { name: string }) {
 	return (
 		<IconGrid>
 			{metadata.more.map(each => (
-				<Icon key={each} icon={datasetAsMap[each]} />
+				<IconBlock key={each} icon={datasetAsMap[each]} />
 			))}
 		</IconGrid>
 	)
@@ -28,16 +28,21 @@ export default function IconInfo({ name }: { name: string }) {
 		<div className="prose">
 			<MDXProvider
 				components={{
-					IconName: () => name,
-					FeatherIconName: () => `<i data-feather="${name}"></i>`,
+					KebabCase: () => name,
+					TitleCase: () => toTitleCase(name),
+
+					JavasScript: () => `<i data-feather="${name}"></i>`,
+					ReactJS: () => `<${toTitleCase(name)} />`,
+					VueJS: () => `<${toTitleCase(name)} />`,
+					AlpineJS: () => `<${toTitleCase(name)} />`,
+					SvelteJS: () => `<${toTitleCase(name)} />`,
+
 					BentoBox: () => <BentoBox icon={icon} />,
 					Demos,
 					More: () =>
 						!metadata.more.length ? null : (
 							<>
-								<h2>
-									More Icons Like <code>{name}</code>
-								</h2>
+								<h2>More Icons</h2>
 								<div>
 									<More name={name} />
 								</div>

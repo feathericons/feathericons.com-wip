@@ -1420,9 +1420,9 @@
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
 "@zaydek/duomo@^0.6.6":
-  version "0.6.12"
-  resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.12.tgz#aaafdda432152299a368215bec4dbe5a3d2ffa33"
-  integrity sha512-65jHqSuMseUrch7wzsgBYE/6TFHvmc+vOgI8+wxsNUSWQGP8tQ9wS6kWeD3Wz7jbL1TZPsElxrXxiQbQal1Ucw==
+  version "0.6.15"
+  resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.15.tgz#e75591820c867c0a986326d1163a8a694f0827e6"
+  integrity sha512-2ek85cKQL5h6ro2w5k/OHgBBvjGOnKvgJ2aeV+JBAtHRXPYyHbfiXIEfxQ40tocue6T8/8wbeM47QgXUW2IPuw==
 
 "@zaydek/lib@^0.6.4":
   version "0.6.4"

@@ -5526,6 +5526,10 @@ body {
   font-size: 4rem;
 }
 
+.-tracking-10 {
+  letter-spacing: -0.1em;
+}
+
 .-tracking-5 {
   letter-spacing: -0.05em;
 }
@@ -5534,8 +5538,16 @@ body {
   letter-spacing: -0.025em;
 }
 
+.-tracking-1\.25 {
+  letter-spacing: -0.0125em;
+}
+
 .tracking-0 {
   letter-spacing: 0;
+}
+
+.tracking-1\.25 {
+  letter-spacing: 0.0125em;
 }
 
 .tracking-2\.5 {
@@ -13066,6 +13078,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
     font-size: 4rem;
   }
 
+  .xs\:-tracking-10 {
+    letter-spacing: -0.1em;
+  }
+
   .xs\:-tracking-5 {
     letter-spacing: -0.05em;
   }
@@ -13074,8 +13090,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     letter-spacing: -0.025em;
   }
 
+  .xs\:-tracking-1\.25 {
+    letter-spacing: -0.0125em;
+  }
+
   .xs\:tracking-0 {
     letter-spacing: 0;
+  }
+
+  .xs\:tracking-1\.25 {
+    letter-spacing: 0.0125em;
   }
 
   .xs\:tracking-2\.5 {
@@ -20582,6 +20606,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
     font-size: 4rem;
   }
 
+  .sm\:-tracking-10 {
+    letter-spacing: -0.1em;
+  }
+
   .sm\:-tracking-5 {
     letter-spacing: -0.05em;
   }
@@ -20590,8 +20618,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     letter-spacing: -0.025em;
   }
 
+  .sm\:-tracking-1\.25 {
+    letter-spacing: -0.0125em;
+  }
+
   .sm\:tracking-0 {
     letter-spacing: 0;
+  }
+
+  .sm\:tracking-1\.25 {
+    letter-spacing: 0.0125em;
   }
 
   .sm\:tracking-2\.5 {
@@ -28098,6 +28134,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
     font-size: 4rem;
   }
 
+  .md\:-tracking-10 {
+    letter-spacing: -0.1em;
+  }
+
   .md\:-tracking-5 {
     letter-spacing: -0.05em;
   }
@@ -28106,8 +28146,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     letter-spacing: -0.025em;
   }
 
+  .md\:-tracking-1\.25 {
+    letter-spacing: -0.0125em;
+  }
+
   .md\:tracking-0 {
     letter-spacing: 0;
+  }
+
+  .md\:tracking-1\.25 {
+    letter-spacing: 0.0125em;
   }
 
   .md\:tracking-2\.5 {
@@ -35614,6 +35662,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
     font-size: 4rem;
   }
 
+  .lg\:-tracking-10 {
+    letter-spacing: -0.1em;
+  }
+
   .lg\:-tracking-5 {
     letter-spacing: -0.05em;
   }
@@ -35622,8 +35674,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     letter-spacing: -0.025em;
   }
 
+  .lg\:-tracking-1\.25 {
+    letter-spacing: -0.0125em;
+  }
+
   .lg\:tracking-0 {
     letter-spacing: 0;
+  }
+
+  .lg\:tracking-1\.25 {
+    letter-spacing: 0.0125em;
   }
 
   .lg\:tracking-2\.5 {
@@ -43130,6 +43190,10 @@ body:not([data-theme-effect=true]) .ease-in-out {
     font-size: 4rem;
   }
 
+  .xl\:-tracking-10 {
+    letter-spacing: -0.1em;
+  }
+
   .xl\:-tracking-5 {
     letter-spacing: -0.05em;
   }
@@ -43138,8 +43202,16 @@ body:not([data-theme-effect=true]) .ease-in-out {
     letter-spacing: -0.025em;
   }
 
+  .xl\:-tracking-1\.25 {
+    letter-spacing: -0.0125em;
+  }
+
   .xl\:tracking-0 {
     letter-spacing: 0;
+  }
+
+  .xl\:tracking-1\.25 {
+    letter-spacing: 0.0125em;
   }
 
   .xl\:tracking-2\.5 {
@@ -45729,28 +45801,43 @@ body:not([data-theme-effect=true]) .ease-in-out {
   top: 1rem;
 }
 
-@media (min-width: 1344px) {
+@media (min-width: xs 512) {
   .xl\:t-16 {
     top: 1rem;
   }
 }
-.grid-cols-128 {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+@media (min-width: sm 640) {
+  .xl\:t-16 {
+    top: 1rem;
+  }
 }
-
-.aspect-ratio-1\:1 {
+@media (min-width: md 768) {
+  .xl\:t-16 {
+    top: 1rem;
+  }
+}
+@media (min-width: lg 1024) {
+  .xl\:t-16 {
+    top: 1rem;
+  }
+}
+@media (min-width: xl 1344) {
+  .xl\:t-16 {
+    top: 1rem;
+  }
+}
+.square {
   position: relative;
 }
 
-.aspect-ratio-1\:1::before {
+.square::before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 100%;
 }
 
-.aspect-ratio-1\:1 > * {
+.square > * {
   position: absolute;
   top: 0;
   right: 0;
@@ -45758,15 +45845,91 @@ body:not([data-theme-effect=true]) .ease-in-out {
   left: 0;
 }
 
-.fill-current {
-  fill: currentColor;
-}
-
-.stroke-0 {
-  stroke-width: 0;
-}
-
 html {
+  --transparent: transparent;
+  --current: currentColor;
+  --black: #000;
+  --white: #fff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --yellow-50: #fffbeb;
+  --yellow-100: #fef3c7;
+  --yellow-200: #fde68a;
+  --yellow-300: #fcd34d;
+  --yellow-400: #fbbf24;
+  --yellow-500: #f59e0b;
+  --yellow-600: #d97706;
+  --yellow-700: #b45309;
+  --yellow-800: #92400e;
+  --yellow-900: #78350f;
+  --green-50: #ecfdf5;
+  --green-100: #d1fae5;
+  --green-200: #a7f3d0;
+  --green-300: #6ee7b7;
+  --green-400: #34d399;
+  --green-500: #10b981;
+  --green-600: #059669;
+  --green-700: #047857;
+  --green-800: #065f46;
+  --green-900: #064e3b;
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+  --blue-900: #1e3a8a;
+  --indigo-50: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --purple-50: #f5f3ff;
+  --purple-100: #ede9fe;
+  --purple-200: #ddd6fe;
+  --purple-300: #c4b5fd;
+  --purple-400: #a78bfa;
+  --purple-500: #8b5cf6;
+  --purple-600: #7c3aed;
+  --purple-700: #6d28d9;
+  --purple-800: #5b21b6;
+  --purple-900: #4c1d95;
+  --pink-50: #fdf2f8;
+  --pink-100: #fce7f3;
+  --pink-200: #fbcfe8;
+  --pink-300: #f9a8d4;
+  --pink-400: #f472b6;
+  --pink-500: #ec4899;
+  --pink-600: #db2777;
+  --pink-700: #be185d;
+  --pink-800: #9d174d;
+  --pink-900: #831843;
   --shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

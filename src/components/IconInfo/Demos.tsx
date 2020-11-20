@@ -137,12 +137,9 @@ export default function Demos() {
 				gap: rem(12),
 			}}
 		>
-			<Demo1 />
-			<Demo2 />
-			<Demo3 />
-			<Demo4 />
-			<Demo5 />
-			<Demo6 />
+			{[Demo1, Demo2, Demo3, Demo4, Demo5, Demo6].map(Each => (
+				<Each />
+			))}
 		</div>
 	)
 }

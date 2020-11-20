@@ -3,28 +3,26 @@
 .t-16 {
 	top: rem(16);
 }
-@media (min-width: px($xl)) {
-	.xl\:t-16 {
-		top: rem(16);
+
+@each $v in $breakpoint-map {
+	@media (min-width: px($v)) {
+		.xl\:t-16 {
+			top: rem(16);
+		}
 	}
 }
 
-.grid-cols-128 {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(rem(128), 1fr));
-}
-
 // https://ratiobuddy.com
-.aspect-ratio-1\:1 {
+.square {
 	position: relative;
 }
-.aspect-ratio-1\:1::before {
+.square::before {
 	display: block;
 	content: "";
 	width: 100%;
 	padding-top: (1 / 1) * 100%;
 }
-.aspect-ratio-1\:1 > * {
+.square > * {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -32,15 +30,14 @@
 	left: 0;
 }
 
-.fill-current {
-	fill: currentColor;
-}
-.stroke-0 {
-	stroke-width: 0;
-}
-
 html {
-	@each $k, $v in $shadow-map {
-		--shadow-#{$k}: #{$v};
+	@each $map in ($color-map, $shadow-map) {
+		@each $k, $v in $map {
+			@if $map == $shadow-map {
+				--shadow-#{$k}: #{$v};
+			} @else {
+				--#{"" + $k}: #{$v};
+			}
+		}
 	}
 }

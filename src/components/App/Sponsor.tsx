@@ -14,8 +14,8 @@ export function Sponsor({ className, sponsor }: SponsorProps) {
 			<div className="group vstack stack-center space-8">
 				<img src={sponsor.src} className="h-48" />
 				<div className="hstack stack-center space-6">
-					<span className="font-500 text-11 leading-1 group-on:underline">{sponsor.subtext}</span>
-					<ExternalLink className="w-13 h-13" />
+					<span className="text-12 leading-1 group-on:underline text-white">{sponsor.subtext}</span>
+					<ExternalLink className="w-12 h-12 text-gray-200" />
 				</div>
 			</div>
 		</ExtAnchor>

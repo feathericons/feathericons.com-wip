@@ -1,13 +1,36 @@
-# The <code><IconName /></code> Icon
+# The <code><KebabCase /></code> Icon
 
 <BentoBox />
 
+<!-- ## Quick Start
+
+<pre>
+	<code>
+
+{`function Thing() {
+	return (
+		${<TitleCase />}
+	)
+}`}
+
+	</code>
+</pre> -->
+
 <br />
+
+<!--
+
+## Quick Start
+
+- **[JavasScript](https://github.com/feathericons/feather)** <code><JavasScript /></code>
+- **[React.js](https://github.com/feathericons/react-feather)** <code><ReactJS /></code>
+
+-->
 
 ## Get Started
 
-[Feather]() is a collection of simply beautiful open source icons. Each icon is designed on a `24x24` grid with an
-emphasis on simplicity, consistency, and flexibility.
+[Feather](https://github.com/feathericons/feather) is a collection of simply beautiful open source icons. Each icon is
+designed on a `24x24` grid with an emphasis on simplicity, consistency, and flexibility.
 
 Get started with JavaScript ([docs here](https://github.com/feathericons/feather)) by running this command:
 
