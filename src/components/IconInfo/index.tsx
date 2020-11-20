@@ -55,7 +55,15 @@ export default function IconInfo({ name }: { name: string }) {
 					// Demos,
 
 					// TODO
-					More: () => <More name={name} />,
+					More: () =>
+						!datasetAsMap[name].more.length ? null : (
+							<>
+								<h2>
+									More Icons Like <code>{name}</code>
+								</h2>
+								<More name={name} />
+							</>
+						),
 				}}
 			>
 				<MarkdownDocs />

@@ -70,6 +70,4 @@ without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duo
 
 <br />
 
-## More Icons Like <code><IconName /></code>
-
 <More />
