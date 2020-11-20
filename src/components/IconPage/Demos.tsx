@@ -35,7 +35,10 @@ export function Demo2() {
 	const [show, setShow] = useState(false)
 	return (
 		<DemoVStack>
-			<div className="bg-white rounded-8" style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-sm)" }}>
+			<div
+				className="bg-white rounded-8"
+				style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
+			>
 				<div className="hstack stack-center space-16 px-16 h-48">
 					<GitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}

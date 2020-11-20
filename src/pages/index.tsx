@@ -1,13 +1,13 @@
 import App from "../components/App"
 import { datasetAsArr } from "../data/dataset"
-import { IconBlock, IconGrid } from "../components/IconBlock"
+import { IconGrid, IconSquare } from "../components/Icon"
 
 export default function Home() {
 	return (
 		<App>
 			<IconGrid>
 				{datasetAsArr.map(each => (
-					<IconBlock key={each.name} icon={each} />
+					<IconSquare key={each.name} metadata={each} />
 				))}
 			</IconGrid>
 		</App>

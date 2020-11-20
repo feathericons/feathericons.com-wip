@@ -4,8 +4,8 @@ import Demos from "./Demos"
 import Markdown from "./markdown.md"
 import React from "react"
 import { datasetAsMap } from "../../data/dataset"
-import { IconBlock, IconGrid } from "../IconBlock"
-import { IFeather, IIcon } from "../../types"
+import { IconGrid, IconSquare } from "../Icon"
+import { IFeather } from "../../types"
 import { MDXProvider } from "@mdx-js/react"
 import { toTitleCase } from "@zaydek/lib/dist/helpers"
 
@@ -14,14 +14,14 @@ function More({ name }: { name: string }) {
 	return (
 		<IconGrid>
 			{metadata.more.map(each => (
-				<IconBlock key={each} icon={datasetAsMap[each]} />
+				<IconSquare key={each} metadata={datasetAsMap[each]} />
 			))}
 		</IconGrid>
 	)
 }
 
 export default function IconInfo({ name }: { name: string }) {
-	const icon = (Feather as IFeather)[toTitleCase(name)]
+	const SVG = (Feather as IFeather)[toTitleCase(name)]
 	const metadata = datasetAsMap[name]
 
 	return (
@@ -37,7 +37,7 @@ export default function IconInfo({ name }: { name: string }) {
 					AlpineJS: () => `<${toTitleCase(name)} />`,
 					SvelteJS: () => `<${toTitleCase(name)} />`,
 
-					BentoBox: () => <BentoBox icon={icon} />,
+					BentoBox: () => <BentoBox SVG={SVG} />,
 					Demos,
 					More: () =>
 						!metadata.more.length ? null : (

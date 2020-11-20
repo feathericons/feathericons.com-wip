@@ -1,11 +1,11 @@
 import App from "../components/App"
-import IconInfo from "../components/IconInfo"
+import IconPage from "../components/IconPage"
 import { datasetAsArr } from "../data/dataset"
 import { GetStaticPropsContext } from "next"
 
-export default function IconPage({ name }: { name: string }) {
+export default function Component({ name }: { name: string }) {
 	// prettier-ignore
-	return <App><IconInfo name={name} /></App>
+	return <App><IconPage name={name} /></App>
 }
 
 // `getStaticProps` forwards parameters as props.

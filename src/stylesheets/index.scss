@@ -41,3 +41,23 @@ html {
 		}
 	}
 }
+
+// https://primer.style/octicons
+[data-primer-grid] {
+	background-image: linear-gradient(
+			0deg,
+			rgba(225, 228, 232, 0),
+			rgba(225, 228, 232, 0) 5px,
+			rgb(225, 228, 232),
+			rgba(225, 228, 232, 0) 6px
+		),
+		linear-gradient(
+			90deg,
+			rgba(225, 228, 232, 0),
+			rgba(225, 228, 232, 0) 5px,
+			rgb(225, 228, 232),
+			rgba(225, 228, 232, 0) 6px
+		);
+	background-size: 10px 10px;
+	background-position: center center;
+}

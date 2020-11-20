@@ -53,7 +53,7 @@ export default function App({ children }: { children?: React.ReactNode }) {
 				<div className="hstack">
 					<div
 						className="w-full max-w-xl bg-white xl:rounded-24"
-						style={{ boxShadow: "var(--shadow-xs), var(--shadow-sm)" }}
+						style={{ boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
 					>
 						<StickyObscureEffect />
 						<div className="hstack">
