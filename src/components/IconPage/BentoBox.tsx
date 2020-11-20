@@ -1,13 +1,14 @@
 import React from "react"
+import { range } from "@zaydek/lib/dist/helpers"
 
 export default function BentoBox({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
-		// prettier-ignore
 		<div className="bento-box">
-			<div><SVG /></div>
-			<div><SVG /></div>
-			<div><SVG /></div>
-			<div><SVG /></div>
+			{range(4).map(each => (
+				<div key={each}>
+					<SVG />
+				</div>
+			))}
 		</div>
 	)
 }

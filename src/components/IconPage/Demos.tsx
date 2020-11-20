@@ -22,10 +22,10 @@ function DemoVStack({ children }: DemoWrapperProps) {
 export function Demo1() {
 	return (
 		<div className="hstack stack-center space-20 bg-gray-100">
-			<GitHub className="w-16 h-16 text-gray-800" />
-			<GitHub className="w-24 h-24 text-gray-800" />
-			<GitHub className="w-36 h-36 text-gray-800" />
-			<GitHub className="w-54 h-54 text-gray-800" />
+			<GitHub className="w-16 h-16" />
+			<GitHub className="w-24 h-24" />
+			<GitHub className="w-36 h-36" />
+			<GitHub className="w-54 h-54" />
 		</div>
 	)
 }
@@ -42,7 +42,7 @@ export function Demo2() {
 					<GitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
 					<div className="spacer vstack h-full overflow-x-scroll">
-						<div className="leading-1 text-gray-800">username_ZAYDEK</div>
+						<div className="leading-1">username_ZAYDEK</div>
 					</div>
 				</div>
 				<div className="h-1 bg-gray-100" />
@@ -50,7 +50,7 @@ export function Demo2() {
 					<Lock className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
 					<div className="spacer vstack h-full overflow-x-scroll">
-						<div className="leading-1 text-gray-800" style={{ letterSpacing: "0.1em" }}>
+						<div className="leading-1" style={{ letterSpacing: "0.1em" }}>
 							••••••••••
 						</div>
 					</div>
@@ -96,19 +96,19 @@ export function Demo5() {
 	return (
 		<div className="hstack stack-center space-20 bg-gray-100">
 			<div className="hstack stack-center space-8">
-				<Heart className="w-17 h-17 text-gray-800" />
+				<Heart className="w-17 h-17" />
 				<div className="text-15 leading-1">31</div>
 			</div>
 			<div className="hstack space-8">
-				<Send className="w-17 h-17 text-gray-800" />
+				<Send className="w-17 h-17" />
 				<div className="text-15 leading-1">41</div>
 			</div>
 			<div className="hstack space-8">
-				<MessageCircle className="w-17 h-17 text-gray-800" />
+				<MessageCircle className="w-17 h-17" />
 				<div className="text-15 leading-1">59</div>
 			</div>
 			<div className="hstack space-8">
-				<GitHub className="w-17 h-17 text-gray-800" />
+				<GitHub className="w-17 h-17" />
 			</div>
 		</div>
 	)
@@ -118,10 +118,10 @@ export function Demo5() {
 export function Demo6() {
 	return (
 		<div className="hstack stack-center space-20 bg-gray-100">
-			<GitHub className="w-20 h-20 text-gray-800" />
-			<Instagram className="w-20 h-20 text-gray-800" />
-			<Mail className="w-20 h-20 text-gray-800" />
-			<Twitter className="w-20 h-20 text-gray-800" />
+			<GitHub className="w-20 h-20" />
+			<Instagram className="w-20 h-20" />
+			<Mail className="w-20 h-20" />
+			<Twitter className="w-20 h-20" />
 		</div>
 	)
 }

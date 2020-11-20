@@ -5,7 +5,7 @@ export default function StickyObscureEffect() {
 	return (
 		<>
 			{screen.xl && (
-				// NOTE: `z-index` must be 20 or more.
+				// NOTE: Uses `z-20` becaused of `<svg>` background.
 				<div id="obscure-effect" className="sticky t-0 -mx-8 -mb-24 z-20">
 					<div className="hstack">
 						<svg

@@ -1,5 +1,5 @@
 import AbsoluteTop from "./AbsoluteTop"
-import CTA from "./CTA"
+import CTASection from "./CTASection"
 import Head from "next/head"
 import React from "react"
 import StickyObscureEffect from "./StickyObscureEffect"
@@ -47,12 +47,12 @@ export default function App({ children }: { children?: React.ReactNode }) {
 			<div className="vstack xl:pb-64 bg-gray-50">
 				{/**/}
 
-				<CTA />
+				<CTASection />
 
 				{/* App */}
 				<div className="hstack">
 					<div
-						className="w-full max-w-xl bg-white xl:rounded-24"
+						className="w-full max-w-xl bg-white xl:rounded-24 z-10"
 						style={{ boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
 					>
 						<StickyObscureEffect />
