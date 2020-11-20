@@ -30,19 +30,15 @@ export default function IconInfo({ name }: { name: string }) {
 				components={{
 					KebabCase: () => name,
 					TitleCase: () => toTitleCase(name),
-
-					JavasScript: () => `<i data-feather="${name}"></i>`,
-					ReactJS: () => `<${toTitleCase(name)} />`,
-					VueJS: () => `<${toTitleCase(name)} />`,
-					AlpineJS: () => `<${toTitleCase(name)} />`,
-					SvelteJS: () => `<${toTitleCase(name)} />`,
-
 					BentoBox: () => <BentoBox SVG={SVG} />,
 					Demos,
 					More: () =>
 						!metadata.more.length ? null : (
 							<>
-								<h2>More Icons</h2>
+								<br />
+								<h2>
+									More Icons Like <code>{name}</code>
+								</h2>
 								<div>
 									<More name={name} />
 								</div>

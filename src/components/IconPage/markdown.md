@@ -76,21 +76,19 @@ You are welcome to submit a pull request to enhance the docs, add translations, 
 
 [Feather](https://github.com/feathericons/feather) is by [Cole Bemis](https://twitter.com/colebemis) and
 [feathericons.com](https://github.com/feathericons/feathericons.com) is by
-[Zaydek](https://twitter.com/username_ZAYDEK).<br /> Licensed as
-[MIT](https://github.com/feathericons/feather/blob/master/LICENSE). You can use the icons personally and commerically
-without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duomo) and
+[Zaydek](https://twitter.com/username_ZAYDEK).<br />
+[Licensed as MIT](https://github.com/feathericons/feather/blob/master/LICENSE). You can use the icons personally and
+commerically without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duomo) and
 [Prose CSS](https://github.com/zaydek/prose).
 
 </small>
 
 <br />
 
-## Ideas
+## Ideas Using <code><KebabCase /></code>
 
 <div>
 	<Demos />
 </div>
-
-<br />
 
 <More />

@@ -42,22 +42,88 @@ html {
 	}
 }
 
-// https://primer.style/octicons
-[data-primer-grid] {
-	background-image: linear-gradient(
-			0deg,
-			rgba(225, 228, 232, 0),
-			rgba(225, 228, 232, 0) 5px,
-			rgb(225, 228, 232),
-			rgba(225, 228, 232, 0) 6px
-		),
-		linear-gradient(
-			90deg,
-			rgba(225, 228, 232, 0),
-			rgba(225, 228, 232, 0) 5px,
-			rgb(225, 228, 232),
-			rgba(225, 228, 232, 0) 6px
-		);
-	background-size: 10px 10px;
-	background-position: center center;
+// <Demo1 />
+.w-54 {
+	width: rem(54);
 }
+.h-54 {
+	height: rem(54);
+}
+
+.bento-box {
+	display: grid;
+	grid-template-rows: 0.62fr 0.38fr;
+	grid-template-columns: 0.62fr 0.14fr 0.24fr;
+	grid-template-areas:
+		"a b b"
+		"a d c";
+	gap: rem(12);
+
+	height: rem(320);
+
+	> * {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		background-color: color(gray-100);
+	}
+
+	> *:nth-child(1) {
+		grid-area: a;
+	}
+	> *:nth-child(2) {
+		grid-area: b;
+	}
+	> *:nth-child(3) {
+		grid-area: c;
+	}
+	> *:nth-child(4) {
+		grid-area: d;
+	}
+
+	> *:nth-child(1) > svg {
+		$wh: 104;
+		width: rem($wh);
+		height: rem($wh);
+		color: color(gray-800);
+	}
+	> *:nth-child(2) > svg {
+		$wh: 64;
+		width: rem($wh);
+		height: rem($wh);
+		color: color(gray-800);
+	}
+	> *:nth-child(3) > svg {
+		$wh: 40;
+		width: rem($wh);
+		height: rem($wh);
+		color: color(gray-800);
+	}
+	> *:nth-child(4) > svg {
+		$wh: 24;
+		width: rem($wh);
+		height: rem($wh);
+		color: color(gray-800);
+	}
+}
+
+// // https://primer.style/octicons
+// [data-primer-grid] {
+// 	background-image: linear-gradient(
+// 			0deg,
+// 			rgba(225, 228, 232, 0),
+// 			rgba(225, 228, 232, 0) 5px,
+// 			rgb(225, 228, 232),
+// 			rgba(225, 228, 232, 0) 6px
+// 		),
+// 		linear-gradient(
+// 			90deg,
+// 			rgba(225, 228, 232, 0),
+// 			rgba(225, 228, 232, 0) 5px,
+// 			rgb(225, 228, 232),
+// 			rgba(225, 228, 232, 0) 6px
+// 		);
+// 	background-size: 10px 10px;
+// 	background-position: center center;
+// }

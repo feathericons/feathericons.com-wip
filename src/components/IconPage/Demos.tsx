@@ -21,12 +21,11 @@ function DemoVStack({ children }: DemoWrapperProps) {
 
 export function Demo1() {
 	return (
-		// NOTE: Uses `w-56 h-56` but technically should be `w-54 h-54`.
 		<div className="hstack stack-center space-20 bg-gray-100">
 			<GitHub className="w-16 h-16 text-gray-800" />
 			<GitHub className="w-24 h-24 text-gray-800" />
 			<GitHub className="w-36 h-36 text-gray-800" />
-			<GitHub className="w-56 h-56 text-gray-800" />
+			<GitHub className="w-54 h-54 text-gray-800" />
 		</div>
 	)
 }
@@ -74,15 +73,15 @@ export function Demo2() {
 	)
 }
 
-const twitterBlue = "#1da1f2"
+const TwitterBlue = "#1da1f2"
 
 export function Demo3() {
 	return (
 		<div className="hstack stack-center bg-gray-100">
 			{/* TODO: Change to <button>. */}
-			<div className="hstack stack-center space-8 px-24 p-16 rounded-full" style={{ backgroundColor: twitterBlue }}>
+			<div className="hstack stack-center space-8 px-24 py-12 rounded-full" style={{ backgroundColor: TwitterBlue }}>
 				<GitHub className="w-20 h-20 text-white" />
-				<div className="text-17 leading-1 text-white">Follow on Twitter!</div>
+				<div className="text-17 leading-1 text-white">Follow me</div>
 			</div>
 		</div>
 	)

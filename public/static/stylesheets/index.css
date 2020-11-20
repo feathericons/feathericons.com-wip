@@ -45939,8 +45939,57 @@ html {
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-[data-primer-grid] {
-  background-image: linear-gradient(0deg, rgba(225, 228, 232, 0), rgba(225, 228, 232, 0) 5px, #e1e4e8, rgba(225, 228, 232, 0) 6px), linear-gradient(90deg, rgba(225, 228, 232, 0), rgba(225, 228, 232, 0) 5px, #e1e4e8, rgba(225, 228, 232, 0) 6px);
-  background-size: 10px 10px;
-  background-position: center center;
+.w-54 {
+  width: 3.375rem;
+}
+
+.h-54 {
+  height: 3.375rem;
+}
+
+.bento-box {
+  display: grid;
+  grid-template-rows: 0.62fr 0.38fr;
+  grid-template-columns: 0.62fr 0.14fr 0.24fr;
+  grid-template-areas: "a b b" "a d c";
+  gap: 0.75rem;
+  height: 20rem;
+}
+.bento-box > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f5;
+}
+.bento-box > *:nth-child(1) {
+  grid-area: a;
+}
+.bento-box > *:nth-child(2) {
+  grid-area: b;
+}
+.bento-box > *:nth-child(3) {
+  grid-area: c;
+}
+.bento-box > *:nth-child(4) {
+  grid-area: d;
+}
+.bento-box > *:nth-child(1) > svg {
+  width: 6.5rem;
+  height: 6.5rem;
+  color: #27272a;
+}
+.bento-box > *:nth-child(2) > svg {
+  width: 4rem;
+  height: 4rem;
+  color: #27272a;
+}
+.bento-box > *:nth-child(3) > svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #27272a;
+}
+.bento-box > *:nth-child(4) > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #27272a;
 }
