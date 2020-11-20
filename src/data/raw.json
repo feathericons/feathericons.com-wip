@@ -233,10 +233,17 @@
 			"pie-chart"
 		]
 	},
-	"bar-chart2": {
-		"name": "bar-chart2",
-		"tags": [],
-		"more": []
+	"bar-chart-2": {
+		"name": "bar-chart-2",
+		"tags": [
+			"statistics",
+			"diagram",
+			"graph"
+		],
+		"more": [
+			"bar-chart",
+			"pie-chart"
+		]
 	},
 	"battery": {
 		"name": "battery",
@@ -604,7 +611,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -627,7 +634,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -1009,15 +1016,27 @@
 			"edit-3"
 		]
 	},
-	"edit2": {
-		"name": "edit2",
-		"tags": [],
-		"more": []
+	"edit-2": {
+		"name": "edit-2",
+		"tags": [
+			"pencil",
+			"change"
+		],
+		"more": [
+			"edit",
+			"edit-3"
+		]
 	},
-	"edit3": {
-		"name": "edit3",
-		"tags": [],
-		"more": []
+	"edit-3": {
+		"name": "edit-3",
+		"tags": [
+			"pencil",
+			"change"
+		],
+		"more": [
+			"edit",
+			"edit-2"
+		]
 	},
 	"external-link": {
 		"name": "external-link",
@@ -1061,7 +1080,7 @@
 			"codesandbox",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -1115,7 +1134,7 @@
 			"codesandbox",
 			"facebook",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -1246,7 +1265,7 @@
 			"codesandbox",
 			"facebook",
 			"figma",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -1299,7 +1318,7 @@
 			"git-commit",
 			"git-merge",
 			"git-pull-request",
-			"github",
+			"git-hub",
 			"gitlab",
 			"terminal"
 		]
@@ -1314,15 +1333,38 @@
 			"git-branch",
 			"git-merge",
 			"git-pull-request",
-			"github",
+			"git-hub",
 			"gitlab",
 			"terminal"
 		]
 	},
 	"git-hub": {
 		"name": "git-hub",
-		"tags": [],
-		"more": []
+		"tags": [
+			"logo",
+			"version control"
+		],
+		"more": [
+			"codepen",
+			"codesandbox",
+			"facebook",
+			"figma",
+			"framer",
+			"git-branch",
+			"git-commit",
+			"git-merge",
+			"git-pull-request",
+			"gitlab",
+			"hexagon",
+			"instagram",
+			"linkedin",
+			"pocket",
+			"slack",
+			"target",
+			"twitch",
+			"twitter",
+			"youtube"
+		]
 	},
 	"git-merge": {
 		"name": "git-merge",
@@ -1334,7 +1376,7 @@
 			"git-branch",
 			"git-commit",
 			"git-pull-request",
-			"github",
+			"git-hub",
 			"gitlab",
 			"terminal"
 		]
@@ -1349,7 +1391,7 @@
 			"git-branch",
 			"git-commit",
 			"git-merge",
-			"github",
+			"git-hub",
 			"gitlab",
 			"terminal"
 		]
@@ -1370,7 +1412,7 @@
 			"git-commit",
 			"git-merge",
 			"git-pull-request",
-			"github",
+			"git-hub",
 			"hexagon",
 			"instagram",
 			"linkedin",
@@ -1484,7 +1526,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"instagram",
 			"linkedin",
@@ -1540,7 +1582,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"linkedin",
@@ -1604,10 +1646,15 @@
 			"link-2"
 		]
 	},
-	"link2": {
-		"name": "link2",
-		"tags": [],
-		"more": []
+	"link-2": {
+		"name": "link-2",
+		"tags": [
+			"chain",
+			"url"
+		],
+		"more": [
+			"link"
+		]
 	},
 	"linkedin": {
 		"name": "linkedin",
@@ -1621,7 +1668,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -1756,10 +1803,21 @@
 			"maximize-2"
 		]
 	},
-	"maximize2": {
-		"name": "maximize2",
-		"tags": [],
-		"more": []
+	"maximize-2": {
+		"name": "maximize-2",
+		"tags": [
+			"fullscreen",
+			"arrows",
+			"expand"
+		],
+		"more": [
+			"maximize",
+			"minimize-2",
+			"move",
+			"refresh-cw",
+			"refresh-ccw",
+			"repeat"
+		]
 	},
 	"meh": {
 		"name": "meh",
@@ -1860,10 +1918,24 @@
 			"x"
 		]
 	},
-	"minimize2": {
-		"name": "minimize2",
-		"tags": [],
-		"more": []
+	"minimize-2": {
+		"name": "minimize-2",
+		"tags": [
+			"exit fullscreen",
+			"arrows",
+			"close"
+		],
+		"more": [
+			"maximize-2",
+			"minimize",
+			"move",
+			"refresh-cw",
+			"refresh-ccw",
+			"repeat",
+			"x-circle",
+			"x-square",
+			"x"
+		]
 	},
 	"minus": {
 		"name": "minus",
@@ -1973,10 +2045,18 @@
 			"navigation-2"
 		]
 	},
-	"navigation2": {
-		"name": "navigation2",
-		"tags": [],
-		"more": []
+	"navigation-2": {
+		"name": "navigation-2",
+		"tags": [
+			"location",
+			"travel"
+		],
+		"more": [
+			"compass",
+			"map-pin",
+			"map",
+			"navigation"
+		]
 	},
 	"octagon": {
 		"name": "octagon",
@@ -2278,7 +2358,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -2499,9 +2579,12 @@
 		"tags": [],
 		"more": []
 	},
-	"share2": {
-		"name": "share2",
-		"tags": [],
+	"share-2": {
+		"name": "share-2",
+		"tags": [
+			"network",
+			"connections"
+		],
 		"more": []
 	},
 	"shield": {
@@ -2643,7 +2726,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -2864,7 +2947,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -2999,10 +3082,25 @@
 			"x"
 		]
 	},
-	"trash2": {
-		"name": "trash2",
-		"tags": [],
-		"more": []
+	"trash-2": {
+		"name": "trash-2",
+		"tags": [
+			"garbage",
+			"delete",
+			"remove",
+			"bin"
+		],
+		"more": [
+			"delete",
+			"file-minus",
+			"trash",
+			"user-minus",
+			"user-x",
+			"x-circle",
+			"x-octagon",
+			"x-square",
+			"x"
+		]
 	},
 	"trello": {
 		"name": "trello",
@@ -3058,7 +3156,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -3082,7 +3180,7 @@
 			"facebook",
 			"figma",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",
@@ -3296,15 +3394,61 @@
 			"volume-x"
 		]
 	},
-	"volume1": {
-		"name": "volume1",
-		"tags": [],
-		"more": []
+	"volume-1": {
+		"name": "volume-1",
+		"tags": [
+			"music",
+			"sound"
+		],
+		"more": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-2",
+			"volume-x"
+		]
 	},
-	"volume2": {
-		"name": "volume2",
-		"tags": [],
-		"more": []
+	"volume-2": {
+		"name": "volume-2",
+		"tags": [
+			"music",
+			"sound"
+		],
+		"more": [
+			"bell",
+			"disc",
+			"fast-forward",
+			"headphones",
+			"mic-off",
+			"mic",
+			"pause",
+			"pause-circle",
+			"play",
+			"play-circle",
+			"rewind",
+			"shuffle",
+			"skip-back",
+			"skip-forward",
+			"speaker",
+			"stop-circle",
+			"volume",
+			"volume-1",
+			"volume-x"
+		]
 	},
 	"volume-x": {
 		"name": "volume-x",
@@ -3499,7 +3643,7 @@
 			"figma",
 			"film",
 			"framer",
-			"github",
+			"git-hub",
 			"gitlab",
 			"hexagon",
 			"instagram",

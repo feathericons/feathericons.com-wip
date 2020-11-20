@@ -86,7 +86,7 @@
   "git-commit": ["code", "version control"],
   "git-merge": ["code", "version control"],
   "git-pull-request": ["code", "version control"],
-  "github": ["logo", "version control"],
+  "git-hub": ["logo", "version control"],
   "gitlab": ["logo", "version control"],
   "globe": ["world", "browser", "language", "translate"],
   "hard-drive": ["computer", "server", "memory", "data"],

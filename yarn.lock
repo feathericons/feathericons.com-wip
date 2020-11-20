@@ -1424,10 +1424,10 @@
   resolved "https://registry.yarnpkg.com/@zaydek/duomo/-/duomo-0.6.12.tgz#aaafdda432152299a368215bec4dbe5a3d2ffa33"
   integrity sha512-65jHqSuMseUrch7wzsgBYE/6TFHvmc+vOgI8+wxsNUSWQGP8tQ9wS6kWeD3Wz7jbL1TZPsElxrXxiQbQal1Ucw==
 
-"@zaydek/lib@^0.6.2":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.6.3.tgz#8e9713d096f4c86256e8f24d6b12a5e57e231874"
-  integrity sha512-CXnPG6RH2Kvdyn3+RWkyy5rkv5PblSA6s8jja6y3LZtgFGKKZDriB64r4DD07pqpYEry5aFaxygl4yrPntfPGg==
+"@zaydek/lib@^0.6.4":
+  version "0.6.4"
+  resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.6.4.tgz#c2c74372c32040e036f7558acd5eb10666f7f6a8"
+  integrity sha512-gKSF+NoF134GTd1J3SuRCxSDWnM+sacADrWV6I08ryaYBDpdZ4mPFKGR6ZJpTAn+pRk1n+btg9VBzIZwsUsdGw==
 
 "@zaydek/prose@^0.3.1":
   version "0.3.1"
