@@ -1,4 +1,4 @@
-import { Archive, Eye, EyeOff, File, Folder, Lock, MessageCircle, Plus, Share2, Trash2 } from "react-feather"
+import { Archive, Eye, EyeOff, File, Folder, Heart, Lock, MessageCircle, Plus, Share2, Trash2 } from "react-feather"
 import { rem } from "@zaydek/duomo/dist/runtime"
 import { useState } from "react"
 
@@ -9,7 +9,10 @@ interface SVGProps {
 function DemoWrapper({ children }: { children?: React.ReactNode }) {
 	return (
 		<div className="hstack bg-gray-100">
-			<div className="vstack">{children}</div>
+			{/* prettier-ignore */}
+			<div className="vstack">
+				{children}
+			</div>
 		</div>
 	)
 }
@@ -98,13 +101,15 @@ export default function Demos({ SVG }: SVGProps) {
 
 			{/* 4 */}
 			<DemoWrapper>
-				<div className="hstack space-24">
-					{[SVG, MessageCircle, Share2].map(Each => (
+				<div className="hstack space-16">
+					{[Heart, MessageCircle, Share2, SVG].map((Each, x) => (
 						<div className="hstack stack-center space-8">
 							<Each className="w-16 h-16" />
-							<div className="text-16 -tracking-2.5 leading-1" style={{ fontFeatureSettings: "'tnum'" }}>
-								{10 + Math.floor(Math.random() * 90)}
-							</div>
+							{x < 3 && (
+								<div className="text-16 -tracking-2.5 leading-1" style={{ fontFeatureSettings: "'tnum'" }}>
+									{10 + Math.floor(Math.random() * 90)}
+								</div>
+							)}
 						</div>
 					))}
 				</div>
@@ -126,18 +131,18 @@ export default function Demos({ SVG }: SVGProps) {
 				<div className="vstack space-8">
 					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
 						<SVG className="w-20 h-20 text-gray-600" />
-						<div>Widget</div>
+						<p>Widget</p>
 						<div className="spacer" />
 						<Plus className="w-20 h-20 text-gray-400" />
 					</div>
 					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
 						<File className="w-20 h-20 text-gray-600" />
-						<div>File</div>
+						<p>File</p>
 						<div className="spacer" />
 					</div>
 					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
 						<Folder className="w-20 h-20 text-gray-600" />
-						<div>Folder</div>
+						<p>Folder</p>
 						<div className="spacer" />
 					</div>
 				</div>
