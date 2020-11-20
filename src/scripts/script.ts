@@ -1,6 +1,6 @@
 import * as Feather from "react-feather"
 import tags from "./tags.json"
-import { IDataset } from "../types"
+import { IDataset, IIconMetadata } from "../types"
 import { toKebabCase } from "@zaydek/lib/dist/helpers"
 
 interface Lookup {
@@ -41,6 +41,5 @@ const tagsInCommon: Lookup = kebabCaseKeys.reduce<Lookup>((acc, name1) => {
 		}
 		return acc
 	}, {})
-
 	console.log(JSON.stringify(dataset_raw, null, "\t"))
 })()

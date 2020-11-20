@@ -1,6 +1,6 @@
 // TODO
 import * as Feather from "react-feather"
-import dataset_map from "../../data/dataset_map"
+import datasetAsMap from "../../data/datasetAsMap"
 import MarkdownDocs from "./docs.md"
 import React from "react"
 import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "./Demos"
@@ -36,8 +36,8 @@ function Demos() {
 function SimilarIcons({ name }: { name: string }) {
 	return (
 		<IconGrid>
-			{(dataset_map as { [key: string]: any })[name].common.map(each => (
-				<Icon icon={dataset_map[each as string]} />
+			{(datasetAsMap as { [key: string]: any })[name].common.map(each => (
+				<Icon icon={datasetAsMap[each as string]} />
 			))}
 		</IconGrid>
 	)

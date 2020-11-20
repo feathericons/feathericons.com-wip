@@ -1429,10 +1429,10 @@
   resolved "https://registry.yarnpkg.com/@zaydek/lib/-/lib-0.6.3.tgz#8e9713d096f4c86256e8f24d6b12a5e57e231874"
   integrity sha512-CXnPG6RH2Kvdyn3+RWkyy5rkv5PblSA6s8jja6y3LZtgFGKKZDriB64r4DD07pqpYEry5aFaxygl4yrPntfPGg==
 
-"@zaydek/prose@^0.2.6":
-  version "0.2.7"
-  resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.2.7.tgz#cc2a81082e82b47ea68ed566be605dd5af5c9b41"
-  integrity sha512-0jeLTKlNjt9bMinmwr1ig16P5WoTDX0QX+X6Gb7xQJT4n4juvdR28UIoukTauJpMS4Y4WWSBKlpJ4KoSYp/SFg==
+"@zaydek/prose@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@zaydek/prose/-/prose-0.3.1.tgz#4b3f89d190dc733fce571e5cf33213fa032e5107"
+  integrity sha512-p2S/YQKm4iNdy3yqA7zT2H0NOJdgHBPkzQFK7nLP7qFi8RAE0xsGfnPsVEI97RMUeIEBffrML8uTehQIAMHocQ==
 
 abort-controller@3.0.0:
   version "3.0.0"

@@ -1,5 +1,5 @@
 import App from "../components/App"
-import dataset_arr from "../data/dataset_arr"
+import datasetAsArr from "../data/datasetAsArr"
 import IconInfo from "../components/IconInfo"
 import { GetStaticPropsContext } from "next"
 
@@ -16,7 +16,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 // `getStaticPaths` enumerates pages as parameters.
 export async function getStaticPaths() {
 	return {
-		paths: dataset_arr.map(each => ({
+		paths: datasetAsArr.map(each => ({
 			params: {
 				name: each.name,
 			},
