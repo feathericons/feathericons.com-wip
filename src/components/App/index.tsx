@@ -25,6 +25,7 @@ export default function App({ children }: { children?: React.ReactNode }) {
 	return (
 		<>
 			<Head>
+				{/* TODO: Add SEO here. */}
 				<title>Feathericons</title>
 				<link href="static/stylesheets/index.css" rel="stylesheet" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -162,22 +163,19 @@ export default function App({ children }: { children?: React.ReactNode }) {
 							<div className="hidden md:block w-320 bg-gray-50 border-l-1 xl:rounded-r-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Icon */}
-									{/* NOTE: Uses a nested `sticky`. */}
 									<div className="sticky t-0 xl:t-16 z-10">
 										<div className="hstack h-320 bg-white border-b-1 xl:rounded-tr-24">
 											<div className="vstack">
 												<div className="w-64 h-64 bg-gray-300 rounded-full"></div>
 											</div>
-											{/* TODO: Move `p-24` off of `absolute`? */}
-											<div className="absolute x-0 t-0 p-24">
-												<div className="hstack">
+											<div className="absolute x-0 t-0">
+												<div className="hstack p-24">
 													<div className="spacer"></div>
 													<div className="w-16 h-16 bg-gray-200 rounded-full" />
 												</div>
 											</div>
-											{/* TODO: Move `p-24` off of `absolute`? */}
-											<div className="absolute x-0 b-0 p-24">
-												<div className="hstack stack-center space-24">
+											<div className="absolute x-0 b-0">
+												<div className="hstack stack-center space-24 p-24">
 													<div className="spacer">
 														<div className="w-full h-8 bg-gray-200 rounded-full" />
 													</div>
