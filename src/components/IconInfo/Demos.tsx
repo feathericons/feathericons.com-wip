@@ -1,6 +1,6 @@
+import { Eye, EyeOff, GitHub, Heart, Instagram, Lock, Mail, MessageCircle, Send, Twitter } from "react-feather"
 import { rem } from "@zaydek/duomo/dist/runtime"
 import { useState } from "react"
-import { Eye, EyeOff, GitHub, Heart, Instagram, Lock, Mail, MessageCircle, Send, Twitter } from "react-feather"
 
 interface DemoWrapperProps {
 	children?: React.ReactNode
@@ -10,7 +10,7 @@ interface DemoWrapperProps {
 function DemoVStack({ children }: DemoWrapperProps) {
 	return (
 		// TODO: Use `stack-center`?
-		<div className="hstack bg-gray-100" style={{ height: rem(160) }}>
+		<div className="hstack h-160 bg-gray-100">
 			{/* prettier-ignore */}
 			<div className="vstack">
 				{children}
@@ -23,11 +23,10 @@ export function Demo1() {
 	return (
 		<DemoVStack>
 			<div className="hstack stack-center space-20">
-				{/* TODO */}
-				<GitHub className="text-gray-800" style={{ width: 16, height: 16 }} />
-				<GitHub className="text-gray-800" style={{ width: 24, height: 24 }} />
-				<GitHub className="text-gray-800" style={{ width: 36, height: 36 }} />
-				<GitHub className="text-gray-800" style={{ width: 54, height: 54 }} />
+				<GitHub className="w-16 h-16 text-gray-800" />
+				<GitHub className="w-24 h-24 text-gray-800" />
+				<GitHub className="w-36 h-36 text-gray-800" />
+				<GitHub className="w-54 h-54 text-gray-800" />
 			</div>
 		</DemoVStack>
 	)
@@ -74,10 +73,12 @@ export function Demo2() {
 	)
 }
 
+const twitterBlue = "#1da1f2"
+
 export function Demo3() {
 	return (
 		<DemoVStack>
-			<div className="hstack stack-center space-8 px-20 py-14 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
+			<div className="hstack stack-center space-8 px-20 py-14 rounded-full" style={{ backgroundColor: twitterBlue }}>
 				<GitHub className="w-20 h-20 text-white" />
 				<div className="font-500 text-17 leading-1 text-white">Follow on Twitter!</div>
 			</div>
@@ -124,5 +125,24 @@ export function Demo6() {
 				<Twitter className="w-20 h-20 text-gray-800" />
 			</div>
 		</DemoVStack>
+	)
+}
+
+export default function Demos() {
+	return (
+		<div
+			style={{
+				display: "grid",
+				gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))",
+				gap: rem(12),
+			}}
+		>
+			<Demo1 />
+			<Demo2 />
+			<Demo3 />
+			<Demo4 />
+			<Demo5 />
+			<Demo6 />
+		</div>
 	)
 }

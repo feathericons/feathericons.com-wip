@@ -1,37 +1,21 @@
-// import * as Feather from "react-feather"
-import MarkdownDocs from "./doc.md"
+import * as Feather from "react-feather"
+import Demos from "./Demos"
+import Markdown from "./markdown.md"
 import React from "react"
 import { datasetAsMap } from "../../data/dataset"
-import { Demo1, Demo2, Demo3, Demo4, Demo5, Demo6 } from "./Demos"
-import { GitHub as SVGGitHub } from "react-feather"
 import { Icon, IconGrid } from "../Icon"
+import { IFeather } from "../../types"
 import { MDXProvider } from "@mdx-js/react"
-import { rem } from "@zaydek/duomo/dist/runtime"
-// TODO
+import { toTitleCase } from "@zaydek/lib/dist/helpers"
 
-// // TODO
-// function BentoBox() {
-// 	return (
-// 		<div className="hstack bg-gray-100" style={{ height: rem(320) }}>
-// 			<div className="vstack">
-// 				<SVGGitHub className="w-48 h-48" />
-// 			</div>
-// 		</div>
-// 	)
-// }
-//
-// function Demos() {
-// 	return (
-// 		<div className="grid gap-12" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))" }}>
-// 			<Demo1 />
-// 			<Demo2 />
-// 			<Demo3 />
-// 			<Demo4 />
-// 			<Demo5 />
-// 			<Demo6 />
-// 		</div>
-// 	)
-// }
+function BentoBox({ icon }: { icon: React.FC<Feather.Props> }) {
+	return (
+		// prettier-ignore
+		<div className="hstack stack-center h-320 bg-gray-100">
+			{React.createElement(icon, { className: "w-48 h-48" })}
+		</div>
+	)
+}
 
 function More({ name }: { name: string }) {
 	const icon = datasetAsMap[name]
@@ -45,28 +29,30 @@ function More({ name }: { name: string }) {
 }
 
 export default function IconInfo({ name }: { name: string }) {
+	const icon = (Feather as IFeather)[toTitleCase(name)]
+
 	return (
 		<div className="prose">
 			<MDXProvider
 				components={{
 					IconName: () => name,
-					FeatherIconName: () => `<i data-feather=${name}></i>`,
-					// BentoBox,
-					// Demos,
-
-					// TODO
+					FeatherIconName: () => `<i data-feather="${name}"></i>`,
+					BentoBox: () => <BentoBox icon={icon} />,
+					Demos,
 					More: () =>
 						!datasetAsMap[name].more.length ? null : (
 							<>
 								<h2>
 									More Icons Like <code>{name}</code>
 								</h2>
-								<More name={name} />
+								<div>
+									<More name={name} />
+								</div>
 							</>
 						),
 				}}
 			>
-				<MarkdownDocs />
+				<Markdown />
 			</MDXProvider>
 		</div>
 	)

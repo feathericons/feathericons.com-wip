@@ -1,6 +1,6 @@
 # The <code><IconName /></code> Icon
 
-<!-- <BentoBox /> -->
+<BentoBox />
 
 <br />
 
@@ -62,11 +62,11 @@ without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duo
 
 <br />
 
-## Demos Using <code><IconName /></code>
+## Demos
 
-<!-- <div>
+<div>
 	<Demos />
-</div> -->
+</div>
 
 <br />
 
