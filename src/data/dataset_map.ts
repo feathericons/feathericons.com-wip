@@ -1,5 +1,5 @@
-import __dataset from "./__dataset.json"
+import dataset_raw from "./dataset_raw.json"
 import { IDataset } from "../types"
 
 // prettier-ignore
-export default (__dataset as IDataset)
+export default (dataset_raw as IDataset)

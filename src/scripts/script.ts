@@ -33,7 +33,7 @@ const tagsInCommon: Lookup = kebabCaseKeys.reduce<Lookup>((acc, name1) => {
 }, {})
 
 ;(() => {
-	const dataset = kebabCaseKeys.reduce<IDataset>((acc, each) => {
+	const dataset_raw = kebabCaseKeys.reduce<IDataset>((acc, each) => {
 		acc[each] = {
 			name: each,
 			tags: (tags as Lookup)[each] || [],
@@ -42,5 +42,5 @@ const tagsInCommon: Lookup = kebabCaseKeys.reduce<Lookup>((acc, name1) => {
 		return acc
 	}, {})
 
-	console.log(JSON.stringify(dataset, null, "\t"))
+	console.log(JSON.stringify(dataset_raw, null, "\t"))
 })()
