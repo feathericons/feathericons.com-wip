@@ -1,5 +1,7 @@
 import * as Feather from "react-feather"
 
+export type IIcon = React.FC<Feather.Props>
+
 // prettier-ignore
 export interface IIconMetadata {
 	name: string   // "arrow-right"

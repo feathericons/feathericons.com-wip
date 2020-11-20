@@ -10,7 +10,7 @@ interface DemoWrapperProps {
 function DemoVStack({ children }: DemoWrapperProps) {
 	return (
 		// TODO: Use `stack-center`?
-		<div className="hstack h-160 bg-gray-100">
+		<div className="hstack bg-gray-100">
 			{/* prettier-ignore */}
 			<div className="vstack">
 				{children}
@@ -21,14 +21,12 @@ function DemoVStack({ children }: DemoWrapperProps) {
 
 export function Demo1() {
 	return (
-		<DemoVStack>
-			<div className="hstack stack-center space-20">
-				<GitHub className="w-16 h-16 text-gray-800" />
-				<GitHub className="w-24 h-24 text-gray-800" />
-				<GitHub className="w-36 h-36 text-gray-800" />
-				<GitHub className="w-54 h-54 text-gray-800" />
-			</div>
-		</DemoVStack>
+		<div className="hstack stack-center space-20 bg-gray-100">
+			<GitHub className="w-16 h-16 text-gray-800" />
+			<GitHub className="w-24 h-24 text-gray-800" />
+			<GitHub className="w-36 h-36 text-gray-800" />
+			<GitHub className="text-gray-800" style={{ width: rem(54), height: rem(54) }} />
+		</div>
 	)
 }
 
@@ -37,7 +35,10 @@ export function Demo2() {
 	return (
 		<DemoVStack>
 			{/* TODO: Shadow. */}
-			<div className="bg-white rounded-8" style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow)" }}>
+			<div
+				className="bg-white rounded-8"
+				style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
+			>
 				<div className="hstack stack-center space-16 px-16 h-48">
 					<GitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
@@ -77,54 +78,52 @@ const twitterBlue = "#1da1f2"
 
 export function Demo3() {
 	return (
-		<DemoVStack>
-			<div className="hstack stack-center space-8 px-20 py-14 rounded-full" style={{ backgroundColor: twitterBlue }}>
+		<div className="hstack stack-center bg-gray-100">
+			{/* TODO: Change to <button>. */}
+			<div className="hstack stack-center space-8 px-24 p-16 rounded-full" style={{ backgroundColor: twitterBlue }}>
 				<GitHub className="w-20 h-20 text-white" />
-				<div className="font-500 text-17 leading-1 text-white">Follow on Twitter!</div>
+				<div className="text-17 leading-1 text-white">Follow on Twitter!</div>
 			</div>
-		</DemoVStack>
+		</div>
 	)
 }
 
+// TODO
 export function Demo4() {
 	return <DemoVStack>Hello</DemoVStack>
 }
 
 export function Demo5() {
 	return (
-		<DemoVStack>
-			<div className="hstack space-20">
-				<div className="hstack stack-center space-8">
-					<Heart className="w-17 h-17 text-gray-800" />
-					<div className="text-15 leading-1">31</div>
-				</div>
-				<div className="hstack space-8">
-					<Send className="w-17 h-17 text-gray-800" />
-					<div className="text-15 leading-1">41</div>
-				</div>
-				<div className="hstack space-8">
-					<MessageCircle className="w-17 h-17 text-gray-800" />
-					<div className="text-15 leading-1">59</div>
-				</div>
-				<div className="hstack space-8">
-					<GitHub className="w-17 h-17 text-gray-800" />
-				</div>
+		<div className="hstack stack-center space-20 bg-gray-100">
+			<div className="hstack stack-center space-8">
+				<Heart className="w-17 h-17 text-gray-800" />
+				<div className="text-15 leading-1">31</div>
 			</div>
-		</DemoVStack>
+			<div className="hstack space-8">
+				<Send className="w-17 h-17 text-gray-800" />
+				<div className="text-15 leading-1">41</div>
+			</div>
+			<div className="hstack space-8">
+				<MessageCircle className="w-17 h-17 text-gray-800" />
+				<div className="text-15 leading-1">59</div>
+			</div>
+			<div className="hstack space-8">
+				<GitHub className="w-17 h-17 text-gray-800" />
+			</div>
+		</div>
 	)
 }
 
 // TODO: Add brand colors for hover.
 export function Demo6() {
 	return (
-		<DemoVStack>
-			<div className="hstack space-24">
-				<GitHub className="w-20 h-20 text-gray-800" />
-				<Instagram className="w-20 h-20 text-gray-800" />
-				<Mail className="w-20 h-20 text-gray-800" />
-				<Twitter className="w-20 h-20 text-gray-800" />
-			</div>
-		</DemoVStack>
+		<div className="hstack stack-center space-20 bg-gray-100">
+			<GitHub className="w-20 h-20 text-gray-800" />
+			<Instagram className="w-20 h-20 text-gray-800" />
+			<Mail className="w-20 h-20 text-gray-800" />
+			<Twitter className="w-20 h-20 text-gray-800" />
+		</div>
 	)
 }
 
@@ -133,7 +132,8 @@ export default function Demos() {
 		<div
 			style={{
 				display: "grid",
-				gridTemplateColumns: "repeat(auto-fill, minmax(256px, 1fr))",
+				gridTemplateColumns: `repeat(auto-fill, minmax(${rem(256)}, 1fr))`,
+				gridAutoRows: rem(160),
 				gap: rem(12),
 			}}
 		>

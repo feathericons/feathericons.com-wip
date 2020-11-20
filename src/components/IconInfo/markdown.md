@@ -62,7 +62,7 @@ without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duo
 
 <br />
 
-## Demos
+## Ideas
 
 <div>
 	<Demos />

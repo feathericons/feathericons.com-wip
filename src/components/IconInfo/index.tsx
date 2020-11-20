@@ -1,27 +1,19 @@
 import * as Feather from "react-feather"
+import BentoBox from "./BentoBox"
 import Demos from "./Demos"
 import Markdown from "./markdown.md"
 import React from "react"
 import { datasetAsMap } from "../../data/dataset"
 import { Icon, IconGrid } from "../Icon"
-import { IFeather } from "../../types"
+import { IFeather, IIcon } from "../../types"
 import { MDXProvider } from "@mdx-js/react"
 import { toTitleCase } from "@zaydek/lib/dist/helpers"
 
-function BentoBox({ icon }: { icon: React.FC<Feather.Props> }) {
-	return (
-		// prettier-ignore
-		<div className="hstack stack-center h-320 bg-gray-100">
-			{React.createElement(icon, { className: "w-48 h-48" })}
-		</div>
-	)
-}
-
 function More({ name }: { name: string }) {
-	const icon = datasetAsMap[name]
+	const metadata = datasetAsMap[name]
 	return (
 		<IconGrid>
-			{icon.more.map(each => (
+			{metadata.more.map(each => (
 				<Icon key={each} icon={datasetAsMap[each]} />
 			))}
 		</IconGrid>
@@ -30,6 +22,7 @@ function More({ name }: { name: string }) {
 
 export default function IconInfo({ name }: { name: string }) {
 	const icon = (Feather as IFeather)[toTitleCase(name)]
+	const metadata = datasetAsMap[name]
 
 	return (
 		<div className="prose">
@@ -40,7 +33,7 @@ export default function IconInfo({ name }: { name: string }) {
 					BentoBox: () => <BentoBox icon={icon} />,
 					Demos,
 					More: () =>
-						!datasetAsMap[name].more.length ? null : (
+						!metadata.more.length ? null : (
 							<>
 								<h2>
 									More Icons Like <code>{name}</code>
