@@ -87,12 +87,7 @@ export function Demo3() {
 	)
 }
 
-// TODO
 export function Demo4() {
-	return <DemoVStack>Hello</DemoVStack>
-}
-
-export function Demo5() {
 	return (
 		<div className="hstack stack-center space-20 bg-gray-100">
 			<div className="hstack stack-center space-8">
@@ -115,7 +110,7 @@ export function Demo5() {
 }
 
 // TODO: Add brand colors for hover.
-export function Demo6() {
+export function Demo5() {
 	return (
 		<div className="hstack stack-center space-20 bg-gray-100">
 			<GitHub className="w-20 h-20" />
@@ -124,6 +119,11 @@ export function Demo6() {
 			<Twitter className="w-20 h-20" />
 		</div>
 	)
+}
+
+// // TODO
+export function Demo6() {
+	return <DemoVStack>Hello</DemoVStack>
 }
 
 export default function Demos() {

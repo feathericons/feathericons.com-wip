@@ -6,20 +6,40 @@ import { datasetAsMap } from "../../data/dataset"
 import { IconGrid, IconSquare } from "../Icon"
 import { IFeather } from "../../types"
 import { MDXProvider } from "@mdx-js/react"
-import { range } from "@zaydek/lib/dist/helpers"
 import { toTitleCase } from "@zaydek/lib/dist/helpers"
 
 function BentoBox({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
-		<div className="bento-box">
-			{range(4).map(each => (
-				<div key={each}>
+		<div className="bento-box group">
+			{[104, 64, 40, 24].map(each => (
+				<div className="relative">
+					<div className="absolute br-0 opacity-0 group-on:opacity-100 transition">
+						<div className="px-8 py-6">
+							<div className="px-4 py-2 bg-gray-200 rounded-4">
+								<div className="text-12 tracking-10 text-gray-400" style={{ fontFamily: "ui-monospace, monospace" }}>
+									{each}x{each}
+								</div>
+							</div>
+						</div>
+					</div>
 					<SVG />
 				</div>
 			))}
 		</div>
 	)
 }
+
+// function BentoBox({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
+// 	return (
+// 		<div className="bento-box">
+// 			{range(4).map(each => (
+// 				<div key={each}>
+// 					<SVG />
+// 				</div>
+// 			))}
+// 		</div>
+// 	)
+// }
 
 function More({ name }: { name: string }) {
 	const metadata = datasetAsMap[name]
