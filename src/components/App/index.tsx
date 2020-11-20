@@ -1,30 +1,21 @@
-import EmbossedFeather from "./EmbossedFeather"
+import AbsoluteTop from "./AbsoluteTop"
+import CTA from "./CTA"
 import Head from "next/head"
-import Link from "next/link"
 import React from "react"
-import sponsors from "../../fixtures/sponsors"
 import StickyObscureEffect from "./StickyObscureEffect"
-import useBreakpoints from "../hooks/useBreakpoints"
-import { AbsoluteTopRow } from "./AbsoluteTopRow"
-import { Download, ExternalLink, GitHub } from "react-feather"
 import { Duomo } from "@zaydek/duomo/dist/runtime"
-import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { range } from "@zaydek/lib/dist/helpers"
-import { Sponsor } from "./Sponsor"
 import { useEffect } from "react"
 import { useRouter } from "next/router"
 
 import "@zaydek/prose"
 
 export default function App({ children }: { children?: React.ReactNode }) {
-	const screen = useBreakpoints()
-
-	const router = useRouter()
-
-	// Once:
 	useEffect(() => {
 		return Duomo.init(process.env.NODE_ENV)
 	}, [])
+
+	const router = useRouter()
 
 	useEffect(() => {
 		const handleRouteChange = (url: string) => {
@@ -52,118 +43,17 @@ export default function App({ children }: { children?: React.ReactNode }) {
 				<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400&display=swap" rel="stylesheet" />
 			</Head>
 
-			<AbsoluteTopRow />
+			<AbsoluteTop />
 			<div className="vstack xl:pb-64 bg-gray-50">
 				{/**/}
 
-				{/* Top */}
-				<div
-					className="hstack px-16 lg:px-24 py-96"
-					style={{ backgroundImage: "linear-gradient(90deg, #0065ff, #7648ff)" }}
-				>
-					<div className="vstack xl:hstack space-48 w-full" style={{ maxWidth: 1024 + 64 }}>
-						{/**/}
-
-						{/* CTA buttons */}
-						<div className="hstack">
-							<div className="vstack stack-center space-24 w-full max-w-xs">
-								<Link href="/">
-									<a>
-										<EmbossedFeather className="w-56 h-56 text-white" />
-									</a>
-								</Link>
-								<h1
-									className="text-center text-36 -tracking-1.25 leading-1 text-white"
-									style={{ fontFamily: "'DM Sans', ui-sans-serif, sans-serif" }}
-								>
-									Open source icons
-								</h1>
-								<h2 className="mt-12 text-center text-17 text-white">
-									Created by{" "}
-									<ExtAnchor className="font-500 on:underline" href="TODO">
-										@colebemis
-									</ExtAnchor>{" "}
-									and{" "}
-									<ExtAnchor className="font-500 on:underline" href="TODO">
-										@username_ZAYDEK
-									</ExtAnchor>
-								</h2>
-								{/* CTA buttons */}
-								<div className="vstack md:hstack space-12 md:space-16 w-full max-w-md">
-									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
-									<div className="vstack md:w-192 h-56 bg-gray-200 rounded-12 md:rounded-full">
-										<div className="hstack stack-center space-8">
-											<GitHub className="w-20 h-20" />
-											<p className="font-500 text-17">Read docs</p>
-										</div>
-									</div>
-									{/* TODO: Change to `<button>` or `<ExtAnchor>`. */}
-									<div className="vstack md:w-192 h-56 bg-gray-200 rounded-12 md:rounded-full">
-										<div className="hstack stack-center space-8">
-											<Download className="w-20 h-20" />
-											<p className="font-500 text-17">Download</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						{/* Sponsors */}
-						{screen.md && (
-							<>
-								<div className="spacer" />
-								<div className="vstack">
-									<div className="spacer" />
-									<div className="hstack">
-										<div className="vstack stack-center space-24">
-											<div className="hstack stack-center space-8">
-												{/* NOTE: Use `<span>` because of `hstack` context. */}
-												<span className="font-500 text-10 tracking-2.5 leading-1 text-white">
-													CHECK OUT OUR SPONSORS
-												</span>
-												<span className="font-500 text-10 tracking-2.5 leading-1 text-white">&middot;</span>
-												<a className="group hstack stack-center space-6" href="TODO">
-													<span className="font-500 text-10 tracking-2.5 leading-1 group-on:underline text-white">
-														SPONSOR FEATHER
-													</span>
-													<ExternalLink className="w-13 h-12 text-gray-200" />
-												</a>
-											</div>
-											{/* NOTE: Use `<div>` to escape the `-m-*` context. */}
-											<div className="block xl:hidden">
-												<div className="-m-12  hstack" style={{ flexWrap: "wrap" }}>
-													{sponsors.map(each => (
-														<Sponsor key={each.href} className="m-12" sponsor={each} />
-													))}
-												</div>
-											</div>
-											<div className="hidden xl:vstack space-24">
-												<div className="hstack space-24">
-													{sponsors.slice(0, 3).map(each => (
-														<Sponsor key={each.href} sponsor={each} />
-													))}
-												</div>
-												<div className="hstack space-24">
-													{sponsors.slice(3).map(each => (
-														<Sponsor key={each.href} sponsor={each} />
-													))}
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</>
-						)}
-
-						{/**/}
-					</div>
-				</div>
+				<CTA />
 
 				{/* App */}
 				<div className="hstack">
 					<div
 						className="w-full max-w-xl bg-white xl:rounded-24"
-						style={{ boxShadow: "0 2px 4px -2px hsla(0, 0%, 0%, 0.25)" }}
+						style={{ boxShadow: "var(--shadow-xs), var(--shadow-sm)" }}
 					>
 						<StickyObscureEffect />
 						<div className="hstack">

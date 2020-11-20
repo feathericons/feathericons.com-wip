@@ -5,18 +5,20 @@ import { GitHub_FeatherSite, Twitter_ShareOnTwitter } from "../../fixtures/hrefs
 import { Twitter } from "react-feather"
 
 // TODO: Add analytics.
-export function AbsoluteTopRow() {
+export default function AbsoluteTop() {
 	return (
 		<div className="absolute x-0 t-0">
 			<div className="hstack px-16 lg:px-24 py-12">
-				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
-					<Twitter className="w-24 h-24 text-white" fill="currentColor" strokeWidth={0} />
-					<p className="group-on:underline text-white">Tweet thank you!</p>
+				<ExtAnchor className="group hstack stack-center space-8" href={GitHub_FeatherSite}>
+					<OctofaceIcon24x24 className="w-20 h-20 text-white" />
+					<p className="hstack space-6 group-on:underline text-white">
+						<span>Star on GitHub</span>
+					</p>
 				</ExtAnchor>
 				<div className="spacer" />
-				<ExtAnchor className="group hstack stack-center space-8" href={GitHub_FeatherSite}>
-					<p className="group-on:underline text-white">Star on GitHub!</p>
-					<OctofaceIcon24x24 className="w-20 h-20 text-white" />
+				<ExtAnchor className="group hstack stack-center space-8" href={Twitter_ShareOnTwitter}>
+					<p className="group-on:underline text-white">Tweet thank you</p>
+					<Twitter className="w-20 h-20 text-white" fill="currentColor" strokeWidth={0} />
 				</ExtAnchor>
 			</div>
 		</div>

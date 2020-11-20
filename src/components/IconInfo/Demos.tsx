@@ -21,11 +21,12 @@ function DemoVStack({ children }: DemoWrapperProps) {
 
 export function Demo1() {
 	return (
+		// NOTE: Uses `w-56 h-56` but technically should be `w-54 h-54`.
 		<div className="hstack stack-center space-20 bg-gray-100">
 			<GitHub className="w-16 h-16 text-gray-800" />
 			<GitHub className="w-24 h-24 text-gray-800" />
 			<GitHub className="w-36 h-36 text-gray-800" />
-			<GitHub className="text-gray-800" style={{ width: rem(54), height: rem(54) }} />
+			<GitHub className="w-56 h-56 text-gray-800" />
 		</div>
 	)
 }
@@ -34,11 +35,7 @@ export function Demo2() {
 	const [show, setShow] = useState(false)
 	return (
 		<DemoVStack>
-			{/* TODO: Shadow. */}
-			<div
-				className="bg-white rounded-8"
-				style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
-			>
+			<div className="bg-white rounded-8" style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-sm)" }}>
 				<div className="hstack stack-center space-16 px-16 h-48">
 					<GitHub className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}

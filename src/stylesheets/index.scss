@@ -4,9 +4,9 @@
 	top: rem(16);
 }
 
-@each $v in $breakpoint-map {
+@each $k, $v in $breakpoint-map {
 	@media (min-width: px($v)) {
-		.xl\:t-16 {
+		.#{$k}\:t-16 {
 			top: rem(16);
 		}
 	}

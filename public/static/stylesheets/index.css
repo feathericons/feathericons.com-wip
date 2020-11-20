@@ -45801,27 +45801,27 @@ body:not([data-theme-effect=true]) .ease-in-out {
   top: 1rem;
 }
 
-@media (min-width: xs 512) {
-  .xl\:t-16 {
+@media (min-width: 512px) {
+  .xs\:t-16 {
     top: 1rem;
   }
 }
-@media (min-width: sm 640) {
-  .xl\:t-16 {
+@media (min-width: 640px) {
+  .sm\:t-16 {
     top: 1rem;
   }
 }
-@media (min-width: md 768) {
-  .xl\:t-16 {
+@media (min-width: 768px) {
+  .md\:t-16 {
     top: 1rem;
   }
 }
-@media (min-width: lg 1024) {
-  .xl\:t-16 {
+@media (min-width: 1024px) {
+  .lg\:t-16 {
     top: 1rem;
   }
 }
-@media (min-width: xl 1344) {
+@media (min-width: 1344px) {
   .xl\:t-16 {
     top: 1rem;
   }
