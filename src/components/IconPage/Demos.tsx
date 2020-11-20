@@ -47,7 +47,8 @@ function Demo2({ SVG }: SVGProps) {
 						<div className="leading-1">username_ZAYDEK</div>
 					</div>
 				</div>
-				<div className="h-1 bg-gray-100" />
+				{/* <hr className="border-t-4 border-gray-50" /> */}
+				<hr className="border-gray-100" />
 				<div className="hstack stack-center space-16 px-16 h-48">
 					<Lock className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
@@ -108,7 +109,7 @@ export default function Demos({ SVG }: SVGProps) {
 						}}
 					>
 						<SVG className="w-20 h-20 text-white" />
-						<div className="text-17 leading-1 text-white">Follow me</div>
+						<div className="text-18 leading-1 text-white">Follow me</div>
 					</div>
 				</div>
 			</DemoWrapper>
@@ -131,7 +132,8 @@ export default function Demos({ SVG }: SVGProps) {
 
 			{/* 5 */}
 			<DemoWrapper>
-				<div className="hstack stack-center space-16">
+				{/* NOTE: Uses `space-12` not `space-16`. */}
+				<div className="hstack stack-center space-12">
 					{[Inbox, Trash2, Archive, SVG].map(Each => (
 						<div className="hstack stack-center w-40 h-40 bg-gray-100 rounded-full">
 							<Each className="w-18 h-18" />
