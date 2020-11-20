@@ -1,6 +1,6 @@
+import { Archive, Eye, EyeOff, File, Folder, Lock, MessageCircle, Plus, Share2, Trash2 } from "react-feather"
 import { rem } from "@zaydek/duomo/dist/runtime"
 import { useState } from "react"
-import { Archive, Eye, EyeOff, File, Folder, Lock, MessageCircle, Plus, Share2, Trash2 } from "react-feather"
 
 interface SVGProps {
 	SVG: React.FC<React.SVGAttributes<SVGElement>>
@@ -14,19 +14,7 @@ function DemoWrapper({ children }: { children?: React.ReactNode }) {
 	)
 }
 
-export function Demo1({ SVG }: SVGProps) {
-	return (
-		<DemoWrapper>
-			<div className="hstack stack-center space-24">
-				{[16, 24, 36, 54].map(each => (
-					<SVG className={`w-${each} h-${each}`} />
-				))}
-			</div>
-		</DemoWrapper>
-	)
-}
-
-export function Demo2({ SVG }: SVGProps) {
+function Demo2({ SVG }: SVGProps) {
 	const [show, setShow] = useState(false)
 
 	return (
@@ -70,82 +58,6 @@ export function Demo2({ SVG }: SVGProps) {
 	)
 }
 
-export function Demo3({ SVG }: SVGProps) {
-	return (
-		// TODO: Change to `<button>`.
-		<DemoWrapper>
-			<div className="vstack space-8">
-				<div
-					className="hstack stack-center space-12 px-24 py-12 rounded-8"
-					style={{
-						backgroundColor: "#1da1f2",
-						boxShadow: "var(--shadow-xs), var(--shadow-base)",
-					}}
-				>
-					<SVG className="w-20 h-20 text-white" />
-					<div className="text-17 leading-1 text-white">Follow me</div>
-				</div>
-			</div>
-		</DemoWrapper>
-	)
-}
-
-export function Demo4({ SVG }: SVGProps) {
-	return (
-		<DemoWrapper>
-			<div className="hstack space-24">
-				{[SVG, MessageCircle, Share2].map(Each => (
-					<div className="hstack stack-center space-8">
-						<Each className="w-16 h-16" />
-						<div className="text-16 -tracking-2.5 leading-1" style={{ fontFeatureSettings: "'tnum'" }}>
-							{10 + Math.floor(Math.random() * 90)}
-						</div>
-					</div>
-				))}
-			</div>
-		</DemoWrapper>
-	)
-}
-
-export function Demo5({ SVG }: SVGProps) {
-	return (
-		<DemoWrapper>
-			<div className="hstack stack-center space-16">
-				{[SVG, Trash2, Archive].map(Each => (
-					<div className="hstack stack-center w-48 h-48 bg-gray-200 rounded-full">
-						<Each className="w-20 h-20" />
-					</div>
-				))}
-			</div>
-		</DemoWrapper>
-	)
-}
-
-export function Demo6({ SVG }: SVGProps) {
-	return (
-		<DemoWrapper>
-			<div className="vstack space-8">
-				<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
-					<SVG className="w-20 h-20 text-gray-600" />
-					<div>Widget</div>
-					<div className="spacer" />
-					<Plus className="w-20 h-20 text-gray-400" />
-				</div>
-				<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
-					<File className="w-20 h-20 text-gray-600" />
-					<div>File</div>
-					<div className="spacer" />
-				</div>
-				<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
-					<Folder className="w-20 h-20 text-gray-600" />
-					<div>Folder</div>
-					<div className="spacer" />
-				</div>
-			</div>
-		</DemoWrapper>
-	)
-}
-
 export default function Demos({ SVG }: SVGProps) {
 	return (
 		<div
@@ -156,9 +68,80 @@ export default function Demos({ SVG }: SVGProps) {
 				gap: rem(12),
 			}}
 		>
-			{[Demo1, Demo2, Demo3, Demo4, Demo5, Demo6].map(Each => (
-				<Each SVG={SVG} />
-			))}
+			{/* 1 */}
+			<DemoWrapper>
+				<div className="hstack stack-center space-24">
+					{[16, 24, 36, 54].map(each => (
+						<SVG className={`w-${each} h-${each}`} />
+					))}
+				</div>
+			</DemoWrapper>
+
+			{/* 2 */}
+			<Demo2 SVG={SVG} />
+
+			{/* 3 */}
+			<DemoWrapper>
+				<div className="vstack space-8">
+					<div
+						className="hstack stack-center space-12 px-24 py-12 rounded-8"
+						style={{
+							backgroundColor: "#1da1f2",
+							boxShadow: "var(--shadow-xs), var(--shadow-base)",
+						}}
+					>
+						<SVG className="w-20 h-20 text-white" />
+						<div className="text-17 leading-1 text-white">Follow me</div>
+					</div>
+				</div>
+			</DemoWrapper>
+
+			{/* 4 */}
+			<DemoWrapper>
+				<div className="hstack space-24">
+					{[SVG, MessageCircle, Share2].map(Each => (
+						<div className="hstack stack-center space-8">
+							<Each className="w-16 h-16" />
+							<div className="text-16 -tracking-2.5 leading-1" style={{ fontFeatureSettings: "'tnum'" }}>
+								{10 + Math.floor(Math.random() * 90)}
+							</div>
+						</div>
+					))}
+				</div>
+			</DemoWrapper>
+
+			{/* 5 */}
+			<DemoWrapper>
+				<div className="hstack stack-center space-16">
+					{[SVG, Trash2, Archive].map(Each => (
+						<div className="hstack stack-center w-48 h-48 bg-gray-200 rounded-full">
+							<Each className="w-20 h-20" />
+						</div>
+					))}
+				</div>
+			</DemoWrapper>
+
+			{/* 6 */}
+			<DemoWrapper>
+				<div className="vstack space-8">
+					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
+						<SVG className="w-20 h-20 text-gray-600" />
+						<div>Widget</div>
+						<div className="spacer" />
+						<Plus className="w-20 h-20 text-gray-400" />
+					</div>
+					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
+						<File className="w-20 h-20 text-gray-600" />
+						<div>File</div>
+						<div className="spacer" />
+					</div>
+					<div className="hstack stack-center space-12 w-192 h-36 bg-gray-200 rounded-8 px-12">
+						<Folder className="w-20 h-20 text-gray-600" />
+						<div>Folder</div>
+						<div className="spacer" />
+					</div>
+				</div>
+			</DemoWrapper>
 		</div>
 	)
 }
