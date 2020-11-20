@@ -6,7 +6,7 @@ export default function StickyObscureEffect() {
 		<>
 			{screen.xl && (
 				// NOTE: Use `z-20` not `z-10` here.
-				<div className="sticky t-0 -mx-8 -mb-24 z-20">
+				<div id="obscure-effect" className="sticky t-0 -mx-8 -mb-24 z-20">
 					<div className="hstack">
 						<svg
 							className="w-8 h-40 text-gray-200 fill-current"

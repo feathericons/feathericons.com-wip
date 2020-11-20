@@ -1,6 +1,6 @@
 # The <code><IconName /></code> Icon
 
-<BentoBox />
+<!-- <BentoBox /> -->
 
 <br />
 
@@ -49,24 +49,24 @@ You can always extract this pattern as a CSS class so you don't need to repeat y
 
 You are welcome to submit a pull request to enhance the docs, add translations, and contribute examples.
 
-<p>
 <small>
 
-<!-- prettier-ignore -->
-[Feather](https://github.com/feathericons/feather) is by [Cole Bemis](https://twitter.com/colebemis) and [feathericons.com](https://github.com/feathericons/feathericons.com) is by [Zaydek](https://twitter.com/username_ZAYDEK).<br />
-Licensed as [MIT](https://github.com/feathericons/feather/blob/master/LICENSE). You can use the icons personally and commerically without attribution.<br />
-Built using [Duomo CSS](https://github.com/zaydek/duomo) and [Prose CSS](https://github.com/zaydek/prose).
+[Feather](https://github.com/feathericons/feather) is by [Cole Bemis](https://twitter.com/colebemis) and
+[feathericons.com](https://github.com/feathericons/feathericons.com) is by
+[Zaydek](https://twitter.com/username_ZAYDEK).<br /> Licensed as
+[MIT](https://github.com/feathericons/feather/blob/master/LICENSE). You can use the icons personally and commerically
+without attribution.<br /> Built using [Duomo CSS](https://github.com/zaydek/duomo) and
+[Prose CSS](https://github.com/zaydek/prose).
 
 </small>
-</p>
 
 <br />
 
 ## Demos Using <code><IconName /></code>
 
-<div>
+<!-- <div>
 	<Demos />
-</div>
+</div> -->
 
 <br />
 

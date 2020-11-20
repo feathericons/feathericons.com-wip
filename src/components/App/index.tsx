@@ -10,6 +10,7 @@ import { Download, ExternalLink, GitHub } from "react-feather"
 import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 import { range } from "@zaydek/lib/dist/helpers"
+import { Router, useRouter } from "next/router"
 import { Sponsor } from "./Sponsor"
 import { useEffect } from "react"
 
@@ -18,8 +19,27 @@ import "@zaydek/prose"
 export default function App({ children }: { children?: React.ReactNode }) {
 	const screen = useBreakpoints()
 
+	const router = useRouter()
+
+	// Once:
 	useEffect(() => {
 		return Duomo.init(process.env.NODE_ENV)
+	}, [])
+
+	useEffect(() => {
+		const handleRouteChange = (url: string) => {
+			if (url === "/") {
+				return
+			}
+			requestAnimationFrame(() => {
+				const obscureEffect = document.getElementById("obscure-effect")!
+				window.scrollTo(0, obscureEffect.getBoundingClientRect().y)
+			})
+		}
+		router.events.on("routeChangeComplete", handleRouteChange)
+		return () => {
+			router.events.off("routeChangeComplete", handleRouteChange)
+		}
 	}, [])
 
 	return (

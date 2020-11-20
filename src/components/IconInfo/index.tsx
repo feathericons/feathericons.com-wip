@@ -38,7 +38,7 @@ function More({ name }: { name: string }) {
 	return (
 		<IconGrid>
 			{icon.more.map(each => (
-				<Icon icon={datasetAsMap[each]} />
+				<Icon key={each} icon={datasetAsMap[each]} />
 			))}
 		</IconGrid>
 	)
