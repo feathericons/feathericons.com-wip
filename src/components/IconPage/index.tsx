@@ -35,7 +35,7 @@ function BentoBox({ SVG }: SVGProps) {
 	return (
 		<div className="bento-box">
 			{range(4).map(each => (
-				<div key={each}>
+				<div key={each} className="border-1 rounded-8">
 					<SVG />
 				</div>
 			))}

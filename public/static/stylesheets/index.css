@@ -46511,7 +46511,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f5;
 }
 .bento-box > *:nth-child(1) {
   grid-area: a;
