@@ -29,18 +29,6 @@ function BentoBox({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	)
 }
 
-// function BentoBox({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
-// 	return (
-// 		<div className="bento-box">
-// 			{range(4).map(each => (
-// 				<div key={each}>
-// 					<SVG />
-// 				</div>
-// 			))}
-// 		</div>
-// 	)
-// }
-
 function More({ name }: { name: string }) {
 	const metadata = datasetAsMap[name]
 	return (
@@ -62,8 +50,10 @@ export default function IconInfo({ name }: { name: string }) {
 				components={{
 					KebabCase: () => name,
 					TitleCase: () => toTitleCase(name),
+
 					BentoBox: () => <BentoBox SVG={SVG} />,
-					Demos,
+					Demos: () => <Demos SVG={SVG} />,
+
 					More: () =>
 						!metadata.more.length ? null : (
 							<>

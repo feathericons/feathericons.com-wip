@@ -1,45 +1,38 @@
-import { Eye, EyeOff, GitHub, Heart, Instagram, Lock, Mail, MessageCircle, Send, Twitter } from "react-feather"
+import { Eye, EyeOff, GitHub, Instagram, Lock, Mail, MessageCircle, Share2, Twitter } from "react-feather"
 import { rem } from "@zaydek/duomo/dist/runtime"
 import { useState } from "react"
 
-interface DemoWrapperProps {
-	children?: React.ReactNode
-}
-
-// TODO
-function DemoVStack({ children }: DemoWrapperProps) {
+function DemoWrapper({ children }: { children?: React.ReactNode }) {
 	return (
-		// TODO: Use `stack-center`?
 		<div className="hstack bg-gray-100">
-			{/* prettier-ignore */}
-			<div className="vstack">
-				{children}
+			<div className="vstack">{children}</div>
+		</div>
+	)
+}
+
+export function Demo1({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
+	return (
+		<DemoWrapper>
+			<div className="hstack stack-center space-24">
+				{[16, 24, 36, 54].map(each => (
+					<SVG className={`w-${each} h-${each}`} />
+				))}
 			</div>
-		</div>
+		</DemoWrapper>
 	)
 }
 
-export function Demo1() {
-	return (
-		<div className="hstack stack-center space-20 bg-gray-100">
-			<GitHub className="w-16 h-16" />
-			<GitHub className="w-24 h-24" />
-			<GitHub className="w-36 h-36" />
-			<GitHub className="w-54 h-54" />
-		</div>
-	)
-}
-
-export function Demo2() {
+export function Demo2({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	const [show, setShow] = useState(false)
+
 	return (
-		<DemoVStack>
+		<DemoWrapper>
 			<div
 				className="bg-white rounded-8"
 				style={{ width: rem(240), boxShadow: "var(--shadow-xs), var(--shadow-base)" }}
 			>
 				<div className="hstack stack-center space-16 px-16 h-48">
-					<GitHub className="w-18 h-18 text-gray-600" />
+					<SVG className="w-18 h-18 text-gray-600" />
 					{/* TODO: Refactor code. */}
 					<div className="spacer vstack h-full overflow-x-scroll">
 						<div className="leading-1">username_ZAYDEK</div>
@@ -69,64 +62,61 @@ export function Demo2() {
 					)}
 				</div>
 			</div>
-		</DemoVStack>
+		</DemoWrapper>
 	)
 }
 
-const TwitterBlue = "#1da1f2"
-
-export function Demo3() {
+export function Demo3({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
-		<div className="hstack stack-center bg-gray-100">
-			{/* TODO: Change to <button>. */}
-			<div className="hstack stack-center space-8 px-24 py-12 rounded-full" style={{ backgroundColor: TwitterBlue }}>
-				<GitHub className="w-20 h-20 text-white" />
+		// TODO: Change to `<button>`.
+		<DemoWrapper>
+			<div className="hstack stack-center space-12 px-24 py-12 rounded-full" style={{ backgroundColor: "#1da1f2" }}>
+				<SVG className="w-20 h-20 text-white" />
 				<div className="text-17 leading-1 text-white">Follow me</div>
 			</div>
-		</div>
+		</DemoWrapper>
 	)
 }
 
-export function Demo4() {
+export function Demo4({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
-		<div className="hstack stack-center space-20 bg-gray-100">
-			<div className="hstack stack-center space-8">
-				<Heart className="w-17 h-17" />
-				<div className="text-15 leading-1">31</div>
+		<DemoWrapper>
+			<div className="hstack space-24">
+				<div className="hstack stack-center space-8">
+					<SVG className="w-17 h-17" />
+					<div className="text-15 leading-1">31</div>
+				</div>
+				<div className="hstack space-8">
+					<MessageCircle className="w-17 h-17" />
+					<div className="text-15 leading-1">41</div>
+				</div>
+				<div className="hstack space-8">
+					<Share2 className="w-17 h-17" />
+					<div className="text-15 leading-1">59</div>
+				</div>
 			</div>
-			<div className="hstack space-8">
-				<Send className="w-17 h-17" />
-				<div className="text-15 leading-1">41</div>
-			</div>
-			<div className="hstack space-8">
-				<MessageCircle className="w-17 h-17" />
-				<div className="text-15 leading-1">59</div>
-			</div>
-			<div className="hstack space-8">
-				<GitHub className="w-17 h-17" />
-			</div>
-		</div>
+		</DemoWrapper>
 	)
 }
 
-// TODO: Add brand colors for hover.
-export function Demo5() {
+export function Demo5({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
-		<div className="hstack stack-center space-20 bg-gray-100">
-			<GitHub className="w-20 h-20" />
-			<Instagram className="w-20 h-20" />
-			<Mail className="w-20 h-20" />
-			<Twitter className="w-20 h-20" />
-		</div>
+		<DemoWrapper>
+			<div className="hstack stack-center space-24">
+				{[SVG, Instagram, Mail, Twitter].map(Each => (
+					<Each className="w-20 h-20" />
+				))}
+			</div>
+		</DemoWrapper>
 	)
 }
 
 // // TODO
 export function Demo6() {
-	return <DemoVStack>Hello</DemoVStack>
+	return <div>TODO</div>
 }
 
-export default function Demos() {
+export default function Demos({ SVG }: { SVG: React.FC<React.SVGAttributes<SVGElement>> }) {
 	return (
 		<div
 			style={{
@@ -137,7 +127,7 @@ export default function Demos() {
 			}}
 		>
 			{[Demo1, Demo2, Demo3, Demo4, Demo5, Demo6].map(Each => (
-				<Each />
+				<Each SVG={SVG} />
 			))}
 		</div>
 	)
