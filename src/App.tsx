@@ -3,6 +3,8 @@ import { DocumentTitle, range } from "./lib"
 import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { Route, Switch } from "react-router-dom"
 
+const appRounded = 32
+
 function TopRow() {
 	return (
 		<div className="hstack space-16 px-16 sm:px-24">
@@ -28,7 +30,6 @@ function Header() {
 				<div className="hstack w-192 h-48 bg-gray-200 rounded-full">
 					<div className="w-96 h-8 bg-gray-300 rounded-full"></div>
 				</div>
-				{/* Sponsor text */}
 				<div className="hstack space-8">
 					<div className="w-12 h-12 bg-gray-300 rounded-full"></div>
 					<div className="w-96 h-8 bg-gray-300 rounded-full"></div>
@@ -44,7 +45,7 @@ function Header() {
 				<div className="vstack space-24">
 					{/* Logo */}
 					<div className="w-64 h-64 bg-gray-200 rounded-full"></div>
-					<div className="w-192 h-24 bg-gray-200 rounded-full"></div>
+					<div className="mt-32 w-192 h-24 bg-gray-200 rounded-full"></div>
 					<div className="mt-16 w-320 h-8 bg-gray-200 rounded-full"></div>
 					{/* CTA buttons */}
 					<div className="vstack md:hstack space-16">
@@ -106,9 +107,34 @@ function Header() {
 function AppLHS() {
 	return (
 		<div className="spacer">
-			{range(64).map(each => (
-				<div key={each}>Hello, world!</div>
-			))}
+			<div className="sticky top-0 z-10">
+				<div className={`hstack space-16 p-24 h-80 md:h-96 bg-white border-b-1 xl:rounded-tl-${appRounded}`}>
+					<div className="w-24 h-24 bg-gray-200 rounded-full"></div>
+					<div className="w-160 h-8 bg-gray-200 rounded-full"></div>
+					<div className="spacer"></div>
+					<div className="w-24 h-24 bg-gray-200 rounded-full"></div>
+				</div>
+			</div>
+			<div
+				className="grid !grid-cols-6 gap-16 px-16 sm:px-24 xl:px-64 py-64"
+				style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}
+			>
+				{range(200).map(each => (
+					<div key={each} className="relative" style={{ paddingBottom: "100%" }}>
+						<div className="absolute inset-0">
+							<div className="zstack h-full">
+								<div className="w-48 h-48 bg-gray-200 rounded-full"></div>
+								<div className="absolute bottom-0 inset-x-0 py-8">
+									<div className="hstack space-8">
+										<div className="w-96 h-8 bg-gray-300 rounded-full"></div>
+										<div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
 		</div>
 	)
 }
@@ -116,13 +142,12 @@ function AppLHS() {
 function AppRHS() {
 	return (
 		// NOTE: Use `align-self-stretch` because of `w-320`.
-		<div className="hidden md:unhidden align-self-stretch w-320 bg-gray-50 border-l-1 xl:rounded-r-24">
+		<div className={`hidden md:unhidden align-self-stretch w-320 bg-gray-50 border-l-1 xl:rounded-r-${appRounded}`}>
 			<div className="sticky top-0">
-				{/* NOTE: Use `align-stretch` here. */}
-				<div className="vstack align-stretch h-screen">
+				<div className="vstack align-stretch">
 					{/* Preview */}
 					{/* NOTE: Use `align-self-stretch` because of `h-320`. */}
-					<div className="zstack align-self-stretch h-320 bg-white border-b-1 rounded-tr-24">
+					<div className={`zstack align-self-stretch h-320 bg-white border-b-1 xl:rounded-tr-${appRounded}`}>
 						<div className="w-64 h-64 bg-gray-200 rounded-full"></div>
 						{/* Top */}
 						<div className="absolute top-0 inset-x-0 p-24">
@@ -162,14 +187,14 @@ function AppRHS() {
 							</div>
 						))}
 					</div>
-					{/* Ad */}
-					<div className="spacer"></div>
-					<div className="hstack space-16 p-24 border-t-1">
+					{/* Ad / Sponsor */}
+					<div className="hstack space-16 p-24 border-b-1">
 						<div className="w-128 h-96 bg-gray-200 rounded-4"></div>
 						<div className="spacer vstack align-self-start align-start space-8 py-4">
-							<div className="h-8 bg-gray-200 rounded-full" data-stagger-3></div>
-							<div className="h-8 bg-gray-200 rounded-full" data-stagger-2></div>
-							<div className="h-8 bg-gray-200 rounded-full" data-stagger-1></div>
+							<div className="h-6 bg-gray-200 rounded-full" data-stagger-1></div>
+							<div className="h-6 bg-gray-200 rounded-full" data-stagger-2></div>
+							<div className="h-6 bg-gray-200 rounded-full" data-stagger-3></div>
+							<div className="h-6 bg-gray-200 rounded-full" data-stagger-4></div>
 						</div>
 					</div>
 				</div>
@@ -181,7 +206,7 @@ function AppRHS() {
 function App() {
 	return (
 		<div className="hstack">
-			<div className="hstack w-full max-w-xl bg-white xl:rounded-24 shadow shadow-px shadow-md">
+			<div className={`hstack w-full max-w-xl bg-white xl:rounded-${appRounded} shadow shadow-px shadow-md`}>
 				<AppLHS />
 				<AppRHS />
 			</div>
@@ -196,7 +221,8 @@ function Home() {
 	}, [])
 
 	return (
-		<div className="py-16 pb-64 bg-gray-50">
+		// data-debug data-debug-space
+		<div className="py-16 xl:pb-64 bg-gray-50">
 			<style>{`
 				:root {
 					--border-color-default: hsl(var(--gray-200));
