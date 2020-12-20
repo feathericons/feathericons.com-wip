@@ -1,12 +1,12 @@
+// prettier-ignore
 export interface ISponsor {
-	name: string
-	href: string
-	src: string
+	name:    string
+	href:    string
+	src:     string
 	subtext: string
 }
 
-// TODO: Add analytics metadata.
-const sponsors: ISponsor[] = [
+export default [
 	{
 		name: "QA Wolf",
 		href: "https://github.com/qawolf/qawolf",
@@ -37,6 +37,4 @@ const sponsors: ISponsor[] = [
 		src: "/static/images/sponsors/codetisans.png",
 		subtext: "Laravel Softwarehouse",
 	},
-]
-
-export default sponsors
+] as ISponsor[]
