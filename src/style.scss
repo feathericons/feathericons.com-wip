@@ -1,5 +1,6 @@
 @use "../node_modules/@zaydek/duomo" as * with (
 	$breakpoint-map: (
+		// xs: 512,
 		sm: 640,
 		md: 768,
 		lg: 1024,
