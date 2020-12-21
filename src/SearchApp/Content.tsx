@@ -8,12 +8,12 @@ export default function Content() {
 	return (
 		<div className="spacer">
 			<div className="sticky top-0 z-10">
-				<div className={`hstack space-16 p-24 h-80 md:h-96 bg-white border-b-1 xl:rounded-tl-${config.rounded}`}>
-					<div className="w-24 h-24 bg-gray-200 rounded-full"></div>
-					<div className="w-160 h-8 bg-gray-200 rounded-full"></div>
+				<div className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 xl:rounded-tl-${config.rounded}`}>
+					<div className="w-24 h-24 bg-less-important rounded-full"></div>
+					<div className="w-160 h-8 bg-less-important rounded-full"></div>
 					<div className="spacer"></div>
-					<div className="w-24 h-24 bg-gray-200 rounded-full"></div>
-					<div className="w-24 h-24 bg-gray-200 rounded-full"></div>
+					<div className="w-24 h-24 bg-less-important rounded-full"></div>
+					<div className="w-24 h-24 bg-less-important rounded-full"></div>
 				</div>
 			</div>
 			<div
@@ -23,7 +23,7 @@ export default function Content() {
 				{range(200).map(each => (
 					<AspectRatioBox key={each}>
 						<div className="zstack h-full">
-							<div className="w-48 h-48 bg-gray-200 rounded-full"></div>
+							<div className="w-48 h-48 bg-important rounded-full"></div>
 							<div className="absolute bottom-0 inset-x-0 py-8">
 								<PlaceholderText />
 							</div>

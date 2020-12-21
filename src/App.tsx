@@ -10,12 +10,16 @@ type DevMode = "development" | "production"
 
 function PageHome() {
 	useEffect(() => {
+		document.body.parentElement!.classList.add("bg-screen")
+	}, [])
+
+	useEffect(() => {
 		return Duomo.init(process.env.NODE_ENV as DevMode)
 	}, [])
 
 	return (
 		<DocumentTitle title="Feathericons">
-			<div className="py-16 xl:pb-64 bg-screen">
+			<div className="py-16 xl:pb-64">
 				<TopAnchors />
 				<Header />
 				<SearchApp />

@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar"
 export default function SearchApp() {
 	return (
 		<div className="hstack">
-			<div className={`hstack w-full max-w-xl bg-white xl:rounded-${config.rounded} shadow shadow-px shadow-md`}>
+			<div className={`hstack w-full max-w-xl bg-search-app xl:rounded-${config.rounded} shadow shadow-px shadow-md`}>
 				<Content />
 				<Sidebar />
 			</div>
