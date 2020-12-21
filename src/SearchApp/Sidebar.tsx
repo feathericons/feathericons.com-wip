@@ -1,4 +1,3 @@
-import AspectRatioBox from "../AspectRatioBox"
 import React from "react"
 import { range } from "../lib"
 

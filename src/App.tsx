@@ -1,21 +1,21 @@
 import Header from "./Header"
-import React, { useEffect } from "react"
+import React from "react"
 import SearchApp from "./SearchApp"
 import TopAnchors from "./TopAnchors"
 import { DocumentTitle } from "./lib"
-import { Duomo } from "@zaydek/duomo/dist/runtime"
+// import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { Route, Switch } from "react-router-dom"
 
-type DevMode = "development" | "production"
+// type DEV_MODE = "development" | "production"
 
 function PageHome() {
-	useEffect(() => {
-		document.body.parentElement!.classList.add("bg-screen")
-	}, [])
-
-	useEffect(() => {
-		return Duomo.init(process.env.NODE_ENV as DevMode)
-	}, [])
+	// useEffect(() => {
+	// 	document.body.parentElement!.classList.add("bg-screen")
+	// }, [])
+	//
+	// useEffect(() => {
+	// 	return Duomo.init(process.env.NODE_ENV as DEV_MODE)
+	// }, [])
 
 	return (
 		<DocumentTitle title="Feathericons">

@@ -12,7 +12,7 @@
 :root {
 	--border-color-default: hsl(var(--gray-200));
 
-	--bg-screen: hsl(var(--gray-50));
+	--bg-html: hsl(var(--gray-50));
 	--bg-search-app: hsl(var(--white));
 	--bg-search-app-siderbar: hsl(var(--gray-50));
 	--bg-less-important: hsl(var(--gray-200));
@@ -23,10 +23,10 @@
 	@include transition;
 }
 
-:root[data-theme="dark"] {
+[data-theme="dark"] {
 	--border-color-default: hsl(var(--gray-700));
 
-	--bg-screen: hsl(var(--gray-900));
+	--bg-html: hsl(var(--gray-900));
 	--bg-search-app: hsl(var(--gray-800));
 	--bg-search-app-siderbar: hsl(var(--gray-700));
 	--bg-less-important: hsl(var(--gray-700));
@@ -35,10 +35,11 @@
 	--border-hr: hsl(var(--gray-700));
 }
 
-.bg-screen {
-	background-color: var(--bg-screen);
+html {
+	background-color: var(--bg-html);
 	@include transition;
 }
+
 .bg-search-app {
 	background-color: var(--bg-search-app);
 	@include transition;
