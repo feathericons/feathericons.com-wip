@@ -1,7 +1,7 @@
 import Header from "./Header"
 import React, { useEffect } from "react"
 import SearchApp from "./SearchApp"
-import TopRow from "./TopRow"
+import TopAnchors from "./TopAnchors"
 import { DocumentTitle } from "./lib"
 import { Duomo } from "@zaydek/duomo/dist/runtime"
 import { Route, Switch } from "react-router-dom"
@@ -16,7 +16,7 @@ function PageHome() {
 	return (
 		<DocumentTitle title="Feathericons">
 			<div className="py-16 xl:pb-64 bg-gray-50">
-				<TopRow />
+				<TopAnchors />
 				<Header />
 				<SearchApp />
 			</div>
