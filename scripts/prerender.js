@@ -1,8 +1,5 @@
 const { build } = require("esbuild")
-const { check } = require("./utils")
-const fs = require("fs")
 const markdownItPlugin = require("./markdown-it-plugin")
-const sass = require("sass")
 
 ;(() => {
 	build({
@@ -17,14 +14,4 @@ const sass = require("sass")
 			throw err
 		}
 	})
-	const res = sass.renderSync({
-		file: "src/style.scss",
-		outputStyle: "compressed",
-	})
-	const [, err] = check(() => fs.writeFileSync("build/style.css", res.css.toString(), "utf8"))
-	if (err) {
-		if (err) {
-			throw err
-		}
-	}
 })()

@@ -8,6 +8,10 @@
 	)
 );
 
+:root {
+	--border-color-default: hsl(var(--gray-200));
+}
+
 // .t-16 {
 // 	top: rem(16);
 // }
