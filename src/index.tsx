@@ -2,22 +2,22 @@ import App from "./App"
 import React from "react"
 import ReactDOM from "react-dom"
 import routes from "./routes"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 
 if (process.env.NODE_ENV === "development" || !routes[window.location.pathname]) {
-	console.log("[debug] ReactDOM.render")
+	console.log("[Zazen] ReactDOM.render")
 	ReactDOM.render(
-		<BrowserRouter>
+		<Router>
 			<App />
-		</BrowserRouter>,
+		</Router>,
 		document.getElementById("root"),
 	)
 } else {
-	console.log("[debug] ReactDOM.hydrate")
+	console.log("[Zazen] ReactDOM.hydrate")
 	ReactDOM.hydrate(
-		<BrowserRouter>
+		<Router>
 			<App />
-		</BrowserRouter>,
+		</Router>,
 		document.getElementById("root"),
 	)
 }
