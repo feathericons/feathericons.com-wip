@@ -8,10 +8,7 @@ function Sponsor() {
 			<div className="hstack w-192 h-48 bg-gray-200 rounded-full">
 				<div className="w-96 h-8 bg-gray-300 rounded-full"></div>
 			</div>
-			<div className="hstack space-8">
-				<div className="w-12 h-12 bg-gray-300 rounded-full"></div>
-				<div className="w-96 h-8 bg-gray-300 rounded-full"></div>
-			</div>
+			<PlaceholderText />
 		</div>
 	)
 }
