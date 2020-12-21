@@ -3,11 +3,12 @@
 	"license": "MIT",
 	"scripts": {
 		"prebuild-dataset": "yarn --silent ts-node src/data/build.ts > src/data/raw.json",
-		"prerender-css": "node scripts/prerender-css.js",
-		"prerender": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
+		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
+		"prerender-duomo-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
+		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css",
 		"test": "jest",
-		"start": "rm -rf build && mkdir build && yarn prerender node scripts/start.js",
-		"build": "rm -rf build && mkdir build && yarn prerender NODE_ENV=production node scripts/build.js",
+		"start": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && node scripts/start.js",
+		"build": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && NODE_ENV=production node scripts/build.js",
 		"serve": "live-server --host=localhost --port=8080 build"
 	},
 	"dependencies": {

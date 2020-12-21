@@ -15,7 +15,7 @@ function PageHome() {
 
 	return (
 		<DocumentTitle title="Feathericons">
-			<div className="py-16 xl:pb-64 bg-gray-50">
+			<div className="py-16 xl:pb-64 bg-screen">
 				<TopAnchors />
 				<Header />
 				<SearchApp />
