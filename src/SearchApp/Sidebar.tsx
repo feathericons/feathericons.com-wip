@@ -7,12 +7,14 @@ const rounded = 24
 export default function Sidebar() {
 	return (
 		<div
-			className={`hidden md:unhidden align-self-stretch w-320 bg-search-app-sidebar border-l-1 xl:rounded-r-${rounded}`}
+			className={`hidden md:unhidden align-self-stretch w-320 bg-search-app-sidebar border-l-1 border-hr xl:rounded-r-${rounded}`}
 		>
 			<div className="sticky top-0">
 				<div className="vstack align-stretch">
 					{/* Preview */}
-					<div className={`zstack align-self-stretch h-320 bg-search-app border-b-1 xl:rounded-tr-${rounded}`}>
+					<div
+						className={`zstack align-self-stretch h-320 bg-search-app border-b-1 border-hr xl:rounded-tr-${rounded}`}
+					>
 						<div className="w-64 h-64 bg-less-important rounded-full"></div>
 						<div className="absolute top-right-0 p-24">
 							<div className="w-24 h-24 bg-less-important rounded-full"></div>
@@ -29,7 +31,7 @@ export default function Sidebar() {
 					{/* Sliders */}
 					<div className="overflow-y-scroll">
 						{range(2).map(each => (
-							<div key={each} className="vstack space-16 p-24 border-b-1">
+							<div key={each} className="vstack space-16 p-24 border-b-1 border-hr">
 								<div className="hstack space-24">
 									<div className="w-96 h-8 bg-less-important rounded-full"></div>
 									<div className="spacer"></div>
@@ -45,13 +47,13 @@ export default function Sidebar() {
 						))}
 					</div>
 					{/* Ad / Sponsor */}
-					<div className="hstack space-16 p-24 border-b-1">
+					<div className="hstack space-16 p-24 border-b-1 border-hr">
 						<div className="w-128 h-96 bg-less-important rounded-4"></div>
 						<div className="spacer vstack align-self-start align-start space-8 py-4">
-							<div className="h-6 bg-less-important rounded-full" data-stagger-1></div>
-							<div className="h-6 bg-less-important rounded-full" data-stagger-2></div>
-							<div className="h-6 bg-less-important rounded-full" data-stagger-3></div>
-							<div className="h-6 bg-less-important rounded-full" data-stagger-4></div>
+							<div className="h-6 bg-less-important rounded-full" data-stagger="1"></div>
+							<div className="h-6 bg-less-important rounded-full" data-stagger="2"></div>
+							<div className="h-6 bg-less-important rounded-full" data-stagger="3"></div>
+							<div className="h-6 bg-less-important rounded-full" data-stagger="4"></div>
 						</div>
 					</div>
 				</div>

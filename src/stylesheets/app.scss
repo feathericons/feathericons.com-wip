@@ -1,10 +1,12 @@
-// @use "@zaydek/duomo" as * with ($headless: true);
+@use "@zaydek/duomo" as * with ($headless: true);
 
 /*
  * Theme
  */
 @mixin transition {
-	transition: 700ms background-color var(--ease-in-out), 700ms border-color var(--ease-in-out);
+	$dur: 700ms;
+	$timing: timing(ease-out, $raw: true);
+	transition: $dur background-color $timing, $dur border-color $timing;
 }
 
 :root {
@@ -16,6 +18,7 @@
 	--bg-less-important: hsl(var(--gray-200));
 	--bg-important: hsl(var(--gray-300));
 	--bg-more-important: hsl(var(--gray-400));
+	--border-hr: hsl(var(--gray-300));
 
 	@include transition;
 }
@@ -29,6 +32,7 @@
 	--bg-less-important: hsl(var(--gray-700));
 	--bg-important: hsl(var(--gray-600));
 	--bg-more-important: hsl(var(--gray-500));
+	--border-hr: hsl(var(--gray-700));
 }
 
 .bg-screen {
@@ -53,5 +57,9 @@
 }
 .bg-more-important {
 	background-color: var(--bg-more-important);
+	@include transition;
+}
+.border-hr {
+	border-color: var(--border-hr);
 	@include transition;
 }

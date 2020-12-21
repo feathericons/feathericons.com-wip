@@ -21,6 +21,7 @@ export default function Document({ metadata }: DocumentProps) {
 					<App />
 				</div>
 				<script src="/script.js"></script>
+				<script>{/* Dark mode */}</script>
 			</body>
 		</html>
 	)
