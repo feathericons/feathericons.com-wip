@@ -10,4 +10,11 @@ export default {
 			<meta name="description" content="Feathericons" />
 		</>,
 	},
+	"/github": {
+		metadata: <>
+			<link rel="icon" href="favicon.ico" />
+			<title>Feathericons</title>
+			<meta name="description" content="Feathericons" />
+		</>,
+	},
 } as Routes

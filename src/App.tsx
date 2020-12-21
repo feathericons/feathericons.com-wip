@@ -1,19 +1,40 @@
-// import { Duomo } from "@zaydek/duomo/dist/runtime"
-
 import Header from "./Header"
+import IconGrid from "./SearchApp/IconGrid"
 import React from "react"
 import SearchApp from "./SearchApp"
 import TopAnchors from "./TopAnchors"
 import { DocumentTitle } from "./lib"
-import { Route, Switch } from "react-router-dom"
+import { Route, Switch, useParams } from "react-router-dom"
 
-function PageHome() {
+function Homepage() {
 	return (
 		<DocumentTitle title="Feathericons">
 			<div className="py-16 pb-0 xl:pb-64">
 				<TopAnchors />
 				<Header />
-				<SearchApp />
+				<SearchApp>
+					<IconGrid />
+				</SearchApp>
+			</div>
+		</DocumentTitle>
+	)
+}
+
+interface Keys {
+	[key: string]: string
+}
+
+function IconPage() {
+	const { name } = useParams() as Keys
+
+	return (
+		<DocumentTitle title="Feathericons">
+			<div className="py-16 pb-0 xl:pb-64">
+				<TopAnchors />
+				<Header />
+				<SearchApp>
+					<div>{name}</div>
+				</SearchApp>
 			</div>
 		</DocumentTitle>
 	)
@@ -22,8 +43,11 @@ function PageHome() {
 export default function Router() {
 	return (
 		<Switch>
-			<Route path="/" exact>
-				<PageHome />
+			<Route path="/:name">
+				<IconPage />
+			</Route>
+			<Route path="*">
+				<Homepage />
 			</Route>
 		</Switch>
 	)

@@ -4,10 +4,10 @@ import React from "react"
 import vars from "./vars"
 import { range } from "../lib"
 
-export default function Content() {
+export default function IconGrid() {
 	return (
-		<div className="spacer">
-			<div className="sticky top-0 z-10">
+		<>
+			{/* <div className="sticky top-0 z-10">
 				<div
 					className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 border-hr xl:rounded-tl-${vars.rounded}`}
 				>
@@ -17,7 +17,7 @@ export default function Content() {
 					<div className="w-24 h-24 bg-important rounded-full"></div>
 					<div className="w-24 h-24 bg-important rounded-full"></div>
 				</div>
-			</div>
+			</div> */}
 			<div
 				className="grid gap-16 px-16 sm:px-24 xl:px-64 py-64 pb-96"
 				style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}
@@ -33,6 +33,6 @@ export default function Content() {
 					</AspectRatioBox>
 				))}
 			</div>
-		</div>
+		</>
 	)
 }
