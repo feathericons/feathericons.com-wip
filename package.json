@@ -8,6 +8,7 @@
 		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css",
 		"test": "jest",
 		"start": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && node scripts/start.js",
+		"fast-start": "node scripts/start.js",
 		"build": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && NODE_ENV=production node scripts/build.js",
 		"serve": "live-server --host=localhost --port=8080 build"
 	},

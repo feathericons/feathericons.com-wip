@@ -9,12 +9,12 @@
 	transition: $dur background-color $timing, $dur border-color $timing;
 }
 
-:root {
+:root:not([data-theme="dark"]) {
 	--border-color-default: hsl(var(--gray-200));
 
 	--bg-html: hsl(var(--gray-50));
 	--bg-search-app: hsl(var(--white));
-	--bg-search-app-siderbar: hsl(var(--gray-50));
+	--bg-search-app-sidebar: hsl(var(--gray-50));
 	--bg-less-important: hsl(var(--gray-200));
 	--bg-important: hsl(var(--gray-300));
 	--bg-more-important: hsl(var(--gray-400));
@@ -23,12 +23,12 @@
 	@include transition;
 }
 
-[data-theme="dark"] {
+:root[data-theme="dark"] {
 	--border-color-default: hsl(var(--gray-700));
 
 	--bg-html: hsl(var(--gray-900));
 	--bg-search-app: hsl(var(--gray-800));
-	--bg-search-app-siderbar: hsl(var(--gray-700));
+	--bg-search-app-sidebar: hsl(var(--gray-800));
 	--bg-less-important: hsl(var(--gray-700));
 	--bg-important: hsl(var(--gray-600));
 	--bg-more-important: hsl(var(--gray-500));

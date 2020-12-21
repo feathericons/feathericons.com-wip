@@ -1,7 +1,7 @@
 import AspectRatioBox from "../AspectRatioBox"
-import config from "./config"
 import PlaceholderText from "../PlaceholderText"
 import React from "react"
+import vars from "./vars"
 import { range } from "../lib"
 
 export default function Content() {
@@ -9,13 +9,13 @@ export default function Content() {
 		<div className="spacer">
 			<div className="sticky top-0 z-10">
 				<div
-					className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 border-hr xl:rounded-tl-${config.rounded}`}
+					className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 border-hr xl:rounded-tl-${vars.rounded}`}
 				>
-					<div className="w-24 h-24 bg-less-important rounded-full"></div>
-					<div className="w-160 h-8 bg-less-important rounded-full"></div>
+					<div className="w-24 h-24 bg-more-important rounded-full"></div>
+					<div className="w-160 h-8 bg-important rounded-full"></div>
 					<div className="spacer"></div>
-					<div className="w-24 h-24 bg-less-important rounded-full"></div>
-					<div className="w-24 h-24 bg-less-important rounded-full"></div>
+					<div className="w-24 h-24 bg-important rounded-full"></div>
+					<div className="w-24 h-24 bg-important rounded-full"></div>
 				</div>
 			</div>
 			<div

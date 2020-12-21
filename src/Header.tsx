@@ -18,7 +18,7 @@ export default function Header() {
 				{/* LHS */}
 				<div className="vstack space-24">
 					{/* Logo */}
-					<div className="w-64 h-64 bg-more-important rounded-full"></div>
+					<div className="w-64 h-64 bg-important rounded-full"></div>
 					<div className="mt-32 w-192 h-24 bg-less-important rounded-full"></div>
 					<div className="mt-16 w-320 h-8 bg-less-important rounded-full"></div>
 					{/* CTA buttons */}
@@ -26,7 +26,7 @@ export default function Header() {
 						{range(2).map(each => (
 							<div
 								key={each}
-								className="hstack w-full md:w-192 h-48 bg-less-important rounded-16 md:rounded-full"
+								className="hstack w-full md:w-192 h-48 bg-less-important rounded-12 md:rounded-full"
 								style={{ maxWidth: 512 }}
 							>
 								<PlaceholderText />
