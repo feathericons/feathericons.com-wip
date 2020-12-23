@@ -4,12 +4,13 @@
 	"scripts": {
 		"prebuild-dataset": "ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
-		"prerender-duomo-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
-		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/app.css",
+		"prerender-skeleton-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/skeleton.scss build/stylesheets/skeleton.css",
+		"prerender-theme-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/theme.scss build/stylesheets/theme.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/theme.css",
+		"prerender-prose-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/prose.scss build/stylesheets/prose.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/prose.css",
 		"test": "jest",
-		"start": "rm -rf build && mkdir build && yarn prerender-html && yarn prerender-duomo-css && yarn prerender-app-css && node scripts/start.js",
+		"start": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-skeleton-css' 'yarn prerender-theme-css' 'yarn prerender-prose-css' && node scripts/start.js",
 		"restart": "node scripts/start.js",
-		"build": "rm -rf build && mkdir build && yarn prerender-html && yarn prerender-duomo-css && yarn prerender-app-css && NODE_ENV=production node scripts/build.js"
+		"build": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-skeleton-css' 'yarn prerender-theme-css' 'yarn prerender-prose-css' && NODE_ENV=production node scripts/build.js"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
@@ -20,17 +21,16 @@
 		"react-router-dom": "^5.2.0"
 	},
 	"devDependencies": {
-		"@types/markdown-it": "^12.0.0",
 		"@types/mdx-js__react": "^1.5.3",
 		"@types/node": "^14.14.14",
 		"@types/react-dom": "^17.0.0",
 		"@types/react-router-dom": "^5.1.6",
 		"@types/sass": "^1.16.0",
 		"chokidar": "^3.4.3",
+		"concurrently": "^5.3.0",
 		"esbuild": "^0.8.25",
 		"jest": "^26.6.3",
 		"live-server": "^1.2.1",
-		"markdown-it": "^12.0.3",
 		"nodemon": "^2.0.6",
 		"prettier": "^2.2.1",
 		"sass": "^1.30.0",

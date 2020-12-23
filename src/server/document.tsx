@@ -24,8 +24,9 @@ export default function Document({ metadata }: DocumentProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{metadata}
-				<link rel="stylesheet" href="/stylesheets/duomo.css" />
-				<link rel="stylesheet" href="/stylesheets/app.css" />
+				<link rel="stylesheet" href="/stylesheets/skeleton.css" />
+				<link rel="stylesheet" href="/stylesheets/theme.css" />
+				<link rel="stylesheet" href="/stylesheets/prose.css" />
 				<Scripts />
 			</head>
 			<body>

@@ -1,79 +1,8 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-@mixin theme-transition {
-	$theme-duration: 500ms;
-	$theme-timing: timing(ease-out, $raw: true);
-
-	// prettier-ignore
-	--theme-transition: background-color #{$theme-duration} #{$theme-timing}, border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing}, color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing}, opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing}, transform #{$theme-duration} #{$theme-timing};
-}
-
-:root {
-	--bg-root: hsl(var(--gray-50));
-	--bg-search-app: hsl(var(--white));
-	--bg-search-app-content-search-bar: hsl(var(--white));
-	--bg-search-app-sidebar-preview: hsl(var(--white));
-	--bg-search-app-sidebar: hsl(var(--gray-50));
-	--bg-less-important: hsl(var(--gray-200));
-	--bg-important: hsl(var(--gray-300));
-	--bg-more-important: hsl(var(--gray-400));
-	--border-color-default: hsl(var(--gray-200));
-
-	@include theme-transition;
-}
-[data-theme="dark"] {
-	--bg-root: hsl(var(--gray-900));
-	--bg-search-app: hsl(var(--gray-800));
-	--bg-search-app-content-search-bar: hsl(var(--gray-800));
-	--bg-search-app-sidebar-preview: hsl(var(--gray-800));
-	--bg-search-app-sidebar: hsl(var(--gray-800));
-	--bg-less-important: hsl(var(--gray-700));
-	--bg-important: hsl(var(--gray-600));
-	--bg-more-important: hsl(var(--gray-500));
-	--border-color-default: hsla(var(--gray-900));
-}
-
-:root {
-	background-color: var(--bg-root);
-	transition: var(--theme-transition);
-}
-.bg-search-app {
-	background-color: var(--bg-search-app);
-	transition: var(--theme-transition);
-}
-.bg-search-app-content-search-bar {
-	background-color: var(--bg-search-app-content-search-bar);
-	transition: var(--theme-transition);
-}
-.bg-search-app-sidebar-preview {
-	background-color: var(--bg-search-app-sidebar-preview);
-	transition: var(--theme-transition);
-}
-.bg-search-app-sidebar {
-	background-color: var(--bg-search-app-sidebar);
-	transition: var(--theme-transition);
-}
-.bg-less-important {
-	background-color: var(--bg-less-important);
-	transition: var(--theme-transition);
-}
-.bg-important {
-	background-color: var(--bg-important);
-	transition: var(--theme-transition);
-}
-.bg-more-important {
-	background-color: var(--bg-more-important);
-	transition: var(--theme-transition);
-}
-[class*="border-"] {
-	// border-color: var(--border-hr);
-	transition: var(--theme-transition);
-}
-
 .prose {
 	--prose-block-space: #{rem(32)};
 
-	// NOTE: Use `em` for `--prose-code`.
 	--prose-head-h1: 600 #{rem(32)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h2: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h3: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
@@ -136,10 +65,6 @@
 	--prose-code-pre-bg: hsl(var(--gray-700));
 	--prose-code-pre-border: none;
 }
-
-// .prose > * {
-// 	transition: var(--theme-transition);
-// }
 
 .prose {
 	font: var(--prose-text);
