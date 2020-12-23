@@ -17,7 +17,7 @@ export default function SearchApp({ children }: SearchAppProps) {
 					{/* Search bar */}
 					<div className="sticky top-0 z-30">
 						<div
-							className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app-content-search-bar border-bottom-1 border-hr xl:rounded-top-left-${vars.rounded}`}
+							className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app-content-search-bar border-bottom-1 xl:rounded-top-left-${vars.rounded}`}
 						>
 							<div className="w-24 h-24 bg-important rounded-full"></div>
 							<div className="w-160 h-8 bg-important rounded-full"></div>
