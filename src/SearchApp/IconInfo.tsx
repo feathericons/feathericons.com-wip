@@ -4,8 +4,10 @@ import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
 
 export default function IconInfo() {
 	return (
-		<MarkdownProvider components={{} /* TODO */}>
-			<Docs />
-		</MarkdownProvider>
+		<div className="prose">
+			<MarkdownProvider components={{} /* TODO */}>
+				<Docs />
+			</MarkdownProvider>
+		</div>
 	)
 }
