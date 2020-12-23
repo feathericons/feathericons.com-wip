@@ -5,7 +5,7 @@
 		"prebuild-dataset": "yarn --silent ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
 		"prerender-duomo-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
-		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css",
+		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/app.css",
 		"test": "jest",
 		"start": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && node scripts/start.js",
 		"fast-start": "node scripts/start.js",

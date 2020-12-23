@@ -1,11 +1,29 @@
 @use "@zaydek/duomo" as * with (
+	$env: production,
 	$headless: true,
 	$skeleton: true,
 );
 
-/*
- * Theme
- */
+// @mixin to-dark-mode {
+// 	:root[data-theme="dark"] & {
+// 		$dur: 1200ms;
+// 		$timing: timing(ease-out, $raw: true);
+// 		transition: $dur background-color $timing, $dur border-color $timing;
+// 	}
+// }
+// @mixin to-light-mode {
+// 	:root:not([data-theme="dark"]) & {
+// 		$dur: 600ms;
+// 		$timing: timing(ease-out, $raw: true);
+// 		transition: $dur background-color $timing, $dur border-color $timing;
+// 	}
+// }
+//
+// @mixin transitions {
+// 	@include to-dark-mode;
+// 	@include to-light-mode;
+// }
+
 @mixin transition {
 	$dur: 700ms;
 	$timing: timing(ease-out, $raw: true);
@@ -15,19 +33,18 @@
 :root {
 	--bg-root: hsl(var(--gray-50));
 	--bg-search-app: hsl(var(--white));
+	--bg-search-app-content-search-bar: hsl(var(--white));
 	--bg-search-app-sidebar-preview: hsl(var(--white));
 	--bg-search-app-sidebar: hsl(var(--gray-50));
 	--bg-less-important: hsl(var(--gray-200));
 	--bg-important: hsl(var(--gray-300));
 	--bg-more-important: hsl(var(--gray-400));
 	--border-hr: hsl(var(--gray-200));
-
-	@include transition;
 }
-
 [data-theme="dark"] {
 	--bg-root: hsl(var(--gray-900));
 	--bg-search-app: hsl(var(--gray-800));
+	--bg-search-app-content-search-bar: hsl(var(--gray-800));
 	--bg-search-app-sidebar-preview: hsl(var(--gray-800));
 	--bg-search-app-sidebar: hsl(var(--gray-800));
 	--bg-less-important: hsl(var(--gray-700));
@@ -38,10 +55,17 @@
 
 :root {
 	background-color: var(--bg-root);
+}
+#root {
+	background-color: var(--bg-root);
 	@include transition;
 }
 .bg-search-app {
 	background-color: var(--bg-search-app);
+	@include transition;
+}
+.bg-search-app-content-search-bar {
+	background-color: var(--bg-search-app-content-search-bar);
 	@include transition;
 }
 .bg-search-app-sidebar-preview {
