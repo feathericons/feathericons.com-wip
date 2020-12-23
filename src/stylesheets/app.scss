@@ -1,4 +1,7 @@
-@use "@zaydek/duomo" as * with ($headless: true);
+@use "@zaydek/duomo" as * with (
+	$headless: true,
+	$skeleton: true,
+);
 
 /*
  * Theme
