@@ -5,10 +5,7 @@ import { range } from "../lib"
 
 export default function Icons() {
 	return (
-		<div
-			className="grid gap-16 px-16 sm:px-24 xl:px-64 py-64 pb-96"
-			style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}
-		>
+		<div className="grid gap-16" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}>
 			{range(100).map(each => (
 				<AspectRatioBox key={each}>
 					{/* NOTE: Use `h-full` because of `<AspectRatioBox>`. */}

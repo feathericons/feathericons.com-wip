@@ -1,20 +1,20 @@
 import App from "../App"
 import React from "react"
 
-interface DocumentProps {
-	metadata?: React.ReactNode
-}
-
-function LayoutDarkMode() {
+// {/* <script dangerouslySetInnerHTML={{ __html: "// https://stackoverflow.com/a/42969608" }}></script> */}
+function Scripts() {
 	return (
 		<>
-			<script src="https://unpkg.com/@zaydek/duomo@0.7.8/dist/browser/index.js"></script>
+			<script src="https://unpkg.com/@zaydek/duomo@0.7.9/dist/browser/index.js"></script>
 			<script
 				dangerouslySetInnerHTML={{ __html: `window.Duomo.init(${JSON.stringify(process.env.NODE_ENV)})` }}
 			></script>
-			{/* <script dangerouslySetInnerHTML={{ __html: "// https://stackoverflow.com/a/42969608" }}></script> */}
 		</>
 	)
+}
+
+interface DocumentProps {
+	metadata?: React.ReactNode
 }
 
 export default function Document({ metadata }: DocumentProps) {
@@ -26,7 +26,7 @@ export default function Document({ metadata }: DocumentProps) {
 				{metadata}
 				<link rel="stylesheet" href="/stylesheets/duomo.css" />
 				<link rel="stylesheet" href="/stylesheets/app.css" />
-				<LayoutDarkMode />
+				<Scripts />
 			</head>
 			<body>
 				<noscript>You need to enable JavaScript to run this app.</noscript>

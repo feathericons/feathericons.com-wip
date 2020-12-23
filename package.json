@@ -2,15 +2,14 @@
 	"name": "feathericons.com",
 	"license": "MIT",
 	"scripts": {
-		"prebuild-dataset": "yarn --silent ts-node src/data/build.ts > src/data/raw.json",
+		"prebuild-dataset": "ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
-		"prerender-duomo-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
+		"prerender-duomo-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
 		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/app.css",
 		"test": "jest",
 		"start": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && node scripts/start.js",
 		"fast-start": "node scripts/start.js",
-		"build": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && NODE_ENV=production node scripts/build.js",
-		"serve": "live-server --host=localhost --port=8080 build"
+		"build": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && NODE_ENV=production node scripts/build.js"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
@@ -35,6 +34,7 @@
 		"nodemon": "^2.0.6",
 		"prettier": "^2.2.1",
 		"sass": "^1.30.0",
+		"serve": "^11.3.2",
 		"ts-jest": "^26.4.4",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.1.3"

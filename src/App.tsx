@@ -48,11 +48,11 @@ function IconPage() {
 export default function Router() {
 	return (
 		<Switch>
+			<Route path={["/", "/404"]} exact>
+				<Homepage />
+			</Route>
 			<Route path="/:name">
 				<IconPage />
-			</Route>
-			<Route path="*">
-				<Homepage />
 			</Route>
 		</Switch>
 	)

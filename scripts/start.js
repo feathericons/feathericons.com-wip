@@ -14,10 +14,12 @@ const mdxPlugin = require("./plugins/mdx")
 		outfile: "build/script.js",
 		plugins: [mdxPlugin],
 	})
+
 	// prettier-ignore
 	chokidar
 		.watch("src/**/*.{ts,tsx}", { interval: 0 })
 		.on("all", builder.rebuild)
+
 	liveServer.start({
 		file: "index.html",
 		host: "localhost",

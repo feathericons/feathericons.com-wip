@@ -1,17 +1,17 @@
 import React from "react"
-import v from "./vars"
+import vars from "./vars"
 import { range } from "../lib"
 
 export default function Sidebar() {
 	return (
 		<div
-			className={`hidden md:unhidden align-self-stretch w-320 bg-search-app-sidebar border-left-1 border-hr xl:rounded-right-${v.rounded}`}
+			className={`hidden md:unhidden align-self-stretch w-320 bg-search-app-sidebar border-left-1 border-hr xl:rounded-right-${vars.rounded}`}
 		>
 			<div className="sticky top-0">
 				<div className="vstack align-stretch">
 					{/* Preview */}
 					<div
-						className={`zstack align-self-stretch h-320 bg-search-app-sidebar-preview border-bottom-1 border-hr xl:rounded-top-right-${v.rounded}`}
+						className={`zstack align-self-stretch h-320 bg-search-app-sidebar-preview border-bottom-1 border-hr xl:rounded-top-right-${vars.rounded}`}
 					>
 						<div className="w-64 h-64 bg-important rounded-full"></div>
 						<div className="absolute top-right-0 p-24">
