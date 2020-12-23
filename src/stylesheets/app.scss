@@ -1,28 +1,4 @@
-@use "@zaydek/duomo" as * with (
-	$env: production,
-	$headless: true,
-	$skeleton: true,
-);
-
-// @mixin to-dark-mode {
-// 	:root[data-theme="dark"] & {
-// 		$dur: 1200ms;
-// 		$timing: timing(ease-out, $raw: true);
-// 		transition: $dur background-color $timing, $dur border-color $timing;
-// 	}
-// }
-// @mixin to-light-mode {
-// 	:root:not([data-theme="dark"]) & {
-// 		$dur: 600ms;
-// 		$timing: timing(ease-out, $raw: true);
-// 		transition: $dur background-color $timing, $dur border-color $timing;
-// 	}
-// }
-//
-// @mixin transitions {
-// 	@include to-dark-mode;
-// 	@include to-light-mode;
-// }
+@use "@zaydek/duomo" as * with ($headless: true);
 
 @mixin transition {
 	$dur: 700ms;
@@ -54,9 +30,6 @@
 }
 
 :root {
-	background-color: var(--bg-root);
-}
-#root {
 	background-color: var(--bg-root);
 	@include transition;
 }

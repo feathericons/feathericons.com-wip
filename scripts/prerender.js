@@ -1,5 +1,5 @@
 const { build } = require("esbuild")
-const markdownItPlugin = require("./markdown-it-plugin")
+const mdxPlugin = require("./plugins/mdx")
 
 ;(() => {
 	build({
@@ -8,7 +8,7 @@ const markdownItPlugin = require("./markdown-it-plugin")
 		entryPoints: ["src/server/prerender.tsx"],
 		outfile: "src/server/prerender.js",
 		platform: "node", // Needed for `fs`
-		plugins: [markdownItPlugin],
+		plugins: [mdxPlugin],
 	}).catch(err => {
 		if (err) {
 			throw err

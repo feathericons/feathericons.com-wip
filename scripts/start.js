@@ -1,7 +1,7 @@
 const { build } = require("esbuild")
 const chokidar = require("chokidar")
 const liveServer = require("live-server")
-const markdownItPlugin = require("./markdown-it-plugin")
+const mdxPlugin = require("./plugins/mdx")
 
 // Based on https://github.com/zaydek/esbuild-hot-reload.
 ;(async () => {
@@ -12,15 +12,12 @@ const markdownItPlugin = require("./markdown-it-plugin")
 		incremental: true,
 		minify: process.env.NODE_ENV === "production",
 		outfile: "build/script.js",
-		plugins: [markdownItPlugin],
+		plugins: [mdxPlugin],
 	})
+	// prettier-ignore
 	chokidar
-		.watch("src/**/*.{ts,tsx}", {
-			interval: 0,
-		})
-		.on("all", () => {
-			builder.rebuild()
-		})
+		.watch("src/**/*.{ts,tsx}", { interval: 0 })
+		.on("all", builder.rebuild)
 	liveServer.start({
 		file: "index.html",
 		host: "localhost",

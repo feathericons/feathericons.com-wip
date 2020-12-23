@@ -1,10 +1,11 @@
 import Header from "./Header"
-import IconGrid from "./SearchApp/IconGrid"
+import IconInfo from "./SearchApp/IconInfo"
+import Icons from "./SearchApp/Icons"
 import React from "react"
 import SearchApp from "./SearchApp"
 import TopAnchors from "./TopAnchors"
 import { DocumentTitle } from "./lib"
-import { Route, Switch, useParams } from "react-router-dom"
+import { Route, Switch /* useParams */ } from "react-router-dom"
 
 function Homepage() {
 	return (
@@ -15,19 +16,19 @@ function Homepage() {
 				</div>
 				<Header />
 				<SearchApp>
-					<IconGrid />
+					<Icons />
 				</SearchApp>
 			</div>
 		</DocumentTitle>
 	)
 }
 
-interface Keys {
-	[key: string]: string
-}
+// interface Keys {
+// 	[key: string]: string
+// }
 
 function IconPage() {
-	const { name } = useParams() as Keys
+	// const { name } = useParams() as Keys
 
 	return (
 		<DocumentTitle title="Feathericons">
@@ -37,7 +38,7 @@ function IconPage() {
 				</div>
 				<Header />
 				<SearchApp>
-					<div>{name}</div>
+					<IconInfo />
 				</SearchApp>
 			</div>
 		</DocumentTitle>
