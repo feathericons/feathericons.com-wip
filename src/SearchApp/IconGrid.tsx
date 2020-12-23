@@ -1,7 +1,7 @@
 import AspectRatioBox from "../AspectRatioBox"
 import PlaceholderText from "../PlaceholderText"
 import React from "react"
-import vars from "./vars"
+// import v from "./vars"
 import { range } from "../lib"
 
 export default function IconGrid() {
@@ -9,7 +9,7 @@ export default function IconGrid() {
 		<>
 			{/* <div className="sticky top-0 z-10">
 				<div
-					className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 border-hr xl:rounded-tl-${vars.rounded}`}
+					className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app border-b-1 border-hr xl:rounded-top-left-${vars.rounded}`}
 				>
 					<div className="w-24 h-24 bg-important rounded-full"></div>
 					<div className="w-160 h-8 bg-important rounded-full"></div>
@@ -24,9 +24,10 @@ export default function IconGrid() {
 			>
 				{range(100).map(each => (
 					<AspectRatioBox key={each}>
+						{/* NOTE: Use `h-full` because of `<AspectRatioBox>`. */}
 						<div className="zstack h-full">
 							<div className="w-48 h-48 bg-important rounded-full"></div>
-							<div className="absolute bottom-0 inset-x-0 py-8">
+							<div className="bottom-0 inset-x-0 py-8">
 								<PlaceholderText />
 							</div>
 						</div>

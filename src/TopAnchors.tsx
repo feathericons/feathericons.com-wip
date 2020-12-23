@@ -4,7 +4,7 @@ import React from "react"
 
 export default function TopAnchors() {
 	return (
-		<div className="hstack space-16 px-16 sm:px-24">
+		<div className="hstack space-16 py-16">
 			<PlaceholderText />
 			<div className="spacer"></div>
 			{range(2).map(each => (

@@ -9,9 +9,10 @@
 	transition: $dur background-color $timing, $dur border-color $timing;
 }
 
-:root:not([data-theme="dark"]) {
-	--bg-html: hsl(var(--gray-50));
+:root {
+	--bg-root: hsl(var(--gray-50));
 	--bg-search-app: hsl(var(--white));
+	--bg-search-app-sidebar-preview: hsl(var(--white));
 	--bg-search-app-sidebar: hsl(var(--gray-50));
 	--bg-less-important: hsl(var(--gray-200));
 	--bg-important: hsl(var(--gray-300));
@@ -21,23 +22,27 @@
 	@include transition;
 }
 
-:root[data-theme="dark"] {
-	--bg-html: hsl(var(--gray-900));
+[data-theme="dark"] {
+	--bg-root: hsl(var(--gray-900));
 	--bg-search-app: hsl(var(--gray-800));
+	--bg-search-app-sidebar-preview: hsl(var(--gray-800));
 	--bg-search-app-sidebar: hsl(var(--gray-800));
 	--bg-less-important: hsl(var(--gray-700));
 	--bg-important: hsl(var(--gray-600));
 	--bg-more-important: hsl(var(--gray-500));
-	--border-hr: hsla(var(--gray-700), 0.75);
+	--border-hr: hsla(var(--gray-900));
 }
 
-html {
-	background-color: var(--bg-html);
+:root {
+	background-color: var(--bg-root);
 	@include transition;
 }
-
 .bg-search-app {
 	background-color: var(--bg-search-app);
+	@include transition;
+}
+.bg-search-app-sidebar-preview {
+	background-color: var(--bg-search-app-sidebar-preview);
 	@include transition;
 }
 .bg-search-app-sidebar {

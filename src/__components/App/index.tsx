@@ -64,7 +64,7 @@ export default function App({ children }: { children?: React.ReactNode }) {
 							<div className="spacer">
 								{/* Searh */}
 								<div className="sticky t-0 xl:t-16 z-10">
-									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-tl-24">
+									<div className="hstack stack-center space-16 p-24 bg-white border-b-1 xl:rounded-top-left-24">
 										<div className="w-32 h-32 bg-gray-200 rounded-full" />
 										<div className="spacer" />
 										<div className="hidden md:vstack px-6 w-128 h-32 bg-gray-100 rounded-full">
@@ -82,11 +82,11 @@ export default function App({ children }: { children?: React.ReactNode }) {
 								</div>
 							</div>
 							{/* RHS */}
-							<div className="hidden md:block w-320 bg-gray-50 border-l-1 xl:rounded-r-24">
+							<div className="hidden md:block w-320 bg-gray-50 border-left-1 xl:rounded-right-24">
 								<div className="sticky t-0 xl:t-16 z-10">
 									{/* Icon pane */}
 									<div className="sticky t-0 xl:t-16 z-10">
-										<div className="hstack stack-center h-320 bg-white border-b-1 xl:rounded-tr-24">
+										<div className="hstack stack-center h-320 bg-white border-b-1 xl:rounded-top-right-24">
 											{/* Icon */}
 											<div className="w-64 h-64 bg-gray-300 rounded-full" />
 											<div className="absolute x-0 t-0">

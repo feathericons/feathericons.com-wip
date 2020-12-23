@@ -9,8 +9,10 @@ import { Route, Switch, useParams } from "react-router-dom"
 function Homepage() {
 	return (
 		<DocumentTitle title="Feathericons">
-			<div className="py-16 pb-0 xl:pb-64">
-				<TopAnchors />
+			<div className="xl:pb-64">
+				<div className="px-16 sm:px-24">
+					<TopAnchors />
+				</div>
 				<Header />
 				<SearchApp>
 					<IconGrid />
@@ -29,8 +31,10 @@ function IconPage() {
 
 	return (
 		<DocumentTitle title="Feathericons">
-			<div className="py-16 pb-0 xl:pb-64">
-				<TopAnchors />
+			<div className="xl:pb-64">
+				<div className="px-16 sm:px-24">
+					<TopAnchors />
+				</div>
 				<Header />
 				<SearchApp>
 					<div>{name}</div>
