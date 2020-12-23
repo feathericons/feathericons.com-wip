@@ -1,10 +1,13 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-// prettier-ignore
-@mixin theme-transition {
-	$theme-duration: 500ms;
-	$theme-timing: timing(ease-out, $raw: true);
-	--theme-transition: background-color #{$theme-duration} #{$theme-timing}, border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing}, color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing}, opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing}, transform #{$theme-duration} #{$theme-timing};
+:root {
+	$theme-duration: 300ms;
+	$theme-timing: timing(ease-out);
+	--theme-transition: background-color #{$theme-duration} #{$theme-timing},
+		border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing},
+		color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing},
+		opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing},
+		transform #{$theme-duration} #{$theme-timing};
 }
 
 :root {
