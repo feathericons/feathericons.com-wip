@@ -1,7 +1,12 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-$theme-duration: 700ms;
-$theme-timing: timing(ease-out, $raw: true);
+@mixin theme-transition {
+	$theme-duration: 500ms;
+	$theme-timing: timing(ease-out, $raw: true);
+
+	// prettier-ignore
+	--theme-transition: background-color #{$theme-duration} #{$theme-timing}, border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing}, color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing}, opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing}, transform #{$theme-duration} #{$theme-timing};
+}
 
 :root {
 	--bg-root: hsl(var(--gray-50));
@@ -14,11 +19,7 @@ $theme-timing: timing(ease-out, $raw: true);
 	--bg-more-important: hsl(var(--gray-400));
 	--border-hr: hsl(var(--gray-200));
 
-	--theme-transition: background-color #{$theme-duration} #{$theme-timing},
-		border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing},
-		color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing},
-		opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing},
-		transform #{$theme-duration} #{$theme-timing};
+	@include theme-transition;
 }
 [data-theme="dark"] {
 	--bg-root: hsl(var(--gray-900));
@@ -72,6 +73,7 @@ $theme-timing: timing(ease-out, $raw: true);
 .prose {
 	--prose-block-space: #{rem(32)};
 
+	// NOTE: Use `em` for `--prose-code`.
 	--prose-head-h1: 600 #{rem(32)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h2: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h3: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
@@ -80,7 +82,7 @@ $theme-timing: timing(ease-out, $raw: true);
 	--prose-head-h6: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-text: #{rem(18)} / 1.5 var(--sans), var(--ui-sans);
 	--prose-text-small: #{rem(14)} / 1.8 var(--sans), var(--ui-sans);
-	--prose-code: #{rem(15)} / 1.5 var(--mono), var(--ui-mono);
+	--prose-code: #{em(14)} / 1.5 var(--mono), var(--ui-mono);
 	--prose-code-pre: #{rem(15)} / 1.6 var(--mono), var(--ui-mono);
 
 	--prose-head-h1-space: #{rem(32 / 2)};
@@ -95,7 +97,7 @@ $theme-timing: timing(ease-out, $raw: true);
 	--prose-code-rounded: #{rem(3)};
 
 	--prose-code-pre-padding: #{rem(16) rem(24)};
-	--prose-code-pre-rounded: #{rem(12)};
+	--prose-code-pre-rounded: #{rem(6)};
 }
 
 .prose {
@@ -106,7 +108,7 @@ $theme-timing: timing(ease-out, $raw: true);
 	--prose-head-h5-color: hsl(var(--black));
 	--prose-head-h6-color: hsl(var(--black));
 	--prose-text-color: hsl(var(--gray-800));
-	--prose-text-small-color: hsl(var(--gray-800));
+	--prose-text-small-color: hsl(var(--gray-700));
 
 	--prose-code-color: hsl(220, 83.33%, 50%);
 	--prose-code-bg: hsl(var(--white));
@@ -116,7 +118,6 @@ $theme-timing: timing(ease-out, $raw: true);
 	--prose-code-pre-bg: hsl(var(--gray-800));
 	--prose-code-pre-border: none;
 }
-
 [data-theme="dark"] .prose {
 	--prose-head-h1-color: hsl(var(--gray-100));
 	--prose-head-h2-color: hsl(var(--gray-100));
@@ -125,7 +126,7 @@ $theme-timing: timing(ease-out, $raw: true);
 	--prose-head-h5-color: hsl(var(--gray-100));
 	--prose-head-h6-color: hsl(var(--gray-100));
 	--prose-text-color: hsl(var(--gray-200));
-	--prose-text-small-color: hsl(var(--gray-800));
+	--prose-text-small-color: hsl(var(--gray-300));
 
 	--prose-code-color: var(--gray-100);
 	--prose-code-bg: hsl(var(--gray-700));

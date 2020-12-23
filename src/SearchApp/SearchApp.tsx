@@ -14,6 +14,7 @@ export default function SearchApp({ children }: SearchAppProps) {
 			>
 				{/* LHS */}
 				<div className="spacer">
+					{/* Search bar */}
 					<div className="sticky top-0 z-30">
 						<div
 							className={`hstack space-16 p-24 h-80 md:h-96 bg-search-app-content-search-bar border-bottom-1 border-hr xl:rounded-top-left-${vars.rounded}`}

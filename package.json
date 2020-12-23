@@ -7,9 +7,9 @@
 		"prerender-duomo-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/duomo.scss build/stylesheets/duomo.css",
 		"prerender-app-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/app.scss build/stylesheets/app.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/app.css",
 		"test": "jest",
-		"start": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && node scripts/start.js",
-		"fast-start": "node scripts/start.js",
-		"build": "rm -rf build && mkdir build && yarn prerender-duomo-css && yarn prerender-app-css && yarn prerender-html && NODE_ENV=production node scripts/build.js"
+		"start": "rm -rf build && mkdir build && yarn prerender-html && yarn prerender-duomo-css && yarn prerender-app-css && node scripts/start.js",
+		"restart": "node scripts/start.js",
+		"build": "rm -rf build && mkdir build && yarn prerender-html && yarn prerender-duomo-css && yarn prerender-app-css && NODE_ENV=production node scripts/build.js"
 	},
 	"dependencies": {
 		"@mdx-js/mdx": "^1.6.22",
