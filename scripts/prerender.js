@@ -1,6 +1,8 @@
 const { build } = require("esbuild")
 const mdxPlugin = require("./plugins/mdx")
 
+// Bundles `src/server/prerender.tsx`;
+// Node is then invoked on the bundled script.
 ;(() => {
 	build({
 		bundle: true,

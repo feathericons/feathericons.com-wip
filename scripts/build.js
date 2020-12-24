@@ -1,7 +1,7 @@
 const { build } = require("esbuild")
-const { checkAsync } = require("./utils")
 const mdxPlugin = require("./plugins/mdx")
 
+// Bundles `src/index.tsx` to `build/script.js`.
 ;(async () => {
 	build({
 		bundle: true,

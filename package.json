@@ -2,7 +2,7 @@
 	"name": "feathericons.com",
 	"license": "MIT",
 	"scripts": {
-		"prebuild-dataset": "ts-node src/data/build.ts > src/data/raw.json",
+		"build-dataset": "ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
 		"prerender-skeleton-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/skeleton.scss build/stylesheets/skeleton.css",
 		"prerender-theme-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/theme.scss build/stylesheets/theme.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/theme.css",
@@ -13,7 +13,6 @@
 		"build": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-skeleton-css' 'yarn prerender-theme-css' 'yarn prerender-prose-css' && NODE_ENV=production node scripts/build.js"
 	},
 	"dependencies": {
-		"@mdx-js/mdx": "^1.6.22",
 		"@mdx-js/react": "^1.6.22",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
@@ -21,6 +20,7 @@
 		"react-router-dom": "^5.2.0"
 	},
 	"devDependencies": {
+		"@mdx-js/mdx": "^1.6.22",
 		"@types/mdx-js__react": "^1.5.3",
 		"@types/node": "^14.14.14",
 		"@types/react-dom": "^17.0.0",
@@ -34,8 +34,6 @@
 		"nodemon": "^2.0.6",
 		"prettier": "^2.2.1",
 		"sass": "^1.30.0",
-		"serve": "^11.3.2",
-		"ts-jest": "^26.4.4",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.1.3"
 	}

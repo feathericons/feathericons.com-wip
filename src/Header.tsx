@@ -26,7 +26,7 @@ function TopAnchors() {
 export default function Header() {
 	return (
 		<div className="zstack">
-			<div className="hstack px-16 sm:px-24">
+			<div className="hstack px-16 sm:px-24" style={{ justifySelf: "stretch" }}>
 				<div className="vstack xl:hstack space-32 py-96 w-full" style={{ maxWidth: 1088 }}>
 					{/* LHS */}
 					<div className="vstack space-24">
@@ -69,7 +69,7 @@ export default function Header() {
 						</div>
 						{/* Sponsors / Wrap pattern */}
 						<div className="unhidden xl:hidden">
-							<div className="-m-12 hstack" style={{ flexWrap: "wrap" }}>
+							<div className="-m-12 hstack wrap">
 								{range(5).map(each => (
 									<div key={each} className="m-12">
 										<Sponsor />

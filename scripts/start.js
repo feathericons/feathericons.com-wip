@@ -3,6 +3,8 @@ const chokidar = require("chokidar")
 const liveServer = require("live-server")
 const mdxPlugin = require("./plugins/mdx")
 
+// Starts the development server.
+//
 // Based on https://github.com/zaydek/esbuild-hot-reload.
 ;(async () => {
 	const builder = await build({
