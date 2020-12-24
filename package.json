@@ -3,7 +3,7 @@
 	"license": "MIT",
 	"scripts": {
 		"build-dataset": "ts-node src/data/build.ts > src/data/raw.json",
-		"prerender-html": "node scripts/prerender.js && node src/server/prerender.js && rm src/server/prerender.js",
+		"prerender-html": "node scripts/prerender-html.js && node src/server/prerender.tmp.js && rm src/server/prerender.tmp.js",
 		"prerender-skeleton-css": "sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/skeleton.scss build/stylesheets/skeleton.css",
 		"prerender-theme-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/theme.scss build/stylesheets/theme.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/theme.css",
 		"prerender-prose-css": "yarn sass --load-path=node_modules --no-source-map --style=compressed src/stylesheets/prose.scss build/stylesheets/prose.css && yarn prettier --tab-width 2 --use-tabs false --write build/stylesheets/prose.css",
