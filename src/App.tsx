@@ -3,7 +3,6 @@ import IconInfo from "./SearchApp/IconInfo"
 import Icons from "./SearchApp/Icons"
 import React from "react"
 import SearchApp from "./SearchApp"
-import TopAnchors from "./TopAnchors"
 import { DocumentTitle } from "./lib"
 import { Route, Switch /* useParams */ } from "react-router-dom"
 
@@ -11,9 +10,6 @@ function Homepage() {
 	return (
 		<DocumentTitle title="Feathericons">
 			<div className="xl:pb-64">
-				<div className="px-16 sm:px-24">
-					<TopAnchors />
-				</div>
 				<Header />
 				<SearchApp>
 					<Icons />
@@ -33,9 +29,6 @@ function IconPage() {
 	return (
 		<DocumentTitle title="Feathericons">
 			<div className="xl:pb-64">
-				<div className="px-16 sm:px-24">
-					<TopAnchors />
-				</div>
 				<Header />
 				<SearchApp>
 					<IconInfo />
