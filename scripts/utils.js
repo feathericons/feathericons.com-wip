@@ -1,5 +1,3 @@
-const fs = require("fs")
-
 module.exports = {
 	/**
 	 * @cb Callback
@@ -22,17 +20,6 @@ module.exports = {
 		} catch (err) {
 			return [null, err]
 		}
-	},
-	/**
-	 * @srcPath Source path
-	 * @pattern Regex pattern
-	 */
-	glob(srcPath, pattern) {
-		const matches = fs.readdirSync(srcPath).filter(each => {
-			const ok = pattern.test(each)
-			return ok
-		})
-		return matches
 	},
 	/**
 	 * @desc Description

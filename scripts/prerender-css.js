@@ -1,55 +1,74 @@
-const { checkSync, glob, panic } = require("./utils")
-const fs = require("fs")
+const { check, checkSync, glob, panic } = require("./utils")
+const fs = require("fs/promises")
 const path = require("path")
 const prettier = require("prettier")
 const sass = require("sass")
 
-function buildSass(inPath, outPath) {
-	const [buff, readErr] = checkSync(() => fs.readFileSync(inPath))
+// https://sass-lang.com/documentation/js-api#fiber
+const Fiber = require("fibers")
+
+async function buildSass(inPath, outPath) {
+	const [buff, readErr] = await check(fs.readFile(inPath))
 	if (readErr) {
-		return new Error("fs.readFileSync: " + readErr.toString())
+		throw new Error("fs.readFileSync: " + readErr.toString())
 	}
-	const [res, sassErr] = checkSync(() =>
-		sass.renderSync({
-			data: buff.toString(),
-			includePaths: ["node_modules"],
-			outputStyle: "compressed",
+	const [css, sassErr] = await check(
+		new Promise((resolve, reject) => {
+			sass.render(
+				{
+					data: buff.toString(),
+					fiber: Fiber, // https://sass-lang.com/documentation/js-api#fiber
+					includePaths: ["node_modules"],
+					outputStyle: "compressed",
+				},
+				(err, res) => {
+					if (err) {
+						reject(err)
+					}
+					resolve(res.css.toString())
+				},
+			)
 		}),
 	)
 	if (sassErr) {
-		return new Error("sass.renderSync: " + sassErr.toString())
+		throw new Error("sass.render: " + sassErr.toString())
 	}
-	const [parsed, pathErr] = checkSync(() => path.parse(outPath))
-	if (pathErr) {
-		return new Error("path.parse: " + pathErr.toString())
-	}
-	const [, mkdirErr] = checkSync(() => fs.mkdirSync(parsed.dir, { recursive: true }))
+	const outDir = path.parse(outPath).dir
+	const [, mkdirErr] = await check(fs.mkdir(outDir, { recursive: true }))
 	if (mkdirErr) {
-		return new Error("fs.mkdirSync: " + mkdirErr.toString())
+		throw new Error("fs.mkdir: " + mkdirErr.toString())
 	}
-	const [fmt, fmtErr] = checkSync(() => prettier.format(res.css.toString(), { parser: "css" }))
+	// NOTE: `prettier.format` is synchronous.
+	const [fmt, fmtErr] = checkSync(() => prettier.format(css, { parser: "css" }))
 	if (fmtErr) {
-		return new Error("prettier.format: " + fmtErr.toString())
+		throw new Error("prettier.format: " + fmtErr.toString())
 	}
-	const [, writeErr] = checkSync(() => fs.writeFileSync(outPath, fmt))
+	const [, writeErr] = await check(fs.writeFile(outPath, fmt))
 	if (writeErr) {
-		return new Error("fs.writeFileSync: " + writeErr.toString())
+		throw new Error("fs.writeFile: " + writeErr.toString())
 	}
 	return null
 }
 
 // Builds `src/stylesheets/*.scss` to `build/stylesheets/*.css`;
-;(() => {
-	const [matches, errGlob] = checkSync(() => glob("src/stylesheets", /(?<!TODO)\.sc?ss$/))
-	if (errGlob) {
-		panic("glob", errGlob)
+;(async () => {
+	const [paths, errReaddir] = await check(fs.readdir("src/stylesheets"))
+	if (errReaddir) {
+		panic("fs.readdir", errReaddir)
 	}
+	const matches = paths.filter(each => /(?<!TODO)\.sc?ss$/.test(each))
+	const ps = []
 	for (const each of matches) {
 		const [inPath, outPath] = [`src/stylesheets/${each}`, `build/stylesheets/${path.parse(each).name}.css`]
-		const errSass = buildSass(inPath, outPath)
-		if (errSass) {
-			panic("buildSass", errSass)
-		}
-		console.log(`✅ ${inPath} → ${outPath}`)
+		ps.push(
+			new Promise(async () => {
+				await buildSass(inPath, outPath)
+				console.log(`✅ ${inPath} -> ${outPath}`)
+			}),
+		)
+	}
+	const [_, err] = await check(Promise.all(ps))
+	if (err) {
+		panic("Promise.all", err)
 	}
 })()
