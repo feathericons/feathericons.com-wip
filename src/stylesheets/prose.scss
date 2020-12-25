@@ -9,17 +9,11 @@
 	--prose-head-h1-margin: #{rem(32 / 2)};
 	--prose-head-h2-margin: #{rem(32 / 2)};
 	--prose-head-h3-margin: #{rem(32 / 2)};
-	--prose-head-h4-margin: #{rem(32 / 2)};
-	--prose-head-h5-margin: #{rem(32 / 2)};
-	--prose-head-h6-margin: #{rem(32 / 2)};
 	--prose-text-margin: #{rem(32 / 2)};
 
 	--prose-head-h1: 600 #{rem(32)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h2: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h3: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
-	--prose-head-h4: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
-	--prose-head-h5: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
-	--prose-head-h6: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-text: #{rem(18)} / 1.5 var(--sans), var(--ui-sans);
 	--prose-text-small: #{rem(14)} / 1.8 var(--sans), var(--ui-sans);
 	--prose-code: #{em(14)} / 1.5 var(--mono), var(--ui-mono);
@@ -40,10 +34,8 @@
 	--prose-head-h1-color: hsl(var(--black));
 	--prose-head-h2-color: hsl(var(--black));
 	--prose-head-h3-color: hsl(var(--black));
-	--prose-head-h4-color: hsl(var(--black));
-	--prose-head-h5-color: hsl(var(--black));
-	--prose-head-h6-color: hsl(var(--black));
 	--prose-text-color: hsl(var(--gray-800));
+	--prose-text-anchor-color: hsl(var(--gray-600));
 	--prose-text-small-color: hsl(var(--gray-700));
 
 	--prose-code-color: hsl(220, 83.33%, 50%);
@@ -58,10 +50,8 @@
 	--prose-head-h1-color: hsl(var(--gray-100));
 	--prose-head-h2-color: hsl(var(--gray-100));
 	--prose-head-h3-color: hsl(var(--gray-100));
-	--prose-head-h4-color: hsl(var(--gray-100));
-	--prose-head-h5-color: hsl(var(--gray-100));
-	--prose-head-h6-color: hsl(var(--gray-100));
 	--prose-text-color: hsl(var(--gray-200));
+	--prose-text-anchor-color: hsl(var(--gray-400));
 	--prose-text-small-color: hsl(var(--gray-300));
 
 	--prose-code-color: var(--gray-100);
@@ -91,33 +81,32 @@
 	color: var(--prose-head-h2-color);
 	transition: var(--theme-transition);
 }
-.prose h3 {
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
 	font: var(--prose-head-h3);
 	color: var(--prose-head-h3-color);
 	transition: var(--theme-transition);
 }
-.prose h4 {
-	font: var(--prose-head-h4);
-	color: var(--prose-head-h4-color);
-	transition: var(--theme-transition);
+.prose h1 + p {
+	margin-top: var(--prose-head-h1-margin);
 }
-.prose h5 {
-	font: var(--prose-head-h5);
-	color: var(--prose-head-h5-color);
-	transition: var(--theme-transition);
+.prose h2 + p {
+	margin-top: var(--prose-head-h2-margin);
 }
-.prose h6 {
-	font: var(--prose-head-h6);
-	color: var(--prose-head-h6-color);
-	transition: var(--theme-transition);
-}
-@each $head in (h1, h2, h3, h4, h5, h6) {
-	.prose #{$head} + p {
-		margin-top: var(--prose-head-#{$head}-margin);
-	}
+.prose h3 + p,
+.prose h4 + p,
+.prose h5 + p,
+.prose h6 + p {
+	margin-top: var(--prose-head-h3-margin);
 }
 .prose p + p {
 	margin-top: var(--prose-text-margin);
+}
+.prose a {
+	color: var(--prose-text-anchor-color);
+	text-decoration: underline;
 }
 .prose small {
 	font: var(--prose-text-small);

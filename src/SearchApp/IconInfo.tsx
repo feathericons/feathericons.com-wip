@@ -33,23 +33,23 @@ function BentoBox() {
 
 	return (
 		<div className="bento">
-			<div className="hstack bg-bento-card border-1 rounded-4">
-				<div className="bg-bento-svg" style={{ width: rem(ratios[0]!), height: rem(ratios[0]!) }}>
+			<div className="hstack bento-item">
+				<div className="bento-item-svg" style={{ width: rem(ratios[0]!), height: rem(ratios[0]!) }}>
 					hello
 				</div>
 			</div>
-			<div className="hstack hidden lg:unhidden bg-bento-card border-1 rounded-4">
-				<div className="bg-bento-svg" style={{ width: rem(ratios[1]!), height: rem(ratios[1]!) }}>
+			<div className="hstack hidden lg:unhidden bento-item">
+				<div className="bento-item-svg" style={{ width: rem(ratios[1]!), height: rem(ratios[1]!) }}>
 					hello
 				</div>
 			</div>
-			<div className="hstack hidden lg:unhidden bg-bento-card border-1 rounded-4">
-				<div className="bg-bento-svg" style={{ width: rem(ratios[2]!), height: rem(ratios[2]!) }}>
+			<div className="hstack hidden lg:unhidden bento-item">
+				<div className="bento-item-svg" style={{ width: rem(ratios[2]!), height: rem(ratios[2]!) }}>
 					hello
 				</div>
 			</div>
-			<div className="hstack hidden lg:unhidden bg-bento-card border-1 rounded-4">
-				<div className="bg-bento-svg" style={{ width: rem(ratios[3]!), height: rem(ratios[3]!) }}>
+			<div className="hstack hidden lg:unhidden bento-item">
+				<div className="bento-item-svg" style={{ width: rem(ratios[3]!), height: rem(ratios[3]!) }}>
 					hello
 				</div>
 			</div>
