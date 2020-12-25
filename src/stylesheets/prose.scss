@@ -63,14 +63,22 @@
 	--prose-code-pre-border: none;
 }
 
-.prose {
+.prose > * + * {
+	margin-top: var(--prose-flow-margin);
+}
+
+// <article class="prose">
+//   <div> <- Step over
+//     ...
+//   </div>
+// </article>
+//
+.prose > :not(div) {
 	font: var(--prose-text);
 	color: var(--prose-text-color);
 	transition: var(--theme-transition);
 }
-.prose > * + * {
-	margin-top: var(--prose-flow-margin);
-}
+
 .prose h1 {
 	font: var(--prose-head-h1);
 	color: var(--prose-head-h1-color);
