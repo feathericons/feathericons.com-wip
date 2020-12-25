@@ -1,5 +1,7 @@
 import Docs from "./docs.mdx"
 import React, { useState } from "react"
+import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
+import { rem } from "@zaydek/duomo/dist/runtime"
 import {
 	Archive,
 	Eye,
@@ -12,11 +14,8 @@ import {
 	Lock,
 	MessageCircle,
 	Plus,
-	Share2,
 	Trash2,
 } from "react-feather"
-import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
-import { rem } from "@zaydek/duomo/dist/runtime"
 
 // components={{
 // 	KebabCase: () => name,
@@ -39,37 +38,25 @@ import { rem } from "@zaydek/duomo/dist/runtime"
 function BentoBox() {
 	// prettier-ignore
 	const ratios = [
-		Math.round(24 * 1.67 * 1.67 * 1.67),
-		Math.round(24 * 1.67 * 1.67),
-		Math.round(24 * 1.67),
+		24 * 1.5 * 1.5 * 1.5,
+		24 * 1.5 * 1.5,
+		24 * 1.5,
 		24,
 	]
 
 	return (
 		<div className="bento-grid -mx-16 sm:mx-0">
-			<div className="bento-grid-area hstack border-1">
-				<div
-					className="bento-svg bg-gray-800 rounded-full"
-					style={{ width: rem(ratios[0]!), height: rem(ratios[0]!) }}
-				/>
+			<div className="bento-grid-area hstack border-1 border-card">
+				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[0]!), height: rem(ratios[0]!) }} />
 			</div>
-			<div className="bento-grid-area hidden lg:unhidden hstack border-1">
-				<div
-					className="bento-svg bg-gray-800 rounded-full"
-					style={{ width: rem(ratios[1]!), height: rem(ratios[1]!) }}
-				/>
+			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
+				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[1]!), height: rem(ratios[1]!) }} />
 			</div>
-			<div className="bento-grid-area hidden lg:unhidden hstack border-1">
-				<div
-					className="bento-svg bg-gray-800 rounded-full"
-					style={{ width: rem(ratios[2]!), height: rem(ratios[2]!) }}
-				/>
+			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
+				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[2]!), height: rem(ratios[2]!) }} />
 			</div>
-			<div className="bento-grid-area hidden lg:unhidden hstack border-1">
-				<div
-					className="bento-svg bg-gray-800 rounded-full"
-					style={{ width: rem(ratios[3]!), height: rem(ratios[3]!) }}
-				/>
+			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
+				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[3]!), height: rem(ratios[3]!) }} />
 			</div>
 		</div>
 	)
@@ -82,7 +69,7 @@ interface DemoWrapperProps {
 function DemoWrapper({ children }: DemoWrapperProps) {
 	return (
 		// prettier-ignore
-		<div className="hstack bg-gray-50 border-1 rounded-6">
+		<div className="hstack -mx-16 sm:mx-0 bg-gray-50 border-1 border-card sm:rounded-6">
 			{children}
 		</div>
 	)
@@ -95,27 +82,28 @@ function Demo2() {
 		<DemoWrapper>
 			<div className="w-224 bg-white rounded-8 shadow shadow-xs shadow-sm">
 				<div className="hstack space-16 px-16 h-48">
-					<GitHub className="w-16 h-16 color-gray-600" />
+					<GitHub className="w-18 h-18 color-gray-600" />
 					<div className="spacer overflow-x-scroll">
 						<div>username_ZAYDEK</div>
 					</div>
 				</div>
-				<hr className="border-gray-100" />
+				{/* TODO */}
+				<div className="h-1 bg-gray-100" />
 				<div className="hstack space-16 px-16 h-48">
-					<Lock className="w-16 h-16 color-gray-600" />
+					<Lock className="w-18 h-18 color-gray-600" />
 					<div className="spacer overflow-x-scroll">
 						<div className={!show ? "tracking-10" : undefined}>{!show ? "•".repeat(11) : "l337h4xbr0!"}</div>
 					</div>
 					{!show ? (
 						// prettier-ignore
 						<EyeOff
-							className="w-16 h-16 color-gray-400 on:text-gray-600"
+							className="w-18 h-18 color-gray-400"
 							onClick={() => setShow(!show)}
 						/>
 					) : (
 						// prettier-ignore
 						<Eye
-							className="w-16 h-16 color-gray-400 on:text-gray-600"
+							className="w-18 h-18 color-gray-400"
 							onClick={() => setShow(!show)}
 						/>
 					)}
@@ -143,8 +131,7 @@ function Demos() {
 			<DemoWrapper>
 				<div className="hstack space-24">
 					{demo1Ratios.map(each => (
-						// <div style={{ width: rem(each), height: rem(each) }}>h</div>
-						<div className="bg-gray-800 rounded-full" style={{ width: rem(each), height: rem(each) }}></div>
+						<GitHub className="color-gray-800" style={{ width: rem(each), height: rem(each) }} />
 					))}
 				</div>
 			</DemoWrapper>
@@ -180,8 +167,8 @@ function Demos() {
 			{/* Demo 5 */}
 			<DemoWrapper>
 				<div className="hstack space-12">
-					{[Inbox, Trash2, Archive, GitHub].map(Each => (
-						<div className="hstack w-40 h-40 bg-gray-100 rounded-full">
+					{[Inbox, Trash2, Archive, GitHub].map((Each, x) => (
+						<div key={x} className="hstack w-40 h-40 bg-gray-100 rounded-full">
 							<Each className="w-18 h-18 color-gray-800" />
 						</div>
 					))}

@@ -13,6 +13,7 @@
 	--bg-less-important: hsl(var(--gray-200));
 	--bg-important: hsl(var(--gray-300));
 	--bg-more-important: hsl(var(--gray-400));
+	--border-card: 1px solid hsl(var(--gray-200));
 	--border-color-default: hsl(var(--gray-200));
 
 	transition: var(--theme-transition);
@@ -26,6 +27,7 @@
 	--bg-less-important: hsl(var(--gray-700));
 	--bg-important: hsl(var(--gray-600));
 	--bg-more-important: hsl(var(--gray-500));
+	--border-card: 1px solid hsl(var(--transparent));
 	--border-color-default: hsla(var(--gray-900));
 }
 
@@ -59,6 +61,10 @@
 }
 .bg-more-important {
 	background-color: var(--bg-more-important);
+	transition: var(--theme-transition);
+}
+.border-card {
+	border: var(--border-card);
 	transition: var(--theme-transition);
 }
 [class*="border"] {

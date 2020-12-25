@@ -38,6 +38,8 @@
 	--prose-text-anchor-color: hsl(var(--gray-600));
 	--prose-text-small-color: hsl(var(--gray-700));
 
+	--prose-hr-border-color: 1px solid hsl(var(--gray-200));
+
 	--prose-code-color: hsl(220, 83.33%, 50%);
 	--prose-code-bg: hsl(var(--white));
 	--prose-code-border: 1px solid hsl(var(--gray-300));
@@ -53,6 +55,8 @@
 	--prose-text-color: hsl(var(--gray-200));
 	--prose-text-anchor-color: hsl(var(--gray-100)); // NOTE: Use `gray-100` not `white`.
 	--prose-text-small-color: hsl(var(--gray-300));
+
+	--prose-hr-border-color: 1px solid hsl(var(--gray-700));
 
 	--prose-code-color: var(--gray-100);
 	--prose-code-bg: hsl(var(--gray-700));
@@ -120,6 +124,10 @@
 .prose small {
 	font: var(--prose-text-small);
 	color: var(--prose-text-small-color);
+	transition: var(--theme-transition);
+}
+.prose hr {
+	border: var(--prose-hr-border-color);
 	transition: var(--theme-transition);
 }
 .prose *:not(pre) code {
