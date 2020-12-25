@@ -81,6 +81,9 @@
 }
 
 .bento {
+	margin-left: rem(-24);
+	margin-right: rem(-24);
+
 	display: grid;
 	grid-template-rows: 0.62fr 0.38fr;
 	grid-template-columns: 0.62fr 0.14fr 0.24fr;
@@ -112,6 +115,13 @@
 .bento-item-svg {
 	color: var(--bento-item-svg-color);
 	transition: var(--theme-transition);
+}
+@media (min-width: px(breakpoint(sm))) {
+	.bento {
+		margin-left: 0; // Reset
+		margin-right: 0; // Reset
+		border-radius: rem(6);
+	}
 }
 @media (min-width: px(breakpoint(lg))) {
 	.bento {

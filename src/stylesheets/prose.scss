@@ -116,6 +116,7 @@
 .prose *:not(pre) code {
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
+
 	padding: var(--prose-code-padding);
 	font: var(--prose-code);
 	color: var(--prose-code-color);
@@ -125,13 +126,24 @@
 	transition: var(--theme-transition);
 }
 .prose pre {
+	margin-left: rem(-24);
+	margin-right: rem(-24);
+
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
+
 	padding: var(--prose-code-pre-padding);
 	font: var(--prose-code-pre);
 	color: var(--prose-code-pre-color);
 	background-color: var(--prose-code-pre-bg);
 	border: var(--prose-code-pre-border);
-	border-radius: var(--prose-code-pre-rounded);
+	// border-radius: var(--prose-code-pre-rounded);
 	transition: var(--theme-transition);
+}
+@media (min-width: px(breakpoint(sm))) {
+	.prose pre {
+		margin-left: 0; // Reset
+		margin-right: 0; // Reset
+		border-radius: var(--prose-code-pre-rounded);
+	}
 }
