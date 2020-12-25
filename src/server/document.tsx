@@ -1,14 +1,21 @@
 import App from "../App"
 import React from "react"
 
-// {/* <script dangerouslySetInnerHTML={{ __html: "// https://stackoverflow.com/a/42969608" }}></script> */}
+function Stylesheets() {
+	return (
+		<>
+			<link rel="stylesheet" href="/stylesheets/duomo.css" />
+			<link rel="stylesheet" href="/stylesheets/theme.css" />
+			<link rel="stylesheet" href="/stylesheets/prose.css" />
+		</>
+	)
+}
+
 function Scripts() {
 	return (
 		<>
 			<script src="https://unpkg.com/@zaydek/duomo@0.7.9/dist/browser/index.js"></script>
-			<script
-				dangerouslySetInnerHTML={{ __html: `window.Duomo.init(${JSON.stringify(process.env.NODE_ENV)})` }}
-			></script>
+			<script dangerouslySetInnerHTML={{ __html: `window.Duomo.init(${JSON.stringify(__DEV__)})` }}></script>
 		</>
 	)
 }
@@ -24,9 +31,7 @@ export default function Document({ metadata }: DocumentProps) {
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				{metadata}
-				<link rel="stylesheet" href="/stylesheets/skeleton.css" />
-				<link rel="stylesheet" href="/stylesheets/theme.css" />
-				<link rel="stylesheet" href="/stylesheets/prose.css" />
+				<Stylesheets />
 				<Scripts />
 			</head>
 			<body>

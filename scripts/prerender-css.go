@@ -51,24 +51,24 @@ func Prettier(inFile, outFile string) error {
 	return nil
 }
 
-func bytesize(inFile, outFile string) (inBytes, outBytes int64, err error) {
-	inInfo, err := os.Stat(inFile)
-	if err != nil {
-		return 0, 0, err
-	}
-	inBytes = inInfo.Size()
-	outInfo, err := os.Stat(outFile)
-	if err != nil {
-		return 0, 0, err
-	}
-	outBytes = outInfo.Size()
-	return inBytes, outBytes, nil
-}
+// func bytesize(inFile, outFile string) (inBytes, outBytes int64, err error) {
+// 	inInfo, err := os.Stat(inFile)
+// 	if err != nil {
+// 		return 0, 0, err
+// 	}
+// 	inBytes = inInfo.Size()
+// 	outInfo, err := os.Stat(outFile)
+// 	if err != nil {
+// 		return 0, 0, err
+// 	}
+// 	outBytes = outInfo.Size()
+// 	return inBytes, outBytes, nil
+// }
 
 // Ex: go run scripts/prerender-css.go src/stylesheets/*.scss
 func main() {
 	if len(os.Args) < 2 {
-		log.Fatal("no args; try go run ... src/stylesheets")
+		log.Fatal("no args; try go run ... src/stylesheets/*")
 	}
 	cmdArgs := os.Args[1:]
 	g := new(errgroup.Group)
@@ -85,11 +85,11 @@ func main() {
 			if err2 != nil {
 				return err2
 			}
-			inBytes, outBytes, err3 := bytesize(inFile, outFile)
-			if err3 != nil {
-				return err3
-			}
-			fmt.Printf("✅ %s (%dkB) -> %s (%dkB)\n", inFile, inBytes/1e3, outFile, outBytes/1e3)
+			// inBytes, outBytes, err3 := bytesize(inFile, outFile)
+			// if err3 != nil {
+			// 	return err3
+			// }
+			// fmt.Printf("✅ %s (%dkB) -> %s (%dkB)\n", inFile, inBytes/1e3, outFile, outBytes/1e3)
 			return nil
 		})
 	}

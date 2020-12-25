@@ -9,7 +9,10 @@ const mdxPlugin = require("./plugins/mdx")
 ;(async () => {
 	const builder = await build({
 		bundle: true,
-		define: { "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development") },
+		define: {
+			__DEV__: JSON.stringify(process.env.NODE_ENV || "development"),
+			"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
+		},
 		entryPoints: ["src/index.tsx"],
 		incremental: true,
 		minify: process.env.NODE_ENV === "production",
