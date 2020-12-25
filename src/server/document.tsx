@@ -5,7 +5,7 @@ function Stylesheets() {
 	return (
 		<>
 			<link rel="stylesheet" href="/stylesheets/duomo.css" />
-			<link rel="stylesheet" href="/stylesheets/theme.css" />
+			<link rel="stylesheet" href="/stylesheets/app.css" />
 			<link rel="stylesheet" href="/stylesheets/prose.css" />
 		</>
 	)

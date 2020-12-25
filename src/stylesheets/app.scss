@@ -1,39 +1,5 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-@use "sass:list";
-
-// prettier-ignore
-$-transitionable-props: (
-	background-color,
-	border-color,
-	box-shadow,
-	color,
-	fill,
-	opacity,
-	stroke,
-	transform,
-);
-
-// Ex:
-//
-// :root {
-//   --theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
-// }
-//
-// -> :root {
-// ->   --theme-transition:
-// ->     <property> <duration> <timing>,
-// ->     ...;
-// -> }
-//
-@function theme-transition($duration, $timing) {
-	$ret: ();
-	@each $prop in $-transitionable-props {
-		$ret: list.append($ret, $prop $duration $timing, comma);
-	}
-	@return $ret;
-}
-
 :root {
 	--theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
 }
@@ -49,6 +15,9 @@ $-transitionable-props: (
 	--bg-more-important: hsl(var(--gray-400));
 	--border-color-default: hsl(var(--gray-200));
 
+	--bg-bento-card: hsl(var(--white));
+	--color-bento-svg: hsl(var(--gray-800));
+
 	transition: var(--theme-transition);
 }
 [data-theme="dark"] {
@@ -61,6 +30,9 @@ $-transitionable-props: (
 	--bg-important: hsl(var(--gray-600));
 	--bg-more-important: hsl(var(--gray-500));
 	--border-color-default: hsla(var(--gray-900));
+
+	--bg-bento-card: hsl(var(--gray-700));
+	--color-bento-svg: hsl(var(--gray-200));
 }
 
 :root {
@@ -97,4 +69,48 @@ $-transitionable-props: (
 }
 [class*="border"] {
 	transition: var(--theme-transition);
+}
+
+.bg-bento-card {
+	background-color: var(--bg-bento-card);
+	transition: var(--theme-transition);
+}
+.bg-bento-svg {
+	background-color: var(--bg-bento-svg);
+	transition: var(--theme-transition);
+}
+
+/*
+ * Bento
+ */
+
+.bento {
+	display: grid;
+	grid-template-rows: 0.62fr 0.38fr;
+	grid-template-columns: 0.62fr 0.14fr 0.24fr;
+	grid-template-areas:
+		"a a a"
+		"a a a";
+
+	gap: rem(12);
+	height: rem(320);
+}
+.bento > :nth-child(1) {
+	grid-area: a;
+}
+.bento > :nth-child(2) {
+	grid-area: b;
+}
+.bento > :nth-child(3) {
+	grid-area: c;
+}
+.bento > :nth-child(4) {
+	grid-area: d;
+}
+@media (min-width: px(breakpoint(lg))) {
+	.bento {
+		grid-template-areas:
+			"a b b"
+			"a d c";
+	}
 }
