@@ -62,8 +62,11 @@ interface DemoWrapperProps {
 
 function DemoWrapper({ children }: DemoWrapperProps) {
 	return (
+		// NOTE: Use `-mx-16 sm:mx-0 ... sm:rounded-6` to match `<pre>`.
+		// NOTE: Use `-mt-1 sm:mt-0` to mask `border-1`.
+		//
 		// prettier-ignore
-		<div className="hstack -mx-16 sm:mx-0 bg-gray-50 border-1 border-card sm:rounded-6">
+		<div className="hstack -mx-16 sm:mx-0 -mt-1 sm:mt-0 bg-gray-50 border-1 border-card sm:rounded-6">
 			{children}
 		</div>
 	)
@@ -74,7 +77,7 @@ function Demo2() {
 
 	return (
 		<DemoWrapper>
-			<div className="w-224 bg-white rounded-8 shadow shadow-xs shadow-sm">
+			<div className="w-224 bg-white rounded-8 shadow shadow-px shadow-xs">
 				<div className="hstack space-16 px-16 h-48">
 					<GitHub className="w-18 h-18 color-gray-600" />
 					<div className="spacer overflow-x-scroll">
@@ -118,7 +121,7 @@ function Demos() {
 
 	return (
 		<div
-			className="grid gap-12"
+			className="grid sm:gap-12"
 			style={{ gridTemplateColumns: `repeat(auto-fill, minmax(${rem(256)}, 1fr))`, gridAutoRows: rem(160) }}
 		>
 			{/* Demo 1 */}
@@ -162,7 +165,7 @@ function Demos() {
 			<DemoWrapper>
 				<div className="hstack space-12">
 					{[Inbox, Trash2, Archive, GitHub].map((Each, x) => (
-						<div key={x} className="hstack w-40 h-40 bg-gray-100 rounded-full">
+						<div key={x} className="hstack w-40 h-40 bg-white rounded-full shadow shadow-px shadow-xs">
 							<Each className="w-18 h-18 color-gray-800" />
 						</div>
 					))}
@@ -172,18 +175,18 @@ function Demos() {
 			{/* Demo 6 */}
 			<DemoWrapper>
 				<div className="vstack space-8 w-192">
-					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
+					<div className="align-self-stretch hstack space-16 px-16 h-36 bg-white rounded-8 shadow shadow-px shadow-xs">
 						<File className="w-16 h-16 color-gray-600" />
 						<p>File</p>
 						<div className="spacer"></div>
 						<Plus className="w-16 h-16 color-gray-400" />
 					</div>
-					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
+					<div className="align-self-stretch hstack space-16 px-16 h-36 bg-white rounded-8 shadow shadow-px shadow-xs">
 						<Folder className="w-16 h-16 color-gray-600" />
 						<p>Folder</p>
 						<div className="spacer"></div>
 					</div>
-					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
+					<div className="align-self-stretch hstack space-16 px-16 h-36 bg-white rounded-8 shadow shadow-px shadow-xs">
 						<GitHub className="w-16 h-16 color-gray-600" />
 						<p>Widget</p>
 						<div className="spacer"></div>
@@ -196,7 +199,7 @@ function Demos() {
 
 export default function IconInfo() {
 	return (
-		<div className="prose">
+		<article className="prose">
 			<MarkdownProvider
 				components={{
 					KebabCase: () => "github",
@@ -206,6 +209,6 @@ export default function IconInfo() {
 			>
 				<Docs />
 			</MarkdownProvider>
-		</div>
+		</article>
 	)
 }
