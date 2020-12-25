@@ -6,7 +6,7 @@ import { range } from "../lib"
 export default function Icons() {
 	return (
 		<div className="grid gap-16" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}>
-			{range(100).map(each => (
+			{range(10).map(each => (
 				<AspectRatioBox key={each}>
 					{/* NOTE: Use `h-full` because of `<AspectRatioBox>`. */}
 					<div className="zstack h-full">

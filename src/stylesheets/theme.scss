@@ -1,14 +1,41 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-// TODO: Extract.
+@use "sass:list";
+
+// prettier-ignore
+$-transitionable-props: (
+	background-color,
+	border-color,
+	box-shadow,
+	color,
+	fill,
+	opacity,
+	stroke,
+	transform,
+);
+
+// Ex:
+//
+// :root {
+//   --theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
+// }
+//
+// -> :root {
+// ->   --theme-transition:
+// ->     <property> <duration> <timing>,
+// ->     ...;
+// -> }
+//
+@function theme-transition($duration, $timing) {
+	$ret: ();
+	@each $prop in $-transitionable-props {
+		$ret: list.append($ret, $prop $duration $timing, comma);
+	}
+	@return $ret;
+}
+
 :root {
-	$theme-duration: 700ms;
-	$theme-timing: timing(ease-out);
-	--theme-transition: background-color #{$theme-duration} #{$theme-timing},
-		border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing},
-		color #{$theme-duration} #{$theme-timing}, fill #{$theme-duration} #{$theme-timing},
-		opacity #{$theme-duration} #{$theme-timing}, stroke #{$theme-duration} #{$theme-timing},
-		transform #{$theme-duration} #{$theme-timing};
+	--theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
 }
 
 :root {
