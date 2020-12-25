@@ -14,7 +14,7 @@ function Stylesheets() {
 function Scripts() {
 	return (
 		<>
-			<script src="https://unpkg.com/@zaydek/duomo@0.7.9/dist/browser/index.js"></script>
+			<script src="/public/scripts/duomo.js"></script>
 			<script dangerouslySetInnerHTML={{ __html: `window.Duomo.init(${JSON.stringify(__DEV__)})` }}></script>
 		</>
 	)
