@@ -1,7 +1,6 @@
 import Docs from "./docs.mdx"
 import React from "react"
 import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
-import { range } from "../lib"
 import { rem } from "@zaydek/duomo/dist/runtime"
 
 // components={{
@@ -57,6 +56,56 @@ function BentoBox() {
 	)
 }
 
+function Demo1() {
+	// prettier-ignore
+	const ratios = [
+		16,
+		16 * 1.5,
+		16 * 1.5 * 1.5,
+		16 * 1.5 * 1.5 *1.5,
+	]
+
+	return (
+		<div className="vstack border-1 rounded-6">
+			<div className="hstack space-24">
+				{ratios.map(each => (
+					// <div style={{ width: rem(each), height: rem(each) }}>h</div>
+					<div className="bg-gray-800 rounded-full" style={{ width: rem(each), height: rem(each) }}></div>
+				))}
+			</div>
+		</div>
+	)
+}
+
+function Demo3() {
+	return (
+		<div className="vstack border-1 rounded-6">
+			<div className="vstack space-8">
+				<div
+					className="hstack space-12 px-24 py-12 w-192 rounded-8 shadow shadow-px shadow-md"
+					style={{ backgroundColor: "#1da1f2" }}
+				>
+					{/* <SVG className="w-20 h-20 text-white" /> */}
+					<div className="w-20 h-20 bg-white rounded-full"></div>
+					<div className="weight-500 text-18 color-white">Follow me</div>
+				</div>
+			</div>
+		</div>
+	)
+}
+
+function Demos() {
+	return (
+		<div
+			className="grid gap-12"
+			style={{ gridTemplateColumns: `repeat(auto-fill, minmax(${rem(256)}, 1fr))`, gridAutoRows: rem(160) }}
+		>
+			<Demo1 />
+			<Demo3 />
+		</div>
+	)
+}
+
 export default function IconInfo() {
 	return (
 		<div className="prose">
@@ -64,6 +113,7 @@ export default function IconInfo() {
 				components={{
 					KebabCase: () => "github",
 					BentoBox,
+					Demos,
 				}}
 			>
 				<Docs />

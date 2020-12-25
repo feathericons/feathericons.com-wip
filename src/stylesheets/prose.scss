@@ -51,7 +51,7 @@
 	--prose-head-h2-color: hsl(var(--gray-100));
 	--prose-head-h3-color: hsl(var(--gray-100));
 	--prose-text-color: hsl(var(--gray-200));
-	--prose-text-anchor-color: hsl(var(--gray-400));
+	--prose-text-anchor-color: hsl(var(--gray-100)); // NOTE: Use `gray-100` not `white`.
 	--prose-text-small-color: hsl(var(--gray-300));
 
 	--prose-code-color: var(--gray-100);
@@ -107,6 +107,7 @@
 .prose a {
 	color: var(--prose-text-anchor-color);
 	text-decoration: underline;
+	transition: var(--theme-transition);
 }
 .prose small {
 	font: var(--prose-text-small);
@@ -126,9 +127,6 @@
 	transition: var(--theme-transition);
 }
 .prose pre {
-	margin-left: rem(-24);
-	margin-right: rem(-24);
-
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
 
@@ -137,13 +135,24 @@
 	color: var(--prose-code-pre-color);
 	background-color: var(--prose-code-pre-bg);
 	border: var(--prose-code-pre-border);
-	// border-radius: var(--prose-code-pre-rounded);
+	border-radius: 0; // Reset
 	transition: var(--theme-transition);
+
+	/*
+	 * Overrides
+	 */
+
+	margin-left: rem(-16);
+	padding-left: rem(16);
+
+	margin-right: rem(-16);
+	padding-right: rem(16);
 }
 @media (min-width: px(breakpoint(sm))) {
 	.prose pre {
 		margin-left: 0; // Reset
 		margin-right: 0; // Reset
+		padding: var(--prose-code-pre-padding);
 		border-radius: var(--prose-code-pre-rounded);
 	}
 }
