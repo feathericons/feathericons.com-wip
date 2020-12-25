@@ -1,3 +1,3 @@
 export default {
-	rounded: 32,
+	rounded: 24,
 }

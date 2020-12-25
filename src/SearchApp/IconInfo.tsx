@@ -17,46 +17,40 @@ import {
 	Trash2,
 } from "react-feather"
 
-// components={{
-// 	KebabCase: () => name,
-// 	BentoBox: () => <BentoBox SVG={SVG} />,
-// 	Demos: () => <Demos SVG={SVG} />,
-// 	More: () =>
-// 		!metadata.more.length ? null : (
-// 			<>
-// 				<br />
-// 				<h2>
-// 					More Icons Like <code>{name}</code>
-// 				</h2>
-// 				<div>
-// 					<More name={name} />
-// 				</div>
-// 			</>
-// 		),
-// }}
-
 function BentoBox() {
 	// prettier-ignore
-	const ratios = [
-		24 * 1.5 * 1.5 * 1.5,
-		24 * 1.5 * 1.5,
-		24 * 1.5,
-		24,
+	const dimensions = [
+		24 * Math.pow(1.5, 3),
+		24 * Math.pow(1.5, 2),
+		24 * Math.pow(1.5, 1),
+		24 * Math.pow(1.5, 0),
 	]
 
 	return (
 		<div className="bento-grid -mx-16 sm:mx-0">
 			<div className="bento-grid-area hstack border-1 border-card">
-				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[0]!), height: rem(ratios[0]!) }} />
+				<GitHub
+					className="bento-svg color-gray-800"
+					style={{ width: rem(dimensions[0]!), height: rem(dimensions[0]!) }}
+				/>
 			</div>
 			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
-				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[1]!), height: rem(ratios[1]!) }} />
+				<GitHub
+					className="bento-svg color-gray-800"
+					style={{ width: rem(dimensions[1]!), height: rem(dimensions[1]!) }}
+				/>
 			</div>
 			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
-				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[2]!), height: rem(ratios[2]!) }} />
+				<GitHub
+					className="bento-svg color-gray-800"
+					style={{ width: rem(dimensions[2]!), height: rem(dimensions[2]!) }}
+				/>
 			</div>
 			<div className="bento-grid-area hidden lg:unhidden hstack border-1 border-card">
-				<GitHub className="bento-svg color-gray-800" style={{ width: rem(ratios[3]!), height: rem(ratios[3]!) }} />
+				<GitHub
+					className="bento-svg color-gray-800"
+					style={{ width: rem(dimensions[3]!), height: rem(dimensions[3]!) }}
+				/>
 			</div>
 		</div>
 	)
@@ -115,7 +109,7 @@ function Demo2() {
 
 function Demos() {
 	// prettier-ignore
-	const demo1Ratios = [
+	const dimensions = [
 		16 * Math.pow(1.5, 0),
 		16 * Math.pow(1.5, 1),
 		16 * Math.pow(1.5, 2),
@@ -130,8 +124,8 @@ function Demos() {
 			{/* Demo 1 */}
 			<DemoWrapper>
 				<div className="hstack space-24">
-					{demo1Ratios.map(each => (
-						<GitHub className="color-gray-800" style={{ width: rem(each), height: rem(each) }} />
+					{dimensions.map((each, x) => (
+						<GitHub key={x} className="color-gray-800" style={{ width: rem(each), height: rem(each) }} />
 					))}
 				</div>
 			</DemoWrapper>
@@ -153,8 +147,8 @@ function Demos() {
 			{/* Demo 4 */}
 			<DemoWrapper>
 				<div className="hstack space-16">
-					{[Heart, MessageCircle, GitHub].map(Each => (
-						<div className="hstack space-8">
+					{[Heart, MessageCircle, GitHub].map((Each, x) => (
+						<div key={x} className="hstack space-8">
 							<Each className="w-16 h-16" />
 							<div className="text-16" style={{ fontFeatureSettings: "'tnum'" }}>
 								{10 + Math.floor(Math.random() * 90)}
@@ -177,19 +171,19 @@ function Demos() {
 
 			{/* Demo 6 */}
 			<DemoWrapper>
-				<div className="vstack space-8">
-					<div className="hstack space-12 px-12 w-192 h-36 bg-gray-100 rounded-8">
+				<div className="vstack space-8 w-192">
+					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
 						<File className="w-16 h-16 color-gray-600" />
 						<p>File</p>
 						<div className="spacer"></div>
 						<Plus className="w-16 h-16 color-gray-400" />
 					</div>
-					<div className="hstack space-12 px-12 w-192 h-36 bg-gray-100 rounded-8">
+					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
 						<Folder className="w-16 h-16 color-gray-600" />
 						<p>Folder</p>
 						<div className="spacer"></div>
 					</div>
-					<div className="hstack space-12 px-12 w-192 h-36 bg-gray-100 rounded-8">
+					<div className="align-self-stretch hstack space-12 px-12 h-36 bg-gray-100 rounded-8">
 						<GitHub className="w-16 h-16 color-gray-600" />
 						<p>Widget</p>
 						<div className="spacer"></div>
