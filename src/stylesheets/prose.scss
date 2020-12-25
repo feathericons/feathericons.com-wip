@@ -1,7 +1,18 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
+/*
+ * Prose
+ */
+
 .prose {
-	--prose-block-space: #{rem(32)};
+	--prose-flow-margin: #{rem(32)};
+	--prose-head-h1-margin: #{rem(32 / 2)};
+	--prose-head-h2-margin: #{rem(32 / 2)};
+	--prose-head-h3-margin: #{rem(32 / 2)};
+	--prose-head-h4-margin: #{rem(32 / 2)};
+	--prose-head-h5-margin: #{rem(32 / 2)};
+	--prose-head-h6-margin: #{rem(32 / 2)};
+	--prose-text-margin: #{rem(32 / 2)};
 
 	--prose-head-h1: 600 #{rem(32)} / 1.4 var(--sans), var(--ui-sans);
 	--prose-head-h2: 600 #{rem(24)} / 1.4 var(--sans), var(--ui-sans);
@@ -14,20 +25,16 @@
 	--prose-code: #{em(14)} / 1.5 var(--mono), var(--ui-mono);
 	--prose-code-pre: #{rem(15)} / 1.6 var(--mono), var(--ui-mono);
 
-	--prose-head-h1-space: #{rem(32 / 2)};
-	--prose-head-h2-space: #{rem(32 / 2)};
-	--prose-head-h3-space: #{rem(32 / 2)};
-	--prose-head-h4-space: #{rem(32 / 2)};
-	--prose-head-h5-space: #{rem(32 / 2)};
-	--prose-head-h6-space: #{rem(32 / 2)};
-	--prose-text-space: #{rem(32 / 2)};
-
 	--prose-code-padding: #{rem(2) rem(4)};
 	--prose-code-rounded: #{rem(3)};
 
 	--prose-code-pre-padding: #{rem(16) rem(24)};
 	--prose-code-pre-rounded: #{rem(6)};
 }
+
+/*
+ * Theme
+ */
 
 .prose {
 	--prose-head-h1-color: hsl(var(--black));
@@ -72,7 +79,7 @@
 	transition: var(--theme-transition);
 }
 .prose > * + * {
-	margin-top: var(--prose-block-space);
+	margin-top: var(--prose-flow-margin);
 }
 .prose h1 {
 	font: var(--prose-head-h1);
@@ -106,11 +113,11 @@
 }
 @each $head in (h1, h2, h3, h4, h5, h6) {
 	.prose #{$head} + p {
-		margin-top: var(--prose-head-#{$head}-space);
+		margin-top: var(--prose-head-#{$head}-margin);
 	}
 }
 .prose p + p {
-	margin-top: var(--prose-text-space);
+	margin-top: var(--prose-text-margin);
 }
 .prose small {
 	font: var(--prose-text-small);

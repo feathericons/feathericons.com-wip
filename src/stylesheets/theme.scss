@@ -1,7 +1,8 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
+// TODO: Extract.
 :root {
-	$theme-duration: 300ms;
+	$theme-duration: 700ms;
 	$theme-timing: timing(ease-out);
 	--theme-transition: background-color #{$theme-duration} #{$theme-timing},
 		border-color #{$theme-duration} #{$theme-timing}, box-shadow #{$theme-duration} #{$theme-timing},
@@ -20,6 +21,8 @@
 	--bg-important: hsl(var(--gray-300));
 	--bg-more-important: hsl(var(--gray-400));
 	--border-color-default: hsl(var(--gray-200));
+
+	transition: var(--theme-transition);
 }
 [data-theme="dark"] {
 	--bg-root: hsl(var(--gray-900));
