@@ -21,16 +21,16 @@ function Scripts() {
 }
 
 interface DocumentProps {
-	metadata?: React.ReactNode
+	SEO?: () => JSX.Element
 }
 
-export default function Document({ metadata }: DocumentProps) {
+export default function Document({ SEO }: DocumentProps) {
 	return (
 		<html lang="en">
 			<head>
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				{metadata}
+				{SEO && <SEO />}
 				<Stylesheets />
 				<Scripts />
 			</head>

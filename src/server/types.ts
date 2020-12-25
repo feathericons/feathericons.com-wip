@@ -1,6 +1,5 @@
 export interface Route {
-	metadata?: React.ReactNode
-	component?: React.ReactNode
+	SEO?: () => JSX.Element
 }
 
 export interface Routes {

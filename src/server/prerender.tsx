@@ -19,7 +19,7 @@ async function prerenderHTML(routes: Routes) {
 		const p = new Promise(async () => {
 			const __html = `<!DOCTYPE html>${ReactDOMServer.renderToString(
 				<Router location={key}>
-					<Document metadata={moddedRoutes[key]?.metadata} />
+					<Document SEO={moddedRoutes[key]?.SEO} />
 				</Router>,
 			)}`
 			const path = `build/${key === "/" ? "index" : key}.html`

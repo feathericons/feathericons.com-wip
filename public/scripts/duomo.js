@@ -1,12 +1,25 @@
 (() => {
   // src/runtime/runtime.ts
-  function userPrefersDarkMode() {
-    const ok = typeof window !== void 0 && Duomo.localStorageKey in window.localStorage && window.localStorage[Duomo.localStorageKey] === "dark";
-    return ok;
+  function localStoragePreference() {
+    if (!(Duomo.localStorageKey in window.localStorage)) {
+      return null;
+    }
+    const value = window.localStorage[Duomo.localStorageKey];
+    if (value !== "light" && value !== "dark") {
+      return null;
+    }
+    return value;
   }
-  function systemPrefersDarkMode() {
-    const ok = typeof window !== void 0 && "matchMedia" in window && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return ok;
+  function matchMediaPreference() {
+    if (!("matchMedia" in window)) {
+      return null;
+    }
+    const matches = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const value = {
+      false: "light",
+      true: "dark"
+    }["" + matches];
+    return value;
   }
   function isKeyDownDarkMode(e) {
     const ok = e.ctrlKey && !e.altKey && (e.key.toLowerCase() === "d" || e.keyCode === 68);
@@ -47,8 +60,10 @@
       this.#options = options;
       this.__console_log("[Duomo] init=true");
       this.#html = document.documentElement;
-      if (userPrefersDarkMode() || systemPrefersDarkMode()) {
-        this.setDarkMode(true);
+      const lsPref = localStoragePreference();
+      const mmPref = matchMediaPreference();
+      if (lsPref || mmPref) {
+        this.setDarkMode((lsPref || mmPref) === "dark");
       }
       if (typeof window !== void 0 && "matchMedia" in window) {
         const media = window.matchMedia("(prefers-color-scheme: dark)");
