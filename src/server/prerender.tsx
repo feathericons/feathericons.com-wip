@@ -3,7 +3,7 @@ import fs from "fs"
 import React from "react"
 import ReactDOMServer from "react-dom/server"
 import routes from "../routes"
-import { check, checkAsync } from "./utils"
+import { check, checkSync } from "./utils"
 import { StaticRouter as Router } from "react-router-dom"
 import type { Routes } from "./types"
 
@@ -21,14 +21,14 @@ async function prerenderHTMLAsync(routes: Routes) {
 					<Document metadata={modRoutes[key]?.metadata} />
 				</Router>,
 			)}`
-			const [, err] = check(() => fs.writeFileSync(`build/${key === "/" ? "index" : key}.html`, doc))
+			const [, err] = checkSync(() => fs.writeFileSync(`build/${key === "/" ? "index" : key}.html`, doc))
 			if (err) {
 				reject(err)
 			}
 		})
 		promises.push(promise)
 	}
-	const [, err] = await checkAsync(Promise.all(promises))
+	const [, err] = await check(Promise.all(promises))
 	if (err) {
 		return err
 	}

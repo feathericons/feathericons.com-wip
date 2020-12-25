@@ -1,13 +1,19 @@
-export function check(fn: Function) {
+/**
+ * @closure Synchronous closure
+ */
+export function checkSync(closure: Function) {
 	try {
-		const ret = fn()
+		const ret = closure()
 		return [ret, null]
 	} catch (err) {
 		return [null, err]
 	}
 }
 
-export async function checkAsync<T>(promise: Promise<T>) {
+/**
+ * @promise Asynchronous promise
+ */
+export async function check<T>(promise: Promise<T>) {
 	try {
 		const ret = await promise
 		return [ret, null]

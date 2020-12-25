@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "es2017", // Changed from `"es5"`
-		"module": "commonjs",
+		"module": "commonjs", // Unchanged
 		"lib": ["dom", "esnext"], // Added
 		"jsx": "react", // Added
 
