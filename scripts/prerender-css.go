@@ -30,7 +30,7 @@ func execCmd(cmdStr string) (stdout, stderr string, err error) {
 }
 
 func Sass(inFile, outFile string) (err error) {
-	cmdStr := `yarn --silent sass --load-path=node_modules --no-source-map --style=compressed %[1]s %[2]s`
+	cmdStr := `yarn sass --load-path=node_modules --no-source-map --style=compressed %[1]s %[2]s`
 	stdout, stderr, _ := execCmd(fmt.Sprintf(cmdStr, inFile, outFile))
 	if stderr != "" {
 		err := errors.New(stderr)
@@ -41,7 +41,7 @@ func Sass(inFile, outFile string) (err error) {
 }
 
 func Prettier(inFile, outFile string) error {
-	cmdStr := `yarn --silent prettier --write %[1]s %[2]s`
+	cmdStr := `yarn prettier --write %[1]s %[2]s`
 	stdout, stderr, _ := execCmd(fmt.Sprintf(cmdStr, inFile, outFile))
 	if stderr != "" {
 		err := errors.New(stderr)

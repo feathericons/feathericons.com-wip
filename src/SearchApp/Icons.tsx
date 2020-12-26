@@ -10,7 +10,7 @@ export default function Icons() {
 				<AspectRatioBox key={each}>
 					{/* NOTE: Use `h-full` because of `<AspectRatioBox>`. */}
 					<div className="zstack h-full">
-						<div className="w-48 h-48 bg-important rounded-full"></div>
+						<div className="w-48 h-48 bg-placeholder rounded-full"></div>
 						<div className="bottom-0 inset-x-0 py-8">
 							<PlaceholderText />
 						</div>
