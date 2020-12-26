@@ -121,7 +121,7 @@ function Demos() {
 
 	return (
 		<div
-			className="grid sm:gap-12"
+			className="grid sm:gap-12 !gap-1 -mx-16 sm:mx-0 !bg-gray-200 sm:rounded-4 !border-1 border-gray-200 sm:overflow-hidden"
 			style={{ gridTemplateColumns: `repeat(auto-fill, minmax(${rem(256)}, 1fr))`, gridAutoRows: rem(160) }}
 		>
 			{/* Demo 1 */}
