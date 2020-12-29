@@ -23,6 +23,8 @@
 	--prose-code-rounded: #{rem(3)};
 
 	--prose-code-pre-padding: #{rem(16) rem(24)};
+
+	// NOTE: Use `rem(6)` not `rem(4)`.
 	--prose-code-pre-rounded: #{rem(6)};
 }
 
@@ -38,6 +40,7 @@
 	--prose-text-anchor-color: hsl(var(--cool-gray-600));
 	--prose-text-small-color: hsl(var(--cool-gray-700));
 
+	// FIXME
 	--prose-hr-border-color: 1px solid hsl(var(--cool-gray-200));
 
 	--prose-code-color: hsl(220, 83.33%, 50%);
@@ -56,6 +59,7 @@
 	--prose-text-anchor-color: hsl(var(--cool-gray-100)); // NOTE: Use `gray-100` not `white`.
 	--prose-text-small-color: hsl(var(--cool-gray-300));
 
+	// FIXME
 	--prose-hr-border-color: 1px solid hsl(var(--cool-gray-700));
 
 	--prose-code-color: var(--gray-100);

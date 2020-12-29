@@ -1,27 +1,79 @@
+@use "sass:color" as sasscolor;
+
 @use "@zaydek/duomo" as * with ($headless: true);
 
 // prettier-ignore
 $light: (
+	// App
 	ui-app-bg: color(white),
 	ui-app-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
-	ui-content-search-bar-bg: color(white),
-	ui-content-card-bg: color(white), // TODO
+
+	ui-search-bar-bg: color(white),
+	// ...
+
+	// Sidebar
 	ui-sidebar-bg: color(white),
 	ui-sidebar-preview-bg: color(white),
-	ui-svg-color: color(black),
-	ui-faded-svg-color: color(black, 0.5),
+
+	// Demo 2
+	ui-demo-2-bg: color(white),
+	ui-demo-2-username-color: color(cool-gray-800),
+	ui-demo-2-hr-bg: color(cool-gray-200),
+	ui-demo-2-password-color: color(cool-gray-800),
+	ui-demo-2-shadow: (shadow(px), shadow(xs), shadow(sm)),
+
+	// Demo 3
+	ui-demo-3-bg: #1da1f2,
+	ui-demo-3-shadow: (shadow(px), shadow(xs), shadow(sm)),
+	ui-demo-3-svg-color: color(white),
+	ui-demo-3-text-color: color(white),
+
+	// Card
+	ui-card-bg: color(white), // TODO
+	ui-card-border-color: color(cool-gray-200),
+
+	// SVG
+	ui-svg-color: color(cool-gray-800),
+	ui-faded-svg-color: color(cool-gray-800),
+	ui-faded-svg-opacity: 0.5,
 );
+
+// TODO: Why does this not work? `ui-card-bg: sasscolor.scale(hex(color(cool-gray-700)), 0.1)`
 
 // prettier-ignore
 $dark: (
+	// App
 	ui-app-bg: color(cool-gray-800),
 	ui-app-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
-	ui-content-search-bar-bg: color(cool-gray-800),
-	ui-content-card-bg: color(cool-gray-800),
+
+	ui-search-bar-bg: color(cool-gray-800),
+	// ...
+
+	// Sidebar
 	ui-sidebar-bg: color(cool-gray-800),
 	ui-sidebar-preview-bg: color(cool-gray-800),
-	ui-svg-color: color(white),
-	ui-faded-svg-color: color(white, 0.5),
+
+	// Demo 2
+	ui-demo-2-bg: color(cool-gray-800),
+	ui-demo-2-username-color: color(cool-gray-200),
+	ui-demo-2-hr-bg: color(cool-gray-600),
+	ui-demo-2-password-color: color(cool-gray-200),
+	ui-demo-2-shadow: 0 0 0 1px color(cool-gray-600),
+
+	// Demo 3
+	ui-demo-3-bg: sasscolor.scale(#1da1f2, $lightness: -20%),
+	ui-demo-3-shadow: none,
+	ui-demo-3-svg-color: color(white),
+	ui-demo-3-text-color: color(white),
+
+	// Card
+	ui-card-bg: color(cool-gray-800),
+	ui-card-border-color: color(cool-gray-700),
+
+	// SVG
+	ui-svg-color: color(cool-gray-200),
+	ui-faded-svg-color: color(cool-gray-200),
+	ui-faded-svg-opacity: 0.5,
 );
 
 :root {
@@ -54,55 +106,50 @@ $dark: (
 	@include themes($light, $dark);
 }
 
-// *
-// * Bento
-// */
-//
-// bento-grid {
-// 	--bento-grid-area-bg: hsl(var(--gray-50));
-// 	--bento-svg-color: hsl(var(--gray-800));
-//
-// data-theme="dark"] .bento-grid {
-// 	--bento-grid-area-bg: hsl(var(--gray-700));
-// 	--bento-svg-color: hsl(var(--gray-200));
-//
-//
-// bento-grid {
-// 	display: grid;
-// 	grid-template-rows: 0.62fr 0.38fr;
-// 	grid-template-columns: 0.62fr 0.14fr 0.24fr;
-// 	grid-template-areas:
-// 		"a a a"
-// 		"a a a";
-//
-// 	gap: rem(12);
-// 	height: rem(320);
-//
-// bento-grid-area:nth-child(1) {
-// 	grid-area: a;
-//
-// bento-grid-area:nth-child(2) {
-// 	grid-area: b;
-//
-// bento-grid-area:nth-child(3) {
-// 	grid-area: c;
-//
-// bento-grid-area:nth-child(4) {
-// 	grid-area: d;
-//
-// bento-grid-area {
-// 	background-color: var(--bento-grid-area-bg);
-// 	border-radius: rem(6);
-// 	transition: var(--theme-transition);
-//
-// bento-svg {
-// 	color: var(--bento-svg-color);
-// 	transition: var(--theme-transition);
-//
-// media (min-width: px(breakpoint(lg))) {
-// 	.bento-grid {
-// 		grid-template-areas:
-// 			"a b b"
-// 			"a d c";
-// 	}
-//
+/*
+ * Bento
+ */
+
+#bento {
+	display: grid;
+	grid-template-rows: 0.62fr 0.38fr;
+	grid-template-columns: 0.62fr 0.14fr 0.24fr;
+	grid-template-areas:
+		"a a a"
+		"a a a";
+
+	gap: rem(12);
+	height: rem(320);
+}
+
+#bento > :nth-child(1) {
+	grid-area: a;
+}
+#bento > :nth-child(2) {
+	grid-area: b;
+}
+#bento > :nth-child(3) {
+	grid-area: c;
+}
+#bento > :nth-child(4) {
+	grid-area: d;
+}
+
+@media (min-width: breakpoint(lg)) {
+	#bento {
+		grid-template-areas:
+			"a b b"
+			"a d c";
+	}
+}
+
+/*
+ * Demos
+ */
+
+#demos {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(px(256), 1fr));
+	grid-auto-rows: rem(160);
+	gap: rem(12);
+}

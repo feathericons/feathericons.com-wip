@@ -4,8 +4,8 @@
 	"scripts": {
 		"build-dataset": "ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender-html.js && node src/server/prerender.tmp.js && rm src/server/prerender.tmp.js",
-		"prerender-css": "go run scripts/prerender-css.go src/stylesheets/*.scss",
-		"watch-css": "yarn nodemon --exec 'go run scripts/prerender-css.go src/stylesheets/app.scss src/stylesheets/prose.scss' --ext scss --watch src/stylesheets",
+		"prerender-css": "go run scripts/prerender-css.go duomo.config.scss src/stylesheets/*.scss",
+		"watch-css": "yarn nodemon --exec 'go run scripts/prerender-css.go src/stylesheets/*.scss' --ext scss --watch src/stylesheets",
 		"test": "jest",
 		"start": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-css' && node scripts/start.js",
 		"restart": "node scripts/start.js",
