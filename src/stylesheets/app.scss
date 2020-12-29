@@ -7,94 +7,94 @@
 // prettier-ignore
 $light: (
 	// App
-	ui-app-bg: color(white),
-	ui-app-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
+	app-bg: color(white),
+	app-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
 
-	ui-search-bar-bg: color(white),
+	search-bar-bg: color(white),
 	// ...
 
 	// Sidebar
-	ui-sidebar-bg: color(white),
-	ui-sidebar-preview-bg: color(white),
+	sidebar-bg: color(white),
+	sidebar-preview-bg: color(white),
 
 	// Demo 2
-	ui-demo-2-bg: color(white),
-	ui-demo-2-username-color: color(cool-gray-800),
-	ui-demo-2-hr-bg: color(cool-gray-200),
-	ui-demo-2-password-color: color(cool-gray-800),
-	ui-demo-2-shadow: (shadow(px), shadow(xs), shadow(sm)),
+	demo-2-bg: color(white),
+	demo-2-username-color: color(cool-gray-800),
+	demo-2-hr-bg: color(cool-gray-200),
+	demo-2-password-color: color(cool-gray-800),
+	demo-2-shadow: (shadow(px), shadow(xs), shadow(sm)),
 
 	// Demo 3
-	ui-demo-3-bg: #1da1f2,
-	ui-demo-3-shadow: (shadow(px), shadow(xs), shadow(sm)),
-	ui-demo-3-svg-color: color(white),
-	ui-demo-3-text-color: color(white),
+	demo-3-bg: #1da1f2,
+	demo-3-shadow: (shadow(px), shadow(xs), shadow(sm)),
+	demo-3-svg-color: color(white),
+	demo-3-text-color: color(white),
 
-	ui-demo-4-li-bg: color(cool-gray-100),
-	ui-demo-4-li-shadow: 0 0 0 1px transparent,
-	ui-demo-4-li-svg-color: color(black),
-	ui-demo-4-li-text-color: color(black),
+	demo-4-li-bg: color(cool-gray-100),
+	demo-4-li-shadow: 0 0 0 1px transparent,
+	demo-4-li-svg-color: color(black),
+	demo-4-li-text-color: color(black),
 
-	ui-demo-5-li-bg: color(cool-gray-100),
+	demo-5-li-bg: color(cool-gray-100),
 	// FIXME: Change to `color(transparent)`.
-	ui-demo-5-li-shadow: 0 0 0 1px transparent,
-	// ui-demo-5-border-color: color(cool-gray-100),
+	demo-5-li-shadow: 0 0 0 1px transparent,
+	// demo-5-border-color: color(cool-gray-100),
 
 	// Card
-	ui-card-bg: color(white), // TODO
-	ui-card-border-color: color(cool-gray-200),
+	card-bg: color(white), // TODO
+	card-border-color: color(cool-gray-200),
 
 	// SVG
-	ui-svg-color: color(cool-gray-800),
-	ui-faded-svg-color: color(cool-gray-800),
-	ui-faded-svg-opacity: 0.5,
+	svg-color: color(cool-gray-800),
+	faded-svg-color: color(cool-gray-800),
+	faded-svg-opacity: 0.5,
 );
 
-// TODO: Why does this not work? `ui-card-bg: sasscolor.scale(hex(color(cool-gray-700)), 0.1)`
+// TODO: Why does this not work? `card-bg: sasscolor.scale(hex(color(cool-gray-700)), 0.1)`
 
 // prettier-ignore
 $dark: (
 	// App
-	ui-app-bg: color(cool-gray-800),
-	ui-app-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
+	app-bg: color(cool-gray-800),
+	app-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
 
-	ui-search-bar-bg: color(cool-gray-800),
+	search-bar-bg: color(cool-gray-800),
 	// ...
 
 	// Sidebar
-	ui-sidebar-bg: color(cool-gray-800),
-	ui-sidebar-preview-bg: color(cool-gray-800),
+	sidebar-bg: color(cool-gray-800),
+	sidebar-preview-bg: color(cool-gray-800),
 
 	// Demo 2
-	ui-demo-2-bg: color(cool-gray-800),
-	ui-demo-2-username-color: color(cool-gray-200),
-	ui-demo-2-hr-bg: color(cool-gray-600),
-	ui-demo-2-password-color: color(cool-gray-200),
-	ui-demo-2-shadow: 0 0 0 1px color(cool-gray-600),
+	demo-2-bg: color(cool-gray-800),
+	demo-2-username-color: color(cool-gray-200),
+	demo-2-hr-bg: color(cool-gray-600),
+	demo-2-password-color: color(cool-gray-200),
+	demo-2-shadow: 0 0 0 1px color(cool-gray-600),
 
 	// Demo 3
-	ui-demo-3-bg: sasscolor.scale(#1da1f2, $lightness: -20%),
-	ui-demo-3-shadow: none,
-	ui-demo-3-svg-color: color(white),
-	ui-demo-3-text-color: color(white),
+	demo-3-bg: sasscolor.scale(#1da1f2, $lightness: -20%),
+	demo-3-shadow: none,
+	demo-3-svg-color: color(white),
+	demo-3-text-color: color(white),
 
-	ui-demo-4-li-bg: color(cool-gray-800),
-	ui-demo-4-li-shadow: 0 0 0 1px color(cool-gray-600),
-	ui-demo-4-li-svg-color: color(white),
-	ui-demo-4-li-text-color: color(white),
+	demo-4-li-bg: color(cool-gray-800),
+	demo-4-li-shadow: 0 0 0 1px color(cool-gray-600),
+	demo-4-li-svg-color: color(white),
+	demo-4-li-text-color: color(white),
 
-	ui-demo-5-li-bg: color(cool-gray-800),
-	ui-demo-5-li-shadow: 0 0 0 1px color(cool-gray-600),
-	// ui-demo-5-border-color: color(cool-gray-800),
+	demo-5-li-bg: color(cool-gray-800),
+	demo-5-li-shadow: 0 0 0 1px color(cool-gray-600),
+	// demo-5-border-color: color(cool-gray-800),
 
 	// Card
-	ui-card-bg: color(cool-gray-800),
-	ui-card-border-color: color(cool-gray-700),
+	card-bg: color(cool-gray-800),
+	card-border-color: color(cool-gray-700),
 
 	// SVG
-	ui-svg-color: color(cool-gray-200),
-	ui-faded-svg-color: color(cool-gray-200),
-	ui-faded-svg-opacity: 0.5,
+	svg-color: color(cool-gray-200),
+	faded-svg-color: color(cool-gray-200),
+	faded-svg-opacity: 0.5,
 );
 
 :root {

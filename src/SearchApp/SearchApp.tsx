@@ -9,13 +9,14 @@ interface SearchAppProps {
 export default function SearchApp({ children }: SearchAppProps) {
 	return (
 		<div className="hstack">
-			<div className={`hstack align-start w-full max-w-xl xl:rounded-${vars.rounded} ui-app`}>
+			<div className={`hstack align-start w-full max-w-xl xl:rounded-${vars.rounded}`} data-id="app">
 				{/* LHS */}
 				<div className="spacer">
 					{/* TODO: Extract `<SearchBar>`. */}
 					<div className="sticky top-0 z-30">
 						<div
-							className={`hstack space-16 p-24 h-80 md:h-96 border-bottom-1 xl:rounded-top-left-${vars.rounded} ui-search-bar`}
+							className={`hstack space-16 p-24 h-80 md:h-96 border-bottom-1 xl:rounded-top-left-${vars.rounded}`}
+							data-id="search-bar"
 						>
 							<div className="w-24 h-24 bg-placeholder rounded-full"></div>
 							<div className="w-160 h-8 bg-placeholder rounded-full"></div>

@@ -9,9 +9,10 @@ export default function Sidebar() {
 		>
 			<div className="sticky top-0">
 				<div className="vstack align-stretch">
-					{/* TODO: Extract `<SiderbarPreview>`. */}
+					{/* TODO: Extract `<SiderbarPreview>`? */}
 					<div
-						className={`zstack align-self-stretch h-320 border-bottom-1 xl:rounded-top-right-${vars.rounded} ui-sidebar-preview`}
+						className={`zstack align-self-stretch h-320 border-bottom-1 xl:rounded-top-right-${vars.rounded}`}
+						data-id="sidebar-preview"
 					>
 						<div className="w-64 h-64 bg-placeholder rounded-full"></div>
 						<div className="absolute top-right-0 p-24">
