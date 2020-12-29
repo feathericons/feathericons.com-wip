@@ -4,12 +4,13 @@
 	"scripts": {
 		"build-dataset": "ts-node src/data/build.ts > src/data/raw.json",
 		"prerender-html": "node scripts/prerender-html.js && node src/server/prerender.tmp.js && rm src/server/prerender.tmp.js",
-		"prerender-css": "go run scripts/prerender-css.go duomo.config.scss src/stylesheets/*.scss",
-		"watch-css": "yarn nodemon --exec 'go run scripts/prerender-css.go src/stylesheets/*.scss' --ext scss --watch src/stylesheets",
+		"prerender-duomo-css": "sass --load-path=node_modules --no-source-map duomo.config.scss build/stylesheets/duomo.css",
+		"prerender-css": "yarn sass --load-path=node_modules --no-source-map src/stylesheets/app.scss build/stylesheets/app.css && yarn sass --load-path=node_modules --no-source-map src/stylesheets/prose.scss build/stylesheets/prose.css",
+		"watch-css": "yarn nodemon --exec 'yarn prerender-etc-css' --ext scss --watch src/stylesheets",
 		"test": "jest",
-		"start": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-css' && node scripts/start.js",
+		"start": "rm -rf build && mkdir build && cp -r public build && yarn concurrently 'yarn prerender-html' 'yarn prerender-duomo-css' 'yarn prerender-css' && node scripts/start.js",
 		"restart": "node scripts/start.js",
-		"build": "rm -rf build && mkdir build && yarn concurrently 'yarn prerender-html' 'yarn prerender-css' && NODE_ENV=production node scripts/build.js"
+		"build": "rm -rf build && mkdir build && cp -r public build && yarn concurrently 'yarn prerender-html' 'yarn prerender-duomo-css' 'yarn prerender-css' && NODE_ENV=production node scripts/build.js"
 	},
 	"dependencies": {
 		"react": "^17.0.1",
@@ -28,8 +29,8 @@
 		"chokidar": "^3.4.3",
 		"concurrently": "^5.3.0",
 		"esbuild": "^0.8.25",
+		"express": "^4.17.1",
 		"jest": "^26.6.3",
-		"live-server": "^1.2.1",
 		"nodemon": "^2.0.6",
 		"prettier": "^2.2.1",
 		"sass": "^1.30.0",

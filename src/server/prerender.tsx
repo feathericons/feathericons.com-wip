@@ -3,16 +3,14 @@ import fs from "fs/promises"
 import React from "react"
 import ReactDOMServer from "react-dom/server"
 import routes from "../routes"
-import { exec } from "child_process"
 import { StaticRouter as Router } from "react-router-dom"
 import type { Routes } from "./types"
 
 // Prerenders HTML routes.
-async function prerenderHTML(routes: Routes) {
-	// NOTE: `/404` is client-side rendered.
+;(async (routes: Routes) => {
 	const moddedRoutes: typeof routes = {
 		...routes,
-		"/404": null,
+		"/404": null, // CSR
 	}
 	const ps = []
 	for (const key in moddedRoutes) {
@@ -28,10 +26,4 @@ async function prerenderHTML(routes: Routes) {
 		ps.push(p)
 	}
 	await Promise.all(ps)
-}
-
-;(async () => {
-	await exec("mkdir build")
-	await exec("ls public && cp -r public build")
-	await prerenderHTML(routes)
-})()
+})(routes)
