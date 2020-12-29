@@ -42,7 +42,7 @@ export default function Header() {
 									className="hstack w-full md:w-192 h-48 bg-placeholder rounded-12 md:rounded-full"
 									style={{ maxWidth: 512 }}
 								>
-									<PlaceholderText />
+									{/* <PlaceholderText /> */}
 								</div>
 							))}
 						</div>

@@ -1,88 +1,70 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-// DEPRECATE
-:root {
-	--theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
-}
-
+// // DEPRECATE
 // :root {
-// 	--theme-duration: 400ms;
-// 	--theme-timing-function: var(--ease-out);
+// 	--theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
 // }
 
-// --bg-root: hsl(var(--gray-900));
-// --bg-search-app: hsl(var(--gray-800));
-// --bg-search-app-content-search-bar: hsl(var(--gray-800));
-// --bg-search-app-sidebar-preview: hsl(var(--gray-800));
-// --bg-search-app-sidebar: hsl(var(--gray-800));
-// --bg-less-important: hsl(var(--gray-700));
-// --bg-important: hsl(var(--gray-600));
-// --bg-more-important: hsl(var(--gray-500));
-// --border-card: 1px solid hsl(var(--transparent));
-
 :root {
-	transition: var(--theme-transition);
-}
-.bg-placeholder {
-	background-color: var(--placeholder-bg-default);
-	transition: var(--theme-transition);
-}
-[class*="border-"] {
-	transition: var(--theme-transition);
-}
-
-:root {
-	--root-bg: hsl(var(--gray-50));
+	--root-bg: hsl(var(--cool-gray-50));
 	--ui-app-bg: hsl(var(--white));
-	--ui-app-shadow: 0 0 0 1px hsl(var(--gray-200)), var(--shadow-xs), var(--shadow-md);
+	--ui-app-shadow: 0 0 0 1px hsl(var(--cool-gray-200)), var(--shadow-xs), var(--shadow-md);
 	--ui-content-search-bar-bg: hsl(var(--white));
 	--ui-content-card-bg: hsl(var(--white)); // TODO
 	--ui-sidebar-bg: hsl(var(--white));
 	--ui-sidebar-preview-bg: hsl(var(--white));
 	--ui-svg-color: hsl(var(--black));
 	--ui-svg-faded-color: hsl(var(--black), 0.5);
-	--placeholder-bg-default: hsl(var(--gray-300));
-	--border-color-default: hsl(var(--gray-200));
+	--placeholder-bg-default: hsl(var(--cool-gray-300));
+	--border-color-default: hsl(var(--cool-gray-200));
 }
 [data-theme="dark"] {
 	--root-bg: #090c14;
-	--ui-app-bg: hsl(var(--gray-800));
-	--ui-app-shadow: 0 0 0 1px hsl(var(--gray-700)), var(--shadow-xs), var(--shadow-md);
-	--ui-content-search-bar-bg: hsl(var(--gray-800));
-	--ui-content-card-bg: hsl(var(--gray-800));
-	--ui-sidebar-bg: hsl(var(--gray-800));
-	--ui-sidebar-preview-bg: hsl(var(--gray-800));
+	--ui-app-bg: hsl(var(--cool-gray-800));
+	--ui-app-shadow: 0 0 0 1px hsl(var(--cool-gray-700)), var(--shadow-xs), var(--shadow-md);
+	--ui-content-search-bar-bg: hsl(var(--cool-gray-800));
+	--ui-content-card-bg: hsl(var(--cool-gray-800));
+	--ui-sidebar-bg: hsl(var(--cool-gray-800));
+	--ui-sidebar-preview-bg: hsl(var(--cool-gray-800));
 	--ui-svg-color: hsl(var(--white));
 	--ui-svg-faded-color: hsl(var(--white), 0.5);
-	--placeholder-bg-default: hsl(var(--gray-700));
-	--border-color-default: hsl(var(--gray-900));
+	--placeholder-bg-default: hsl(var(--cool-gray-700));
+	--border-color-default: hsl(var(--cool-gray-900));
 }
 
-[class*="ui-"] {
+[class*="bg-placeholder"],
+[class*="border-"] {
 	transition: var(--theme-transition);
 }
 
 :root {
 	background-color: var(--root-bg);
+	transition: var(--theme-transition);
 }
 .ui-app {
 	background-color: var(--ui-app-bg);
 	box-shadow: var(--ui-app-shadow);
+	transition: var(--theme-transition);
 }
 .ui-content-search-bar {
 	background-color: var(--ui-content-search-bar-bg);
+	transition: var(--theme-transition);
 }
 .ui-content-card {
 	background-color: var(--ui-content-card-bg);
+	transition: var(--theme-transition);
 }
 .ui-sidebar {
 	background-color: var(--ui-sidebar-bg);
+	transition: var(--theme-transition);
 }
 .ui-sidebar-preview {
 	background-color: var(--ui-sidebar-preview-bg);
+	transition: var(--theme-transition);
 }
 .ui-svg {
 	color: var(--ui-svg-color);
+	transition: var(--theme-transition);
 }
 
 // *
