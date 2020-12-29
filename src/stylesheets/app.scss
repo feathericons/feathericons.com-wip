@@ -2,6 +2,8 @@
 
 @use "@zaydek/duomo" as * with ($headless: true);
 
+// FIXME: color(white) color(transparent) color(black)
+
 // prettier-ignore
 $light: (
 	// App
@@ -27,6 +29,16 @@ $light: (
 	ui-demo-3-shadow: (shadow(px), shadow(xs), shadow(sm)),
 	ui-demo-3-svg-color: color(white),
 	ui-demo-3-text-color: color(white),
+
+	ui-demo-4-li-bg: color(cool-gray-100),
+	ui-demo-4-li-shadow: 0 0 0 1px transparent,
+	ui-demo-4-li-svg-color: color(black),
+	ui-demo-4-li-text-color: color(black),
+
+	ui-demo-5-li-bg: color(cool-gray-100),
+	// FIXME: Change to `color(transparent)`.
+	ui-demo-5-li-shadow: 0 0 0 1px transparent,
+	// ui-demo-5-border-color: color(cool-gray-100),
 
 	// Card
 	ui-card-bg: color(white), // TODO
@@ -65,6 +77,15 @@ $dark: (
 	ui-demo-3-shadow: none,
 	ui-demo-3-svg-color: color(white),
 	ui-demo-3-text-color: color(white),
+
+	ui-demo-4-li-bg: color(cool-gray-800),
+	ui-demo-4-li-shadow: 0 0 0 1px color(cool-gray-600),
+	ui-demo-4-li-svg-color: color(white),
+	ui-demo-4-li-text-color: color(white),
+
+	ui-demo-5-li-bg: color(cool-gray-800),
+	ui-demo-5-li-shadow: 0 0 0 1px color(cool-gray-600),
+	// ui-demo-5-border-color: color(cool-gray-800),
 
 	// Card
 	ui-card-bg: color(cool-gray-800),

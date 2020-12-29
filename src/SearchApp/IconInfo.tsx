@@ -102,7 +102,7 @@ function Demo2() {
 
 	return (
 		<DemoWrapper>
-			<div className="w-224 rounded-8 ui-card ui-demo-2">
+			<div className="w-224 rounded-8 ui-demo-2">
 				{/* Username */}
 				<div className="zstack align-stretch h-48">
 					<input
@@ -192,14 +192,14 @@ function Demos() {
 
 			{/* Demo 4 */}
 			<DemoWrapper>
-				<div className="hstack space-16">
-					{[Heart, MessageCircle, GitHub].map((Each, x) => (
-						<div key={x} className="hstack space-8">
-							<Each className="w-16 h-16" />
-							<div className="text-16" style={{ fontFeatureSettings: "'tnum'" }}>
-								{10 + Math.floor(Math.random() * 90)}
+				<div className="hstack space-8">
+					{[Heart, MessageCircle, GitHub].map((each, x) => (
+						<li key={x} className="align-self-center hstack space-8 px-16 py-8 rounded-full ui-demo-4-li">
+							<SVG svg={each} className="w-16 h-16 ui-demo-4-li-svg" />
+							<div className="text-16 ui-demo-4-li-text" style={{ fontFeatureSettings: "'tnum'" }}>
+								{0 + Math.floor(Math.random() * 20)}
 							</div>
-						</div>
+						</li>
 					))}
 				</div>
 			</DemoWrapper>
@@ -207,10 +207,10 @@ function Demos() {
 			{/* Demo 5 */}
 			<DemoWrapper>
 				<div className="hstack space-12">
-					{[Inbox, Trash2, Archive, GitHub].map((Each, x) => (
-						<div key={x} className="hstack w-40 h-40 rounded-full shadow shadow-px shadow-xs">
-							<Each className="w-18 h-18 ui-svg" />
-						</div>
+					{[Inbox, Trash2, Archive, GitHub].map((each, x) => (
+						<li key={x} className="hstack w-48 h-48 rounded-full ui-demo-5-li">
+							<SVG svg={each} className="w-20 h-20 ui-svg" />
+						</li>
 					))}
 				</div>
 			</DemoWrapper>
