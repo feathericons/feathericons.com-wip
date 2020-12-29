@@ -83,13 +83,13 @@ import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
 // 					{!show ? (
 // 						// prettier-ignore
 // 						<EyeOff
-// 							className="w-18 h-18 ui-svg-faded"
+// 							className="w-18 h-18 ui-faded-svg"
 // 							onClick={() => setShow(!show)}
 // 						/>
 // 					) : (
 // 						// prettier-ignore
 // 						<Eye
-// 							className="w-18 h-18 ui-svg-faded"
+// 							className="w-18 h-18 ui-faded-svg"
 // 							onClick={() => setShow(!show)}
 // 						/>
 // 					)}
@@ -168,7 +168,7 @@ import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
 // 						<File className="w-16 h-16 ui-svg" />
 // 						<p>File</p>
 // 						<div className="spacer"></div>
-// 						<Plus className="w-16 h-16 ui-svg-faded" />
+// 						<Plus className="w-16 h-16 ui-faded-svg" />
 // 					</div>
 // 					<div className="align-self-stretch hstack space-16 px-16 h-36 bg-white rounded-8 shadow shadow-px shadow-xs">
 // 						<Folder className="w-16 h-16 ui-svg" />

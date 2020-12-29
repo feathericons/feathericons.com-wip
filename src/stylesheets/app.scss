@@ -1,70 +1,57 @@
 @use "@zaydek/duomo" as * with ($headless: true);
 
-// // DEPRECATE
-// :root {
-// 	--theme-transition: #{theme-transition(700ms, timing(ease-out, $raw: true))};
-// }
+// prettier-ignore
+$light: (
+	ui-app-bg: color(white),
+	ui-app-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
+	ui-content-search-bar-bg: color(white),
+	ui-content-card-bg: color(white), // TODO
+	ui-sidebar-bg: color(white),
+	ui-sidebar-preview-bg: color(white),
+	ui-svg-color: color(black),
+	ui-faded-svg-color: color(black, 0.5),
+);
+
+// prettier-ignore
+$dark: (
+	ui-app-bg: color(cool-gray-800),
+	ui-app-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
+	ui-content-search-bar-bg: color(cool-gray-800),
+	ui-content-card-bg: color(cool-gray-800),
+	ui-sidebar-bg: color(cool-gray-800),
+	ui-sidebar-preview-bg: color(cool-gray-800),
+	ui-svg-color: color(white),
+	ui-faded-svg-color: color(white, 0.5),
+);
 
 :root {
-	--root-bg: hsl(var(--cool-gray-50));
-	--ui-app-bg: hsl(var(--white));
-	--ui-app-shadow: 0 0 0 1px hsl(var(--cool-gray-200)), var(--shadow-xs), var(--shadow-md);
-	--ui-content-search-bar-bg: hsl(var(--white));
-	--ui-content-card-bg: hsl(var(--white)); // TODO
-	--ui-sidebar-bg: hsl(var(--white));
-	--ui-sidebar-preview-bg: hsl(var(--white));
-	--ui-svg-color: hsl(var(--black));
-	--ui-svg-faded-color: hsl(var(--black), 0.5);
-	--placeholder-bg-default: hsl(var(--cool-gray-300));
-	--border-color-default: hsl(var(--cool-gray-200));
-}
-[data-theme="dark"] {
-	--root-bg: #090c14;
-	--ui-app-bg: hsl(var(--cool-gray-800));
-	--ui-app-shadow: 0 0 0 1px hsl(var(--cool-gray-700)), var(--shadow-xs), var(--shadow-md);
-	--ui-content-search-bar-bg: hsl(var(--cool-gray-800));
-	--ui-content-card-bg: hsl(var(--cool-gray-800));
-	--ui-sidebar-bg: hsl(var(--cool-gray-800));
-	--ui-sidebar-preview-bg: hsl(var(--cool-gray-800));
-	--ui-svg-color: hsl(var(--white));
-	--ui-svg-faded-color: hsl(var(--white), 0.5);
-	--placeholder-bg-default: hsl(var(--cool-gray-700));
-	--border-color-default: hsl(var(--cool-gray-900));
+	--root-bg: #{color(cool-gray-50)};
+	--placeholder-bg-default: #{color(cool-gray-300)};
+	--border-color-default: #{color(cool-gray-200)};
+
+	// TODO: Move to `themes` API.
+	--theme-duration: 700ms;
+	--theme-timing: #{timing(ease-out)};
 }
 
-[class*="bg-placeholder"],
-[class*="border-"] {
-	transition: var(--theme-transition);
+[data-theme="dark"] {
+	--root-bg: #090c14;
+	--placeholder-bg-default: #{color(cool-gray-700)};
+	--border-color-default: #{color(cool-gray-900)};
 }
 
 :root {
 	background-color: var(--root-bg);
 	transition: var(--theme-transition);
 }
-.ui-app {
-	background-color: var(--ui-app-bg);
-	box-shadow: var(--ui-app-shadow);
+
+.bg-placeholder,
+[class*="border-"] {
 	transition: var(--theme-transition);
 }
-.ui-content-search-bar {
-	background-color: var(--ui-content-search-bar-bg);
-	transition: var(--theme-transition);
-}
-.ui-content-card {
-	background-color: var(--ui-content-card-bg);
-	transition: var(--theme-transition);
-}
-.ui-sidebar {
-	background-color: var(--ui-sidebar-bg);
-	transition: var(--theme-transition);
-}
-.ui-sidebar-preview {
-	background-color: var(--ui-sidebar-preview-bg);
-	transition: var(--theme-transition);
-}
-.ui-svg {
-	color: var(--ui-svg-color);
-	transition: var(--theme-transition);
+
+@at-root {
+	@include themes($light, $dark);
 }
 
 // *
