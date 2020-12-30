@@ -1,0 +1,14 @@
+@use "duomo" as *;
+
+#icons {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(128), 1fr));
+	gap: rem(16);
+}
+
+#demos {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(rem(256), 1fr));
+	grid-auto-rows: rem(160);
+	gap: rem(16);
+}

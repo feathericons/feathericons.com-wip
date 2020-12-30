@@ -1,26 +1,5 @@
 @use "duomo" as *;
 
-/*
- * Resets
- */
-
-svg {
-	width: rem(16);
-	height: rem(16);
-}
-
-input {
-	width: 100%;
-	background-color: transparent;
-}
-
-/*
- * Themes
- */
-
-// TODO: Why does this not work? `card-bg: sasscolor.scale(hex(color(cool-gray-700)), 0.1)`
-// TODO: Change `transparent` to `color(transparent)`.
-
 :root {
 	--root-bg: hsl(var(--cool-gray-50));
 	--placeholder-bg-default: var(--cool-gray-300);
@@ -44,34 +23,66 @@ input {
 	transition: var(--theme-transition);
 }
 
+/*
+ * Themes
+ */
+
+// TODO: Change `transparent` to `color(transparent)`.
+
 // prettier-ignore
 $light: (
+	btn-text-color: color(white, 0.95),
+	btn-bg: color(green-500),
+	btn-shadow: (shadow(sm), shadow(lg)),
+
+
+
+
+
+
 	App-bg: color(white),
 	App-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
 	SearchBar-bg: color(white),
-	Sidebar-bg: color(gray-50),
+	Sidebar-bg: color(cool-gray-50),
 	ToolbarPreview-bg: color(white),
-	DemoBtn-bg: color(cool-gray-100),
-	DemoBtn-shadow: 0 0 0 1px transparent,
-	DemoBtnSVG-color: color(cool-gray-800),
-	DemoBtnFadedSVG-color: color(cool-gray-800),
-	DemoBtnFadedSVG-opacity: 0.5,
-	DemoBtnText-color: color(cool-gray-800),
+	Card-shadow: 0 0 0 1px color(cool-gray-200),
+	SVG-color: color(cool-gray-800),
+	FadedSVG-color: color(cool-gray-800),
+	FadedSVG-opacity: 0.33,
+	Text-color: color(cool-gray-800),
+	GrayUI-bg: color(cool-gray-100),
+	GrayUI-shadow: 0 0 0 1px transparent,
+	RaisedUI-bg: color(white),
+	RaisedUI-shadow: (shadow(px), shadow(xs), shadow(sm)),
+	RaisedUISeparator-bg: color(cool-gray-100),
 );
 
 // prettier-ignore
 $dark: (
+	btn-text-color: color(white, 0.95),
+	btn-bg: color(red-500),
+	btn-shadow: (shadow(sm), shadow(lg)),
+
+
+
+
+
+
 	App-bg: color(cool-gray-800),
 	App-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
 	SearchBar-bg: color(cool-gray-800),
 	Sidebar-bg: color(cool-gray-800),
 	ToolbarPreview-bg: color(cool-gray-800),
-	DemoBtn-bg: color(cool-gray-700),
-	DemoBtn-shadow: 0 0 0 1px color(cool-gray-600),
-	DemoBtnSVG-color: color(cool-gray-200),
-	DemoBtnFadedSVG-color: color(cool-gray-200),
-	DemoBtnFadedSVG-opacity: 0.5,
-	DemoBtnText-color: color(cool-gray-200),
+	Card-shadow: 0 0 0 1px color(cool-gray-600),
+	SVG-color: color(cool-gray-200),
+	FadedSVG-color: color(cool-gray-200),
+	FadedSVG-opacity: 0.33,
+	Text-color: color(cool-gray-200),
+	GrayUI-bg: transparent,
+	GrayUI-shadow: 0 0 0 1px color(cool-gray-600),
+	RaisedUI-bg: transparent,
+	RaisedUI-shadow: 0 0 0 1px color(cool-gray-600),
+	RaisedUISeparator-bg: color(cool-gray-600),
 );
 
 // prettier-ignore

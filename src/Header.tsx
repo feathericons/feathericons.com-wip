@@ -36,15 +36,15 @@ export default function Header() {
 						<div className="mt-16 w-320 h-8 bg-placeholder rounded-full" />
 						{/* CTA buttons */}
 						<div className="vstack md:hstack space-16">
-							{range(2).map(each => (
-								<div
-									key={each}
-									className="hstack w-full md:w-192 h-48 bg-placeholder rounded-12 md:rounded-full"
-									style={{ maxWidth: 512 }}
-								>
-									{/* <PlaceholderText /> */}
-								</div>
-							))}
+							<div
+								className="hstack w-full md:w-192 h-48 bg-placeholder rounded-12 md:rounded-full"
+								style={{ maxWidth: 512 }}
+							/>
+							<div
+								// FIXME
+								className="hstack w-full md:w-192 h-48 bg-placeholder bg-opacty-50 rounded-12 md:rounded-full"
+								style={{ maxWidth: 512 }}
+							/>
 						</div>
 					</div>
 

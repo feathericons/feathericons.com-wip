@@ -10,6 +10,7 @@ export default function Sidebar() {
 		>
 			<div className="sticky t-0">
 				<div className="vstack align-stretch">
+					{/* Top */}
 					<ThemeToolbarPreview
 						className={`zstack align-self-stretch h-320 border-bottom-1 xl:rounded-top-right-${vars.rounded}`}
 					>
@@ -27,6 +28,7 @@ export default function Sidebar() {
 						</div>
 					</ThemeToolbarPreview>
 
+					{/* Bottom */}
 					<div className="overflow-y-scroll">
 						{range(2).map(each => (
 							<div key={each} className="vstack space-16 p-24 border-bottom-1">

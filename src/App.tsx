@@ -36,6 +36,16 @@ function IconPage() {
 export default function Router() {
 	return (
 		<Switch>
+			<Route path="/demo">
+				<div className="hstack h-screen">
+					<div className="hstack w-160 h-48 rounded-8" data-theme-id="btn">
+						<div className="weight-600 text-20" data-theme-id="btn-text">
+							Hello, world!
+						</div>
+					</div>
+				</div>
+			</Route>
+
 			<Route path="/:name">
 				<IconPage />
 			</Route>
