@@ -12,7 +12,7 @@ export default function Sidebar() {
 					{/* TODO: Extract `<SiderbarPreview>`? */}
 					<div
 						className={`zstack align-self-stretch h-320 border-bottom-1 xl:rounded-top-right-${vars.rounded}`}
-						data-id="sidebar-preview"
+						data-theme-id="sidebar-preview"
 					>
 						<div className="w-64 h-64 bg-placeholder rounded-full"></div>
 						<div className="absolute top-right-0 p-24">
@@ -48,6 +48,7 @@ export default function Sidebar() {
 					{/* Ad / Sponsor */}
 					<div className="hstack space-16 p-24 border-bottom-1">
 						<div className="w-128 h-96 bg-placeholder rounded-4"></div>
+						{/* FIXME: Change `spacer vstack`. */}
 						<div className="spacer vstack align-self-start align-start space-8 py-4">
 							<div className="h-6 bg-placeholder rounded-full" data-stagger="1"></div>
 							<div className="h-6 bg-placeholder rounded-full" data-stagger="2"></div>
