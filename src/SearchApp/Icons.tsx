@@ -5,13 +5,12 @@ import { range } from "../lib"
 
 export default function Icons() {
 	return (
-		<div className="grid gap-16" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))" }}>
+		<div id="icons">
 			{range(10).map(each => (
 				<AspectRatioBox key={each}>
-					{/* NOTE: Use `h-full` because of `<AspectRatioBox>`. */}
-					<div className="zstack h-full">
+					<div className="zstack">
 						<div className="w-48 h-48 bg-placeholder rounded-full"></div>
-						<div className="bottom-0 inset-x-0 py-8">
+						<div className="x-0 b-0 py-8">
 							<PlaceholderText />
 						</div>
 					</div>

@@ -1,0 +1,85 @@
+@use "duomo" as *;
+
+/*
+ * Resets
+ */
+
+svg {
+	width: rem(16);
+	height: rem(16);
+}
+
+input {
+	width: 100%;
+	background-color: transparent;
+}
+
+/*
+ * Themes
+ */
+
+// TODO: Why does this not work? `card-bg: sasscolor.scale(hex(color(cool-gray-700)), 0.1)`
+// TODO: Change `transparent` to `color(transparent)`.
+
+:root {
+	--root-bg: hsl(var(--cool-gray-50));
+	--placeholder-bg-default: var(--cool-gray-300);
+	--border-color-default: var(--cool-gray-200);
+}
+
+[data-theme="dark"] {
+	--root-bg: #090c14;
+	--placeholder-bg-default: var(--cool-gray-700);
+	--border-color-default: var(--cool-gray-900);
+}
+
+:root {
+	background-color: var(--root-bg);
+	transition: var(--theme-transition);
+}
+
+.bg-placeholder,
+[class^="border-"],
+[class*=" border-"] {
+	transition: var(--theme-transition);
+}
+
+// prettier-ignore
+$light: (
+	App-bg: color(white),
+	App-shadow: (0 0 0 1px color(cool-gray-200), shadow(xs), shadow(md)),
+	SearchBar-bg: color(white),
+	Sidebar-bg: color(gray-50),
+	ToolbarPreview-bg: color(white),
+	DemoBtn-bg: color(cool-gray-100),
+	DemoBtn-shadow: 0 0 0 1px transparent,
+	DemoBtnSVG-color: color(cool-gray-800),
+	DemoBtnFadedSVG-color: color(cool-gray-800),
+	DemoBtnFadedSVG-opacity: 0.5,
+	DemoBtnText-color: color(cool-gray-800),
+);
+
+// prettier-ignore
+$dark: (
+	App-bg: color(cool-gray-800),
+	App-shadow: (0 0 0 1px color(cool-gray-700), shadow(xs), shadow(md)),
+	SearchBar-bg: color(cool-gray-800),
+	Sidebar-bg: color(cool-gray-800),
+	ToolbarPreview-bg: color(cool-gray-800),
+	DemoBtn-bg: color(cool-gray-700),
+	DemoBtn-shadow: 0 0 0 1px color(cool-gray-600),
+	DemoBtnSVG-color: color(cool-gray-200),
+	DemoBtnFadedSVG-color: color(cool-gray-200),
+	DemoBtnFadedSVG-opacity: 0.5,
+	DemoBtnText-color: color(cool-gray-200),
+);
+
+// prettier-ignore
+@at-root {
+	@include themes((
+		light: $light,
+		dark: $dark,
+		duration: 700ms,
+		timing: timing(ease-out),
+	));
+}

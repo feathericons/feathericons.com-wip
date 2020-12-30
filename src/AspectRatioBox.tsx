@@ -1,15 +1,22 @@
-import React from "react"
+import React, { cloneElement } from "react"
 
-interface AspectRatioBoxProps {
-	children?: React.ReactNode
+interface AspectRatioSquareProps {
+	children?: JSX.Element
 }
 
-export default function AspectRatioBox({ children }: AspectRatioBoxProps) {
+export default function AspectRatioSquare({ children }: AspectRatioSquareProps) {
 	return (
 		// prettier-ignore
 		<div className="relative" style={{ paddingBottom: "100%" }}>
-			<div className="absolute inset-0">
-				{children}
+			<div className="absolute a-0">
+				{children && (
+					cloneElement(children, {
+						...children.props, // Takes precedence
+						className: !children.props.className
+							? "h-full"
+							: children.props.className + " h-full",
+					})
+				)}
 			</div>
 		</div>
 	)

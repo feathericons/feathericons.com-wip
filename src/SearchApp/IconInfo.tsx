@@ -1,7 +1,5 @@
 import Docs from "./docs.mdx"
 import React, { useState } from "react"
-import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
-import { rem } from "@zaydek/duomo/dist/runtime"
 import {
 	Archive,
 	Eye,
@@ -17,6 +15,25 @@ import {
 	Trash2,
 } from "react-feather"
 import { disableAutoCorrect } from "../lib"
+import { MDXProvider as MarkdownProvider } from "@mdx-js/react"
+import { rem } from "@zaydek/duomo/dist/runtime"
+import { ThemeDemoBtn, ThemeDemoBtnText } from "../ThemeElements"
+
+// TODO: Extract.
+function SVG({ svg: Component, ...props }: SVGProps) {
+	return <>{Component && <Component {...props} />}</>
+}
+
+interface SVGProps extends React.ComponentProps<"svg"> {
+	svg?: React.FunctionComponent
+}
+
+function ThemeDemoBtnSVG({ svg, ...props }: SVGProps) {
+	return <SVG svg={svg} data-theme-id="DemoBtnSVG" {...props} />
+}
+function ThemeDemoBtnFadedSVG({ svg, ...props }: SVGProps) {
+	return <SVG svg={svg} data-theme-id="DemoBtnFadedSVG" {...props} />
+}
 
 function Bento() {
 	// prettier-ignore
@@ -29,42 +46,42 @@ function Bento() {
 
 	return (
 		<div id="bento" className="-mx-16 sm:mx-0">
-			<li className="hstack border-y-1 sm:border-x-1 sm:rounded-6" data-theme-id="card">
-				<GitHub
-					data-theme-id="svg"
+			<ThemeDemoBtn className="hstack border-y-1 sm:border-x-1 sm:rounded-6">
+				<ThemeDemoBtnSVG
+					svg={GitHub}
 					style={{
 						width: rem(sizes[0]!),
 						height: rem(sizes[0]!),
 					}}
 				/>
-			</li>
-			<li className="hidden lg:unhidden hstack border-1 rounded-6" data-theme-id="card">
-				<GitHub
-					data-theme-id="svg"
+			</ThemeDemoBtn>
+			<ThemeDemoBtn className="hidden lg:unhidden hstack border-1 rounded-6">
+				<ThemeDemoBtnSVG
+					svg={GitHub}
 					style={{
 						width: rem(sizes[1]!),
 						height: rem(sizes[1]!),
 					}}
 				/>
-			</li>
-			<li className="hidden lg:unhidden hstack border-1 rounded-6" data-theme-id="card">
-				<GitHub
-					data-theme-id="svg"
+			</ThemeDemoBtn>
+			<ThemeDemoBtn className="hidden lg:unhidden hstack border-1 rounded-6">
+				<ThemeDemoBtnSVG
+					svg={GitHub}
 					style={{
 						width: rem(sizes[2]!),
 						height: rem(sizes[2]!),
 					}}
 				/>
-			</li>
-			<li className="hidden lg:unhidden hstack border-1 rounded-6" data-theme-id="card">
-				<GitHub
-					data-theme-id="svg"
+			</ThemeDemoBtn>
+			<ThemeDemoBtn className="hidden lg:unhidden hstack border-1 rounded-6">
+				<ThemeDemoBtnSVG
+					svg={GitHub}
 					style={{
 						width: rem(sizes[3]!),
 						height: rem(sizes[3]!),
 					}}
 				/>
-			</li>
+			</ThemeDemoBtn>
 		</div>
 	)
 }
@@ -73,26 +90,8 @@ interface DemoWrapperProps {
 	children?: React.ReactNode
 }
 
-function DemoWrapper({ children }: DemoWrapperProps) {
-	return (
-		// NOTE: Use `-mx-16 sm:mx-0 ... sm:rounded-6` to match `<pre>`.
-		// NOTE: Use `-mt-1 sm:mt-0` to mask `border-1`.
-		//
-		// prettier-ignore
-		<div className="hstack border-1 rounded-6" data-theme-id="card">
-			{children}
-		</div>
-	)
-}
-
-// TODO: Possibly change `"svg"` to any.
-interface SVGProps extends React.ComponentProps<"svg"> {
-	svg?: React.FunctionComponent
-}
-
-// TODO: Extract this.
-function SVG({ svg: Component, ...props }: SVGProps) {
-	return <>{Component && <Component {...props} />}</>
+function Demo({ children }: DemoWrapperProps) {
+	return <div className="hstack border-1 rounded-6">{children}</div>
 }
 
 function Demo2() {
@@ -101,146 +100,142 @@ function Demo2() {
 	const [show, setShow] = useState(false)
 
 	return (
-		<DemoWrapper>
-			<div className="w-224 rounded-8" data-theme-id="demo-2">
+		<Demo>
+			<div className="vstack space-1">
 				{/* Username */}
-				<div className="zstack align-stretch h-48">
-					<input
-						className="px-16 pl-48 w-full bg-transparent"
-						data-theme-id="demo-2-username"
-						type="text"
-						value={user}
-						onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-							setUser(e.target.value)
-						}}
-						{...disableAutoCorrect}
-					/>
-					<div className="inset-y-0 left-0 px-16 pointer-events-none">
-						<div className="hstack h-full">
-							<GitHub className="w-16 h-16 transform scale-110" data-theme-id="svg" />
+				<ThemeDemoBtn className="w-224 rounded-8 rounded-bottom-0">
+					<div className="zstack align-stretch h-48">
+						<ThemeDemoBtnText
+							tag="input"
+							className="px-20 pl-56"
+							type="text"
+							value={user}
+							onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUser(e.target.value)}
+							{...disableAutoCorrect}
+						/>
+						<div className="l-0 y-0 px-20 pointer-events-none">
+							<div className="hstack h-full">
+								<ThemeDemoBtnSVG svg={GitHub} className="transform scale-110" />
+							</div>
 						</div>
 					</div>
-				</div>
+				</ThemeDemoBtn>
+
 				{/* Password */}
-				<div className="h-1" data-theme-id="demo-2-hr" />
-				<div className="zstack align-stretch h-48">
-					<input
-						className="px-48 w-full bg-transparent"
-						data-theme-id="demo-2-username"
-						style={{ letterSpacing: !show ? "0.1em" : undefined }}
-						type={!show ? "password" : "text"}
-						value={pass}
-						onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-							setPass(e.target.value)
-						}}
-						{...disableAutoCorrect}
-					/>
-					<div className="inset-y-0 left-0 px-16 pointer-events-none">
-						<div className="hstack h-full">
-							<Lock className="w-16 h-16 transform scale-110" data-theme-id="svg" />
+				<ThemeDemoBtn className="w-224 rounded-8 rounded-top-0">
+					<div className="zstack align-stretch h-48">
+						<ThemeDemoBtnText
+							tag="input"
+							className="px-20 pl-56"
+							style={{ letterSpacing: !show ? "0.1em" : undefined }}
+							type={!show ? "password" : "text"}
+							value={pass}
+							onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPass(e.target.value)}
+							{...disableAutoCorrect}
+						/>
+						<div className="l-0 y-0 px-20 pointer-events-none">
+							<div className="hstack h-full">
+								<ThemeDemoBtnSVG svg={Lock} className="transform scale-110" />
+							</div>
+						</div>
+						<div className="r-0 y-0 px-20" style={{ cursor: "pointer" }} onClick={() => setShow(!show)}>
+							<div className="hstack h-full">
+								<ThemeDemoBtnFadedSVG svg={!show ? EyeOff : Eye} className="transform scale-110" />
+							</div>
 						</div>
 					</div>
-					<div className="inset-y-0 right-0 px-16" style={{ cursor: "pointer" }} onClick={() => setShow(!show)}>
-						<div className="hstack h-full">
-							<SVG svg={!show ? EyeOff : Eye} className="w-16 h-16 transform scale-110" data-theme-id="faded-svg" />
-						</div>
-					</div>
-				</div>
+				</ThemeDemoBtn>
 			</div>
-		</DemoWrapper>
+		</Demo>
 	)
 }
+
+// prettier-ignore
+const d1Specs = [
+	16 * Math.pow(1.5, 0),
+	16 * Math.pow(1.5, 1),
+	16 * Math.pow(1.5, 2),
+	16 * Math.pow(1.5, 3),
+]
 
 function Demos() {
 	return (
 		<div id="demos" className="-mx-16 sm:mx-0">
 			{/* Demo 1 */}
-			{/* prettier-ignore */}
-			<DemoWrapper>
-				<div className="hstack space-24">
-					{[
-						16 * Math.pow(1.5, 0),
-						16 * Math.pow(1.5, 1),
-						16 * Math.pow(1.5, 2),
-						16 * Math.pow(1.5, 3),
-					].map(
-						(each, x) => (
-							<GitHub
-								key={x}
-								data-theme-id="svg"
-								style={{
-									width: rem(each),
-									height: rem(each),
-								}}
-							/>
-						),
-					)}
+			<Demo>
+				<div className="hstack space-16">
+					{d1Specs.map((each, x) => (
+						<ThemeDemoBtnSVG
+							key={x}
+							svg={GitHub}
+							style={{
+								width: rem(each),
+								height: rem(each),
+							}}
+						/>
+					))}
 				</div>
-			</DemoWrapper>
+			</Demo>
 
 			{/* Demo 2 */}
 			<Demo2 />
 
 			{/* Demo 3 */}
-			<DemoWrapper>
-				<div
-					// NOTE: Use `align-self-center` because does not use `w-*` or `h-*`.
-					className="align-self-center hstack space-12 px-24 py-12 rounded-8"
-					data-theme-id="demo-3"
-				>
-					<GitHub className="w-18 h-18" data-theme-id="demo-3-svg" />
-					<div className="weight-500 text-18" data-theme-id="demo-3-text">
-						Follow me
-					</div>
-				</div>
-			</DemoWrapper>
+			<Demo>
+				{/* NOTE: Use `align-self-center` because `w-*` and `h-*` are unspecified. */}
+				<ThemeDemoBtn className="align-self-center hstack space-12 px-24 py-16 rounded-8">
+					<ThemeDemoBtnSVG svg={GitHub} className="w-18 h-18" />
+					<ThemeDemoBtnText className="text-18">Follow me</ThemeDemoBtnText>
+				</ThemeDemoBtn>
+			</Demo>
 
 			{/* Demo 4 */}
-			<DemoWrapper>
+			<Demo>
 				<div className="hstack space-8">
 					{[Heart, MessageCircle, GitHub].map((each, x) => (
-						<li key={x} className="align-self-center hstack space-8 px-16 py-8 rounded-full" data-theme-id="demo-4-li">
-							<SVG svg={each} className="w-16 h-16" data-theme-id="demo-4-li-svg" />
-							<div className="text-16" data-theme-id="demo-4-li-text" style={{ fontFeatureSettings: "'tnum'" }}>
+						// NOTE: Use `align-self-center` because `w-*` and `h-*` are unspecified.
+						<ThemeDemoBtn key={x} className="align-self-center hstack space-8 px-16 py-8 rounded-full">
+							<ThemeDemoBtnSVG svg={each} />
+							<ThemeDemoBtnText style={{ fontFeatureSettings: "'tnum'" }}>
 								{0 + Math.floor(Math.random() * 20)}
-							</div>
-						</li>
+							</ThemeDemoBtnText>
+						</ThemeDemoBtn>
 					))}
 				</div>
-			</DemoWrapper>
+			</Demo>
 
 			{/* Demo 5 */}
-			<DemoWrapper>
+			<Demo>
 				<div className="hstack space-12">
 					{[Inbox, Trash2, Archive, GitHub].map((each, x) => (
-						<li key={x} className="hstack w-48 h-48 rounded-full" data-theme-id="demo-5-li">
-							<SVG svg={each} className="w-20 h-20" data-theme-id="svg" />
-						</li>
+						<ThemeDemoBtn key={x} className="hstack w-48 h-48 rounded-full">
+							<ThemeDemoBtnSVG svg={each} className="w-20 h-20" />
+						</ThemeDemoBtn>
 					))}
 				</div>
-			</DemoWrapper>
+			</Demo>
 
 			{/* Demo 6 */}
-			<DemoWrapper>
+			<Demo>
 				<div className="vstack space-8 w-192">
-					<div className="align-self-stretch hstack space-16 px-16 h-36 rounded-8 shadow shadow-px shadow-xs">
-						<File className="w-16 h-16" data-theme-id="svg" />
-						<p>File</p>
-						<div className="spacer"></div>
-						<Plus className="w-16 h-16" data-theme-id="faded-svg" />
-					</div>
-					<div className="align-self-stretch hstack space-16 px-16 h-36 rounded-8 shadow shadow-px shadow-xs">
-						<Folder className="w-16 h-16" data-theme-id="svg" />
-						<p>Folder</p>
-						<div className="spacer"></div>
-					</div>
-					<div className="align-self-stretch hstack space-16 px-16 h-36 rounded-8 shadow shadow-px shadow-xs">
-						<GitHub className="w-16 h-16" data-theme-id="svg" />
-						<p>Widget</p>
-						<div className="spacer"></div>
-					</div>
+					<ThemeDemoBtn className="align-self-stretch hstack space-12 px-16 h-36 rounded-8">
+						<ThemeDemoBtnSVG svg={File} />
+						<ThemeDemoBtnText>File</ThemeDemoBtnText>
+						<div className="spacer" />
+						<ThemeDemoBtnFadedSVG svg={Plus} />
+					</ThemeDemoBtn>
+					<ThemeDemoBtn className="align-self-stretch hstack space-12 px-16 h-36 rounded-8 shadow shadow-px shadow-xs">
+						<ThemeDemoBtnSVG svg={Folder} />
+						<ThemeDemoBtnText>Folder</ThemeDemoBtnText>
+						<div className="spacer" />
+					</ThemeDemoBtn>
+					<ThemeDemoBtn className="align-self-stretch hstack space-12 px-16 h-36 rounded-8 shadow shadow-px shadow-xs">
+						<ThemeDemoBtnSVG svg={GitHub} />
+						<ThemeDemoBtnText>Widget</ThemeDemoBtnText>
+						<div className="spacer" />
+					</ThemeDemoBtn>
 				</div>
-			</DemoWrapper>
+			</Demo>
 		</div>
 	)
 }

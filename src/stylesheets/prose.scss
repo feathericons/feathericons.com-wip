@@ -1,4 +1,4 @@
-@use "@zaydek/duomo" as * with ($headless: true);
+@use "duomo" as *;
 
 @mixin unantialiased {
 	-webkit-font-smoothing: auto;
@@ -6,15 +6,15 @@
 }
 
 /*
- * Prose
+ * Layout
  */
 
 // prettier-ignore
-$map: (
+$layout-map: (
 	flow-margin: rem(32),
-	head-h1-margin: rem(32 / 2),
-	head-h2-margin: rem(32 / 2),
-	head-h3-margin: rem(32 / 2),
+	head-h1-margin: rem(32 / 4),
+	head-h2-margin: rem(32 / 4),
+	head-h3-margin: rem(32 / 4),
 	text-margin: rem(32 / 2),
 	head-h1: (600 rem(32) / 1.4 var(--sans), var(--ui-sans)),
 	head-h2: (600 rem(24) / 1.4 var(--sans), var(--ui-sans)),
@@ -30,16 +30,16 @@ $map: (
 );
 
 .prose {
-	@each $mk, $mv in $map {
+	@each $mk, $mv in $layout-map {
 		--prose-#{$mk}: #{$mv};
 	}
 }
 
 /*
- * Theme
+ * Themes
  */
 
-$light: (
+$light-map: (
 	head-h1-color: color(black),
 	head-h2-color: color(black),
 	head-h3-color: color(black),
@@ -55,7 +55,10 @@ $light: (
 	code-pre-border: none,
 );
 
-$dark: (
+// FIXME: 1px solid transparent
+//
+// https://github.com/zaydek/duomo/issues/203
+$dark-map: (
 	head-h1-color: color(cool-gray-100),
 	head-h2-color: color(cool-gray-100),
 	head-h3-color: color(cool-gray-100),
@@ -65,7 +68,6 @@ $dark: (
 	hr-border: 2px solid color(cool-gray-700),
 	code-color: var(--gray-100),
 	code-bg: color(cool-gray-700),
-	// https://github.com/zaydek/duomo/issues/203
 	code-border: 1px solid transparent,
 	code-pre-color: color(cool-gray-100),
 	code-pre-bg: color(cool-gray-700),
@@ -73,13 +75,13 @@ $dark: (
 );
 
 .prose {
-	@each $mk, $mv in $light {
+	@each $mk, $mv in $light-map {
 		--prose-#{$mk}: #{$mv};
 	}
 }
 
 [data-theme="dark"] .prose {
-	@each $mk, $mv in $dark {
+	@each $mk, $mv in $dark-map {
 		--prose-#{$mk}: #{$mv};
 	}
 }

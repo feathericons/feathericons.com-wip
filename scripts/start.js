@@ -7,26 +7,18 @@ const path = require("path")
 const sass = require("sass")
 
 const __DEV__ = process.env.NODE_ENV !== "production"
-const __PORT__ = +process.env.PORT || 8000
+
+const port = +process.env.PORT || 8000
 
 function buildSass() {
-	const files = fs.readdirSync("src/stylesheets").filter(each => each.endsWith(".scss"))
-	for (const each of files) {
-		const basename = path.parse(each).name
-		const res = sass.render(
-			{
-				file: `src/stylesheets/${basename}.scss`,
-				includePaths: ["node_modules"],
-				outFile: `build/stylesheets/${basename}.css`,
-				outputStyle: __DEV__ ? "expanded" : "compressed",
-			},
-			(_, res) => {
-				const css = res.css.toString()
-				fs.writeFileSync(`build/stylesheets/${basename}.css`, css)
-				console.log(`✅ src/stylesheets/${basename}.scss -> build/stylesheets/${basename}.css`)
-			},
-		)
-	}
+	const res = sass.renderSync({
+		file: "src/stylesheets/index.scss",
+		includePaths: ["node_modules"],
+		outFile: "build/stylesheets/style.css",
+		outputStyle: __DEV__ ? "expanded" : "compressed",
+	})
+	const css = res.css.toString()
+	fs.writeFileSync("build/stylesheets/style.css", css)
 }
 
 ;(async () => {
@@ -39,8 +31,12 @@ function buildSass() {
 		entryPoints: ["src/index.tsx"],
 		incremental: __DEV__,
 		minify: !__DEV__,
-		outfile: "build/bundle.js",
+		outfile: "build/script.js",
 		plugins: [mdxPlugin],
+	}).catch(err => {
+		if (err) {
+			throw err
+		}
 	})
 
 	const tsWatcher = chokidar.watch("src/**/*.{ts,tsx}", { interval: 0 })
@@ -54,8 +50,8 @@ function buildSass() {
 	const app = express()
 	app.use(express.static("build", { extensions: ["html"] }))
 	app.get("*", (_, res) => {
-		res.sendfile(path.resolve("build", "index.html"))
+		res.sendFile(path.resolve("build", "index.html"))
 	})
-	console.log(`✅ listening on port ${__PORT__}; open http://localhost:${__PORT__}`)
-	app.listen(__PORT__)
+	console.log(`serving on port ${port}; http://localhost:${port}`)
+	app.listen(port)
 })()

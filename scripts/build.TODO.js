@@ -3,7 +3,6 @@ const mdxPlugin = require("./plugins/mdx")
 
 const __DEV__ = process.env.NODE_ENV !== "production"
 
-// Bundles `src/index.tsx` to `build/script.js`.
 ;(async () => {
 	build({
 		bundle: true,

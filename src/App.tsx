@@ -4,7 +4,7 @@ import Icons from "./SearchApp/Icons"
 import React from "react"
 import SearchApp from "./SearchApp"
 import { DocumentTitle } from "./lib"
-import { Route, Switch /* useParams */ } from "react-router-dom"
+import { Route, Switch } from "react-router-dom"
 
 function Homepage() {
 	return (
@@ -19,14 +19,8 @@ function Homepage() {
 	)
 }
 
-// interface Keys {
-// 	[key: string]: string
-// }
-
+// TODO: Add `const { name } = useParams()`.
 function IconPage() {
-	// const { name } = useParams() as Keys
-
-	// TODO: Add `<Redirect>`.
 	return (
 		<DocumentTitle title="Feathericons">
 			<div className="xl:pb-64">
